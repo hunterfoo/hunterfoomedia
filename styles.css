@@ -34,6 +34,7 @@
 .faq-item summary:after{content:"+";color:var(--orange);font-size:28px;line-height:1;flex-shrink:0}
 .faq-item[open] summary:after{content:"–"}
 .faq-item p{font-size:16px;line-height:1.9;color:#c7d1c9;margin:14px 0 0;max-width:860px}
+.faq-item a{border-bottom:1px solid var(--orange)}.faq-item a:hover{color:var(--orange)}
 @media(max-width:760px){.faq-item summary{font-size:18px}}
 
 .service h3 a:hover,.service-more a:hover{color:#e25a22}

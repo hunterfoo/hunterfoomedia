@@ -4,7 +4,7 @@ const toggle=document.getElementById('language');
 function setLanguage(next){
  language=next;
  document.documentElement.lang=next==='zh'?'zh-Hans':'en';
- document.querySelectorAll('[data-zh][data-en]').forEach(el=>{el.textContent=el.dataset[next].replace(/\\n/g,'\n');});
+ document.querySelectorAll('[data-zh][data-en]').forEach(el=>{const value=el.dataset[next].replace(/\\n/g,'\n');if(value.includes('<'))el.innerHTML=value;else el.textContent=value;});
  document.querySelectorAll('[data-zh-alt][data-en-alt]').forEach(el=>{el.alt=el.getAttribute(`data-${next}-alt`);});
  if(toggle){
   toggle.textContent=next==='zh'?'EN':'中文';
