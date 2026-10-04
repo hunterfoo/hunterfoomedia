@@ -1,15 +1,26 @@
 # Hunter Foo Media
 
-静态站，准备从 ChatGPT Sites 迁到 Cloudflare Pages。
+静态站，部署在 Cloudflare Pages。推送 `main` 会自动发布。不要在这个仓库里改 DNS。
 
-线上现在仍是 [www.hunterfoomedia.com](https://www.hunterfoomedia.com)（源：`hunter-foo-media.hunterfoo-my.chatgpt.site`）。**这个仓库还没改 DNS。** 先用 Pages 预览地址看过，再切域名。
+线上是 [www.hunterfoomedia.com](https://www.hunterfoomedia.com)。裸域若还要 301 到 www，用 Cloudflare Redirect Rule（见下文），不要改 MX。
+
+## 页面
+
+- https://www.hunterfoomedia.com/
+- https://www.hunterfoomedia.com/services/ai-automation/
+- https://www.hunterfoomedia.com/services/personal-brand/
+- https://www.hunterfoomedia.com/services/social-reels/
+- https://www.hunterfoomedia.com/malaysia/
+- https://www.hunterfoomedia.com/singapore/
+
+`sitemap.xml` 只列以上地址。未知路径仍返回 `404.html`，不要加「所有路径都改写成首页」的重定向。
 
 ## 这个版本改了什么
 
 - 保留原单页视觉与文案；首屏说明加上「马来西亚 AI 自动化、个人品牌与社媒」
 - `robots.txt` 允许抓取；页面 `meta robots` 为 `index,follow`
 - canonical、`og:url`、JSON-LD `@id` 全部指向 `https://www.hunterfoomedia.com/`
-- `sitemap.xml` 只有 www 首页
+- `sitemap.xml` 含首页、三项服务、马来西亚与新加坡页面
 - 增加中文 FAQ + `FAQPage` schema（服务、MY+SG 远程、联系方式、不是招聘中介）
 - 自定义 `404.html`
 - 头图：原 `hero.png` 约 1.9MB → WebP 约 47KB，PNG 降色后备约 0.7MB

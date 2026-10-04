@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.hunterfoomedia.com/</loc>
-  </url>
+  <url><loc>https://www.hunterfoomedia.com/</loc></url>
+  <url><loc>https://www.hunterfoomedia.com/services/ai-automation/</loc></url>
+  <url><loc>https://www.hunterfoomedia.com/services/personal-brand/</loc></url>
+  <url><loc>https://www.hunterfoomedia.com/services/social-reels/</loc></url>
+  <url><loc>https://www.hunterfoomedia.com/malaysia/</loc></url>
+  <url><loc>https://www.hunterfoomedia.com/singapore/</loc></url>
 </urlset>
