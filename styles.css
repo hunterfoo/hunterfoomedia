@@ -52,7 +52,7 @@ header nav.compact a[aria-current=page]{color:var(--orange)}
 .prose h2{font-size:clamp(26px,3vw,36px);margin:28px 0 10px}
 .prose h2:first-child{margin-top:0}
 .prose p,.prose li{font-size:16px;line-height:1.9;color:#536053}
-.prose ul{margin:8px 0 0;padding-left:1.2em;max-width:760px}
+.prose ul,.prose ol{margin:8px 0 0;padding-left:1.2em;max-width:760px}.prose ol{padding-left:1.35em}.prose h3{font-size:20px;line-height:1.45;margin:22px 0 6px;font-weight:600}
 .prose a{border-bottom:1px solid currentColor}
 .prose a:hover{color:#e25a22}
 .agency-note{border-left:3px solid var(--orange);padding:2px 0 2px 16px;margin-top:28px;max-width:760px}
