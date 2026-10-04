@@ -1,0 +1,5 @@
+# Apex → www.
+# This file only applies to requests that already hit this Pages project.
+# Because the domain is on Cloudflare, also add a Redirect Rule (see README)
+# so hunterfoomedia.com always 301s to www, including the path and query.
+https://hunterfoomedia.com/* https://www.hunterfoomedia.com/:splat 301
