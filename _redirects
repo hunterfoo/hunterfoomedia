@@ -3,3 +3,9 @@
 # Because the domain is on Cloudflare, also add a Redirect Rule (see README)
 # so hunterfoomedia.com always 301s to www, including the path and query.
 https://hunterfoomedia.com/* https://www.hunterfoomedia.com/:splat 301
+
+# Country thin pages merged into /services/
+/malaysia /services/ 301
+/malaysia/ /services/ 301
+/singapore /services/ 301
+/singapore/ /services/ 301

@@ -21,7 +21,7 @@ function setLanguage(next){
  if(nav && !nav.classList.contains('compact')) nav.setAttribute('aria-label',next==='zh'?'主导航':'Main navigation');
  const brand=document.querySelector('.brand');
  if(brand && brand.hasAttribute('data-home-label')) brand.setAttribute('aria-label',next==='zh'?'Hunter Foo Media 首页':'Hunter Foo Media home');
- const message=next==='zh'?'Hi Hunter，我从 Hunter Foo Media 官网过来，想聊聊我的项目。':'Hi Hunter, I found Hunter Foo Media and would love to discuss a project.';
+ const message=next==='zh'?'你好 Hunter，我想预约 20 分钟免费诊断。我做的是：＿＿，最卡的是：＿＿':'Hi Hunter, I want a free 20-min diagnosis. I do ____, stuck on ____.';
  document.querySelectorAll('a.whatsapp').forEach(a=>{
   const text=a.dataset.wa||message;
   a.href='https://wa.me/60196273143?text='+encodeURIComponent(text);

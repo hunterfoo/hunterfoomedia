@@ -11,8 +11,6 @@
 - https://www.hunterfoomedia.com/services/ai-automation/
 - https://www.hunterfoomedia.com/services/personal-brand/
 - https://www.hunterfoomedia.com/services/social-reels/
-- https://www.hunterfoomedia.com/malaysia/
-- https://www.hunterfoomedia.com/singapore/
 
 `sitemap.xml` 只列以上地址。未知路径仍返回 `404.html`，不要加「所有路径都改写成首页」的重定向。
 
@@ -79,3 +77,8 @@ python3 -m http.server 8787
 ```
 
 打开 `http://127.0.0.1:8787/`。
+
+
+## Country pages
+
+`/malaysia/` and `/singapore/` 301 redirect to `/services/` (merged). See `_redirects`.
