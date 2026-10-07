@@ -19,7 +19,7 @@
 - 保留原单页视觉与文案；首屏说明加上「马来西亚 AI 自动化、个人品牌与社媒」
 - `robots.txt` 允许抓取；页面 `meta robots` 为 `index,follow`
 - canonical、`og:url`、JSON-LD `@id` 全部指向 `https://www.hunterfoomedia.com/`
-- `sitemap.xml` 含首页、服务总览、三项服务、马来西亚与新加坡页面
+- `sitemap.xml` 只含可索引页：首页、服务总览、三项服务（`/malaysia/`、`/singapore/` 已 301 合并到 `/services/`，不进 sitemap）
 - 增加中文 FAQ + `FAQPage` schema（服务、MY+SG 远程、联系方式、不是招聘中介）
 - 自定义 `404.html`
 - 头图：原 `hero.png` 约 1.9MB → WebP 约 47KB，PNG 降色后备约 0.7MB
