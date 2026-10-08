@@ -9,3 +9,6 @@ https://hunterfoomedia.com/* https://www.hunterfoomedia.com/:splat 301
 /malaysia/ /services/ 301
 /singapore /services/ 301
 /singapore/ /services/ 301
+
+# Default favicon path for browsers and crawlers
+/favicon.ico /assets/favicon-48.png 301
