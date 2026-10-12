@@ -1,34 +1,16 @@
 (() => {
-let language='zh';
-const toggle=document.getElementById('language');
-function setLanguage(next){
- language=next;
- document.documentElement.lang=next==='zh'?'zh-Hans':'en';
- document.querySelectorAll('[data-zh][data-en]').forEach(el=>{
-  let value=el.dataset[next].replace(/\\n/g,'\n');
-  if(value.includes('&lt;')||value.includes('&gt;')||value.includes('&amp;')){
-   value=value.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"');
-  }
-  if(value.includes('<')) el.innerHTML=value;
-  else el.textContent=value;
- });
- document.querySelectorAll('[data-zh-alt][data-en-alt]').forEach(el=>{el.alt=el.getAttribute(`data-${next}-alt`);});
- if(toggle){
-  toggle.textContent=next==='zh'?'EN':'中文';
-  toggle.setAttribute('aria-label',next==='zh'?'Switch to English':'切换为中文');
- }
- const nav=document.querySelector('header nav');
- if(nav && !nav.classList.contains('compact')) nav.setAttribute('aria-label',next==='zh'?'主导航':'Main navigation');
- const brand=document.querySelector('.brand');
- if(brand && brand.hasAttribute('data-home-label')) brand.setAttribute('aria-label',next==='zh'?'Hunter Foo Media 首页':'Hunter Foo Media home');
- const message=next==='zh'?'你好 Hunter，我想预约 20 分钟免费诊断。我做的是：＿＿，最卡的是：＿＿':'Hi Hunter, I want a free 20-min diagnosis. I do ____, stuck on ____.';
- document.querySelectorAll('a.whatsapp').forEach(a=>{
-  const text=a.dataset.wa||message;
-  a.href='https://wa.me/60196273143?text='+encodeURIComponent(text);
- });
-}
-if(toggle) toggle.addEventListener('click',()=>setLanguage(language==='zh'?'en':'zh'));
+// Language is fixed per URL (/, /zh/, /ms/). Do not change <html lang> here.
+const lang=(document.documentElement.lang||'en').toLowerCase();
+const msgs={
+ 'en':"Hi Hunter, I'd like a free 20-min diagnosis. My business: ____. Where I'm stuck: ____",
+ 'zh-hans':'你好 Hunter，我想预约 20 分钟免费诊断。我做的是：＿＿，最卡的是：＿＿',
+ 'ms':'Hai Hunter, saya nak tempah diagnosis percuma 20 minit. Bisnes saya: ____. Masalah utama: ____'
+};
+const message=msgs[lang]||msgs.en;
+document.querySelectorAll('a.whatsapp').forEach(a=>{
+ const text=a.dataset.wa||message;
+ a.href='https://wa.me/60196273143?text='+encodeURIComponent(text);
+});
 const year=document.getElementById('year');
 if(year) year.textContent=String(new Date().getFullYear());
-setLanguage(language);
 })();
