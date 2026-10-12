@@ -47,7 +47,7 @@ def L(p, path):  # localized absolute path
 
 def rewrite_urls(s, p):
     if not p: return s
-    s = re.sub(r'href="/(?!/|assets/|zh/|ms/)([^"]*)"', lambda m: 'href="%s/%s"' % (p, m.group(1)), s)
+    s = re.sub(r'href="/(?!/|assets/|zh/|ms/|[^"]*\.(?:css|js|png|jpg|webp|svg|ico|xml|txt|pdf)")([^"]*)"', lambda m: 'href="%s/%s"' % (p, m.group(1)), s)
     s = re.sub(re.escape(D) + r'/(?!assets/|#organization|#founder|#website|zh/|ms/)([^"\s?]*)', lambda m: "%s%s/%s" % (D, p, m.group(1)), s)
     return s
 

@@ -16,11 +16,11 @@ def _rows(l):
 
 ABOUT = {
  "en": {"title": "About HF Media Solution (IP0633909-U) | Hunter Foo Media",
-        "desc": "Hunter Foo Media is the brand of HF Media Solution, a Malaysian registered business (IP0633909-U). AI automation, personal branding and social media for service businesses. WhatsApp +60196273143.",
-        "main": None, "d": dict(eyebrow="ABOUT", h1="Who we are.", lede="Hunter Foo Media is the trading brand of HF Media Solution, a business registered in Malaysia. We help service businesses in Malaysia and Singapore get more clients with less busywork.",
+        "desc": "Hunter Foo Media is a brand of HF Media Solution (IP0633909-U), registered in Malaysia. Business details, founder background and how to reach us.",
+        "main": None, "d": dict(eyebrow="ABOUT", h1="Who we are.", lede="Hunter Foo Media is the trading name of HF Media Solution, a business registered in Malaysia. We help service businesses in Malaysia and Singapore win more clients and spend less time on admin.",
         idh="Business details", rows=_rows(["Registered name", "Brand", "Business registration no. (Malaysia)", "Country of registration", "Malaysia", "Founder", "WhatsApp", "Email", "Website", "Service area", "Malaysia and Singapore (remote)"]),
-        founderh="Founder", founder="Hunter Foo has 18 years in HR, recruitment and sales, starting as a CNC programmer in Singapore. Since 2025 he has used AI in his own company's daily work and built an internal HR app. He only offers what he has used himself and knows works.",
-        note="<strong>Not a recruitment agency.</strong> This business does not post jobs or charge job seekers. We work remotely and have no walk-in office.", next="CONTACT", cta="Talk to us.")},
+        founderh="Founder", founder="Hunter Foo started as a CNC programmer in Singapore and has spent 18 years in HR, recruitment and sales. Since 2025 he has run his own company's daily work with AI and built an internal HR app. He only offers clients what he has tested in his own business.",
+        note="<strong>Not a recruitment agency.</strong> We don't post jobs or charge job seekers. We work remotely and have no walk-in office.", next="CONTACT", cta="Get in touch.")},
  "zh": {"title": "关于我们｜HF Media Solution (IP0633909-U)｜Hunter Foo Media",
         "desc": "Hunter Foo Media 是 HF Media Solution 的品牌，马来西亚注册商业（IP0633909-U）。为服务型生意做 AI 自动化、个人品牌与社媒。WhatsApp +60196273143。",
         "main": None, "d": dict(eyebrow="关于我们", h1="我们是谁。", lede="Hunter Foo Media 是 HF Media Solution 的经营品牌，在马来西亚注册。我们帮马来西亚与新加坡的服务型生意多接客户，少做杂事。",
