@@ -247,3 +247,5 @@ footer p{margin-bottom:6px}
 .region-note{font-size:15px;color:var(--muted);margin-top:20px;padding:14px 18px;background:#eceee8;border-radius:12px}
 footer{padding-bottom:44px}
 @media (max-width:820px){footer{padding-bottom:110px}.svc-table{display:block;overflow-x:auto}}
+.lang-switch{display:flex;align-items:center;gap:6px;font-size:13px;white-space:nowrap}.lang-switch a{color:inherit;opacity:.75;text-decoration:none;padding:2px 2px}.lang-switch a[aria-current]{opacity:1;font-weight:700;text-decoration:underline;text-underline-offset:3px}.lang-switch span{opacity:.45}
+footer .legal{font-size:12.5px;margin-top:14px;opacity:.85}footer .legal a{color:inherit}

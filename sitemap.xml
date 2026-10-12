@@ -1,8 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.hunterfoomedia.com/</loc></url>
-  <url><loc>https://www.hunterfoomedia.com/services/</loc></url>
-  <url><loc>https://www.hunterfoomedia.com/services/ai-automation/</loc></url>
-  <url><loc>https://www.hunterfoomedia.com/services/personal-brand/</loc></url>
-  <url><loc>https://www.hunterfoomedia.com/services/social-reels/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.hunterfoomedia.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/services/ai-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/ai-automation/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/services/ai-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/ai-automation/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/services/ai-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/ai-automation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/ai-automation/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/services/personal-brand/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/personal-brand/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/services/personal-brand/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/personal-brand/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/services/personal-brand/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/personal-brand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/personal-brand/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/services/social-reels/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/social-reels/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/services/social-reels/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/social-reels/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/services/social-reels/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/services/social-reels/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/social-reels/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/about/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/about/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/about/"/>
+  </url>
 </urlset>

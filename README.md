@@ -4,15 +4,28 @@
 
 线上是 [www.hunterfoomedia.com](https://www.hunterfoomedia.com)。裸域若还要 301 到 www，用 Cloudflare Redirect Rule（见下文），不要改 MX。
 
-## 页面
+## 语言与页面（i18n）
 
+英文为默认（`/`），中文在 `/zh/`，马来文在 `/ms/`。每页有 self-canonical、hreflang（en / zh-Hans / ms + x-default=en）和可见的 EN | 中文 | BM 切换（不自动跳转）。
+
+**不要直接改生成的 HTML。** 中文原稿在 `tools/src_zh/`，译文在 `tools/i18n_strings.py`，About 页在 `tools/about_pages.py`。改完运行：
+
+```bash
+python3 tools/build_i18n.py
+```
+
+会重新生成 `/`、`/zh/`、`/ms/` 下全部页面（含 `/about/`）和 `sitemap.xml`。
+
+## 页面（每种语言各一套）
+
+- https://www.hunterfoomedia.com/about/
 - https://www.hunterfoomedia.com/
 - https://www.hunterfoomedia.com/services/
 - https://www.hunterfoomedia.com/services/ai-automation/
 - https://www.hunterfoomedia.com/services/personal-brand/
 - https://www.hunterfoomedia.com/services/social-reels/
 
-`sitemap.xml` 只列以上地址。未知路径仍返回 `404.html`，不要加「所有路径都改写成首页」的重定向。
+`sitemap.xml` 列出以上地址的三种语言版本，并带 `xhtml:link` hreflang。未知路径仍返回 `404.html`，不要加「所有路径都改写成首页」的重定向。
 
 ## 这个版本改了什么
 

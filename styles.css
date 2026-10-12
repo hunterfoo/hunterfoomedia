@@ -61,3 +61,6 @@ header nav.compact a[aria-current=page]{color:var(--orange)}
 
 .subnav{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;padding:12px 0 14px;border-bottom:1px solid var(--line);font-size:13px}
 .subnav a:hover{color:var(--orange)}
+.lang-switch{display:flex;align-items:center;gap:6px;font-size:13px;white-space:nowrap}.lang-switch a{opacity:.75}.lang-switch a[aria-current]{opacity:1;font-weight:700;color:var(--orange)}.lang-switch span{opacity:.45}
+footer .legal{font-size:12px;color:var(--muted);padding:0 0 22px;margin:0}footer .legal a{text-decoration:underline}
+.biz-id{border-collapse:collapse;width:100%;max-width:760px;margin:10px 0 40px}.biz-id th,.biz-id td{text-align:left;padding:12px 14px;border-bottom:1px solid #c8cfc6;vertical-align:top}.biz-id th{width:42%;font-weight:600}
