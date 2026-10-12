@@ -87,7 +87,7 @@ const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]);
   const W = D.wa;
   const log = h("div", { class: "pd-chatlog", role: "log", "aria-live": "polite" });
   const tags = h("ul", { class: "pd-tags" }), status = h("p", { class: "pd-status" }, "—"), rules = h("ul", { class: "pd-rules" });
-  const linkify = s => s.replace(/(https:\/\/\S+)/g, '<span class="pd-link">$1</span>').replace(/\n/g, "<br>");
+  const linkify = s => s.replace(/(https:\/\/\S+)/g, '<span class="pd-link">$1</span> <span class="pd-slabel">(' + W.slabel + ')</span>').replace(/\n/g, "<br>");
   const bubble = (who, html) => h("div", { class: "pd-msg " + who, html: linkify(html) + '<span class="pd-time">' + new Date().toTimeString().slice(0, 5) + (who === "out" ? " ✓✓" : "") + "</span>" });
   let timer = [];
   const reset = () => { timer.forEach(clearTimeout); timer = []; log.replaceChildren(h("p", { class: "pd-sys" }, W.start)); tags.replaceChildren(); status.textContent = "—"; rules.replaceChildren(); btns.forEach(b => b.disabled = false); };
