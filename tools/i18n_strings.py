@@ -3,6 +3,8 @@ T = {
 '多接客户，少做杂事｜Hunter Foo Media · 马来西亚与新加坡': ('Get More Clients With Less Admin | Hunter Foo Media', 'Lebih Ramai Pelanggan, Kurang Kerja Remeh | Hunter Foo Media · Malaysia & Singapura'),
 '跳到主要内容': ('Skip to main content', 'Langkau ke kandungan utama'),
 '服务': ('Services', 'Perkhidmatan'),
+'产品演示': ('Products', 'Produk'),
+'看三个产品的在线演示 →': ('Try live demos of our three products →', 'Cuba demo langsung tiga produk kami →'),
 '算一笔账': ('The maths', 'Kira sendiri'),
 '做法': ('How it works', 'Cara kerja'),
 '关于': ('About', 'Tentang'),

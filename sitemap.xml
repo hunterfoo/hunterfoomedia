@@ -106,6 +106,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/services/social-reels/"/>
   </url>
   <url>
+    <loc>https://www.hunterfoomedia.com/products/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/products/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/products/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/products/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/zh/products/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/products/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/products/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/products/"/>
+  </url>
+  <url>
+    <loc>https://www.hunterfoomedia.com/ms/products/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/products/"/>
+    <xhtml:link rel="alternate" hreflang="ms" href="https://www.hunterfoomedia.com/ms/products/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hunterfoomedia.com/products/"/>
+  </url>
+  <url>
     <loc>https://www.hunterfoomedia.com/about/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.hunterfoomedia.com/about/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.hunterfoomedia.com/zh/about/"/>
