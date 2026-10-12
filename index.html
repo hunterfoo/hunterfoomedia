@@ -32,6 +32,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="stylesheet" href="/redesign.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.hunterfoomedia.com/#organization","name":"Hunter Foo Media","legalName":"HF Media Solution","alternateName":"Hunter Foo Media","identifier":{"@type":"PropertyValue","propertyID":"Malaysia business registration (SSM)","value":"IP0633909-U"},"url":"https://www.hunterfoomedia.com/","logo":"https://www.hunterfoomedia.com/assets/hfm-logo.png","email":"hello@hunterfoomedia.com","telephone":"+60196273143","areaServed":[{"@type":"Country","name":"Malaysia"},{"@type":"Country","name":"Singapore"}],"sameAs":["https://web.facebook.com/hunterfooai/","https://www.linkedin.com/in/hunterfoo3143/"],"founder":{"@id":"https://www.hunterfoomedia.com/#founder"},"contactPoint":[{"@type":"ContactPoint","telephone":"+60196273143","email":"hello@hunterfoomedia.com","contactType":"customer service","url":"https://wa.me/60196273143","availableLanguage":["en","zh-Hans"],"areaServed":["MY","SG"]}]},{"@type":"WebSite","@id":"https://www.hunterfoomedia.com/#website","url":"https://www.hunterfoomedia.com/","name":"Hunter Foo Media","inLanguage":["en","zh-Hans","ms"],"publisher":{"@id":"https://www.hunterfoomedia.com/#organization"}},{"@type":"Person","@id":"https://www.hunterfoomedia.com/#founder","name":"Hunter Foo","jobTitle":"Founder","url":"https://www.hunterfoomedia.com/about/","image":"https://www.hunterfoomedia.com/assets/hunter-foo-portrait.jpeg","sameAs":["https://www.linkedin.com/in/hunterfoo3143/"],"worksFor":{"@id":"https://www.hunterfoomedia.com/#organization"}},{"@type":"FAQPage","@id":"https://www.hunterfoomedia.com/#faq","url":"https://www.hunterfoomedia.com/#faq","inLanguage":"en","isPartOf":{"@id":"https://www.hunterfoomedia.com/#website"},"mainEntity":[{"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"After the call you get a one-page quote: what you get, how long, how much. No hidden fees. Account management is a separate monthly fee and isn't part of the Starter Plan."}},{"@type":"Question","name":"I'm not technical. Is that a problem?","acceptedAnswer":{"@type":"Answer","text":"No. That's why you'd hire me. Tell me how you work now and where you're stuck. I pick the tools, show you how to use them and leave you a screen recording."}},{"@type":"Question","name":"Do I need to buy software? Will I end up with lots of subscriptions?","acceptedAnswer":{"@type":"Answer","text":"No. I cut the unnecessary steps first. If WhatsApp and Google Sheets can do the job, you don't get new tools. If a paid tool is really needed, I tell you the monthly cost upfront and only use it if you agree."}},{"@type":"Question","name":"How fast will I see results?","acceptedAnswer":{"@type":"Answer","text":"The clock starts when your materials are complete. Positioning around day 7, content plan around day 14, follow-up system on day 28. More clients depends on you posting and following up. I guarantee the system works. I won't promise you a number of sales."}},{"@type":"Question","name":"I'm in Singapore or outside KL. Does that matter?","acceptedAnswer":{"@type":"Answer","text":"No. It's all done remotely over WhatsApp and video calls. Same service in Malaysia and Singapore, in English or Chinese."}},{"@type":"Question","name":"What happens after? Can you run my accounts?","acceptedAnswer":{"@type":"Answer","text":"You get 30 days of support after delivery, including 2 free revisions; extra changes quoted separately. The Starter Plan doesn't cover posting, replying to clients or running your accounts. Ongoing management or monthly content is a separate monthly fee, quoted on the call."}}]}]}</script>
+<link rel="stylesheet" href="/assets/mobile-nav.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -39,7 +40,8 @@
 <header>
   <div class="wrap">
     <a class="logo" href="/" aria-label="Hunter Foo Media home"><img class="logo-img" src="/assets/hfm-logo-nav.png" width="48" height="43" alt="Hunter Foo Media"></a>
-    <nav aria-label="Main navigation">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" data-open="Menu" data-close="Close"><span class="bars" aria-hidden="true"></span><span class="lbl">Menu</span></button>
+<nav id="site-menu" aria-label="Main navigation">
       <a href="/services/">Services</a>
 <a href="/products/">Products</a>
 <a href="/#value">The maths</a>
@@ -348,5 +350,6 @@ document.querySelectorAll("a.wa").forEach(function(a){a.href=wa;a.target="_blank
   ["c1","c2","c3"].forEach(function(i){document.getElementById(i).addEventListener("input",up)});
 })();
 </script>
+<script src="/assets/mobile-nav.js" defer></script>
 </body>
 </html>
