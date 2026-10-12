@@ -14,6 +14,7 @@ LANGS = {"en": ("", "en", "en_MY", "EN"), "zh": ("/zh", "zh-Hans", "zh_MY", "中
 IDX = {"en": 0, "ms": 1}
 C = r'[\u3000-\u9fff\uff00-\uffef]'
 LEGAL = {"en": "About", "zh": "关于我们", "ms": "Tentang Kami"}
+MENU = {"en": ("Menu", "Close"), "zh": ("菜单", "关闭"), "ms": ("Menu", "Tutup")}
 SUF = {"en": " a year", "ms": " setahun"}
 
 ORG = {"@type": "Organization", "@id": D + "/#organization", "name": "Hunter Foo Media",
@@ -102,6 +103,16 @@ def build(src, path, lang):
         s = s.replace('<a class="btn sm wa"', sw + '\n    <a class="btn sm wa"', 1)
     else:
         s = s.replace('<div class="header-actions">', '<div class="header-actions">' + sw, 1)
+    # mobile hamburger menu
+    ml = MENU[lang]
+    btn = ('<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-menu" data-open="%s" data-close="%s">'
+           '<span class="bars" aria-hidden="true"></span><span class="lbl">%s</span></button>\n') % (ml[0], ml[1], ml[0])
+    s = re.sub(r'<nav( class="compact")? aria-label="([^"]*)">', lambda m: btn + '<nav id="site-menu"%s aria-label="%s">' % (m.group(1) or '', m.group(2)), s, 1)
+    hn = re.search(r'<nav id="site-menu".*?</nav>', s, re.S)
+    if hn and ('href="%s/about/"' % p) not in hn.group(0):
+        s = s[:hn.end() - 6] + '<a class="m-only" href="%s/about/">%s</a>' % (p, LEGAL[lang]) + s[hn.end() - 6:]
+    s = s.replace('</head>', '<link rel="stylesheet" href="/assets/mobile-nav.css">\n</head>', 1)
+    s = s.replace('</body>', '<script src="/assets/mobile-nav.js" defer></script>\n</body>', 1)
     s = re.sub(r'<p style="margin-top:10px;font-size:12.5px">© <span id="year">2026</span> Hunter Foo Media</p>', '', s)
     s = s.replace('<span>© <span id="year">2026</span> Hunter Foo Media</span>', '<span>Hunter Foo Media</span>')
     s = s.replace('</footer>', legal(lang, p) + '\n</footer>', 1)
