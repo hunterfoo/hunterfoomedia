@@ -101,17 +101,33 @@ ADS["ms"] = dict(
  wamsg="Hai Hunter, saya nak tanya tentang iklan ChatGPT.\n1) Pernah jalankan iklan Facebook/Google? (ya/tidak): __\nAnggaran bajet sebulan: __\nHasil atau tangkapan skrin: __\n2) Dari mana pelanggan saya datang sekarang: __\n3) Ada laman web dan Halaman Facebook? __",
 )
 
+EX = {'en': {'appr': 'You approve every ad before it is submitted.', 'tag': 'Example only', 'h': 'A simple example, step by step', 'intro': 'This is a made-up business, not a real client. It only shows how the pieces fit together. No results or numbers are promised.', 'biz': 'CoolBreeze Aircon (example)', 's1h': '1 · A customer asks ChatGPT', 'q': 'My aircon is leaking water at home. Should I get it serviced or replace it?', 'a': 'ChatGPT gives its usual answer: common causes, what to check, and when servicing is enough. (Shortened sample.)', 's2h': '2 · A Sponsored ad appears under the answer', 'sp': 'Sponsored', 'ah': 'Aircon leaking? Book a check', 'ad': 'Aircon servicing in Singapore. WhatsApp us for a quote.', 'al': 'coolbreeze.example', 's3h': '3 · The customer taps the ad', 's3': 'They land on a short page about aircon servicing, with a WhatsApp button to ask for a quote.', 's4h': '4 · What we did for the business', 's4': ['Helped set up and verify the ad account', 'Set up the landing page and tracking (OpenAI pixel)', 'Wrote the ad copy and chose the image', 'You approved every ad before it was submitted', 'Ran the campaign and sent a daily ad report'], 's5h': '5 · What the business prepared', 's5': ['A company registered in Singapore', 'The website, with a tracking tag installed', 'What they sell, prices and areas served', 'A monthly ad budget and a company card', 'Logo and photos']}, 'zh': {'appr': '每一条广告提交之前，都由你批准。', 'tag': '示例', 'h': '一个简单的例子，一步一步看', 'intro': '这是虚构的生意，不是真实客户，只用来说明各个环节怎么配合。不承诺任何结果或数字。', 'biz': 'CoolBreeze 冷气服务（示例）', 's1h': '1 · 客户问 ChatGPT', 'q': '我家冷气漏水，该找人保养还是直接换新的？', 'a': 'ChatGPT 照常给出回答：常见原因、该检查什么、什么时候保养就够了。（简短示意）', 's2h': '2 · 回答下方出现 Sponsored 广告', 'sp': 'Sponsored', 'ah': '冷气漏水？预约检查', 'ad': '新加坡冷气保养服务。WhatsApp 我们问报价。', 'al': 'coolbreeze.example', 's3h': '3 · 客户点进广告', 's3': '来到一个简短的冷气保养页面，页面上有 WhatsApp 按钮，可以直接问报价。', 's4h': '4 · 我们为这门生意做了什么', 's4': ['协助开通并验证广告账号', '设置落地页和追踪（OpenAI pixel）', '写广告文案、选图片', '每一条广告提交前都由你批准', '管理投放，每天发一份广告报告'], 's5h': '5 · 这门生意准备了什么', 's5': ['在新加坡注册的公司', '装好追踪代码的网站', '卖什么、价格和服务地区', '每月广告预算和公司付款卡', 'Logo 和照片']}, 'ms': {'appr': 'Anda luluskan setiap iklan sebelum ia dihantar.', 'tag': 'Contoh sahaja', 'h': 'Satu contoh mudah, langkah demi langkah', 'intro': 'Ini perniagaan rekaan, bukan pelanggan sebenar. Ia hanya menunjukkan bagaimana setiap bahagian bersambung. Tiada hasil atau angka dijanjikan.', 'biz': 'CoolBreeze Aircon (contoh)', 's1h': '1 · Pelanggan bertanya ChatGPT', 'q': 'Aircond rumah saya bocor air. Patut servis atau tukar baharu?', 'a': 'ChatGPT beri jawapan seperti biasa: punca biasa, apa perlu disemak, dan bila servis sudah cukup. (Contoh dipendekkan.)', 's2h': '2 · Iklan Sponsored muncul di bawah jawapan', 'sp': 'Sponsored', 'ah': 'Aircond bocor? Tempah semakan', 'ad': 'Servis aircond di Singapura. WhatsApp kami untuk sebut harga.', 'al': 'coolbreeze.example', 's3h': '3 · Pelanggan tekan iklan', 's3': 'Mereka sampai ke halaman ringkas tentang servis aircond, dengan butang WhatsApp untuk minta sebut harga.', 's4h': '4 · Apa yang kami buat untuk perniagaan itu', 's4': ['Bantu sediakan dan sahkan akaun iklan', 'Sediakan halaman pendaratan dan penjejakan (piksel OpenAI)', 'Tulis teks iklan dan pilih imej', 'Anda luluskan setiap iklan sebelum ia dihantar', 'Uruskan kempen dan hantar laporan iklan harian'], 's5h': '5 · Apa yang perniagaan itu sediakan', 's5': ['Syarikat berdaftar di Singapura', 'Laman web dengan kod penjejakan dipasang', 'Apa dijual, harga dan kawasan perkhidmatan', 'Bajet iklan bulanan dan kad syarikat', 'Logo dan gambar']}}
+for _k in ADS:
+    ADS[_k]["ex"] = EX[_k]
+    ADS[_k]["do"] = ADS[_k]["do"][:3] + [EX[_k]["appr"]] + ADS[_k]["do"][3:]
+    ADS[_k]["fine"] = EX[_k]["appr"] + " " + ADS[_k]["fine"]
+
+def _example(k):
+    e = ADS[k]["ex"]
+    li = lambda xs: "<ul>" + "".join("<li>%s</li>" % x for x in xs) + "</ul>"
+    return ('<div class="pd-ex" id="ads-example"><p class="pd-ex-tag">%s</p><h3>%s</h3><p>%s</p><ol class="pd-ex-steps">'
+            '<li><h4>%s</h4><div class="pd-ex-chat"><p class="pd-ex-q">%s</p><p class="pd-ex-a">%s</p>'
+            '<div class="pd-ex-ad" role="img" aria-label="%s"><span class="pd-ex-sp">%s</span><b>%s</b><strong>%s</strong><span>%s</span><u>%s</u></div></div></li>'
+            '<li><h4>%s</h4><p>%s</p></li><li><h4>%s</h4>%s</li><li><h4>%s</h4>%s</li></ol></div>') % (
+        e["tag"], e["h"], e["intro"], e["s1h"] + " → " + e["s2h"], e["q"], e["a"], e["tag"], e["sp"], e["biz"], e["ah"], e["ad"], e["al"],
+        e["s3h"], e["s3"], e["s4h"], li(e["s4"]), e["s5h"], li(e["s5"]))
+
 def _ads(k):
     a = ADS[k]
     ul = lambda xs: "<ul class=\"pd-priv\">" + "".join("<li>%s</li>" % x for x in xs) + "</ul>"
     link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
     return ('<section class="paper" id="chatgpt-ads"><div class="wrap section prose"><p class="eyebrow"><i></i>%s</p><h2>%s</h2>'
             '<div class="pd-intro"><div>%s<h3>%s</h3>%s</div><div><h3>%s</h3>%s<h3>%s</h3>%s</div></div>'
-            '<div class="pd-ads-intake"><h3>%s</h3><ol class="pd-priv">%s</ol><p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p><p class="pd-mini">%s</p></div>'
+            '%s<div class="pd-ads-intake"><h3>%s</h3><ol class="pd-priv">%s</ol><p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p><p class="pd-mini">%s</p></div>'
             '<p class="pd-mini">%s</p></div></section>\n') % (
         a["eyebrow"], a["h"], "".join("<p>%s</p>" % x for x in a["p"]), a["knowh"], ul(a["know"]),
         a["doh"], ul(a["do"]), a["preph"], ul(a["prep"]),
-        a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
+        _example(k), a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
 # ---------- shared demo structure (language-neutral) ----------
 POSITIONS = ["warehouse", "operator", "cs", "tech"]
