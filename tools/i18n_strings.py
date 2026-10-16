@@ -406,3 +406,11 @@ T.update({
 '或用 WhatsApp 发送你的情况，问问适不适合 →': ('Or send me your situation on WhatsApp and ask if it fits →', 'Atau hantar situasi anda di WhatsApp dan tanya sama ada sesuai →'),
 '你好 Hunter，我想了解 ChatGPT 广告。\\n1）以前投过 Facebook/Google 广告吗（有/没有）：＿＿\\n每月大概预算：＿＿\\n成果或截图：＿＿\\n2）现在客户从哪里来：＿＿\\n3）有没有网站和 Facebook 专页：＿＿': ("Hi Hunter, I'd like to ask about ChatGPT ads.\\n1) Have I run Facebook/Google ads before? (yes/no): __\\nRough monthly budget: __\\nResults or screenshots: __\\n2) Where my customers come from now: __\\n3) Website and Facebook Page? __", "Hai Hunter, saya nak tanya tentang iklan ChatGPT.\\n1) Pernah jalankan iklan Facebook/Google? (ya/tidak): __\\nAnggaran bajet sebulan: __\\nHasil atau tangkapan skrin: __\\n2) Dari mana pelanggan saya datang sekarang: __\\n3) Ada laman web dan Halaman Facebook? __"),
 })
+
+T.update({
+'示例': ('Example only', 'Contoh sahaja'),
+'我家冷气漏水，该找人保养还是直接换新的？': ('My aircon is leaking water at home. Should I get it serviced or replace it?', 'Aircond rumah saya bocor air. Patut servis atau tukar baharu?'),
+'CoolBreeze 冷气服务（示例）': ('CoolBreeze Aircon (example)', 'CoolBreeze Aircon (contoh)'),
+'冷气漏水？预约检查': ('Aircon leaking? Book a check', 'Aircond bocor? Tempah semakan'),
+'新加坡冷气保养服务。WhatsApp 我们问报价。': ('Aircon servicing in Singapore. WhatsApp us for a quote.', 'Servis aircond di Singapura. WhatsApp kami untuk sebut harga.'),
+})

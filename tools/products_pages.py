@@ -107,26 +107,66 @@ for _k in ADS:
     ADS[_k]["do"] = ADS[_k]["do"][:3] + [EX[_k]["appr"]] + ADS[_k]["do"][3:]
     ADS[_k]["fine"] = EX[_k]["appr"] + " " + ADS[_k]["fine"]
 
+FLOW = {
+ "en": [("Ask", "A customer asks ChatGPT a question"), ("Sponsored ad", "A labelled ad appears under the answer"), ("Tap", "They tap the ad and land on your page"), ("Chat on WhatsApp", "They message you to ask for a quote")],
+ "zh": [("提问", "客户问 ChatGPT 一个问题"), ("Sponsored 广告", "回答下方出现标注的广告"), ("点击", "点进广告，来到你的页面"), ("WhatsApp 洽谈", "客户发消息向你问报价")],
+ "ms": [("Bertanya", "Pelanggan bertanya ChatGPT"), ("Iklan Sponsored", "Iklan berlabel muncul di bawah jawapan"), ("Tekan", "Mereka tekan iklan dan sampai ke halaman anda"), ("Chat di WhatsApp", "Mereka mesej anda untuk minta sebut harga")],
+}
+_I = lambda p: '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">%s</svg>' % p
+ICON = {
+ "ask": _I('<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9.5 10a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7"/><path d="M12 17h.01"/>'),
+ "ad": _I('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h10"/><path d="M17 9.5h.01"/>'),
+ "tap": _I('<path d="M9 11V5a2 2 0 1 1 4 0v6"/><path d="M13 10.5a2 2 0 0 1 4 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.5 15a1.8 1.8 0 0 1 3-2L9 15"/>'),
+ "wa": _I('<path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-2-1-.9.8a3.5 3.5 0 0 1-1.6-1.6l.8-.9-1-2z"/>'),
+ "cal": _I('<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/>'),
+ "bld": _I('<path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-5h6v5M8.5 9.5h.01M12 9.5h.01M15.5 9.5h.01M8.5 13h.01M12 13h.01M15.5 13h.01"/>'),
+ "tgt": _I('<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/>'),
+ "usr": _I('<circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3.2 3.2 0 0 1 0 6M18.5 14.2A6.5 6.5 0 0 1 21.5 20"/>'),
+ "shd": _I('<path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/>'),
+ "chk": _I('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),
+}
+CHECK = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
+KNOW_ICONS = ["cal", "bld", "tgt", "usr", "shd"]
+
+def _adcard(e, mini=False):
+    return ('<div class="ad-card%s"><span class="ad-sp">%s</span><span class="ad-biz">%s</span><strong class="ad-h">%s</strong><span class="ad-d">%s</span><span class="ad-url">%s</span></div>'
+            % (" mini" if mini else "", e["sp"], e["biz"], e["ah"], e["ad"], e["al"]))
+
 def _example(k):
     e = ADS[k]["ex"]
-    li = lambda xs: "<ul>" + "".join("<li>%s</li>" % x for x in xs) + "</ul>"
-    return ('<div class="pd-ex" id="ads-example"><p class="pd-ex-tag">%s</p><h3>%s</h3><p>%s</p><ol class="pd-ex-steps">'
-            '<li><h4>%s</h4><div class="pd-ex-chat"><p class="pd-ex-q">%s</p><p class="pd-ex-a">%s</p>'
-            '<div class="pd-ex-ad" role="img" aria-label="%s"><span class="pd-ex-sp">%s</span><b>%s</b><strong>%s</strong><span>%s</span><u>%s</u></div></div></li>'
-            '<li><h4>%s</h4><p>%s</p></li><li><h4>%s</h4>%s</li><li><h4>%s</h4>%s</li></ol></div>') % (
-        e["tag"], e["h"], e["intro"], e["s1h"] + " → " + e["s2h"], e["q"], e["a"], e["tag"], e["sp"], e["biz"], e["ah"], e["ad"], e["al"],
-        e["s3h"], e["s3"], e["s4h"], li(e["s4"]), e["s5h"], li(e["s5"]))
+    li = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
+    split = lambda t: t.split(" · ", 1)
+    n1, t1 = split(e["s1h"]); n2, t2 = split(e["s2h"]); n3, t3 = split(e["s3h"]); n4, t4 = split(e["s4h"]); n5, t5 = split(e["s5h"])
+    j = lambda n, t, body: '<li class="ad-jstep"><span class="ad-jn">%s</span><h4>%s</h4>%s</li>' % (n, t, body)
+    return ('<div class="ad-ex" id="ads-example"><div class="ad-ex-head"><span class="ad-chip">%s</span><h3>%s</h3><p>%s</p></div>'
+            '<ol class="ad-journey">%s%s%s</ol>'
+            '<div class="ad-two ad-ex-two"><div class="ad-panel"><h4><span class="ad-jn">%s</span>%s</h4>%s</div><div class="ad-panel"><h4><span class="ad-jn">%s</span>%s</h4>%s</div></div></div>') % (
+        e["tag"], e["h"], e["intro"],
+        j(n1, t1, '<p class="ad-bubble user">%s</p>' % e["q"]),
+        j(n2, t2, _adcard(e, True)),
+        j(n3, t3, "<p>%s</p>" % e["s3"]),
+        n4, t4, li(e["s4"]), n5, t5, li(e["s5"]))
 
 def _ads(k):
-    a = ADS[k]
-    ul = lambda xs: "<ul class=\"pd-priv\">" + "".join("<li>%s</li>" % x for x in xs) + "</ul>"
+    a = ADS[k]; e = a["ex"]
     link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
-    return ('<section class="paper" id="chatgpt-ads"><div class="wrap section prose"><p class="eyebrow"><i></i>%s</p><h2>%s</h2>'
-            '<div class="pd-intro"><div>%s<h3>%s</h3>%s</div><div><h3>%s</h3>%s<h3>%s</h3>%s</div></div>'
-            '%s<div class="pd-ads-intake"><h3>%s</h3><ol class="pd-priv">%s</ol><p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p><p class="pd-mini">%s</p></div>'
-            '<p class="pd-mini">%s</p></div></section>\n') % (
-        a["eyebrow"], a["h"], "".join("<p>%s</p>" % x for x in a["p"]), a["knowh"], ul(a["know"]),
-        a["doh"], ul(a["do"]), a["preph"], ul(a["prep"]),
+    icons = ["ask", "ad", "tap", "wa"]
+    flow = "".join('<li class="ad-step"><span class="ad-ico">%s</span><span class="ad-sn">%d</span><h3>%s</h3><p>%s</p></li>' % (ICON[icons[i]], i + 1, t, d) for i, (t, d) in enumerate(FLOW[k]))
+    know = "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[KNOW_ICONS[i]], x) for i, x in enumerate(a["know"]))
+    chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
+    mock = ('<div class="ad-mock" aria-label="%s"><span class="ad-chip dark">%s</span><p class="ad-bubble user">%s</p><p class="ad-bubble bot">%s</p>%s</div>'
+            % (_esc(e["tag"]), e["tag"], e["q"], e["a"], _adcard(e)))
+    return ('<section class="paper ad-section" id="chatgpt-ads"><div class="wrap section">'
+            '<div class="ad-hero"><div class="ad-hero-copy"><p class="eyebrow"><i></i>%s</p><h2>%s</h2>%s'
+            '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p><p class="ad-note">%s</p></div>%s</div>'
+            '<ol class="ad-flow">%s</ol>'
+            '<h3 class="ad-h3">%s</h3><ul class="ad-knows">%s</ul>'
+            '<div class="ad-two"><div class="ad-panel"><h3>%s</h3>%s</div><div class="ad-panel"><h3>%s</h3>%s</div></div>'
+            '%s'
+            '<div class="ad-intake"><div><h3>%s</h3><ol>%s</ol></div><div class="ad-intake-cta"><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a><p>%s</p></div></div>'
+            '<p class="ad-fine">%s</p></div></section>\n') % (
+        a["eyebrow"], a["h"], "".join("<p>%s</p>" % x for x in a["p"]), link, a["cta"], a["note"], mock,
+        flow, a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
         _example(k), a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
 # ---------- shared demo structure (language-neutral) ----------
