@@ -107,67 +107,92 @@ for _k in ADS:
     ADS[_k]["do"] = ADS[_k]["do"][:3] + [EX[_k]["appr"]] + ADS[_k]["do"][3:]
     ADS[_k]["fine"] = EX[_k]["appr"] + " " + ADS[_k]["fine"]
 
-FLOW = {
- "en": [("Ask", "A customer asks ChatGPT a question"), ("Sponsored ad", "A labelled ad appears under the answer"), ("Tap", "They tap the ad and land on your page"), ("Chat on WhatsApp", "They message you to ask for a quote")],
- "zh": [("提问", "客户问 ChatGPT 一个问题"), ("Sponsored 广告", "回答下方出现标注的广告"), ("点击", "点进广告，来到你的页面"), ("WhatsApp 洽谈", "客户发消息向你问报价")],
- "ms": [("Bertanya", "Pelanggan bertanya ChatGPT"), ("Iklan Sponsored", "Iklan berlabel muncul di bawah jawapan"), ("Tekan", "Mereka tekan iklan dan sampai ke halaman anda"), ("Chat di WhatsApp", "Mereka mesej anda untuk minta sebut harga")],
-}
 _I = lambda p: '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">%s</svg>' % p
 ICON = {
- "ask": _I('<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9.5 10a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7"/><path d="M12 17h.01"/>'),
- "ad": _I('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h6M7 14h10"/><path d="M17 9.5h.01"/>'),
- "tap": _I('<path d="M9 11V5a2 2 0 1 1 4 0v6"/><path d="M13 10.5a2 2 0 0 1 4 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.5 15a1.8 1.8 0 0 1 3-2L9 15"/>'),
- "wa": _I('<path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.3-2-1-.9.8a3.5 3.5 0 0 1-1.6-1.6l.8-.9-1-2z"/>'),
  "cal": _I('<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/>'),
  "bld": _I('<path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-5h6v5M8.5 9.5h.01M12 9.5h.01M15.5 9.5h.01M8.5 13h.01M12 13h.01M15.5 13h.01"/>'),
  "tgt": _I('<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/>'),
  "usr": _I('<circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3.2 3.2 0 0 1 0 6M18.5 14.2A6.5 6.5 0 0 1 21.5 20"/>'),
  "shd": _I('<path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/>'),
- "chk": _I('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),
 }
 CHECK = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
 KNOW_ICONS = ["cal", "bld", "tgt", "usr", "shd"]
 
-def _adcard(e, mini=False):
-    return ('<div class="ad-card%s"><span class="ad-sp">%s</span><span class="ad-biz">%s</span><strong class="ad-h">%s</strong><span class="ad-d">%s</span><span class="ad-url">%s</span></div>'
-            % (" mini" if mini else "", e["sp"], e["biz"], e["ah"], e["ad"], e["al"]))
+# ---- ChatGPT Ads interactive widget (fictional sample data) ----
+def _T(name, biz, url, items):
+    return {"name": name, "biz": biz, "url": url, "qs": [{"q": q, "h": h, "d": d} for q, h, d in items]}
+ADSW = {}
+ADSW["en"] = dict(
+ pick="Choose a business type", qh="A customer asks ChatGPT", ph="Sponsored ad draft", sp="Sponsored",
+ ans="ChatGPT answers the question as usual. The ad appears below the answer. (Sample)",
+ nexth="After the tap", nextt="The customer taps the ad and lands on your page or WhatsApp. We set up the page and tracking (OpenAI pixel), and you get a daily ad report where we run the ads for you.",
+ step="Human approval", pending="Waiting for your approval. No ad is submitted until you approve.", approve="Approve & submit", change="Request changes",
+ approved="Approved. (Demo only: no ad is actually submitted.)", changed="Sent back to the copywriter with your notes. A new draft will appear for approval.",
+ types=[_T("Aircon servicing", "CoolBreeze Aircon (example)", "coolbreeze.example", [
+   ("My aircon is leaking water at home. Should I get it serviced or replace it?", "Aircon leaking? Book a check", "Aircon servicing in Singapore. WhatsApp us for a quote."),
+   ("How often should I service my aircon at home?", "Regular aircon servicing", "Book a servicing slot in Singapore. WhatsApp to ask."),
+   ("Why is my aircon not cold anymore?", "Aircon not cold? Get it checked", "We check and service aircons in Singapore. Ask for a quote on WhatsApp.")]),
+  _T("Beauty salon", "Glow Studio (example)", "glowstudio.example", [
+   ("What facial is good for dry, tight skin?", "Hydrating facial, 60 minutes", "Book a slot at our Puchong studio. WhatsApp to ask."),
+   ("How do I choose a salon for my first facial?", "First facial? Ask us first", "Tell us your skin concern on WhatsApp and we'll suggest a treatment."),
+   ("How early should I do a facial before a wedding?", "Pre-wedding skin care", "Plan your treatments with us. WhatsApp for available slots.")]),
+  _T("Tuition centre", "BrightPath Tuition (example)", "brightpath.example", [
+   ("How do I help my child improve in Maths for PSLE?", "PSLE Maths small-group classes", "Small classes in Singapore. Book a trial lesson on WhatsApp."),
+   ("What should I look for when choosing a tuition centre?", "Choosing a tuition centre?", "Try a trial lesson and see the class first. WhatsApp to book."),
+   ("My child doesn't want to do homework. What can I do?", "Homework help for primary students", "Talk to our teachers on WhatsApp about what your child needs.")])])
+ADSW["zh"] = dict(
+ pick="选择生意类型", qh="客户问 ChatGPT", ph="Sponsored 广告草稿", sp="Sponsored",
+ ans="ChatGPT 照常回答问题，广告出现在回答下方。（示意）",
+ nexth="点击之后", nextt="客户点进广告，来到你的页面或 WhatsApp。我们设置页面和追踪（OpenAI pixel）；若由我们代投广告，每天给你一份广告报告。",
+ step="人工批准", pending="等待你批准。批准前不会提交任何广告。", approve="批准并提交", change="要求修改",
+ approved="已批准。（仅为演示，不会真的提交广告。）", changed="已连同你的意见退回给文案，新草稿会再送来给你批准。",
+ types=[_T("冷气保养", "CoolBreeze 冷气服务（示例）", "coolbreeze.example", [
+   ("我家冷气漏水，该找人保养还是直接换新的？", "冷气漏水？预约检查", "新加坡冷气保养服务。WhatsApp 我们问报价。"),
+   ("家里的冷气多久该保养一次？", "定期冷气保养", "在新加坡预约保养时段。WhatsApp 询问。"),
+   ("为什么我的冷气不冷了？", "冷气不冷？先检查", "新加坡冷气检查与保养。WhatsApp 问报价。")]),
+  _T("美容院", "Glow Studio（示例）", "glowstudio.example", [
+   ("皮肤干又紧绷，做哪种护理比较好？", "补水护理 60 分钟", "蒲种分店预约时段。WhatsApp 询问。"),
+   ("第一次做脸，怎么挑美容院？", "第一次做脸？先问我们", "WhatsApp 告诉我们你的皮肤困扰，我们建议适合的护理。"),
+   ("婚礼前多早开始做脸比较好？", "婚前肌肤护理", "和我们一起规划护理。WhatsApp 查询空档。")]),
+  _T("补习中心", "BrightPath Tuition（示例）", "brightpath.example", [
+   ("怎么帮孩子提升 PSLE 数学？", "PSLE 数学小班", "新加坡小班教学。WhatsApp 预约试听。"),
+   ("挑补习中心要看什么？", "在挑补习中心？", "先试听，亲眼看看班级。WhatsApp 预约。"),
+   ("孩子不想做功课，怎么办？", "小学生功课辅导", "WhatsApp 和老师聊聊孩子需要什么。")])])
+ADSW["ms"] = dict(
+ pick="Pilih jenis perniagaan", qh="Pelanggan bertanya ChatGPT", ph="Draf iklan Sponsored", sp="Sponsored",
+ ans="ChatGPT menjawab soalan seperti biasa. Iklan muncul di bawah jawapan. (Contoh)",
+ nexth="Selepas ditekan", nextt="Pelanggan tekan iklan dan sampai ke halaman atau WhatsApp anda. Kami sediakan halaman dan penjejakan (piksel OpenAI), dan jika kami uruskan iklan, anda terima laporan iklan harian.",
+ step="Kelulusan manusia", pending="Menunggu kelulusan anda. Tiada iklan dihantar sehingga anda luluskan.", approve="Lulus & hantar", change="Minta pindaan",
+ approved="Diluluskan. (Demo sahaja: tiada iklan benar-benar dihantar.)", changed="Dihantar semula kepada penulis bersama nota anda. Draf baharu akan muncul untuk kelulusan.",
+ types=[_T("Servis aircond", "CoolBreeze Aircon (contoh)", "coolbreeze.example", [
+   ("Aircond rumah saya bocor air. Patut servis atau tukar baharu?", "Aircond bocor? Tempah semakan", "Servis aircond di Singapura. WhatsApp kami untuk sebut harga."),
+   ("Berapa kerap patut servis aircond di rumah?", "Servis aircond berkala", "Tempah slot servis di Singapura. WhatsApp untuk bertanya."),
+   ("Kenapa aircond saya tak sejuk lagi?", "Aircond tak sejuk? Semak dahulu", "Semakan dan servis aircond di Singapura. WhatsApp untuk sebut harga.")]),
+  _T("Salun kecantikan", "Glow Studio (contoh)", "glowstudio.example", [
+   ("Rawatan muka apa yang sesuai untuk kulit kering dan tegang?", "Rawatan muka hidrasi 60 minit", "Slot di cawangan Puchong. WhatsApp untuk bertanya."),
+   ("Macam mana nak pilih salun untuk rawatan muka pertama?", "Rawatan muka pertama? Tanya kami dahulu", "Beritahu masalah kulit anda di WhatsApp, kami cadangkan rawatan yang sesuai."),
+   ("Berapa awal patut buat rawatan muka sebelum majlis kahwin?", "Penjagaan kulit pra-perkahwinan", "Rancang rawatan bersama kami. WhatsApp untuk slot kosong.")]),
+  _T("Pusat tuisyen", "BrightPath Tuition (contoh)", "brightpath.example", [
+   ("Macam mana nak bantu anak saya baiki Matematik PSLE?", "Kelas kecil Matematik PSLE", "Kelas kecil di Singapura. Tempah kelas percubaan di WhatsApp."),
+   ("Apa yang perlu dilihat bila pilih pusat tuisyen?", "Sedang pilih pusat tuisyen?", "Cuba kelas percubaan dan lihat kelasnya dahulu. WhatsApp untuk tempah."),
+   ("Anak saya tak mahu buat kerja rumah. Apa patut saya buat?", "Bantuan kerja rumah untuk murid sekolah rendah", "Bualkan dengan guru kami di WhatsApp tentang keperluan anak anda.")])])
 
-def _example(k):
-    e = ADS[k]["ex"]
-    li = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
-    split = lambda t: t.split(" · ", 1)
-    n1, t1 = split(e["s1h"]); n2, t2 = split(e["s2h"]); n3, t3 = split(e["s3h"]); n4, t4 = split(e["s4h"]); n5, t5 = split(e["s5h"])
-    j = lambda n, t, body: '<li class="ad-jstep"><span class="ad-jn">%s</span><h4>%s</h4>%s</li>' % (n, t, body)
-    return ('<div class="ad-ex" id="ads-example"><div class="ad-ex-head"><span class="ad-chip">%s</span><h3>%s</h3><p>%s</p></div>'
-            '<ol class="ad-journey">%s%s%s</ol>'
-            '<div class="ad-two ad-ex-two"><div class="ad-panel"><h4><span class="ad-jn">%s</span>%s</h4>%s</div><div class="ad-panel"><h4><span class="ad-jn">%s</span>%s</h4>%s</div></div></div>') % (
-        e["tag"], e["h"], e["intro"],
-        j(n1, t1, '<p class="ad-bubble user">%s</p>' % e["q"]),
-        j(n2, t2, _adcard(e, True)),
-        j(n3, t3, "<p>%s</p>" % e["s3"]),
-        n4, t4, li(e["s4"]), n5, t5, li(e["s5"]))
-
-def _ads(k):
+def _ads(k, s):
     a = ADS[k]; e = a["ex"]
     link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
-    icons = ["ask", "ad", "tap", "wa"]
-    flow = "".join('<li class="ad-step"><span class="ad-ico">%s</span><span class="ad-sn">%d</span><h3>%s</h3><p>%s</p></li>' % (ICON[icons[i]], i + 1, t, d) for i, (t, d) in enumerate(FLOW[k]))
     know = "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[KNOW_ICONS[i]], x) for i, x in enumerate(a["know"]))
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
-    mock = ('<div class="ad-mock" aria-label="%s"><span class="ad-chip dark">%s</span><p class="ad-bubble user">%s</p><p class="ad-bubble bot">%s</p>%s</div>'
-            % (_esc(e["tag"]), e["tag"], e["q"], e["a"], _adcard(e)))
-    return ('<section class="paper ad-section" id="chatgpt-ads"><div class="wrap section">'
-            '<div class="ad-hero"><div class="ad-hero-copy"><p class="eyebrow"><i></i>%s</p><h2>%s</h2>%s'
-            '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p><p class="ad-note">%s</p></div>%s</div>'
-            '<ol class="ad-flow">%s</ol>'
+    demo = _demo_shell(4, e["h"], e["intro"], s["badge"], '<div class="pd-ads" data-demo="ads"></div>')
+    return ('<section class="wrap section pd-products pd-ads-sec" id="chatgpt-ads"><p class="eyebrow"><i></i>%s</p><h2>%s</h2><div class="pd-ads-lede">%s'
+            '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p></div>%s</section>\n'
+            '<section class="paper ad-section"><div class="wrap section">'
             '<h3 class="ad-h3">%s</h3><ul class="ad-knows">%s</ul>'
             '<div class="ad-two"><div class="ad-panel"><h3>%s</h3>%s</div><div class="ad-panel"><h3>%s</h3>%s</div></div>'
-            '%s'
             '<div class="ad-intake"><div><h3>%s</h3><ol>%s</ol></div><div class="ad-intake-cta"><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a><p>%s</p></div></div>'
             '<p class="ad-fine">%s</p></div></section>\n') % (
-        a["eyebrow"], a["h"], "".join("<p>%s</p>" % x for x in a["p"]), link, a["cta"], a["note"], mock,
-        flow, a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
-        _example(k), a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
+        a["eyebrow"], a["h"], "".join("<p>%s</p>" % x for x in a["p"]), link, a["cta"], demo,
+        a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
+        a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
 # ---------- shared demo structure (language-neutral) ----------
 POSITIONS = ["warehouse", "operator", "cs", "tech"]
@@ -382,9 +407,9 @@ def _main(s):
                  s["introh"], intro, s["engh"], eng,
                  s["prodh"], s["prodsub"],
                  _demo_shell(1, s["p1h"], s["p1d"], s["badge"], d1), _demo_shell(2, s["p2h"], s["p2d"], s["badge"], d2), _demo_shell(3, s["p3h"], s["p3d"], s["badge"], d3),
-                 _ads(s["k"]), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv,
+                 _ads(s["k"], s), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv,
                  s["ctaey"], s["ctah"], _esc(s["wamsg"]), s["reg"],
-                 json.dumps({"rec": s["rec"], "wa": s["wa"], "ct": s["ct"], "jobs": JOBS, "presets": PRESETS, "positions": POSITIONS, "tags": TAGS, "areas": AREAS}, ensure_ascii=False).replace("</", "<\\/"))
+                 json.dumps({"rec": s["rec"], "wa": s["wa"], "ct": s["ct"], "ads": ADSW[s["k"]], "jobs": JOBS, "presets": PRESETS, "positions": POSITIONS, "tags": TAGS, "areas": AREAS}, ensure_ascii=False).replace("</", "<\\/"))
 
 PRODUCTS = {}
 for k, s in S.items():

@@ -143,4 +143,34 @@ const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]);
   root.append(h("h4", {}, C.pick), tabs, body);
   show(0);
 })();
+/* ---------- 4. ChatGPT Ads draft + approval ---------- */
+(function ads() {
+  const root = document.querySelector('[data-demo="ads"]'); if (!root || !D.ads) return;
+  const C = D.ads;
+  const tabs = h("div", { class: "pd-chips", role: "tablist", "aria-label": C.pick });
+  const body = h("div", { class: "pd-ctbody", role: "tabpanel" });
+  const tabBtns = C.types.map((t, i) => h("button", { type: "button", role: "tab", class: "pd-chip", "aria-selected": "false", onclick: () => show(i, 0) }, t.name));
+  tabs.append(...tabBtns);
+  function show(i, qi) {
+    const t = C.types[i], q = t.qs[qi];
+    tabBtns.forEach((b, j) => b.setAttribute("aria-selected", String(i === j)));
+    const st = h("p", { class: "pd-approval", "aria-live": "polite" }, C.pending);
+    const ap = h("button", { type: "button", class: "button pd-run" }, C.approve, h("span", { "aria-hidden": "true" }, "✓"));
+    const ch = h("button", { type: "button", class: "pd-reset" }, C.change);
+    ap.addEventListener("click", () => { st.textContent = C.approved; st.dataset.state = "ok"; ap.disabled = ch.disabled = true; });
+    ch.addEventListener("click", () => { st.textContent = C.changed; st.dataset.state = "back"; });
+    const qs = h("ol", { class: "pd-cal pd-qs" }, t.qs.map((x, k) => h("li", { class: k === qi ? "on" : "" },
+      h("button", { type: "button", class: "pd-q", "aria-pressed": String(k === qi), onclick: () => show(i, k) }, x.q))));
+    body.replaceChildren(
+      h("div", { class: "pd-grid" },
+        h("div", {}, h("h4", {}, C.qh), qs),
+        h("div", {}, h("h4", {}, C.ph),
+          h("div", { class: "pd-post pd-askpost" }, h("p", { class: "pd-pg" }, "💬 " + q.q), h("p", { class: "pd-mini" }, C.ans)),
+          h("div", { class: "pd-adcard" }, h("span", { class: "pd-adsp" }, C.sp), h("span", { class: "pd-adbiz" }, t.biz), h("strong", {}, q.h), h("span", {}, q.d), h("span", { class: "pd-adurl" }, t.url)),
+          h("p", { class: "pd-mini pd-adnext" }, h("b", {}, C.nexth + ": "), C.nextt),
+          h("div", { class: "pd-card pd-approve" }, h("h5", {}, "👤 " + C.step), st, h("div", { class: "pd-row" }, ap, ch)))));
+  }
+  root.append(h("h4", {}, C.pick), tabs, body);
+  show(0, 0);
+})();
 })();
