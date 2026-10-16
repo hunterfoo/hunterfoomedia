@@ -182,7 +182,13 @@ def _ads(k, s):
     link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
     know = "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[KNOW_ICONS[i]], x) for i, x in enumerate(a["know"]))
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
-    demo = _demo_shell(4, e["h"], e["intro"], s["badge"], '<div class="pd-ads" data-demo="ads"></div>')
+    W = ADSW[k]; t0 = W["types"][0]
+    fb = ('<div class="pd-ads-static"><div class="pd-grid"><div><h4>%s</h4><ol class="pd-cal pd-qs">%s</ol></div><div><h4>%s</h4>'
+          '<div class="pd-adcard"><span class="pd-adsp">%s</span><span class="pd-adbiz">%s</span><strong>%s</strong><span>%s</span><span class="pd-adurl">%s</span></div>'
+          '<div class="pd-card pd-approve"><h5>\U0001F464 %s</h5><p class="pd-approval">%s</p></div></div></div></div>') % (
+        W["qh"], "".join('<li%s><span class="pd-q">%s</span></li>' % (' class="on"' if i == 0 else "", x["q"]) for i, x in enumerate(t0["qs"])),
+        W["ph"], W["sp"], t0["biz"], t0["qs"][0]["h"], t0["qs"][0]["d"], t0["url"], W["step"], W["pending"])
+    demo = _demo_shell(4, e["h"], e["intro"], s["badge"], '<div class="pd-ads" data-demo="ads">%s</div>' % fb)
     return ('<section class="wrap section pd-products pd-ads-sec" id="chatgpt-ads"><p class="eyebrow"><i></i>%s</p><h2>%s</h2><div class="pd-ads-lede">%s'
             '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p></div>%s</section>\n'
             '<section class="paper ad-section"><div class="wrap section">'

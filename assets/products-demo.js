@@ -170,7 +170,7 @@ const fmt = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]);
           h("p", { class: "pd-mini pd-adnext" }, h("b", {}, C.nexth + ": "), C.nextt),
           h("div", { class: "pd-card pd-approve" }, h("h5", {}, "👤 " + C.step), st, h("div", { class: "pd-row" }, ap, ch)))));
   }
-  root.append(h("h4", {}, C.pick), tabs, body);
+  root.replaceChildren(h("h4", {}, C.pick), tabs, body);
   show(0, 0);
 })();
 })();

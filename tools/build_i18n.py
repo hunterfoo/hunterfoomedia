@@ -123,7 +123,18 @@ def build(src, path, lang):
         if left: print("UNTRANSLATED", lang, path, left)
     return s
 
+import hashlib
+def _v(m):
+    fp = m.group(2).lstrip("/")
+    if not os.path.isfile(fp): return m.group(0)
+    return '%s%s?v=%s"' % (m.group(1), m.group(2), hashlib.md5(open(fp, "rb").read()).hexdigest()[:8])
+
+def bust(html):
+    # cache-busting: version every local css/js reference by content hash
+    return re.sub(r'((?:href|src)=")(/(?:assets/)?[A-Za-z0-9._-]+\.(?:css|js))"', _v, html)
+
 def write(lang, path, html):
+    html = bust(html)
     out = (LANGS[lang][0].lstrip("/") + path).lstrip("/")
     os.makedirs(out or ".", exist_ok=True) if out else None
     with open(os.path.join(out, "index.html"), "w") as f: f.write(html)
