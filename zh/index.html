@@ -235,6 +235,19 @@
   </div>
 </section>
 
+<!-- CHATGPT ADS -->
+<section id="chatgpt-ads" aria-labelledby="ads-title">
+  <div class="wrap narrow">
+    <div class="kicker">新服务 · ChatGPT 广告</div>
+    <h2 id="ads-title">你的客户，也在问 ChatGPT。</h2>
+    <p class="lead">现在很多人遇到问题、想找服务，会直接问 ChatGPT：我该怎么做、为什么会这样、该选哪一种？ChatGPT 广告出现在回答下方，标注 Sponsored，面向 Free 和 Go 用户。这是 Google 搜索之外，客户提问的另一个地方。</p>
+    <p>ChatGPT 广告自助投放已于 2026 年 9 月 23 日在新加坡和马来西亚开放。开户验证、追踪设置、广告文案、投放管理和每日广告报告，我们帮你做。</p>
+    <p class="fine">不保证任何结果。费用在开工前以书面报价确认。</p>
+    <p><a class="btn" href="/zh/products/#chatgpt-ads">了解 ChatGPT 广告服务 →</a></p>
+    <p class="fine"><a class="wa-ads" href="https://wa.me/60196273143" style="text-decoration:underline;text-underline-offset:3px">或用 WhatsApp 发送你的情况，问问适不适合 →</a></p>
+  </div>
+</section>
+
 <!-- FIT -->
 <section aria-labelledby="fit-title">
   <div class="wrap">
@@ -334,6 +347,8 @@
 
 <script>
 var wa="https://wa.me/60196273143?text="+encodeURIComponent("你好 Hunter，我想预约 20 分钟免费诊断。我做的是：＿＿，最卡的是：＿＿");
+var waAds="https://wa.me/60196273143?text="+encodeURIComponent("你好 Hunter，我想了解 ChatGPT 广告。\n1）以前投过 Facebook/Google 广告吗（有/没有）：＿＿\n每月大概预算：＿＿\n成果或截图：＿＿\n2）现在客户从哪里来：＿＿\n3）有没有网站和 Facebook 专页：＿＿");
+document.querySelectorAll("a.wa-ads").forEach(function(a){a.href=waAds;a.target="_blank";a.rel="noopener noreferrer"});
 document.querySelectorAll("a.wa").forEach(function(a){a.href=wa;a.target="_blank";a.rel="noopener noreferrer"});
 (function(){
   var y=document.getElementById("year"); if(y) y.textContent=String(new Date().getFullYear());

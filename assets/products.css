@@ -40,3 +40,5 @@
 .pd-cslede{font-size:18px!important;max-width:900px;color:var(--green)!important}
 .pd-nums{list-style:none;padding:0;margin:0 0 8px;display:grid;gap:12px}.pd-nums li{display:grid;grid-template-columns:90px 1fr;gap:14px;align-items:center;background:#fff;border:1px solid #dfe4dc;border-left:4px solid var(--orange);padding:12px 16px}.pd-nums b{font-size:40px;line-height:1;color:var(--green)}.pd-nums span{font-size:15px;line-height:1.5;color:#405046}
 #case-study h3{font-size:19px;margin:18px 0 8px}#case-study a{text-decoration:underline;text-underline-offset:3px}.pd-how-wrap{border-top:1px solid #dfe4dc}.pd-slabel{font-size:11.5px;color:#667}
+.pd-ads-intake{margin-top:40px;padding:26px 28px;border:1px solid #c8cfc6;background:#fff}.pd-ads-intake h3{margin:0 0 10px}.pd-ads-intake .pd-priv{margin:0 0 18px}
+#chatgpt-ads h3{margin:22px 0 6px}#chatgpt-ads .pd-intro h3:first-child,#chatgpt-ads .pd-intro>div>h3:first-child{margin-top:0}#chatgpt-ads .pd-mini{margin-top:16px}

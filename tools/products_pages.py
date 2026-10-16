@@ -2,6 +2,116 @@
 # Copy per language is written natively (EN written from scratch, not translated).
 # Demo data is fictional sample data; it is embedded as JSON and run by /assets/products-demo.js.
 import json
+import urllib.parse
+ADS = {}
+ADS["en"] = dict(
+ jump="ChatGPT Ads", eyebrow="NEW · CHATGPT ADS",
+ h="ChatGPT Ads: be there when your customers ask",
+ p=["Many people now ask ChatGPT directly when they want to solve a problem or find a service: <em>how do I…</em>, <em>why does…</em>, <em>what kind of… should I choose?</em> ChatGPT ads appear below the answer, labelled Sponsored, for people on the Free and Go plans, the largest group of ChatGPT users.",
+    "Think of it as another place your customers are asking, beyond Google search. It sits alongside the channels you already use."],
+ knowh="What to know before you start",
+ know=["Self-serve ChatGPT Ads opened in Singapore and Malaysia on 23 September 2026.",
+       "The advertising and billing company must be registered in Singapore or Malaysia. New accounts may start limited to their home country.",
+       "Targeting is by conversation context. There are no keywords and no audience uploads.",
+       "Ads are shown only to Free and Go users, and not on sensitive topics.",
+       "We don't promise any budget level, ranking or result. Your ad budget is yours to set."],
+ doh="What we do",
+ do=["Account setup and verification help",
+     "Landing page and tracking setup (OpenAI pixel)",
+     "Ad copy and creative",
+     "Campaign management",
+     "Reporting: where we run paid ads for you, you get a daily ad performance report",
+     "Hands-on implementation: Hunter works inside your business with you to get the tools and workflow running"],
+ preph="What you need to prepare",
+ prep=["A company registered in Singapore or Malaysia",
+       "A website or landing page where a tracking tag can be installed",
+       "What you sell, your prices, your target customers and areas",
+       "A monthly ad budget and a company payment card",
+       "Brand images and your logo"],
+ intakeh="A few questions to start",
+ intake=["Have you run Facebook or Google ads before? (yes or no, roughly how much per month, and results or screenshots if you have them)",
+         "Where do your customers come from today?",
+         "Do you have a website and a Facebook Page?"],
+ cta="Send your answers on WhatsApp", note="Opens WhatsApp with these questions filled in. Nothing is sent until you press send.",
+ fine="Scope and fees are agreed in a written quote before we start. Results are never guaranteed: how ads perform depends on your offer, your page and the market. We handle personal data in line with the personal data protection laws of Malaysia and Singapore (PDPA).",
+ wamsg="Hi Hunter, I'd like to ask about ChatGPT ads.\n1) Have I run Facebook/Google ads before? (yes/no): __\nRough monthly budget: __\nResults or screenshots: __\n2) Where my customers come from now: __\n3) Website and Facebook Page? __",
+)
+ADS["zh"] = dict(
+ jump="ChatGPT 广告", eyebrow="新服务 · CHATGPT 广告",
+ h="ChatGPT 广告：客户提问的时候，你在场",
+ p=["现在很多人遇到问题、想找服务，会直接问 ChatGPT：<em>我该怎么…</em>、<em>为什么…</em>、<em>该选哪一种…？</em>ChatGPT 广告出现在回答下方，标注 Sponsored，面向 Free 和 Go 用户，也就是 ChatGPT 最大的用户群。",
+    "把它当成 Google 搜索之外，客户提问的另一个地方。它和你现在用的渠道并行，不是取代。"],
+ knowh="开始之前先知道",
+ know=["ChatGPT 广告自助投放已于 2026 年 9 月 23 日在新加坡和马来西亚开放。",
+       "投放和付款的公司必须在新加坡或马来西亚注册。新账号可能一开始只能投放公司所在国。",
+       "按对话语境定向，没有关键词，也不能上传受众名单。",
+       "广告只显示给 Free 和 Go 用户，敏感话题不显示。",
+       "我们不承诺任何预算额度、排名或结果。广告预算由你自己决定。"],
+ doh="我们做什么",
+ do=["开户与验证协助",
+     "落地页与追踪设置（OpenAI pixel）",
+     "广告文案与素材",
+     "投放管理",
+     "报告：若由我们代投广告，每天给你一份广告成效报告",
+     "亲手落地：Hunter 和你一起进到你的生意里，把工具和流程跑起来"],
+ preph="你需要准备",
+ prep=["在新加坡或马来西亚注册的公司",
+       "可以安装追踪代码的网站或落地页",
+       "你卖什么、价格、目标客户和地区",
+       "每月广告预算和公司付款卡",
+       "品牌图片和 Logo"],
+ intakeh="开始前的几个问题",
+ intake=["你以前投过 Facebook 或 Google 广告吗？（有或没有、每月大概多少预算，有成果或截图的话一起发）",
+         "你现在的客户从哪里来？",
+         "你有网站和 Facebook 专页吗？"],
+ cta="用 WhatsApp 发送你的回答", note="会打开 WhatsApp 并填好这些问题。你按发送之前，不会发出任何信息。",
+ fine="服务范围和费用在开工前以书面报价确认。不保证任何结果：广告成效取决于你的产品、页面和市场。我们依照马来西亚与新加坡的个人资料保护法（PDPA）处理个人资料。",
+ wamsg="你好 Hunter，我想了解 ChatGPT 广告。\n1）以前投过 Facebook/Google 广告吗（有/没有）：＿＿\n每月大概预算：＿＿\n成果或截图：＿＿\n2）现在客户从哪里来：＿＿\n3）有没有网站和 Facebook 专页：＿＿",
+)
+ADS["ms"] = dict(
+ jump="Iklan ChatGPT", eyebrow="BARU · IKLAN CHATGPT",
+ h="Iklan ChatGPT: hadir bila pelanggan anda bertanya",
+ p=["Ramai orang kini terus bertanya ChatGPT bila nak selesaikan masalah atau cari servis: <em>macam mana nak…</em>, <em>kenapa…</em>, <em>jenis… yang mana patut saya pilih?</em> Iklan ChatGPT muncul di bawah jawapan, berlabel Sponsored, untuk pengguna pelan Free dan Go, kumpulan pengguna ChatGPT yang terbesar.",
+    "Anggap ia satu lagi tempat pelanggan anda bertanya, selain carian Google. Ia berjalan bersama saluran yang anda sudah guna."],
+ knowh="Perkara perlu tahu sebelum mula",
+ know=["Iklan ChatGPT layan diri dibuka di Singapura dan Malaysia pada 23 September 2026.",
+       "Syarikat pengiklanan dan pengebilan mesti berdaftar di Singapura atau Malaysia. Akaun baharu mungkin pada mulanya terhad kepada negara asal.",
+       "Penyasaran mengikut konteks perbualan. Tiada kata kunci dan tiada muat naik audiens.",
+       "Iklan hanya ditunjuk kepada pengguna Free dan Go, dan tidak untuk topik sensitif.",
+       "Kami tidak menjanjikan sebarang tahap bajet, kedudukan atau hasil. Bajet iklan anda tentukan sendiri."],
+ doh="Apa yang kami buat",
+ do=["Bantuan penyediaan akaun dan pengesahan",
+     "Persediaan halaman pendaratan dan penjejakan (piksel OpenAI)",
+     "Teks iklan dan kreatif",
+     "Pengurusan kempen",
+     "Laporan: jika kami uruskan iklan berbayar anda, anda terima laporan prestasi iklan setiap hari",
+     "Pelaksanaan secara langsung: Hunter bekerja bersama anda dalam perniagaan anda sehingga alat dan aliran kerja berjalan"],
+ preph="Apa yang perlu anda sediakan",
+ prep=["Syarikat berdaftar di Singapura atau Malaysia",
+       "Laman web atau halaman pendaratan yang boleh dipasang kod penjejakan",
+       "Apa yang anda jual, harga, pelanggan sasaran dan kawasan",
+       "Bajet iklan bulanan dan kad pembayaran syarikat",
+       "Imej jenama dan logo anda"],
+ intakeh="Beberapa soalan untuk bermula",
+ intake=["Pernahkah anda jalankan iklan Facebook atau Google? (ya atau tidak, anggaran bajet sebulan, dan hasil atau tangkapan skrin jika ada)",
+         "Dari mana pelanggan anda datang sekarang?",
+         "Adakah anda ada laman web dan Halaman Facebook?"],
+ cta="Hantar jawapan anda di WhatsApp", note="Membuka WhatsApp dengan soalan ini sudah diisi. Tiada apa dihantar sehingga anda tekan hantar.",
+ fine="Skop dan yuran dipersetujui dalam sebut harga bertulis sebelum mula. Hasil tidak dijamin: prestasi iklan bergantung pada tawaran, halaman dan pasaran anda. Kami mengendalikan data peribadi selaras dengan undang-undang perlindungan data peribadi Malaysia dan Singapura (PDPA).",
+ wamsg="Hai Hunter, saya nak tanya tentang iklan ChatGPT.\n1) Pernah jalankan iklan Facebook/Google? (ya/tidak): __\nAnggaran bajet sebulan: __\nHasil atau tangkapan skrin: __\n2) Dari mana pelanggan saya datang sekarang: __\n3) Ada laman web dan Halaman Facebook? __",
+)
+
+def _ads(k):
+    a = ADS[k]
+    ul = lambda xs: "<ul class=\"pd-priv\">" + "".join("<li>%s</li>" % x for x in xs) + "</ul>"
+    link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
+    return ('<section class="paper" id="chatgpt-ads"><div class="wrap section prose"><p class="eyebrow"><i></i>%s</p><h2>%s</h2>'
+            '<div class="pd-intro"><div>%s<h3>%s</h3>%s</div><div><h3>%s</h3>%s<h3>%s</h3>%s</div></div>'
+            '<div class="pd-ads-intake"><h3>%s</h3><ol class="pd-priv">%s</ol><p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p><p class="pd-mini">%s</p></div>'
+            '<p class="pd-mini">%s</p></div></section>\n') % (
+        a["eyebrow"], a["h"], "".join("<p>%s</p>" % x for x in a["p"]), a["knowh"], ul(a["know"]),
+        a["doh"], ul(a["do"]), a["preph"], ul(a["prep"]),
+        a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
 # ---------- shared demo structure (language-neutral) ----------
 POSITIONS = ["warehouse", "operator", "cs", "tech"]
@@ -203,20 +313,20 @@ def _main(s):
     d2 = '<div class="pd-wa" data-demo="wa"></div>'
     d3 = '<div class="pd-ct" data-demo="ct"></div>'
     return ('\n<section class="wrap page-intro"><p class="eyebrow"><i></i>%s</p><h1>%s</h1><p class="lede">%s</p>'
-            '<nav class="pd-jump" aria-label="%s"><a href="#demo-1">%s</a><a href="#demo-2">%s</a><a href="#demo-3">%s</a><a href="#case-study">%s</a></nav></section>\n'
+            '<nav class="pd-jump" aria-label="%s"><a href="#demo-1">%s</a><a href="#demo-2">%s</a><a href="#demo-3">%s</a><a href="#chatgpt-ads">%s</a><a href="#case-study">%s</a></nav></section>\n'
             '<section class="paper"><div class="wrap section prose pd-intro"><div><h2>%s</h2>%s</div><div><h2>%s</h2><ol class="pd-steps">%s</ol></div></div></section>\n'
             '<section class="wrap section pd-products" id="demos"><h2>%s</h2><p class="pd-sub">%s</p>%s%s%s</section>\n'
-            '%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
+            '%s%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
             '<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" data-wa="%s" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div>'
             '<p class="pd-reg">%s</p></section>\n'
             '<script type="application/json" id="pd-data">%s</script>\n<script src="/assets/products-demo.js" defer></script>\n'
-            ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], CS[s["k"]]["jump"],
+            ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], ADS[s["k"]]["jump"], CS[s["k"]]["jump"],
                  s["introh"], intro, s["engh"], eng,
                  s["prodh"], s["prodsub"],
                  _demo_shell(1, s["p1h"], s["p1d"], s["badge"], d1), _demo_shell(2, s["p2h"], s["p2d"], s["badge"], d2), _demo_shell(3, s["p3h"], s["p3d"], s["badge"], d3),
-                 _case(CS[s["k"]]), s["howh"], how, s["privh"], priv,
+                 _ads(s["k"]), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv,
                  s["ctaey"], s["ctah"], _esc(s["wamsg"]), s["reg"],
                  json.dumps({"rec": s["rec"], "wa": s["wa"], "ct": s["ct"], "jobs": JOBS, "presets": PRESETS, "positions": POSITIONS, "tags": TAGS, "areas": AREAS}, ensure_ascii=False).replace("</", "<\\/"))
 

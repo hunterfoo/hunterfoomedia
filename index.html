@@ -234,6 +234,19 @@
   </div>
 </section>
 
+<!-- CHATGPT ADS -->
+<section id="chatgpt-ads" aria-labelledby="ads-title">
+  <div class="wrap narrow">
+    <div class="kicker">New · ChatGPT Ads</div>
+    <h2 id="ads-title">Your customers are asking ChatGPT, too.</h2>
+    <p class="lead">Many people now ask ChatGPT directly when they want to solve a problem or find a service: how do I…, why does…, what kind should I choose? ChatGPT ads appear below the answer, labelled Sponsored, for people on the Free and Go plans. It’s another place your customers are asking, beyond Google search.</p>
+    <p>Self-serve ChatGPT Ads opened in Singapore and Malaysia on 23 September 2026. We help with account verification, tracking setup, ad copy, campaign management and daily ad reports.</p>
+    <p class="fine">No results are guaranteed. Fees are agreed in a written quote before we start.</p>
+    <p><a class="btn" href="/products/#chatgpt-ads">See the ChatGPT Ads service →</a></p>
+    <p class="fine"><a class="wa-ads" href="https://wa.me/60196273143" style="text-decoration:underline;text-underline-offset:3px">Or send me your situation on WhatsApp and ask if it fits →</a></p>
+  </div>
+</section>
+
 <!-- FIT -->
 <section aria-labelledby="fit-title">
   <div class="wrap">
@@ -333,6 +346,8 @@
 
 <script>
 var wa="https://wa.me/60196273143?text="+encodeURIComponent("Hi Hunter, I'd like to book the free 20-minute call. My business: ____. Where I'm stuck: ____");
+var waAds="https://wa.me/60196273143?text="+encodeURIComponent("Hi Hunter, I'd like to ask about ChatGPT ads.\n1) Have I run Facebook/Google ads before? (yes/no): __\nRough monthly budget: __\nResults or screenshots: __\n2) Where my customers come from now: __\n3) Website and Facebook Page? __");
+document.querySelectorAll("a.wa-ads").forEach(function(a){a.href=waAds;a.target="_blank";a.rel="noopener noreferrer"});
 document.querySelectorAll("a.wa").forEach(function(a){a.href=wa;a.target="_blank";a.rel="noopener noreferrer"});
 (function(){
   var y=document.getElementById("year"); if(y) y.textContent=String(new Date().getFullYear());

@@ -394,3 +394,15 @@ T = {
 '这一页不存在。': ("This page doesn't exist.", 'Halaman ini tidak wujud.'),
 '链接可能旧了，或地址打错了。回首页继续看马来西亚 AI 自动化、个人品牌与社媒。': ('The link may be old or mistyped. Head back home for AI automation, personal branding and social media.', 'Pautan mungkin lama atau salah taip. Kembali ke laman utama untuk automasi AI, jenama peribadi dan media sosial di Malaysia.'),
 }
+
+# --- ChatGPT Ads (homepage section) ---
+T.update({
+'新服务 · ChatGPT 广告': ('New · ChatGPT Ads', 'Baru · Iklan ChatGPT'),
+'你的客户，也在问 ChatGPT。': ('Your customers are asking ChatGPT, too.', 'Pelanggan anda pun bertanya kepada ChatGPT.'),
+'现在很多人遇到问题、想找服务，会直接问 ChatGPT：我该怎么做、为什么会这样、该选哪一种？ChatGPT 广告出现在回答下方，标注 Sponsored，面向 Free 和 Go 用户。这是 Google 搜索之外，客户提问的另一个地方。': ('Many people now ask ChatGPT directly when they want to solve a problem or find a service: how do I…, why does…, what kind should I choose? ChatGPT ads appear below the answer, labelled Sponsored, for people on the Free and Go plans. It's another place your customers are asking, beyond Google search.', 'Ramai orang kini terus bertanya ChatGPT bila nak selesaikan masalah atau cari servis: macam mana nak…, kenapa…, jenis mana patut dipilih? Iklan ChatGPT muncul di bawah jawapan, berlabel Sponsored, untuk pengguna pelan Free dan Go. Ia satu lagi tempat pelanggan anda bertanya, selain carian Google.'),
+'ChatGPT 广告自助投放已于 2026 年 9 月 23 日在新加坡和马来西亚开放。开户验证、追踪设置、广告文案、投放管理和每日广告报告，我们帮你做。': ('Self-serve ChatGPT Ads opened in Singapore and Malaysia on 23 September 2026. We help with account verification, tracking setup, ad copy, campaign management and daily ad reports.', 'Iklan ChatGPT layan diri dibuka di Singapura dan Malaysia pada 23 September 2026. Kami bantu pengesahan akaun, persediaan penjejakan, teks iklan, pengurusan kempen dan laporan iklan harian.'),
+'不保证任何结果。费用在开工前以书面报价确认。': ('No results are guaranteed. Fees are agreed in a written quote before we start.', 'Tiada hasil dijamin. Yuran dipersetujui dalam sebut harga bertulis sebelum mula.'),
+'了解 ChatGPT 广告服务 →': ('See the ChatGPT Ads service →', 'Lihat perkhidmatan Iklan ChatGPT →'),
+'或用 WhatsApp 发送你的情况，问问适不适合 →': ('Or send me your situation on WhatsApp and ask if it fits →', 'Atau hantar situasi anda di WhatsApp dan tanya sama ada sesuai →'),
+'你好 Hunter，我想了解 ChatGPT 广告。\\n1）以前投过 Facebook/Google 广告吗（有/没有）：＿＿\\n每月大概预算：＿＿\\n成果或截图：＿＿\\n2）现在客户从哪里来：＿＿\\n3）有没有网站和 Facebook 专页：＿＿': ("Hi Hunter, I'd like to ask about ChatGPT ads.\\n1) Have I run Facebook/Google ads before? (yes/no): __\\nRough monthly budget: __\\nResults or screenshots: __\\n2) Where my customers come from now: __\\n3) Website and Facebook Page? __", "Hai Hunter, saya nak tanya tentang iklan ChatGPT.\\n1) Pernah jalankan iklan Facebook/Google? (ya/tidak): __\\nAnggaran bajet sebulan: __\\nHasil atau tangkapan skrin: __\\n2) Dari mana pelanggan saya datang sekarang: __\\n3) Ada laman web dan Halaman Facebook? __"),
+})

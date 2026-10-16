@@ -235,6 +235,19 @@
   </div>
 </section>
 
+<!-- CHATGPT ADS -->
+<section id="chatgpt-ads" aria-labelledby="ads-title">
+  <div class="wrap narrow">
+    <div class="kicker">Baru · Iklan ChatGPT</div>
+    <h2 id="ads-title">Pelanggan anda pun bertanya kepada ChatGPT.</h2>
+    <p class="lead">Ramai orang kini terus bertanya ChatGPT bila nak selesaikan masalah atau cari servis: macam mana nak…, kenapa…, jenis mana patut dipilih? Iklan ChatGPT muncul di bawah jawapan, berlabel Sponsored, untuk pengguna pelan Free dan Go. Ia satu lagi tempat pelanggan anda bertanya, selain carian Google.</p>
+    <p>Iklan ChatGPT layan diri dibuka di Singapura dan Malaysia pada 23 September 2026. Kami bantu pengesahan akaun, persediaan penjejakan, teks iklan, pengurusan kempen dan laporan iklan harian.</p>
+    <p class="fine">Tiada hasil dijamin. Yuran dipersetujui dalam sebut harga bertulis sebelum mula.</p>
+    <p><a class="btn" href="/ms/products/#chatgpt-ads">Lihat perkhidmatan Iklan ChatGPT →</a></p>
+    <p class="fine"><a class="wa-ads" href="https://wa.me/60196273143" style="text-decoration:underline;text-underline-offset:3px">Atau hantar situasi anda di WhatsApp dan tanya sama ada sesuai →</a></p>
+  </div>
+</section>
+
 <!-- FIT -->
 <section aria-labelledby="fit-title">
   <div class="wrap">
@@ -334,6 +347,8 @@
 
 <script>
 var wa="https://wa.me/60196273143?text="+encodeURIComponent("Hai Hunter, saya nak tempah diagnosis percuma 20 minit. Bisnes saya: ____. Masalah utama: ____");
+var waAds="https://wa.me/60196273143?text="+encodeURIComponent("Hai Hunter, saya nak tanya tentang iklan ChatGPT.\n1) Pernah jalankan iklan Facebook/Google? (ya/tidak): __\nAnggaran bajet sebulan: __\nHasil atau tangkapan skrin: __\n2) Dari mana pelanggan saya datang sekarang: __\n3) Ada laman web dan Halaman Facebook? __");
+document.querySelectorAll("a.wa-ads").forEach(function(a){a.href=waAds;a.target="_blank";a.rel="noopener noreferrer"});
 document.querySelectorAll("a.wa").forEach(function(a){a.href=wa;a.target="_blank";a.rel="noopener noreferrer"});
 (function(){
   var y=document.getElementById("year"); if(y) y.textContent=String(new Date().getFullYear());
