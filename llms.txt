@@ -14,6 +14,7 @@
 - [AI Automation](https://www.hunterfoomedia.com/services/ai-automation/): for small teams stuck forwarding and chasing updates; fix the most annoying handover first, no software to buy first
 - [Personal Brand](https://www.hunterfoomedia.com/services/personal-brand/): for solo professionals and property agents; one clear line of positioning plus content themes
 - [Social Media & Reels](https://www.hunterfoomedia.com/services/social-reels/): for brands and professionals who keep going quiet; topics, captions and Reels
+- [ChatGPT Ads](https://www.hunterfoomedia.com/products/#chatgpt-ads): new; account setup, tracking (OpenAI pixel), ad copy, campaign management and reporting for ads shown below ChatGPT answers to Free and Go users; you approve every ad, no results guaranteed
 
 ## About
 

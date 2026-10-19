@@ -172,7 +172,9 @@ for lang in LANGS:
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": pu + "#webpage", "url": pu, "name": a["title"], "description": a["desc"], "about": {"@id": D + "/#organization"}, "isPartOf": {"@id": D + "/#website"}}] + [
         {"@type": "Service", "@id": pu + "#product-%d" % (i + 1), "name": n, "description": d, "serviceType": "AI automation", "provider": {"@id": D + "/#organization"},
-         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#demo-%d" % (i + 1)} for i, (n, d) in enumerate(a["services"])]}
+         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#demo-%d" % (i + 1)} for i, (n, d) in enumerate(a["services"])] + [
+        {"@type": "Service", "@id": pu + "#chatgpt-ads", "name": a["ads_service"][0], "description": a["ads_service"][1], "serviceType": "ChatGPT Ads", "provider": {"@id": D + "/#organization"},
+         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#chatgpt-ads"}]}
     shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>', shell, flags=re.S)
     shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
     write(lang, "/products/", build(shell, "/products/", lang))

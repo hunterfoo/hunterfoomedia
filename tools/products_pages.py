@@ -222,7 +222,7 @@ AREAS = ["woodlands", "jurong", "tuas", "changi"]
 S = {}
 S["en"] = dict(
  title="Products & live demos | HF Media Solution (IP0633909-U)",
- desc="See exactly what HF Media Solution builds: AI digital employees for recruitment matching, WhatsApp follow-up and content. Try three demos with sample data.",
+ desc="See what HF Media Solution builds: AI digital employees for recruitment, WhatsApp and content, plus ChatGPT Ads setup. Try the demos with sample data.",
  eyebrow="PRODUCTS", h1="Digital employees you can actually see.",
  lede="HF Media Solution builds and runs AI “digital employees” for service businesses in Malaysia and Singapore. They're automation systems that do the repetitive work: sorting candidates, answering WhatsApp enquiries, preparing social posts. A person stays in charge of every decision that matters.",
  introh="What we do, in plain terms",
@@ -274,7 +274,7 @@ S["en"] = dict(
 
 S["zh"] = dict(
  title="产品与在线演示｜HF Media Solution (IP0633909-U)",
- desc="看清楚 HF Media Solution 做什么：招聘匹配、WhatsApp 跟进、内容自动化三款 AI 数字员工，附示例数据在线演示。",
+ desc="看清楚 HF Media Solution 做什么：招聘匹配、WhatsApp 跟进、内容自动化三款 AI 数字员工，另有 ChatGPT 广告服务，附示例数据在线演示。",
  eyebrow="产品", h1="看得见的数字员工。",
  lede="HF Media Solution 为马来西亚与新加坡的服务型生意，搭建并运营 AI「数字员工」：也就是帮你做重复工作的自动化系统，比如筛选候选人、回复 WhatsApp 询问、准备社媒贴文。重要的决定，始终由人来做。",
  introh="我们具体做什么",
@@ -326,7 +326,7 @@ S["zh"] = dict(
 
 S["ms"] = dict(
  title="Produk & demo langsung | HF Media Solution (IP0633909-U)",
- desc="Lihat apa yang HF Media Solution bina: pekerja digital AI untuk padanan rekrutmen, follow-up WhatsApp dan kandungan. Cuba tiga demo dengan data contoh.",
+ desc="Lihat apa yang HF Media Solution bina: pekerja digital AI untuk rekrutmen, WhatsApp dan kandungan, serta servis Iklan ChatGPT. Cuba demo dengan data contoh.",
  eyebrow="PRODUK", h1="Pekerja digital yang boleh anda lihat.",
  lede="HF Media Solution membina dan mengendalikan “pekerja digital” AI untuk perniagaan servis di Malaysia dan Singapura. Ia sistem automasi yang buat kerja berulang: menapis calon, menjawab pertanyaan WhatsApp, menyediakan post media sosial. Keputusan penting tetap dibuat oleh manusia.",
  introh="Apa yang kami buat",
@@ -417,8 +417,14 @@ def _main(s):
                  s["ctaey"], s["ctah"], _esc(s["wamsg"]), s["reg"],
                  json.dumps({"rec": s["rec"], "wa": s["wa"], "ct": s["ct"], "ads": ADSW[s["k"]], "jobs": JOBS, "presets": PRESETS, "positions": POSITIONS, "tags": TAGS, "areas": AREAS}, ensure_ascii=False).replace("</", "<\\/"))
 
+ADS_LD = {
+    "en": ("ChatGPT Ads", "Help setting up and running ChatGPT Ads for service businesses in Malaysia and Singapore: account setup and verification help, landing page and tracking setup (OpenAI pixel), ad copy and creative, campaign management and reporting. You approve every ad before it is submitted. Scope and fees are agreed in a written quote; results are never guaranteed."),
+    "zh": ("ChatGPT 广告", "为马来西亚与新加坡的服务型生意提供 ChatGPT 广告服务：开户与验证协助、落地页与追踪设置（OpenAI pixel）、广告文案与素材、投放管理与报告。每一条广告提交之前，都由你批准。服务范围和费用在开工前以书面报价确认，不保证任何结果。"),
+    "ms": ("Iklan ChatGPT", "Servis Iklan ChatGPT untuk perniagaan perkhidmatan di Malaysia dan Singapura: bantuan penyediaan akaun dan pengesahan, persediaan halaman pendaratan dan penjejakan (piksel OpenAI), teks iklan dan kreatif, pengurusan kempen dan laporan. Anda luluskan setiap iklan sebelum ia dihantar. Skop dan yuran dipersetujui dalam sebut harga bertulis; hasil tidak dijamin."),
+}
 PRODUCTS = {}
 for k, s in S.items():
     s["k"] = k
     PRODUCTS[k] = {"title": s["title"], "desc": s["desc"], "main": _main(s),
-                   "services": [(s["p1h"], s["p1d"]), (s["p2h"], s["p2d"]), (s["p3h"], s["p3d"])]}
+                   "services": [(s["p1h"], s["p1d"]), (s["p2h"], s["p2d"]), (s["p3h"], s["p3d"])],
+                   "ads_service": ADS_LD[k]}
