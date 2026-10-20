@@ -200,6 +200,61 @@ def _ads(k, s):
         a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
         a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
+# ---- FAQ (visible <details> list + FAQPage JSON-LD). Answers only restate what this page already says. ----
+FAQ = {}
+FAQ["en"] = dict(jump="FAQ", kicker="FAQ", h="Common questions", qa=[
+ ("What is a ChatGPT ad, and who sees it?",
+  "When someone asks ChatGPT a question, a short ad can appear below the answer, labelled Sponsored. It's matched to what the conversation is about, not to keywords. Ads are shown to people on the Free and Go plans, the largest group of ChatGPT users, so this is where an ad reaches the most people. They don't appear on sensitive topics. The example and demo above show what one can look like."),
+ ("How much does it cost?",
+  "Scope and fees are agreed in a <b>written quote</b> before we start, for ChatGPT Ads and for the digital employees on this page. Your ad budget is separate: you decide how much to spend, and it's paid with your company card."),
+ ("How soon will I see results?",
+  "We don't promise a timeline or a result. How ads perform depends on your offer, your page and the market. Where we run the ads for you, you get a daily ad performance report, so you always know how they're doing."),
+ ("Do I get to approve the ads?",
+  "Yes. We write the ad copy and prepare the creative, but <b>every ad is submitted only after you approve it</b>. If something isn't right, ask for changes and we'll send a new draft for your approval."),
+ ("Do I still need Google ads?",
+  "ChatGPT ads don't replace Google. Think of ChatGPT as another place your customers ask, beyond Google search. It runs alongside the channels you already use, so if Google ads bring you customers, keep them going."),
+ ("How do you handle my data? What about PDPA?",
+  "We handle personal data in line with the personal data protection laws of Malaysia and Singapore (PDPA). Your accounts, your data and your customers stay yours: data stays in your own accounts, and we only get the access we need to set up and run the work. The demos on this page use made-up sample data only."),
+])
+FAQ["zh"] = dict(jump="常见问题", kicker="常见问题", h="你可能想问的", qa=[
+ ("什么是 ChatGPT 广告？谁会看到？",
+  "有人在 ChatGPT 提问时，回答下方可能出现一则简短的广告，标注 Sponsored。广告按对话内容配对，不是按关键词。广告面向 Free 和 Go 用户，也就是 ChatGPT 最大的用户群，能接触到最多的人。敏感话题不会显示广告。上面的例子和演示，就是广告大概的样子。"),
+ ("要多少钱？",
+  "服务范围和费用，在开工前以<b>书面报价</b>确认，ChatGPT 广告和本页的数字员工都一样。广告预算另外算：投多少由你自己决定，用你的公司付款卡支付。"),
+ ("多久看得到效果？",
+  "我们不承诺时间，也不承诺结果。广告成效取决于你的产品、页面和市场。若由我们代投广告，每天给你一份广告成效报告，你随时知道广告跑得怎样。"),
+ ("广告要经过我批准吗？",
+  "要。广告文案和素材由我们准备，但<b>每一条广告都要你批准之后才提交</b>。哪里不满意就提出修改，我们改好新草稿再给你批准。"),
+ ("还需要做 Google 广告吗？",
+  "ChatGPT 广告不是取代 Google。把它当成 Google 搜索之外，客户提问的另一个地方。它和你现在用的渠道并行；Google 广告有带来客户，就继续做。"),
+ ("你们怎么处理我的资料？有遵守 PDPA 吗？",
+  "我们依照马来西亚与新加坡的个人资料保护法（PDPA）处理个人资料。账号、数据、客户都是你的：数据保存在你自己的账号里，我们只取得开设和运行所需的权限。本页演示只使用虚构的示例数据。"),
+])
+FAQ["ms"] = dict(jump="Soalan lazim", kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
+ ("Apa itu iklan ChatGPT, dan siapa yang nampak?",
+  "Bila seseorang bertanya kepada ChatGPT, iklan ringkas boleh muncul di bawah jawapan, berlabel Sponsored. Iklan dipadankan dengan topik perbualan, bukan kata kunci. Iklan ditunjuk kepada pengguna pelan Free dan Go, kumpulan pengguna ChatGPT yang terbesar, jadi di sinilah iklan anda sampai kepada paling ramai orang. Iklan tidak muncul untuk topik sensitif. Contoh dan demo di atas menunjukkan rupa iklan tersebut."),
+ ("Berapa kosnya?",
+  "Skop dan yuran dipersetujui dalam <b>sebut harga bertulis</b> sebelum kami mula, sama ada untuk Iklan ChatGPT atau pekerja digital di halaman ini. Bajet iklan adalah berasingan: anda sendiri tentukan berapa nak belanja, dan ia dibayar dengan kad syarikat anda."),
+ ("Bila saya boleh nampak hasil?",
+  "Kami tidak menjanjikan tempoh atau hasil. Prestasi iklan bergantung pada tawaran, halaman dan pasaran anda. Jika kami uruskan iklan anda, anda terima laporan prestasi iklan setiap hari, jadi anda sentiasa tahu perkembangannya."),
+ ("Adakah saya perlu luluskan iklan?",
+  "Ya. Kami tulis teks iklan dan sediakan kreatif, tetapi <b>setiap iklan hanya dihantar selepas anda meluluskannya</b>. Kalau ada yang tak kena, minta pindaan dan kami hantar draf baharu untuk kelulusan anda."),
+ ("Perlukah saya teruskan iklan Google?",
+  "Iklan ChatGPT bukan pengganti Google. Anggap ChatGPT satu lagi tempat pelanggan anda bertanya, selain carian Google. Ia berjalan bersama saluran yang anda sudah guna, jadi jika iklan Google membawa pelanggan, teruskan."),
+ ("Bagaimana data saya dikendalikan? Bagaimana dengan PDPA?",
+  "Kami mengendalikan data peribadi selaras dengan undang-undang perlindungan data peribadi Malaysia dan Singapura (PDPA). Akaun, data dan pelanggan kekal milik anda: data disimpan dalam akaun anda sendiri, dan kami hanya diberi akses yang perlu untuk menyediakan dan menjalankan kerja. Demo di halaman ini hanya guna data contoh rekaan."),
+])
+
+import re as _re
+def _plain(h):
+    return _re.sub(r"<[^>]+>", "", h)
+
+def _faq(k):
+    f = FAQ[k]
+    items = "".join('<details%s><summary>%s</summary><p>%s</p></details>' % (' open' if i == 0 else '', q, a) for i, (q, a) in enumerate(f["qa"]))
+    return ('<section class="paper pd-faq-wrap" id="faq" aria-labelledby="pd-faq-h"><div class="wrap section"><div class="pd-faq">'
+            '<p class="pd-kicker">%s</p><h2 id="pd-faq-h">%s</h2>%s</div></div></section>\n') % (f["kicker"], f["h"], items)
+
 # ---------- shared demo structure (language-neutral) ----------
 POSITIONS = ["warehouse", "operator", "cs", "tech"]
 TAGS = ["exp2", "shift", "forklift", "english", "mandarin", "immediate", "passport", "transport"]
@@ -400,20 +455,20 @@ def _main(s):
     d2 = '<div class="pd-wa" data-demo="wa"></div>'
     d3 = '<div class="pd-ct" data-demo="ct"></div>'
     return ('\n<section class="wrap page-intro"><p class="eyebrow"><i></i>%s</p><h1>%s</h1><p class="lede">%s</p>'
-            '<nav class="pd-jump" aria-label="%s"><a href="#demo-1">%s</a><a href="#demo-2">%s</a><a href="#demo-3">%s</a><a href="#chatgpt-ads">%s</a><a href="#case-study">%s</a></nav></section>\n'
+            '<nav class="pd-jump" aria-label="%s"><a href="#demo-1">%s</a><a href="#demo-2">%s</a><a href="#demo-3">%s</a><a href="#chatgpt-ads">%s</a><a href="#case-study">%s</a><a href="#faq">%s</a></nav></section>\n'
             '<section class="paper"><div class="wrap section prose pd-intro"><div><h2>%s</h2>%s</div><div><h2>%s</h2><ol class="pd-steps">%s</ol></div></div></section>\n'
             '<section class="wrap section pd-products" id="demos"><h2>%s</h2><p class="pd-sub">%s</p>%s%s%s</section>\n'
             '%s%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
-            '<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
+            '%s<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" data-wa="%s" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div>'
             '<p class="pd-reg">%s</p></section>\n'
             '<script type="application/json" id="pd-data">%s</script>\n<script src="/assets/products-demo.js" defer></script>\n'
-            ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], ADS[s["k"]]["jump"], CS[s["k"]]["jump"],
+            ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], ADS[s["k"]]["jump"], CS[s["k"]]["jump"], FAQ[s["k"]]["jump"],
                  s["introh"], intro, s["engh"], eng,
                  s["prodh"], s["prodsub"],
                  _demo_shell(1, s["p1h"], s["p1d"], s["badge"], d1), _demo_shell(2, s["p2h"], s["p2d"], s["badge"], d2), _demo_shell(3, s["p3h"], s["p3d"], s["badge"], d3),
-                 _ads(s["k"], s), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv,
+                 _ads(s["k"], s), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv, _faq(s["k"]),
                  s["ctaey"], s["ctah"], _esc(s["wamsg"]), s["reg"],
                  json.dumps({"rec": s["rec"], "wa": s["wa"], "ct": s["ct"], "ads": ADSW[s["k"]], "jobs": JOBS, "presets": PRESETS, "positions": POSITIONS, "tags": TAGS, "areas": AREAS}, ensure_ascii=False).replace("</", "<\\/"))
 
@@ -427,4 +482,5 @@ for k, s in S.items():
     s["k"] = k
     PRODUCTS[k] = {"title": s["title"], "desc": s["desc"], "main": _main(s),
                    "services": [(s["p1h"], s["p1d"]), (s["p2h"], s["p2d"]), (s["p3h"], s["p3d"])],
-                   "ads_service": ADS_LD[k]}
+                   "ads_service": ADS_LD[k],
+                   "faq": [(q, _plain(a)) for q, a in FAQ[k]["qa"]]}

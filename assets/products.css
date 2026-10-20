@@ -70,3 +70,14 @@
 .ad-fine{margin:28px 0 0;font-size:13.5px;line-height:1.7;color:var(--ad-mute);max-width:46em}
 @media(max-width:760px){.ad-section .section{padding-top:48px;padding-bottom:56px}.ad-two,.ad-intake{grid-template-columns:1fr}.ad-panel{padding:22px}.ad-intake{padding:26px 20px;gap:24px}.ad-intake .button,.pd-ads-lede .button{width:100%;justify-content:space-between}}
 .ad-knows{list-style:none;padding-left:0}.ad-know{list-style:none}.ad-know::marker{content:none}.ad-know .ad-ico{flex:none}
+/* FAQ: same card style as the homepage and /services FAQ (redesign.css details/summary), scoped to this page */
+.pd-faq-wrap{border-top:1px solid #dfe4dc}.pd-faq{max-width:760px}
+.pd-kicker{font-size:13px;letter-spacing:.14em;color:#c2552a;font-weight:700;margin:0 0 10px;text-transform:uppercase}
+.pd-faq h2{font-size:clamp(26px,3vw,36px);line-height:1.25;margin:0 0 24px}
+.pd-faq details{background:#fff;border:1px solid #dfe3db;border-radius:12px;margin-bottom:10px;padding:0 20px}
+.pd-faq summary{cursor:pointer;font-weight:700;padding:18px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;font-size:17px;line-height:1.45}
+.pd-faq summary::-webkit-details-marker{display:none}
+.pd-faq summary::after{content:"+";color:var(--orange);font-size:22px;line-height:1;flex-shrink:0}
+.pd-faq details[open] summary::after{content:"–"}
+.pd-faq summary:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:6px}
+.pd-faq details p{margin:0;padding:0 0 18px;color:#38423d;font-size:15.5px;line-height:1.8}
