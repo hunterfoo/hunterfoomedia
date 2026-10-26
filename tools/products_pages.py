@@ -115,6 +115,9 @@ ICON = {
  "usr": _I('<circle cx="9" cy="8.5" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 5.5a3.2 3.2 0 0 1 0 6M18.5 14.2A6.5 6.5 0 0 1 21.5 20"/>'),
  "shd": _I('<path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/>'),
 }
+ICON["glb"] = _I('<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.6 3.6 5.4 3.6 8.5s-1.2 5.9-3.6 8.5c-2.4-2.6-3.6-5.4-3.6-8.5s1.2-5.9 3.6-8.5z"/>')
+ICON["srv"] = _I('<rect x="4" y="4.5" width="16" height="6" rx="1.5"/><rect x="4" y="13.5" width="16" height="6" rx="1.5"/><path d="M7.5 7.5h.01M7.5 16.5h.01"/><path d="M3 21L21 3"/>')
+ICON["key"] = _I('<circle cx="8" cy="15" r="4"/><path d="M11 12l8.5-8.5M16 7l2.5 2.5M14 9l2 2"/>')
 CHECK = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>'
 KNOW_ICONS = ["cal", "bld", "tgt", "usr", "shd"]
 
@@ -203,6 +206,11 @@ def _ads(k, s):
 # ---- Website building (two tiers). Copy written natively per language. Fees: written quote only; no rankings promised. ----
 WB = {}
 WB["en"] = dict(
+ geth="What you get",
+ gets=["Hosted on Cloudflare's global network, so your site loads fast, with the HTTPS security padlock included.",
+       "No server to rent. Each year, the main cost is just your domain fee.",
+       "Your domain and website are in your name, so you're never locked in."],
+ scope="Online shop payments, member logins, or a dashboard for editing your own content are quoted separately.",
  jump="Website building", eyebrow="NEW · WEBSITE BUILDING",
  h="Website building: easy for customers to find, clear for AI search to read",
  p=["When people hear about you, most of them look you up online first. We build a clean company website that works well on a phone and makes it easy to message you on WhatsApp.",
@@ -226,6 +234,11 @@ WB["en"] = dict(
  ld=("Website building", "Company websites for service businesses in Malaysia and Singapore. Basic: Home, About, Services and Contact pages, a WhatsApp button, mobile-friendly design, optional English/Chinese/Malay versions, and domain and HTTPS setup. SEO + AEO/GEO: everything in Basic plus page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, page speed work, clear Q&A/FAQ content, structured data (schema), an FAQ page, consistent company details and an indexing check report. Fees by written quote; no rankings are promised."),
 )
 WB["zh"] = dict(
+ geth="你得到什么",
+ gets=["放在 Cloudflare 全球服务器，速度快，自带 HTTPS 安全锁。",
+       "不用租服务器，每年主要只付域名费。",
+       "域名和网站都在你名下，不会被绑住。"],
+ scope="网店付款、会员登录、自己改内容的后台，另外报价。",
  jump="网站建设", eyebrow="新服务 · 网站建设",
  h="网站建设：客户找得到，AI 搜索也读得懂",
  p=["客户听说你之后，多数会先上网查一查。我们帮你做一个清楚的公司网站，手机上好看好用，一按就能 WhatsApp 你。",
@@ -249,6 +262,11 @@ WB["zh"] = dict(
  ld=("网站建设", "为马来西亚与新加坡的服务型生意建公司网站。基础版：首页、关于我们、服务、联系我们，WhatsApp 按钮，手机友好设计，可选 EN / 中文 / BM 多语言，域名与 HTTPS 设置。SEO + AEO/GEO：包含基础版全部内容，另加每页标题与 meta 描述、网站地图、提交 Google 与 Bing 收录、网页速度优化、清楚的问答 / FAQ 内容、结构化数据（schema）、FAQ 页面、全站一致的公司资料，以及收录检查报告。费用以书面报价确认，不承诺排名。"),
 )
 WB["ms"] = dict(
+ geth="Apa yang anda dapat",
+ gets=["Dihoskan di rangkaian global Cloudflare, jadi laman anda dibuka dengan pantas, siap dengan ikon mangga keselamatan HTTPS.",
+       "Tak perlu sewa server. Setiap tahun, kos utama hanyalah yuran domain.",
+       "Domain dan laman web didaftarkan atas nama anda, jadi anda tidak terikat."],
+ scope="Pembayaran kedai dalam talian, log masuk ahli, atau papan pemuka untuk anda ubah kandungan sendiri disebut harga secara berasingan.",
  jump="Pembinaan laman web", eyebrow="BARU · PEMBINAAN LAMAN WEB",
  h="Pembinaan laman web: mudah dicari pelanggan, jelas dibaca carian AI",
  p=["Bila orang dengar tentang anda, kebanyakannya akan semak dalam talian dahulu. Kami bina laman web syarikat yang kemas, selesa dibuka di telefon dan memudahkan pelanggan WhatsApp anda.",
@@ -281,11 +299,14 @@ def _wb(k):
     return ('<section class="wrap section pd-products pd-ads-sec wb-sec" id="website-building"><p class="eyebrow"><i></i>%s</p><h2>%s</h2><div class="pd-ads-lede">%s'
             '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p></div></section>\n'
             '<section class="paper ad-section wb-section"><div class="wrap section">'
+            '<h3 class="ad-h3">%s</h3><ul class="wb-gets">%s</ul>'
             '<div class="ad-two wb-two">%s%s</div>'
+            '<p class="wb-scope">%s</p>'
             '<p class="ad-fine">%s</p></div></section>\n') % (
         w["eyebrow"], w["h"], "".join("<p>%s</p>" % x for x in w["p"]), link, w["cta"],
+        w["geth"], "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[i], x) for i, x in zip(["glb", "srv", "key"], w["gets"])),
         panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], ""), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus"),
-        w["fine"])
+        w["scope"], w["fine"])
 
 # ---- FAQ (visible <details> list + FAQPage JSON-LD). Answers only restate what this page already says. ----
 FAQ = {}

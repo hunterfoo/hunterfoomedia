@@ -88,3 +88,7 @@
 .wb-sub{margin:-8px 0 18px;color:var(--ad-mute);font-size:15px;line-height:1.5}
 .wb-plus{border:2px solid var(--orange)}
 .wb-fee{margin:22px 0 0;padding-top:16px;border-top:1px solid var(--ad-line);font-size:15px;color:#2b3a33}.wb-fee b{color:var(--green)}
+.wb-gets{list-style:none;margin:0 0 32px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.wb-gets .ad-know{align-items:start}
+.wb-scope{margin:20px 0 0;padding:14px 18px;background:#fff;border:1px dashed var(--ad-line);border-radius:12px;font-size:15px;line-height:1.6;color:#2b3a33;max-width:46em}
+@media(max-width:900px){.wb-gets{grid-template-columns:1fr}}
