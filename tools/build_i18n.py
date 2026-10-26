@@ -175,6 +175,8 @@ for lang in LANGS:
          "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#demo-%d" % (i + 1)} for i, (n, d) in enumerate(a["services"])] + [
         {"@type": "Service", "@id": pu + "#chatgpt-ads", "name": a["ads_service"][0], "description": a["ads_service"][1], "serviceType": "ChatGPT Ads", "provider": {"@id": D + "/#organization"},
          "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#chatgpt-ads"},
+        {"@type": "Service", "@id": pu + "#website-building", "name": a["web_service"][0], "description": a["web_service"][1], "serviceType": "Website building", "provider": {"@id": D + "/#organization"},
+         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#website-building"},
         {"@type": "FAQPage", "@id": pu + "#faq", "url": pu + "#faq", "isPartOf": {"@id": pu + "#webpage"},
          "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": t}} for q, t in a["faq"]]}]}
     shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>', shell, flags=re.S)

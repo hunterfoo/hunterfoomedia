@@ -200,6 +200,93 @@ def _ads(k, s):
         a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
         a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
+# ---- Website building (two tiers). Copy written natively per language. Fees: written quote only; no rankings promised. ----
+WB = {}
+WB["en"] = dict(
+ jump="Website building", eyebrow="NEW · WEBSITE BUILDING",
+ h="Website building: easy for customers to find, clear for AI search to read",
+ p=["When people hear about you, most of them look you up online first. We build a clean company website that works well on a phone and makes it easy to message you on WhatsApp.",
+    "More people now also ask AI search tools like ChatGPT and Perplexity for advice and recommendations. Think of it as another place customers ask, beyond Google. Our SEO + AEO/GEO package sets your site up so Google and AI search can both read it clearly.",
+    "hunterfoomedia.com, the site you're on now, is one we built ourselves."],
+ t1tag="Package 1", t1h="Basic", t1sub="A company website that's ready to use",
+ t1=["A company website with Home, About, Services and Contact pages",
+     "A WhatsApp button on every page",
+     "Mobile-friendly design",
+     'Optional multilingual site: English, <span lang="zh-Hans">中文</span> and BM',
+     "Domain and HTTPS setup"],
+ t2tag="Package 2", t2h="SEO + AEO/GEO", t2sub="Everything in Basic, plus:",
+ t2=["<b>SEO:</b> page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, and page speed work",
+     "<b>AEO</b> (answer engine optimisation): clear Q&amp;A and FAQ content, so search engines can quote your answers directly",
+     "<b>GEO</b> (generative engine optimisation): structured data (schema), an FAQ page and consistent company details, so AI search like ChatGPT and Perplexity can understand and cite your site",
+     "An indexing check report"],
+ feel="Fee: ", fee="Written quote",
+ cta="Ask about a website on WhatsApp",
+ fine="Scope and fees are agreed in a written quote before we start. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up; how search engines and AI tools rank and cite sites is up to them.",
+ wamsg="Hi Hunter, I'd like to ask about a company website.\nMy business: __\nDo I have a website now? (yes/no, link): __\nBasic or SEO + AEO/GEO: __\nLanguages needed (EN / 中文 / BM): __",
+ ld=("Website building", "Company websites for service businesses in Malaysia and Singapore. Basic: Home, About, Services and Contact pages, a WhatsApp button, mobile-friendly design, optional English/Chinese/Malay versions, and domain and HTTPS setup. SEO + AEO/GEO: everything in Basic plus page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, page speed work, clear Q&A/FAQ content, structured data (schema), an FAQ page, consistent company details and an indexing check report. Fees by written quote; no rankings are promised."),
+)
+WB["zh"] = dict(
+ jump="网站建设", eyebrow="新服务 · 网站建设",
+ h="网站建设：客户找得到，AI 搜索也读得懂",
+ p=["客户听说你之后，多数会先上网查一查。我们帮你做一个清楚的公司网站，手机上好看好用，一按就能 WhatsApp 你。",
+    "现在也有越来越多人会问 ChatGPT、Perplexity 这类 AI 搜索，请它们给建议、推荐。把它当成 Google 之外，客户提问的另一个地方。「SEO + AEO/GEO」方案会把网站整理好，让 Google 和 AI 搜索都能清楚读懂。",
+    "你现在看的 hunterfoomedia.com，就是我们自己做的。"],
+ t1tag="方案一", t1h="基础版", t1sub="一个马上能用的公司网站",
+ t1=["公司网站：首页、关于我们、服务、联系我们",
+     "每一页都有 WhatsApp 按钮",
+     "手机友好的设计",
+     "可选多语言：EN / 中文 / BM",
+     "域名与 HTTPS 设置"],
+ t2tag="方案二", t2h="SEO + AEO/GEO", t2sub="包含基础版全部内容，另加：",
+ t2=["<b>SEO：</b>每页标题与 meta 描述、网站地图（sitemap）、提交 Google 与 Bing 收录、网页速度优化",
+     "<b>AEO</b>（答案引擎优化）：写清楚的问答 / FAQ 内容，方便搜索引擎直接引用你的答案",
+     "<b>GEO</b>（生成式引擎优化）：结构化数据（schema）、FAQ 页面、全站一致的公司资料，让 ChatGPT、Perplexity 等 AI 搜索更容易读懂并引用你的网站",
+     "收录检查报告"],
+ feel="费用：", fee="书面报价",
+ cta="用 WhatsApp 问网站建设",
+ fine="服务范围和费用在开工前以书面报价确认。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们只把做什么、设置什么写清楚；搜索引擎和 AI 工具怎么排序、引用，由它们决定。",
+ wamsg="你好 Hunter，我想了解公司网站。\n我做的是：＿＿\n现在有没有网站（有/没有，链接）：＿＿\n基础版还是 SEO + AEO/GEO：＿＿\n需要哪些语言（EN / 中文 / BM）：＿＿",
+ ld=("网站建设", "为马来西亚与新加坡的服务型生意建公司网站。基础版：首页、关于我们、服务、联系我们，WhatsApp 按钮，手机友好设计，可选 EN / 中文 / BM 多语言，域名与 HTTPS 设置。SEO + AEO/GEO：包含基础版全部内容，另加每页标题与 meta 描述、网站地图、提交 Google 与 Bing 收录、网页速度优化、清楚的问答 / FAQ 内容、结构化数据（schema）、FAQ 页面、全站一致的公司资料，以及收录检查报告。费用以书面报价确认，不承诺排名。"),
+)
+WB["ms"] = dict(
+ jump="Pembinaan laman web", eyebrow="BARU · PEMBINAAN LAMAN WEB",
+ h="Pembinaan laman web: mudah dicari pelanggan, jelas dibaca carian AI",
+ p=["Bila orang dengar tentang anda, kebanyakannya akan semak dalam talian dahulu. Kami bina laman web syarikat yang kemas, selesa dibuka di telefon dan memudahkan pelanggan WhatsApp anda.",
+    "Semakin ramai juga bertanya kepada carian AI seperti ChatGPT dan Perplexity untuk nasihat dan cadangan. Anggap ia satu lagi tempat pelanggan bertanya, selain Google. Pakej SEO + AEO/GEO kami menyusun laman anda supaya Google dan carian AI sama-sama boleh membacanya dengan jelas.",
+    "hunterfoomedia.com, laman yang anda sedang lihat ini, kami bina sendiri."],
+ t1tag="Pakej 1", t1h="Asas", t1sub="Laman web syarikat yang sedia digunakan",
+ t1=["Laman web syarikat dengan halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi",
+     "Butang WhatsApp di setiap halaman",
+     "Reka bentuk mesra telefon",
+     'Pilihan pelbagai bahasa: EN, <span lang="zh-Hans">中文</span> dan BM',
+     "Persediaan domain dan HTTPS"],
+ t2tag="Pakej 2", t2h="SEO + AEO/GEO", t2sub="Semua dalam pakej Asas, serta:",
+ t2=["<b>SEO:</b> tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, dan penambahbaikan kelajuan halaman",
+     "<b>AEO</b> (pengoptimuman enjin jawapan): kandungan soal jawab dan FAQ yang jelas, supaya enjin carian boleh memetik jawapan anda secara terus",
+     "<b>GEO</b> (pengoptimuman enjin generatif): data berstruktur (schema), halaman FAQ dan maklumat syarikat yang konsisten, supaya carian AI seperti ChatGPT dan Perplexity mudah memahami dan memetik laman anda",
+     "Laporan semakan pengindeksan"],
+ feel="Yuran: ", fee="Sebut harga bertulis",
+ cta="Tanya tentang laman web di WhatsApp",
+ fine="Skop dan yuran dipersetujui dalam sebut harga bertulis sebelum mula. Kami tidak menjanjikan kedudukan carian, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami nyatakan dengan jelas apa yang kami bina dan sediakan; cara enjin carian dan alat AI menyusun dan memetik laman ditentukan oleh mereka.",
+ wamsg="Hai Hunter, saya nak tanya tentang laman web syarikat.\nBisnes saya: __\nAda laman web sekarang? (ya/tidak, pautan): __\nAsas atau SEO + AEO/GEO: __\nBahasa diperlukan (EN / 中文 / BM): __",
+ ld=("Pembinaan laman web", "Laman web syarikat untuk perniagaan perkhidmatan di Malaysia dan Singapura. Asas: halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi, butang WhatsApp, reka bentuk mesra telefon, pilihan EN / Cina / BM, serta persediaan domain dan HTTPS. SEO + AEO/GEO: semua dalam pakej Asas serta tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, kelajuan halaman, kandungan soal jawab / FAQ yang jelas, data berstruktur (schema), halaman FAQ, maklumat syarikat yang konsisten dan laporan semakan pengindeksan. Yuran melalui sebut harga bertulis; kedudukan carian tidak dijanjikan."),
+)
+
+def _wb(k):
+    w = WB[k]
+    link = "https://wa.me/60196273143?text=" + urllib.parse.quote(w["wamsg"], safe="")
+    chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
+    panel = lambda tag, h, sub, xs, cls: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
+                                          '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, h, sub, chk(xs), w["feel"], w["fee"])
+    return ('<section class="wrap section pd-products pd-ads-sec wb-sec" id="website-building"><p class="eyebrow"><i></i>%s</p><h2>%s</h2><div class="pd-ads-lede">%s'
+            '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p></div></section>\n'
+            '<section class="paper ad-section wb-section"><div class="wrap section">'
+            '<div class="ad-two wb-two">%s%s</div>'
+            '<p class="ad-fine">%s</p></div></section>\n') % (
+        w["eyebrow"], w["h"], "".join("<p>%s</p>" % x for x in w["p"]), link, w["cta"],
+        panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], ""), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus"),
+        w["fine"])
+
 # ---- FAQ (visible <details> list + FAQPage JSON-LD). Answers only restate what this page already says. ----
 FAQ = {}
 FAQ["en"] = dict(jump="FAQ", kicker="FAQ", h="Common questions", qa=[
@@ -277,7 +364,7 @@ AREAS = ["woodlands", "jurong", "tuas", "changi"]
 S = {}
 S["en"] = dict(
  title="Products & live demos | HF Media Solution (IP0633909-U)",
- desc="See what HF Media Solution builds: AI digital employees for recruitment, WhatsApp and content, plus ChatGPT Ads setup. Try the demos with sample data.",
+ desc="See what HF Media Solution builds: AI digital employees for recruitment, WhatsApp and content, ChatGPT Ads setup, and company websites with SEO and AEO/GEO. Try the demos with sample data.",
  eyebrow="PRODUCTS", h1="Digital employees you can actually see.",
  lede="HF Media Solution builds and runs AI “digital employees” for service businesses in Malaysia and Singapore. They're automation systems that do the repetitive work: sorting candidates, answering WhatsApp enquiries, preparing social posts. A person stays in charge of every decision that matters.",
  introh="What we do, in plain terms",
@@ -329,7 +416,7 @@ S["en"] = dict(
 
 S["zh"] = dict(
  title="产品与在线演示｜HF Media Solution (IP0633909-U)",
- desc="看清楚 HF Media Solution 做什么：招聘匹配、WhatsApp 跟进、内容自动化三款 AI 数字员工，另有 ChatGPT 广告服务，附示例数据在线演示。",
+ desc="看清楚 HF Media Solution 做什么：招聘匹配、WhatsApp 跟进、内容自动化三款 AI 数字员工，另有 ChatGPT 广告与网站建设（SEO + AEO/GEO），附示例数据在线演示。",
  eyebrow="产品", h1="看得见的数字员工。",
  lede="HF Media Solution 为马来西亚与新加坡的服务型生意，搭建并运营 AI「数字员工」：也就是帮你做重复工作的自动化系统，比如筛选候选人、回复 WhatsApp 询问、准备社媒贴文。重要的决定，始终由人来做。",
  introh="我们具体做什么",
@@ -381,7 +468,7 @@ S["zh"] = dict(
 
 S["ms"] = dict(
  title="Produk & demo langsung | HF Media Solution (IP0633909-U)",
- desc="Lihat apa yang HF Media Solution bina: pekerja digital AI untuk rekrutmen, WhatsApp dan kandungan, serta servis Iklan ChatGPT. Cuba demo dengan data contoh.",
+ desc="Lihat apa yang HF Media Solution bina: pekerja digital AI untuk rekrutmen, WhatsApp dan kandungan, Iklan ChatGPT, serta pembinaan laman web dengan SEO dan AEO/GEO. Cuba demo dengan data contoh.",
  eyebrow="PRODUK", h1="Pekerja digital yang boleh anda lihat.",
  lede="HF Media Solution membina dan mengendalikan “pekerja digital” AI untuk perniagaan servis di Malaysia dan Singapura. Ia sistem automasi yang buat kerja berulang: menapis calon, menjawab pertanyaan WhatsApp, menyediakan post media sosial. Keputusan penting tetap dibuat oleh manusia.",
  introh="Apa yang kami buat",
@@ -455,7 +542,7 @@ def _main(s):
     d2 = '<div class="pd-wa" data-demo="wa"></div>'
     d3 = '<div class="pd-ct" data-demo="ct"></div>'
     return ('\n<section class="wrap page-intro"><p class="eyebrow"><i></i>%s</p><h1>%s</h1><p class="lede">%s</p>'
-            '<nav class="pd-jump" aria-label="%s"><a href="#demo-1">%s</a><a href="#demo-2">%s</a><a href="#demo-3">%s</a><a href="#chatgpt-ads">%s</a><a href="#case-study">%s</a><a href="#faq">%s</a></nav></section>\n'
+            '<nav class="pd-jump" aria-label="%s"><a href="#demo-1">%s</a><a href="#demo-2">%s</a><a href="#demo-3">%s</a><a href="#chatgpt-ads">%s</a><a href="#website-building">%s</a><a href="#case-study">%s</a><a href="#faq">%s</a></nav></section>\n'
             '<section class="paper"><div class="wrap section prose pd-intro"><div><h2>%s</h2>%s</div><div><h2>%s</h2><ol class="pd-steps">%s</ol></div></div></section>\n'
             '<section class="wrap section pd-products" id="demos"><h2>%s</h2><p class="pd-sub">%s</p>%s%s%s</section>\n'
             '%s%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
@@ -464,11 +551,11 @@ def _main(s):
             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div>'
             '<p class="pd-reg">%s</p></section>\n'
             '<script type="application/json" id="pd-data">%s</script>\n<script src="/assets/products-demo.js" defer></script>\n'
-            ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], ADS[s["k"]]["jump"], CS[s["k"]]["jump"], FAQ[s["k"]]["jump"],
+            ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], ADS[s["k"]]["jump"], WB[s["k"]]["jump"], CS[s["k"]]["jump"], FAQ[s["k"]]["jump"],
                  s["introh"], intro, s["engh"], eng,
                  s["prodh"], s["prodsub"],
                  _demo_shell(1, s["p1h"], s["p1d"], s["badge"], d1), _demo_shell(2, s["p2h"], s["p2d"], s["badge"], d2), _demo_shell(3, s["p3h"], s["p3d"], s["badge"], d3),
-                 _ads(s["k"], s), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv, _faq(s["k"]),
+                 _ads(s["k"], s) + _wb(s["k"]), _case(CS[s["k"]]), s["howh"], how, s["privh"], priv, _faq(s["k"]),
                  s["ctaey"], s["ctah"], _esc(s["wamsg"]), s["reg"],
                  json.dumps({"rec": s["rec"], "wa": s["wa"], "ct": s["ct"], "ads": ADSW[s["k"]], "jobs": JOBS, "presets": PRESETS, "positions": POSITIONS, "tags": TAGS, "areas": AREAS}, ensure_ascii=False).replace("</", "<\\/"))
 
@@ -483,4 +570,5 @@ for k, s in S.items():
     PRODUCTS[k] = {"title": s["title"], "desc": s["desc"], "main": _main(s),
                    "services": [(s["p1h"], s["p1d"]), (s["p2h"], s["p2d"]), (s["p3h"], s["p3d"])],
                    "ads_service": ADS_LD[k],
+                   "web_service": WB[k]["ld"],
                    "faq": [(q, _plain(a)) for q, a in FAQ[k]["qa"]]}
