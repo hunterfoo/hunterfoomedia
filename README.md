@@ -24,6 +24,8 @@ python3 tools/build_i18n.py
 - https://www.hunterfoomedia.com/services/ai-automation/
 - https://www.hunterfoomedia.com/services/personal-brand/
 - https://www.hunterfoomedia.com/services/social-reels/
+- https://www.hunterfoomedia.com/products/
+- https://www.hunterfoomedia.com/articles/ （文章列表；文章内容在 `tools/articles_pages.py`，新增文章就往 `ARTICLES` 里加一条，三种语言各写一份，然后重新 build）
 
 `sitemap.xml` 列出以上地址的三种语言版本，并带 `xhtml:link` hreflang。未知路径仍返回 `404.html`，不要加「所有路径都改写成首页」的重定向。
 

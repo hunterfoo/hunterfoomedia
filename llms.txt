@@ -17,6 +17,11 @@
 - [ChatGPT Ads](https://www.hunterfoomedia.com/products/#chatgpt-ads): new; account setup, tracking (OpenAI pixel), ad copy, campaign management and reporting for ads shown below ChatGPT answers to Free and Go users; you approve every ad, no results guaranteed
 - [Website building](https://www.hunterfoomedia.com/products/#website-building): new; Basic company website (Home, About, Services, Contact, WhatsApp button, mobile-friendly, optional EN/中文/BM, domain and HTTPS setup) or SEO + AEO/GEO (adds titles and meta descriptions, sitemap, Google and Bing indexing submission, page speed, Q&A/FAQ content, structured data, consistent company details, indexing check report); fees by written quote, no rankings promised
 
+## Articles
+
+- [Articles index](https://www.hunterfoomedia.com/articles/) · [文章](https://www.hunterfoomedia.com/zh/articles/) · [Artikel](https://www.hunterfoomedia.com/ms/articles/)
+- [What Singapore SMEs should know before running Meta hiring ads](https://www.hunterfoomedia.com/articles/meta-hiring-ads-singapore-sme/) (2026-10-28): Meta's Employment special ad category and when it applies, targeting limits, fair job-ad wording under Singapore's TAFEP guidelines, caption and image tips, WhatsApp for applicants, fast follow-up; also in [中文](https://www.hunterfoomedia.com/zh/articles/meta-hiring-ads-singapore-sme/) and [Bahasa Melayu](https://www.hunterfoomedia.com/ms/articles/meta-hiring-ads-singapore-sme/)
+
 ## About
 
 - [About / business details](https://www.hunterfoomedia.com/about/)
