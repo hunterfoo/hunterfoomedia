@@ -12,7 +12,7 @@ BUILD_DATE = datetime.date.today().isoformat()
 D = "https://www.hunterfoomedia.com"
 SRC = "tools/src_zh"
 PAGES = ["/", "/services/", "/services/ai-automation/", "/services/personal-brand/", "/services/social-reels/"]
-ART_PATHS = ["/articles/"] + ["/articles/%s/" % a["slug"] for a in ARTICLES]
+ART_PATHS = ["/notes/"] + ["/notes/%s/" % a["slug"] for a in ARTICLES]
 ALL = PAGES + ["/products/", "/about/"] + ART_PATHS
 LANGS = {"en": ("", "en", "en_MY", "EN"), "zh": ("/zh", "zh-Hans", "zh_MY", "中文"), "ms": ("/ms", "ms", "ms_MY", "BM")}
 IDX = {"en": 0, "ms": 1}
@@ -187,7 +187,7 @@ for lang in LANGS:
     shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
     write(lang, "/products/", build(shell, "/products/", lang))
 
-    # Articles: index + each article, same shell pattern as About
+    # Notes (formerly Articles): index + each article, same shell pattern as About
     def art_shell(title, desc, path, ogtype="website"):
         sh = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
         sh = re.sub(r'<title>.*?</title>', lambda m: '<title>%s</title>' % title, sh)
@@ -196,13 +196,13 @@ for lang in LANGS:
         sh = re.sub(r'<meta (property|name)="(og|twitter):description" content="[^"]*">', lambda m: '<meta %s="%s:description" content="%s">' % (m.group(1), m.group(2), desc), sh)
         sh = sh.replace('<meta property="og:type" content="website">', '<meta property="og:type" content="%s">' % ogtype)
         sh = sh.replace(D + "/services/ai-automation/", D + path).replace(' aria-current="page"', '')
-        sh = sh.replace('<a href="/articles/">', '<a href="/articles/" aria-current="page">')
+        sh = sh.replace('<a href="/notes/">', '<a href="/notes/" aria-current="page">')
         return sh
     def put(sh, ld, main):
         sh = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>', sh, flags=re.S)
         return re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + main + '</main>', sh, flags=re.S)
     hl = LANGS[lang][1]; p = LANGS[lang][0]
-    ai = ART_INDEX[lang]; iu = D + "/articles/"
+    ai = ART_INDEX[lang]; iu = D + "/notes/"
     crumbs = lambda items: {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
     PUB = {"@type": "Organization", "name": "HF Media Solution", "legalName": "HF Media Solution", "alternateName": "Hunter Foo Media",
            "identifier": {"@type": "PropertyValue", "propertyID": "Malaysia business registration (SSM)", "value": "IP0633909-U"},
@@ -211,9 +211,9 @@ for lang in LANGS:
         {"@type": "CollectionPage", "@id": iu + "#webpage", "url": iu, "name": ai["title"], "description": ai["desc"], "inLanguage": hl, "isPartOf": {"@id": D + "/#website"},
          "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": iu + a["slug"] + "/", "name": a[lang]["h1"]} for i, a in enumerate(ARTICLES)]}},
         crumbs([(ai["crumb"], D + "/"), (ai["h1"].rstrip(".。"), iu)])]}
-    write(lang, "/articles/", build(put(art_shell(ai["title"], ai["desc"], "/articles/"), ld, index_main(lang, p)), "/articles/", lang))
+    write(lang, "/notes/", build(put(art_shell(ai["title"], ai["desc"], "/notes/"), ld, index_main(lang, p)), "/notes/", lang))
     for a in ARTICLES:
-        t = a[lang]; path = "/articles/%s/" % a["slug"]; au = D + path
+        t = a[lang]; path = "/notes/%s/" % a["slug"]; au = D + path
         ld = {"@context": "https://schema.org", "@graph": [
             {"@type": "Article", "@id": au + "#article", "headline": t["h1"], "description": t["desc"], "inLanguage": hl, "url": au,
              "mainEntityOfPage": {"@type": "WebPage", "@id": au}, "datePublished": a["date"], "dateModified": a.get("modified", a["date"]),

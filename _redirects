@@ -12,3 +12,11 @@ https://hunterfoomedia.com/* https://www.hunterfoomedia.com/:splat 301
 
 # Default favicon path for browsers and crawlers
 /favicon.ico /assets/favicon-48.png 301
+
+# Articles section renamed to Notes (2026-10-30)
+/articles /notes/ 301
+/articles/* /notes/:splat 301
+/zh/articles /zh/notes/ 301
+/zh/articles/* /zh/notes/:splat 301
+/ms/articles /ms/notes/ 301
+/ms/articles/* /ms/notes/:splat 301

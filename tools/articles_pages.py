@@ -1,20 +1,20 @@
-# Articles section: index + article pages (EN / ZH / MS), built by build_i18n.py.
+# Notes section (URL /notes/; formerly "Articles"): index + article pages (EN / ZH / MS), built by build_i18n.py.
 # Write each language natively. No ranking promises, no timelines, no invented numbers, no client names.
 WA = "https://wa.me/60196273143"
 
 INDEX = {
- "en": {"title": "Articles | Hunter Foo Media",
+ "en": {"title": "Notes | Hunter Foo Media",
         "desc": "Practical notes for small businesses in Malaysia and Singapore on ads, hiring, content and AI automation. Written from real work, no hype.",
-        "eyebrow": "ARTICLES", "h1": "Articles.", "lede": "Practical notes on ads, hiring, content and automation for small businesses in Malaysia and Singapore. Written from what we actually do.",
-        "read": "Read the article", "crumb": "Home", "next": "CONTACT", "cta": "Ask us a question.", "wa": "Hi Hunter, I read your articles and have a question:"},
- "zh": {"title": "文章｜Hunter Foo Media",
+        "eyebrow": "NOTES", "h1": "Notes.", "lede": "Practical notes on ads, hiring, content and automation for small businesses in Malaysia and Singapore. Written from what we actually do.",
+        "read": "Read the note", "crumb": "Home", "next": "CONTACT", "cta": "Ask us a question.", "wa": "Hi Hunter, I read your notes and have a question:"},
+ "zh": {"title": "笔记｜Hunter Foo Media",
         "desc": "写给马来西亚与新加坡中小企业的实用笔记：广告、招聘、内容与 AI 自动化。从实际工作出发，不吹牛。",
-        "eyebrow": "文章", "h1": "文章。", "lede": "写给马来西亚和新加坡中小企业的实用笔记：广告、招聘、内容和自动化。都是我们实际在做的事。",
-        "read": "阅读全文", "crumb": "首页", "next": "联系", "cta": "有问题直接问。", "wa": "你好 Hunter，我看了你的文章，想问："},
- "ms": {"title": "Artikel | Hunter Foo Media",
+        "eyebrow": "笔记", "h1": "笔记。", "lede": "写给马来西亚和新加坡中小企业的实用笔记：广告、招聘、内容和自动化。都是我们实际在做的事。",
+        "read": "阅读全文", "crumb": "首页", "next": "联系", "cta": "有问题直接问。", "wa": "你好 Hunter，我看了你的笔记，想问："},
+ "ms": {"title": "Catatan | Hunter Foo Media",
         "desc": "Nota praktikal untuk perniagaan kecil di Malaysia dan Singapura tentang iklan, pengambilan pekerja, kandungan dan automasi AI. Ditulis daripada kerja sebenar.",
-        "eyebrow": "ARTIKEL", "h1": "Artikel.", "lede": "Nota praktikal tentang iklan, pengambilan pekerja, kandungan dan automasi untuk perniagaan kecil di Malaysia dan Singapura. Berdasarkan kerja yang kami buat sendiri.",
-        "read": "Baca artikel", "crumb": "Utama", "next": "HUBUNGI", "cta": "Tanya kami.", "wa": "Hai Hunter, saya baca artikel anda dan ada soalan:"},
+        "eyebrow": "CATATAN", "h1": "Catatan.", "lede": "Nota praktikal tentang iklan, pengambilan pekerja, kandungan dan automasi untuk perniagaan kecil di Malaysia dan Singapura. Berdasarkan kerja yang kami buat sendiri.",
+        "read": "Baca catatan", "crumb": "Utama", "next": "HUBUNGI", "cta": "Tanya kami.", "wa": "Hai Hunter, saya baca catatan anda dan ada soalan:"},
 }
 
 META_HELP = "https://www.facebook.com/business/help/1537759006681893"
@@ -308,7 +308,7 @@ DATE_FMT = {"en": lambda d: "%d %s %s" % (int(d[8:]), ["January","February","Mar
             "zh": lambda d: "%s 年 %d 月 %d 日" % (d[:4], int(d[5:7]), int(d[8:])),
             "ms": lambda d: "%d %s %s" % (int(d[8:]), ["Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"][int(d[5:7])-1], d[:4])}
 BY = {"en": "By Hunter Foo", "zh": "作者：Hunter Foo", "ms": "Oleh Hunter Foo"}
-ALL_LABEL = {"en": "All articles", "zh": "全部文章", "ms": "Semua artikel"}
+ALL_LABEL = {"en": "All notes", "zh": "全部笔记", "ms": "Semua catatan"}
 
 def contact(lang, next_, cta, wa, note=""):
     n = '<p>%s</p>' % note if note else ''
@@ -318,7 +318,7 @@ def contact(lang, next_, cta, wa, note=""):
 
 def index_main(lang, p):
     h = INDEX[lang]
-    items = "".join('<li><h3><a href="%s/articles/%s/">%s</a></h3><p>%s · %s</p><p>%s</p><p><a href="%s/articles/%s/">%s →</a></p></li>\n' % (
+    items = "".join('<li><h3><a href="%s/notes/%s/">%s</a></h3><p>%s · %s</p><p>%s</p><p><a href="%s/notes/%s/">%s →</a></p></li>\n' % (
         p, a["slug"], a[lang]["h1"], DATE_FMT[lang](a["date"]), BY[lang], a[lang]["desc"], p, a["slug"], h["read"]) for a in ARTICLES)
     return ('\n<section class="wrap page-intro">\n<p class="crumbs"><a href="/">%s</a> / %s</p>\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n</section>\n'
             '<section class="paper"><div class="wrap section prose">\n<ul class="article-list" style="list-style:none;padding-left:0">\n%s</ul>\n</div></section>\n' % (h["crumb"], h["h1"].rstrip(".。"), h["eyebrow"], h["h1"], h["lede"], items)
@@ -326,9 +326,9 @@ def index_main(lang, p):
 
 def article_main(lang, a, p):
     t = a[lang]; h = INDEX[lang]
-    return ('\n<article>\n<section class="wrap page-intro">\n<p class="crumbs"><a href="/">%s</a> / <a href="/articles/">%s</a> / %s</p>\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n'
+    return ('\n<article>\n<section class="wrap page-intro">\n<p class="crumbs"><a href="/">%s</a> / <a href="/notes/">%s</a> / %s</p>\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n'
             '<p class="crumbs" style="margin-top:18px"><time datetime="%s">%s</time> · %s</p>\n</section>\n'
-            '<section class="paper"><div class="wrap section prose">\n%s\n<p class="related"><a href="/articles/">← %s</a><a href="/products/">%s</a></p>\n</div></section>\n</article>\n' % (
+            '<section class="paper"><div class="wrap section prose">\n%s\n<p class="related"><a href="/notes/">← %s</a><a href="/products/">%s</a></p>\n</div></section>\n</article>\n' % (
             h["crumb"], h["h1"].rstrip(".。"), t["h1"], t["eyebrow"], t["h1"], t["lede"], a["date"], DATE_FMT[lang](a["date"]), BY[lang], t["body"], ALL_LABEL[lang],
             {"en": "Our services and demos", "zh": "看我们的服务与演示", "ms": "Servis dan demo kami"}[lang])
             + contact(lang, t["next"], t["cta"], t["wa"], t["cta_note"]))
