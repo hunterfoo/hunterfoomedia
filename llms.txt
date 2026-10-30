@@ -1,19 +1,19 @@
 # Hunter Foo Media
 
-> Hunter Foo Media (legal name: HF Media Solution, Malaysia business registration IP0633909-U) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore, working as forward deployed engineers (embedded with the client's team). Step 1: a website that Google and AI assistants can read (Basic from RM886; SEO + AEO/GEO add-on +RM1,999, RM2,885 total). Step 2: lead automation (finding leads, filling in phone and email, email follow-up, funnel filtering). Step 3: closing on WhatsApp with a WhatsApp digital employee. Not a recruitment agency. Founder: Hunter Foo.
+> Hunter Foo Media (legal name: HF Media Solution, Malaysia business registration IP0633909-U) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore, working as forward deployed engineers (embedded with the client's team). Step 1: a website that Google and AI assistants can read (Basic from RM886; SEO + AEO/GEO add-on +RM1,999, RM2,885 total). Step 2: lead automation (finding leads, filling in phone and email, email follow-up, funnel filtering). Step 3: closing on WhatsApp with a WhatsApp digital employee. Steps 1–3 are grouped as Business (external: winning customers). A second area, Management (internal: back-office operations), covers AI for reports, matching and assignments, document processing (e.g. resume preparation), team workflows and daily summaries, and approval queues with human sign-off; fees by written quote. Not a recruitment agency. Founder: Hunter Foo.
 
 - Website: https://www.hunterfoomedia.com/ (English) · https://www.hunterfoomedia.com/zh/ (中文) · https://www.hunterfoomedia.com/ms/ (Bahasa Melayu)
 - Contact: WhatsApp +60196273143 | hello@hunterfoomedia.com
 - Address: D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia
 - Service area: Malaysia, Singapore (same service, delivered remotely)
 - Fees: website starting prices as above; final price and all other fees confirmed by written quote after scoping
-- Proof: the lead and recruitment automation runs daily for Sky Employment Pte Ltd, a licensed Singapore employment agency (22 candidates processed end-to-end, 49 candidate-to-job recommendations, internal records as of 12 October 2026); see the [case study](https://www.hunterfoomedia.com/products/#case-study)
+- Proof: the lead and recruitment automation runs daily for Sky Employment Pte Ltd, a licensed Singapore employment agency (22 candidates processed end-to-end, 49 candidate-to-job recommendations, internal records as of 12 October 2026); the same system also handles back-office work: resumes prepared automatically, candidates matched to open job orders, a daily progress report to the team, and a person approves every outbound message before it is sent; see the [case study](https://www.hunterfoomedia.com/products/#case-study)
 - This site as an example: llms.txt, English/中文/BM with hreflang, schema.org structured data, XML sitemap, IndexNow key
 - After delivery: 2 free revisions within 30 days; account management is a separate monthly fee
 
 ## Services
 
-- [Home](https://www.hunterfoomedia.com/): the three steps (website, lead automation, close on WhatsApp), live demos, latest notes, founder
+- [Home](https://www.hunterfoomedia.com/): Business, external (three steps: website, lead automation, close on WhatsApp); [Management, internal](https://www.hunterfoomedia.com/#management) (back-office AI: reports, matching and assignments, document processing, team workflows and daily summaries, approval queues with human sign-off; written quote); live demos, latest notes, founder
 - [Products & live demos](https://www.hunterfoomedia.com/products/): AI Recruitment Matching System, WhatsApp Digital Employee, Content Automation (browser demos with made-up sample data), ChatGPT Ads, website building, Sky Employment case study, FAQ
 - [Services overview](https://www.hunterfoomedia.com/services/): AI automation, personal branding, social media & Reels — start with the one holding you back most
 - [AI Automation](https://www.hunterfoomedia.com/services/ai-automation/): for small teams stuck forwarding and chasing updates; fix the most annoying handover first, no software to buy first
