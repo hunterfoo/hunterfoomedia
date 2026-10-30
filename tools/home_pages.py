@@ -52,10 +52,10 @@ H["en"] = dict(
 )
 H["zh"] = dict(
  title="马来西亚与新加坡的 AI Agency｜AI 读得懂的网站与获客自动化｜Hunter Foo Media",
- desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，以前线部署工程师的方式工作。先做 Google 和 AI 助手都读得懂的网站，RM886 起；再把找客户、跟进、成交自动化。WhatsApp +60196273143。",
+ desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，以前沿部署工程师的方式工作。先做 Google 和 AI 助手都读得懂的网站，RM886 起；再把找客户、跟进、成交自动化。WhatsApp +60196273143。",
  eyebrow="AI AGENCY · 马来西亚与新加坡",
  h1='把 AI 带进你的公司，<span class="orange">一步一步来。</span>',
- lede=["Hunter Foo Media 是服务马来西亚和新加坡企业的 AI agency。我们以<b>前线部署工程师</b>（Forward Deployed Engineer）的方式工作：走进你的团队，先弄清楚你们实际怎么做事，再动手搭建合用的系统。",
+ lede=["Hunter Foo Media 是服务马来西亚和新加坡企业的 AI agency。我们以<b>前沿部署工程师</b>（Forward Deployed Engineer）的方式工作：走进你的团队，先弄清楚你们实际怎么做事，再动手搭建合用的系统。",
        "第一步，做一个 Google 和 AI 助手都读得懂的网站。接着，把找客户、跟进和成交的流程自动化。"],
  cta1="看网站方案", cta2="WhatsApp +60 19-627 3143",
  stepsnav=[("#website", "1 · 网站"), ("#automation", "2 · 获客自动化"), ("#whatsapp", "3 · WhatsApp 成交")],
