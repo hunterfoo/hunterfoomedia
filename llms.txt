@@ -1,22 +1,26 @@
 # Hunter Foo Media
 
-> Hunter Foo Media (legal name: HF Media Solution, Malaysia business registration IP0633909-U) builds positioning, content and follow-up systems for service businesses in Malaysia and Singapore: more clients, less busywork. Fully remote, English or Chinese. Not a recruitment agency. Founder: Hunter Foo.
+> Hunter Foo Media (legal name: HF Media Solution, Malaysia business registration IP0633909-U) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore, working as forward deployed engineers (embedded with the client's team). Step 1: a website that Google and AI assistants can read (Basic RM399; SEO + AEO/GEO one-time add-on +RM994, RM1,393 total; optional maintenance RM199/month). Step 2: lead automation (finding leads, filling in phone and email, email follow-up, funnel filtering). Step 3: closing on WhatsApp with a WhatsApp digital employee. Steps 1–3 are grouped as Business (external: winning customers). A second area, Management (internal: back-office operations), covers AI for reports, matching and assignments, document processing (e.g. resume preparation), team workflows and daily summaries, and approval queues with human sign-off; fees by written quote. Not a recruitment agency. Founder: Hunter Foo.
 
 - Website: https://www.hunterfoomedia.com/ (English) · https://www.hunterfoomedia.com/zh/ (中文) · https://www.hunterfoomedia.com/ms/ (Bahasa Melayu)
 - Contact: WhatsApp +60196273143 | hello@hunterfoomedia.com
 - Address: D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia
 - Service area: Malaysia, Singapore (same service, delivered remotely)
-- Delivery: about 28 days after complete materials; one-page quote after the diagnosis (what, how many days, how much)
-- After delivery: 2 free revisions within 30 days; account management is a separate monthly fee
+- Fees: website package prices as above (each price on the site is a WhatsApp button with a preset enquiry message); SEO + AEO/GEO optional maintenance RM199/month; more languages, extra pages, other custom scope and all other fees confirmed by written quote
+- Proof: the lead and recruitment automation runs daily for our client Sky Employment Pte Ltd, a licensed Singapore employment agency (22 candidates processed end-to-end, 49 candidate-to-job recommendations, internal records as of 12 October 2026); the same system also handles back-office work: resumes prepared automatically, candidates matched to open job orders, a daily progress report to the team, and a person approves every outbound message before it is sent; see the [case study](https://www.hunterfoomedia.com/products/#case-study)
+- This site as an example: llms.txt, English/中文/BM with hreflang, schema.org structured data, XML sitemap, IndexNow key
+- After delivery: 2 free revisions; account management is a separate monthly fee
 
 ## Services
 
+- [Home](https://www.hunterfoomedia.com/): Business, external (three steps: website, lead automation, close on WhatsApp); [Management, internal](https://www.hunterfoomedia.com/#management) (back-office AI: reports, matching and assignments, document processing, team workflows and daily summaries, approval queues with human sign-off; written quote); live demos, latest notes, founder
+- [Products & live demos](https://www.hunterfoomedia.com/products/): AI Recruitment Matching System, WhatsApp Digital Employee, Content Automation (browser demos with made-up sample data), ChatGPT Ads, website building, Sky Employment case study, FAQ
 - [Services overview](https://www.hunterfoomedia.com/services/): AI automation, personal branding, social media & Reels — start with the one holding you back most
 - [AI Automation](https://www.hunterfoomedia.com/services/ai-automation/): for small teams stuck forwarding and chasing updates; fix the most annoying handover first, no software to buy first
 - [Personal Brand](https://www.hunterfoomedia.com/services/personal-brand/): for solo professionals and property agents; one clear line of positioning plus content themes
 - [Social Media & Reels](https://www.hunterfoomedia.com/services/social-reels/): for brands and professionals who keep going quiet; topics, captions and Reels
 - [ChatGPT Ads](https://www.hunterfoomedia.com/products/#chatgpt-ads): new; account setup, tracking (OpenAI pixel), ad copy, campaign management and reporting for ads shown below ChatGPT answers to Free and Go users; you approve every ad, no results guaranteed
-- [Website building](https://www.hunterfoomedia.com/products/#website-building): new; Basic company website (Home, About, Services, Contact, WhatsApp button, mobile-friendly, optional EN/中文/BM, domain and HTTPS setup) or SEO + AEO/GEO (adds titles and meta descriptions, sitemap, Google and Bing indexing submission, page speed, Q&A/FAQ content, structured data, consistent company details, indexing check report); fees by written quote, no rankings promised
+- [Website building](https://www.hunterfoomedia.com/products/#website-building): new; Basic company website (Home, About, Services, Contact, WhatsApp button, mobile-friendly, one language included: EN, 中文 or BM; domain included for the first year (renewal from the second year billed separately), HTTPS setup; llms.txt AI-readable site summary) or SEO + AEO/GEO (adds titles and meta descriptions, sitemap, Google and Bing indexing submission, page speed, Q&A/FAQ content, structured data, consistent company details, llms.txt, indexing check report; one-time setup; optional maintenance: RM199/month); prices: Basic RM399, SEO + AEO/GEO a +RM994 add-on (RM1,393 total); more languages, extra pages and other custom scope by written quote; no rankings promised
 
 ## Notes
 
@@ -27,5 +31,4 @@
 ## About
 
 - [About / business details](https://www.hunterfoomedia.com/about/)
-- [Home & FAQ](https://www.hunterfoomedia.com/)
 - [Hunter Foo · LinkedIn](https://www.linkedin.com/in/hunterfoo3143/)

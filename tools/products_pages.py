@@ -203,12 +203,12 @@ def _ads(k, s):
         a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
         a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
-# ---- Website building (two tiers). Copy written natively per language. Fees: written quote only; no rankings promised. ----
+# ---- Website building (two tiers). Copy written natively per language. Prices shown (Basic RM399; SEO + AEO/GEO +RM994 one-time add-on, RM1,393 total; optional maintenance RM199/month); each price is a WhatsApp button with a preset message; custom scope by written quote; no rankings promised. ----
 WB = {}
 WB["en"] = dict(
  geth="What you get",
  gets=["Hosted on Cloudflare's global network, so your site loads fast, with the HTTPS security padlock included.",
-       "No server to rent. Each year, the main cost is just your domain fee.",
+       "No server to rent. From the second year, you only renew your domain (billed separately).",
        "Your domain and website are in your name, so you're never locked in."],
  scope="Online shop payments, member logins, or a dashboard for editing your own content are quoted separately.",
  jump="Website building", eyebrow="NEW · WEBSITE BUILDING",
@@ -220,23 +220,27 @@ WB["en"] = dict(
  t1=["A company website with Home, About, Services and Contact pages",
      "A WhatsApp button on every page",
      "Mobile-friendly design",
-     'Optional multilingual site: English, <span lang="zh-Hans">中文</span> and BM',
-     "Domain and HTTPS setup"],
+     'One language included: English, <span lang="zh-Hans">中文</span> or BM',
+     "Domain included for the first year, with HTTPS setup",
+     "llms.txt: a plain-text summary of your business that AI tools can read"],
  t2tag="Package 2", t2h="SEO + AEO/GEO", t2sub="Everything in Basic, plus:",
  t2=["<b>SEO:</b> page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, and page speed work",
      "<b>AEO</b> (answer engine optimisation): clear Q&amp;A and FAQ content, so search engines can quote your answers directly",
      "<b>GEO</b> (generative engine optimisation): structured data (schema), an FAQ page and consistent company details, so AI search like ChatGPT and Perplexity can understand and cite your site",
-     "An indexing check report"],
- feel="Fee: ", fee="Written quote",
+     "An indexing check report",
+     "llms.txt, written so AI tools can read your services and FAQ",
+     "A one-time setup. Optional maintenance: RM199/month"],
+ feel="Fee", btn1="RM399 · WhatsApp us", btn2="RM1,393 · WhatsApp us", btn2sub="Basic RM399 + RM994",
+ wa1="I'd like to build my Basic website (RM399)", wa2="I'd like to build my website with SEO + AEO/GEO (RM1,393 total)",
  cta="Ask about a website on WhatsApp",
- fine="Scope and fees are agreed in a written quote before we start. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up; how search engines and AI tools rank and cite sites is up to them.",
+ fine="Prices above cover the packages as listed. More languages, extra pages or other custom scope are confirmed by written quote. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up; how search engines and AI tools rank and cite sites is up to them.",
  wamsg="Hi Hunter, I'd like to ask about a company website.\nMy business: __\nDo I have a website now? (yes/no, link): __\nBasic or SEO + AEO/GEO: __\nLanguages needed (EN / 中文 / BM): __",
- ld=("Website building", "Company websites for service businesses in Malaysia and Singapore. Basic: Home, About, Services and Contact pages, a WhatsApp button, mobile-friendly design, optional English/Chinese/Malay versions, and domain and HTTPS setup. SEO + AEO/GEO: everything in Basic plus page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, page speed work, clear Q&A/FAQ content, structured data (schema), an FAQ page, consistent company details and an indexing check report. Fees by written quote; no rankings are promised."),
+ ld=("Website building", "Company websites for service businesses in Malaysia and Singapore. Basic: Home, About, Services and Contact pages, a WhatsApp button, mobile-friendly design, one language included (English, Chinese or Malay), the domain for the first year (renewal from the second year billed separately) with HTTPS setup, and an llms.txt AI-readable summary. SEO + AEO/GEO (one-time setup): everything in Basic plus page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, page speed work, clear Q&A/FAQ content, structured data (schema), an FAQ page, consistent company details, an llms.txt file and an indexing check report. Prices: Basic RM399; SEO + AEO/GEO is a +RM994 add-on (RM1,393 total), a one-time setup. Optional maintenance: RM199/month. Custom scope (more languages, extra pages) is confirmed by written quote. No rankings are promised."),
 )
 WB["zh"] = dict(
  geth="你得到什么",
  gets=["放在 Cloudflare 全球服务器，速度快，自带 HTTPS 安全锁。",
-       "不用租服务器，每年主要只付域名费。",
+       "不用租服务器。第二年起只需续域名费（另计）。",
        "域名和网站都在你名下，不会被绑住。"],
  scope="网店付款、会员登录、自己改内容的后台，另外报价。",
  jump="网站建设", eyebrow="新服务 · 网站建设",
@@ -248,23 +252,27 @@ WB["zh"] = dict(
  t1=["公司网站：首页、关于我们、服务、联系我们",
      "每一页都有 WhatsApp 按钮",
      "手机友好的设计",
-     "可选多语言：EN / 中文 / BM",
-     "域名与 HTTPS 设置"],
+     "含 1 种语言：EN、中文或 BM 任选",
+     "含第一年域名，并设置好 HTTPS",
+     "llms.txt：一份 AI 工具读得懂的网站简介"],
  t2tag="方案二", t2h="SEO + AEO/GEO", t2sub="包含基础版全部内容，另加：",
  t2=["<b>SEO：</b>每页标题与 meta 描述、网站地图（sitemap）、提交 Google 与 Bing 收录、网页速度优化",
      "<b>AEO</b>（答案引擎优化）：写清楚的问答 / FAQ 内容，方便搜索引擎直接引用你的答案",
      "<b>GEO</b>（生成式引擎优化）：结构化数据（schema）、FAQ 页面、全站一致的公司资料，让 ChatGPT、Perplexity 等 AI 搜索更容易读懂并引用你的网站",
-     "收录检查报告"],
- feel="费用：", fee="书面报价",
+     "收录检查报告",
+     "llms.txt：把你的服务和 FAQ 写成 AI 工具读得懂的格式",
+     "一次性设置。如需维护：每月 RM199"],
+ feel="费用", btn1="RM399 · WhatsApp 我们", btn2="RM1,393 · WhatsApp 我们", btn2sub="基础版 RM399 + RM994",
+ wa1="我要搭建我的 Basic 网站 RM399", wa2="我要搭建我的网站，含 SEO + AEO/GEO，合共 RM1,393",
  cta="用 WhatsApp 问网站建设",
- fine="服务范围和费用在开工前以书面报价确认。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们只把做什么、设置什么写清楚；搜索引擎和 AI 工具怎么排序、引用，由它们决定。",
+ fine="以上价格按所列内容计算。加语言、加页面或其他特别需求，以书面报价确认。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们只把做什么、设置什么写清楚；搜索引擎和 AI 工具怎么排序、引用，由它们决定。",
  wamsg="你好 Hunter，我想了解公司网站。\n我做的是：＿＿\n现在有没有网站（有/没有，链接）：＿＿\n基础版还是 SEO + AEO/GEO：＿＿\n需要哪些语言（EN / 中文 / BM）：＿＿",
- ld=("网站建设", "为马来西亚与新加坡的服务型生意建公司网站。基础版：首页、关于我们、服务、联系我们，WhatsApp 按钮，手机友好设计，可选 EN / 中文 / BM 多语言，域名与 HTTPS 设置。SEO + AEO/GEO：包含基础版全部内容，另加每页标题与 meta 描述、网站地图、提交 Google 与 Bing 收录、网页速度优化、清楚的问答 / FAQ 内容、结构化数据（schema）、FAQ 页面、全站一致的公司资料，以及收录检查报告。费用以书面报价确认，不承诺排名。"),
+ ld=("网站建设", "为马来西亚与新加坡的服务型生意建公司网站。基础版：首页、关于我们、服务、联系我们，WhatsApp 按钮，手机友好设计，含 1 种语言（EN、中文或 BM），含第一年域名（第二年起续费另计）并设置 HTTPS，另附 llms.txt AI 可读网站简介。SEO + AEO/GEO（一次性设置）：包含基础版全部内容，另加每页标题与 meta 描述、网站地图、提交 Google 与 Bing 收录、网页速度优化、清楚的问答 / FAQ 内容、结构化数据（schema）、FAQ 页面、全站一致的公司资料、llms.txt，以及收录检查报告。价格：基础版 RM399；SEO + AEO/GEO 在基础版上另加 RM994，合共 RM1,393，为一次性设置。如需维护：每月 RM199。特别需求（加语言、加页面）以书面报价确认。不承诺排名。"),
 )
 WB["ms"] = dict(
  geth="Apa yang anda dapat",
  gets=["Dihoskan di rangkaian global Cloudflare, jadi laman anda dibuka dengan pantas, siap dengan ikon mangga keselamatan HTTPS.",
-       "Tak perlu sewa server. Setiap tahun, kos utama hanyalah yuran domain.",
+       "Tak perlu sewa server. Mulai tahun kedua, anda hanya perlu memperbaharui domain (dikenakan berasingan).",
        "Domain dan laman web didaftarkan atas nama anda, jadi anda tidak terikat."],
  scope="Pembayaran kedai dalam talian, log masuk ahli, atau papan pemuka untuk anda ubah kandungan sendiri disebut harga secara berasingan.",
  jump="Pembinaan laman web", eyebrow="BARU · PEMBINAAN LAMAN WEB",
@@ -276,26 +284,38 @@ WB["ms"] = dict(
  t1=["Laman web syarikat dengan halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi",
      "Butang WhatsApp di setiap halaman",
      "Reka bentuk mesra telefon",
-     'Pilihan pelbagai bahasa: EN, <span lang="zh-Hans">中文</span> dan BM',
-     "Persediaan domain dan HTTPS"],
+     'Satu bahasa termasuk: EN, <span lang="zh-Hans">中文</span> atau BM',
+     "Domain untuk tahun pertama, dengan persediaan HTTPS",
+     "llms.txt: ringkasan perniagaan anda dalam teks biasa yang boleh dibaca alat AI"],
  t2tag="Pakej 2", t2h="SEO + AEO/GEO", t2sub="Semua dalam pakej Asas, serta:",
  t2=["<b>SEO:</b> tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, dan penambahbaikan kelajuan halaman",
      "<b>AEO</b> (pengoptimuman enjin jawapan): kandungan soal jawab dan FAQ yang jelas, supaya enjin carian boleh memetik jawapan anda secara terus",
      "<b>GEO</b> (pengoptimuman enjin generatif): data berstruktur (schema), halaman FAQ dan maklumat syarikat yang konsisten, supaya carian AI seperti ChatGPT dan Perplexity mudah memahami dan memetik laman anda",
-     "Laporan semakan pengindeksan"],
- feel="Yuran: ", fee="Sebut harga bertulis",
+     "Laporan semakan pengindeksan",
+     "llms.txt, ditulis supaya alat AI boleh membaca servis dan FAQ anda",
+     "Persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan"],
+ feel="Yuran", btn1="RM399 · WhatsApp kami", btn2="RM1,393 · WhatsApp kami", btn2sub="Asas RM399 + RM994",
+ wa1="Saya mahu bina laman web Basic saya (RM399)", wa2="Saya mahu bina laman web saya dengan SEO + AEO/GEO (jumlah RM1,393)",
  cta="Tanya tentang laman web di WhatsApp",
- fine="Skop dan yuran dipersetujui dalam sebut harga bertulis sebelum mula. Kami tidak menjanjikan kedudukan carian, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami nyatakan dengan jelas apa yang kami bina dan sediakan; cara enjin carian dan alat AI menyusun dan memetik laman ditentukan oleh mereka.",
+ fine="Harga di atas meliputi pakej seperti yang disenaraikan. Bahasa tambahan, halaman tambahan atau skop khas lain disahkan melalui sebut harga bertulis. Kami tidak menjanjikan kedudukan carian, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami nyatakan dengan jelas apa yang kami bina dan sediakan; cara enjin carian dan alat AI menyusun dan memetik laman ditentukan oleh mereka.",
  wamsg="Hai Hunter, saya nak tanya tentang laman web syarikat.\nBisnes saya: __\nAda laman web sekarang? (ya/tidak, pautan): __\nAsas atau SEO + AEO/GEO: __\nBahasa diperlukan (EN / 中文 / BM): __",
- ld=("Pembinaan laman web", "Laman web syarikat untuk perniagaan perkhidmatan di Malaysia dan Singapura. Asas: halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi, butang WhatsApp, reka bentuk mesra telefon, pilihan EN / Cina / BM, serta persediaan domain dan HTTPS. SEO + AEO/GEO: semua dalam pakej Asas serta tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, kelajuan halaman, kandungan soal jawab / FAQ yang jelas, data berstruktur (schema), halaman FAQ, maklumat syarikat yang konsisten dan laporan semakan pengindeksan. Yuran melalui sebut harga bertulis; kedudukan carian tidak dijanjikan."),
+ ld=("Pembinaan laman web", "Laman web syarikat untuk perniagaan perkhidmatan di Malaysia dan Singapura. Asas: halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi, butang WhatsApp, reka bentuk mesra telefon, satu bahasa termasuk (EN, Cina atau BM), domain untuk tahun pertama (pembaharuan mulai tahun kedua dikenakan berasingan) dengan persediaan HTTPS, serta ringkasan llms.txt yang boleh dibaca AI. SEO + AEO/GEO (persediaan sekali sahaja): semua dalam pakej Asas serta tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, kelajuan halaman, kandungan soal jawab / FAQ yang jelas, data berstruktur (schema), halaman FAQ, maklumat syarikat yang konsisten, fail llms.txt dan laporan semakan pengindeksan. Harga: Asas RM399; SEO + AEO/GEO ialah tambahan RM994 (jumlah RM1,393), persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan. Skop khas (bahasa atau halaman tambahan) disahkan melalui sebut harga bertulis. Kedudukan carian tidak dijanjikan."),
 )
+
+def fee_btn(w, n):
+    """Package price as a WhatsApp button with a preset message (opens in a new tab)."""
+    href = "https://wa.me/60196273143?text=" + urllib.parse.quote(w["wa%d" % n], safe="")
+    sub = '<small class="wb-buy-sub">%s</small>' % w["btn2sub"] if n == 2 else ""
+    return ('<div class="wb-fee wb-fee-btn"><span class="wb-fee-l">%s</span>'
+            '<a class="button wb-buy" href="%s" target="_blank" rel="noopener noreferrer"><span>%s</span><span aria-hidden="true">→</span></a>%s</div>') % (
+            w["feel"], href, w["btn%d" % n], sub)
 
 def _wb(k):
     w = WB[k]
     link = "https://wa.me/60196273143?text=" + urllib.parse.quote(w["wamsg"], safe="")
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
-    panel = lambda tag, h, sub, xs, cls: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
-                                          '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, h, sub, chk(xs), w["feel"], w["fee"])
+    panel = lambda tag, h, sub, xs, cls, fee: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
+                                               '%s</div>') % (cls, tag, h, sub, chk(xs), fee)
     return ('<section class="wrap section pd-products pd-ads-sec wb-sec" id="website-building"><p class="eyebrow"><i></i>%s</p><h2>%s</h2><div class="pd-ads-lede">%s'
             '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p></div></section>\n'
             '<section class="paper ad-section wb-section"><div class="wrap section">'
@@ -305,7 +325,7 @@ def _wb(k):
             '<p class="ad-fine">%s</p></div></section>\n') % (
         w["eyebrow"], w["h"], "".join("<p>%s</p>" % x for x in w["p"]), link, w["cta"],
         w["geth"], "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[i], x) for i, x in zip(["glb", "srv", "key"], w["gets"])),
-        panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], ""), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus"),
+        panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)),
         w["scope"], w["fine"])
 
 # ---- FAQ (visible <details> list + FAQPage JSON-LD). Answers only restate what this page already says. ----
@@ -393,7 +413,7 @@ S["en"] = dict(
         "Everything is delivered online. We map how you work over video call and WhatsApp, cut the steps that don't need to exist, then build the system on tools you already use, like WhatsApp, Google Sheets and Facebook. We're based in Kuala Lumpur and work mostly online, with nothing to install on site.",
         "<strong>In daily use:</strong> these systems run every day for our client Sky Employment Pte Ltd, a licensed Singapore employment agency. See the case study below."],
  engh="How an engagement works",
- eng=[("1 · Setup", "A one-off project. We map your process, build the system, test it with you and train your team. Setup timeline and fees are agreed in a written quote before we start."),
+ eng=[("1 · Setup", "A one-off project. We map your process, build the system, test it with you and train your team. Scope and fees are agreed in a written quote before we start."),
       ("2 · Monthly operation", "An optional monthly fee. We keep the system running, adjust rules and message templates, and fix anything that breaks. Where we run paid ads for you, you get a daily ad performance report."),
       ("3 · You stay in control", "Your accounts, your data, your customers. You approve every outbound message template and every post before it goes live.")],
  prodh="Three products. Try each one.",
@@ -445,7 +465,7 @@ S["zh"] = dict(
         "全部线上交付。我们通过视频会议和 WhatsApp 了解你怎么做事，先删掉不必要的步骤，再用你现有的工具（WhatsApp、Google 表格、Facebook）搭系统。我们位于吉隆坡，大部分工作在线上完成，不需要上门安装。",
         "<strong>每天在用：</strong>这些系统每天都在为我们的客户 Sky Employment Pte Ltd（新加坡持牌职业中介）运行。详见下方案例。"],
  engh="合作怎么进行",
- eng=[("1 · 搭建", "一次性项目。梳理流程、搭系统、和你一起测试、培训团队。搭建时间和费用在开工前以书面报价确认。"),
+ eng=[("1 · 搭建", "一次性项目。梳理流程、搭系统、和你一起测试、培训团队。服务范围和费用在开工前以书面报价确认。"),
       ("2 · 每月运营", "可选月费。我们维护系统运行、调整规则和话术模板、修复问题。若由我们代投广告，每天给你一份广告成效报告。"),
       ("3 · 主控权在你", "账号、数据、客户都是你的。每一条对外信息模板、每一篇贴文，都要你批准才上线。")],
  prodh="三款产品，每款都能试。",
@@ -497,7 +517,7 @@ S["ms"] = dict(
         "Semuanya diserahkan secara dalam talian. Kami fahami cara kerja anda melalui panggilan video dan WhatsApp, buang langkah yang tak perlu, kemudian bina sistem atas alat yang anda sudah guna: WhatsApp, Google Sheets dan Facebook. Kami berpangkalan di Kuala Lumpur dan kebanyakan kerja dibuat dalam talian, tanpa pemasangan di premis.",
         "<strong>Digunakan setiap hari:</strong> sistem ini berjalan setiap hari untuk pelanggan kami Sky Employment Pte Ltd, agensi pekerjaan berlesen di Singapura. Lihat kajian kes di bawah."],
  engh="Cara kerjasama berjalan",
- eng=[("1 · Persediaan", "Projek sekali. Kami petakan proses, bina sistem, uji bersama anda dan latih pasukan anda. Tempoh persediaan dan yuran dipersetujui dalam sebut harga bertulis sebelum mula."),
+ eng=[("1 · Persediaan", "Projek sekali. Kami petakan proses, bina sistem, uji bersama anda dan latih pasukan anda. Skop dan yuran dipersetujui dalam sebut harga bertulis sebelum mula."),
       ("2 · Operasi bulanan", "Yuran bulanan pilihan. Kami pastikan sistem berjalan, laraskan peraturan dan templat mesej serta baiki sebarang masalah. Jika kami uruskan iklan berbayar anda, anda terima laporan prestasi iklan setiap hari."),
       ("3 · Anda tetap mengawal", "Akaun, data dan pelanggan milik anda. Setiap templat mesej keluar dan setiap post perlu kelulusan anda sebelum disiarkan.")],
  prodh="Tiga produk. Cuba setiap satu.",
@@ -539,7 +559,7 @@ S["ms"] = dict(
  reg="HF Media Solution · No. pendaftaran perniagaan IP0633909-U (Malaysia) · Berdagang sebagai Hunter Foo Media · Servis jarak jauh di Malaysia dan Singapura",
 )
 
-CS = {'en': {'csh': 'Case study: Sky Employment Pte Ltd', 'jump': 'Case study', 'cslede': 'Sky Employment Pte Ltd is a Singapore employment agency (MOM EA licence 08C5793). HF Media Solution manages its recruitment marketing and operations, including its jobseeker channel, <strong>SG Jobs For Malaysians</strong>. The demos above are simplified versions of the systems we run for them.', 'scopeh': 'What we manage', 'scope': ['<strong>Facebook / Meta paid ads.</strong> Planning and running campaigns, with a daily ad performance report.', '<strong>Facebook Page content.</strong> Daily job-info posts and hiring posters for the SG Jobs For Malaysians page and the Sky Employment Pte Ltd page.', '<strong>WhatsApp Business.</strong> Replying to jobseekers, sending job details and the application form, following up, and labelling every chat.', '<strong>WhatsApp Channel “SG Jobs For Malaysians”.</strong> Daily job updates for followers.', '<strong>Google Drive &amp; Sheets.</strong> The job order list, candidate registration through a Google Form, resume production and a resume index.', '<strong>AI candidate-to-job matching.</strong> Each registered candidate is checked against open job orders and gets a list of recommended jobs.'], 'numh': 'By the numbers', 'asof': 'From internal records, as of 12 October 2026.', 'nums': [('22', 'candidates processed end-to-end through the automated pipeline: registration → resume → job recommendations'), ('49', 'candidate-to-job recommendations generated')], 'note': 'Sky Employment Pte Ltd is the licensed employment agency. HF Media Solution provides marketing, operations and automation services to it and does not charge job seekers.', 'links': 'Public pages', 'l1': 'SG Jobs For Malaysians on Facebook', 'l2': 'Sky Employment Pte Ltd on Facebook'}, 'zh': {'csh': '案例：Sky Employment Pte Ltd', 'jump': '客户案例', 'cslede': 'Sky Employment Pte Ltd 是新加坡职业中介（MOM EA 执照 08C5793）。HF Media Solution 为其管理招聘营销与运营，包括它的求职频道 <strong>SG Jobs For Malaysians</strong>。上面的演示，就是我们为它运行的系统的简化版。', 'scopeh': '我们负责的范围', 'scope': ['<strong>Facebook / Meta 付费广告。</strong>规划和投放广告活动，每天提供广告成效报告。', '<strong>Facebook 专页内容。</strong>为 SG Jobs For Malaysians 专页和 Sky Employment Pte Ltd 专页每天发布职位资讯和招聘海报。', '<strong>WhatsApp Business。</strong>回复求职者、发送职位详情和申请表、跟进，并为每个对话贴标签。', '<strong>WhatsApp 频道「SG Jobs For Malaysians」。</strong>每天发布职位资讯。', '<strong>Google Drive 与表格。</strong>职位单清单、通过 Google 表单登记候选人、制作简历及简历索引。', '<strong>AI 候选人与职位匹配。</strong>每位登记的候选人都会对照现有职位单，得到一份推荐职位清单。'], 'numh': '数据', 'asof': '内部记录，截至 2026 年 10 月 12 日。', 'nums': [('22', '位候选人走完整个自动化流程：登记 → 简历 → 职位推荐'), ('49', '条候选人与职位推荐')], 'note': 'Sky Employment Pte Ltd 是持牌职业中介。HF Media Solution 为其提供营销、运营与自动化服务，不向求职者收费。', 'links': '公开专页', 'l1': 'SG Jobs For Malaysians（Facebook）', 'l2': 'Sky Employment Pte Ltd（Facebook）'}, 'ms': {'csh': 'Kajian kes: Sky Employment Pte Ltd', 'jump': 'Kajian kes', 'cslede': 'Sky Employment Pte Ltd ialah agensi pekerjaan di Singapura (lesen EA MOM 08C5793). HF Media Solution mengurus pemasaran dan operasi rekrutmennya, termasuk saluran pencari kerjanya, <strong>SG Jobs For Malaysians</strong>. Demo di atas ialah versi ringkas sistem yang kami jalankan untuknya.', 'scopeh': 'Apa yang kami urus', 'scope': ['<strong>Iklan berbayar Facebook / Meta.</strong> Merancang dan menjalankan kempen, dengan laporan prestasi iklan setiap hari.', '<strong>Kandungan Facebook Page.</strong> Post maklumat kerja dan poster pengambilan setiap hari untuk page SG Jobs For Malaysians dan page Sky Employment Pte Ltd.', '<strong>WhatsApp Business.</strong> Membalas pencari kerja, menghantar butiran kerja dan borang permohonan, follow-up dan melabel setiap chat.', '<strong>WhatsApp Channel “SG Jobs For Malaysians”.</strong> Maklumat kerja setiap hari.', '<strong>Google Drive &amp; Sheets.</strong> Senarai pesanan kerja, pendaftaran calon melalui Google Form, penghasilan resume dan indeks resume.', '<strong>Padanan calon-kerja AI.</strong> Setiap calon berdaftar disemak dengan pesanan kerja terbuka dan menerima senarai kerja yang disyorkan.'], 'numh': 'Dalam angka', 'asof': 'Daripada rekod dalaman, setakat 12 Oktober 2026.', 'nums': [('22', 'calon diproses sepenuhnya melalui aliran automatik: pendaftaran → resume → cadangan kerja'), ('49', 'cadangan calon-kerja dijana')], 'note': 'Sky Employment Pte Ltd ialah agensi pekerjaan berlesen. HF Media Solution menyediakan perkhidmatan pemasaran, operasi dan automasi kepadanya dan tidak mengenakan caj kepada pencari kerja.', 'links': 'Page awam', 'l1': 'SG Jobs For Malaysians di Facebook', 'l2': 'Sky Employment Pte Ltd di Facebook'}}
+CS = {'en': {'csh': 'Case study: Sky Employment Pte Ltd', 'jump': 'Case study', 'cslede': 'Our client Sky Employment Pte Ltd is a Singapore employment agency (MOM EA licence 08C5793). HF Media Solution manages its recruitment marketing and operations, including its jobseeker channel, <strong>SG Jobs For Malaysians</strong>. The demos above are simplified versions of the systems we run for them.', 'scopeh': 'What we manage', 'scope': ['<strong>Facebook / Meta paid ads.</strong> Planning and running campaigns, with a daily ad performance report.', '<strong>Facebook Page content.</strong> Daily job-info posts and hiring posters for the SG Jobs For Malaysians page and the Sky Employment Pte Ltd page.', '<strong>WhatsApp Business.</strong> Replying to jobseekers, sending job details and the application form, following up, and labelling every chat.', '<strong>WhatsApp Channel “SG Jobs For Malaysians”.</strong> Daily job updates for followers.', '<strong>Google Drive &amp; Sheets.</strong> The job order list, candidate registration through a Google Form, resume production and a resume index.', '<strong>AI candidate-to-job matching.</strong> Each registered candidate is checked against open job orders and gets a list of recommended jobs.'], 'numh': 'By the numbers', 'asof': 'From internal records, as of 12 October 2026.', 'nums': [('22', 'candidates processed end-to-end through the automated pipeline: registration → resume → job recommendations'), ('49', 'candidate-to-job recommendations generated')], 'note': 'Sky Employment Pte Ltd is the licensed employment agency. HF Media Solution provides marketing, operations and automation services to it and does not charge job seekers.', 'links': 'Public pages', 'l1': 'SG Jobs For Malaysians on Facebook', 'l2': 'Sky Employment Pte Ltd on Facebook'}, 'zh': {'csh': '案例：Sky Employment Pte Ltd', 'jump': '客户案例', 'cslede': '我们的客户 Sky Employment Pte Ltd 是新加坡职业中介（MOM EA 执照 08C5793）。HF Media Solution 为其管理招聘营销与运营，包括它的求职频道 <strong>SG Jobs For Malaysians</strong>。上面的演示，就是我们为它运行的系统的简化版。', 'scopeh': '我们负责的范围', 'scope': ['<strong>Facebook / Meta 付费广告。</strong>规划和投放广告活动，每天提供广告成效报告。', '<strong>Facebook 专页内容。</strong>为 SG Jobs For Malaysians 专页和 Sky Employment Pte Ltd 专页每天发布职位资讯和招聘海报。', '<strong>WhatsApp Business。</strong>回复求职者、发送职位详情和申请表、跟进，并为每个对话贴标签。', '<strong>WhatsApp 频道「SG Jobs For Malaysians」。</strong>每天发布职位资讯。', '<strong>Google Drive 与表格。</strong>职位单清单、通过 Google 表单登记候选人、制作简历及简历索引。', '<strong>AI 候选人与职位匹配。</strong>每位登记的候选人都会对照现有职位单，得到一份推荐职位清单。'], 'numh': '数据', 'asof': '内部记录，截至 2026 年 10 月 12 日。', 'nums': [('22', '位候选人走完整个自动化流程：登记 → 简历 → 职位推荐'), ('49', '条候选人与职位推荐')], 'note': 'Sky Employment Pte Ltd 是持牌职业中介。HF Media Solution 为其提供营销、运营与自动化服务，不向求职者收费。', 'links': '公开专页', 'l1': 'SG Jobs For Malaysians（Facebook）', 'l2': 'Sky Employment Pte Ltd（Facebook）'}, 'ms': {'csh': 'Kajian kes: Sky Employment Pte Ltd', 'jump': 'Kajian kes', 'cslede': 'Pelanggan kami Sky Employment Pte Ltd ialah agensi pekerjaan di Singapura (lesen EA MOM 08C5793). HF Media Solution mengurus pemasaran dan operasi rekrutmennya, termasuk saluran pencari kerjanya, <strong>SG Jobs For Malaysians</strong>. Demo di atas ialah versi ringkas sistem yang kami jalankan untuknya.', 'scopeh': 'Apa yang kami urus', 'scope': ['<strong>Iklan berbayar Facebook / Meta.</strong> Merancang dan menjalankan kempen, dengan laporan prestasi iklan setiap hari.', '<strong>Kandungan Facebook Page.</strong> Post maklumat kerja dan poster pengambilan setiap hari untuk page SG Jobs For Malaysians dan page Sky Employment Pte Ltd.', '<strong>WhatsApp Business.</strong> Membalas pencari kerja, menghantar butiran kerja dan borang permohonan, follow-up dan melabel setiap chat.', '<strong>WhatsApp Channel “SG Jobs For Malaysians”.</strong> Maklumat kerja setiap hari.', '<strong>Google Drive &amp; Sheets.</strong> Senarai pesanan kerja, pendaftaran calon melalui Google Form, penghasilan resume dan indeks resume.', '<strong>Padanan calon-kerja AI.</strong> Setiap calon berdaftar disemak dengan pesanan kerja terbuka dan menerima senarai kerja yang disyorkan.'], 'numh': 'Dalam angka', 'asof': 'Daripada rekod dalaman, setakat 12 Oktober 2026.', 'nums': [('22', 'calon diproses sepenuhnya melalui aliran automatik: pendaftaran → resume → cadangan kerja'), ('49', 'cadangan calon-kerja dijana')], 'note': 'Sky Employment Pte Ltd ialah agensi pekerjaan berlesen. HF Media Solution menyediakan perkhidmatan pemasaran, operasi dan automasi kepadanya dan tidak mengenakan caj kepada pencari kerja.', 'links': 'Page awam', 'l1': 'SG Jobs For Malaysians di Facebook', 'l2': 'Sky Employment Pte Ltd di Facebook'}}
 
 def _case(c):
     sc = ''.join('<li>%s</li>' % x for x in c['scope'])
