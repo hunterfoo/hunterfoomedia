@@ -203,7 +203,7 @@ def _ads(k, s):
         a["knowh"], know, a["doh"], chk(a["do"]), a["preph"], chk(a["prep"]),
         a["intakeh"], "".join("<li>%s</li>" % x for x in a["intake"]), link, a["cta"], a["note"], a["fine"])
 
-# ---- Website building (two tiers). Copy written natively per language. Fees: written quote only; no rankings promised. ----
+# ---- Website building (two tiers). Copy written natively per language. Starting prices shown (Basic from RM886; SEO + AEO/GEO +RM1,999, RM2,885 total); final price by written quote; no rankings promised. ----
 WB = {}
 WB["en"] = dict(
  geth="What you get",
@@ -227,11 +227,11 @@ WB["en"] = dict(
      "<b>AEO</b> (answer engine optimisation): clear Q&amp;A and FAQ content, so search engines can quote your answers directly",
      "<b>GEO</b> (generative engine optimisation): structured data (schema), an FAQ page and consistent company details, so AI search like ChatGPT and Perplexity can understand and cite your site",
      "An indexing check report"],
- feel="Fee: ", fee="Written quote",
+ feel="Fee: ", fee1="From RM886", fee2="+RM1,999 add-on (RM2,885 total)",
  cta="Ask about a website on WhatsApp",
- fine="Scope and fees are agreed in a written quote before we start. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up; how search engines and AI tools rank and cite sites is up to them.",
+ fine="The prices above are starting prices. Final price confirmed by written quote after we scope your site. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up; how search engines and AI tools rank and cite sites is up to them.",
  wamsg="Hi Hunter, I'd like to ask about a company website.\nMy business: __\nDo I have a website now? (yes/no, link): __\nBasic or SEO + AEO/GEO: __\nLanguages needed (EN / 中文 / BM): __",
- ld=("Website building", "Company websites for service businesses in Malaysia and Singapore. Basic: Home, About, Services and Contact pages, a WhatsApp button, mobile-friendly design, optional English/Chinese/Malay versions, and domain and HTTPS setup. SEO + AEO/GEO: everything in Basic plus page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, page speed work, clear Q&A/FAQ content, structured data (schema), an FAQ page, consistent company details and an indexing check report. Fees by written quote; no rankings are promised."),
+ ld=("Website building", "Company websites for service businesses in Malaysia and Singapore. Basic: Home, About, Services and Contact pages, a WhatsApp button, mobile-friendly design, optional English/Chinese/Malay versions, and domain and HTTPS setup. SEO + AEO/GEO: everything in Basic plus page titles and meta descriptions, a sitemap, submission to Google and Bing for indexing, page speed work, clear Q&A/FAQ content, structured data (schema), an FAQ page, consistent company details and an indexing check report. Prices: Basic from RM886; SEO + AEO/GEO is a +RM1,999 add-on (RM2,885 total). These are starting prices; final price confirmed by written quote after scoping. No rankings are promised."),
 )
 WB["zh"] = dict(
  geth="你得到什么",
@@ -255,11 +255,11 @@ WB["zh"] = dict(
      "<b>AEO</b>（答案引擎优化）：写清楚的问答 / FAQ 内容，方便搜索引擎直接引用你的答案",
      "<b>GEO</b>（生成式引擎优化）：结构化数据（schema）、FAQ 页面、全站一致的公司资料，让 ChatGPT、Perplexity 等 AI 搜索更容易读懂并引用你的网站",
      "收录检查报告"],
- feel="费用：", fee="书面报价",
+ feel="费用：", fee1="RM886 起", fee2="基础版另加 RM1,999（合共 RM2,885）",
  cta="用 WhatsApp 问网站建设",
- fine="服务范围和费用在开工前以书面报价确认。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们只把做什么、设置什么写清楚；搜索引擎和 AI 工具怎么排序、引用，由它们决定。",
+ fine="以上是起价。我们先了解你的网站需求，最终价格以书面报价确认。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们只把做什么、设置什么写清楚；搜索引擎和 AI 工具怎么排序、引用，由它们决定。",
  wamsg="你好 Hunter，我想了解公司网站。\n我做的是：＿＿\n现在有没有网站（有/没有，链接）：＿＿\n基础版还是 SEO + AEO/GEO：＿＿\n需要哪些语言（EN / 中文 / BM）：＿＿",
- ld=("网站建设", "为马来西亚与新加坡的服务型生意建公司网站。基础版：首页、关于我们、服务、联系我们，WhatsApp 按钮，手机友好设计，可选 EN / 中文 / BM 多语言，域名与 HTTPS 设置。SEO + AEO/GEO：包含基础版全部内容，另加每页标题与 meta 描述、网站地图、提交 Google 与 Bing 收录、网页速度优化、清楚的问答 / FAQ 内容、结构化数据（schema）、FAQ 页面、全站一致的公司资料，以及收录检查报告。费用以书面报价确认，不承诺排名。"),
+ ld=("网站建设", "为马来西亚与新加坡的服务型生意建公司网站。基础版：首页、关于我们、服务、联系我们，WhatsApp 按钮，手机友好设计，可选 EN / 中文 / BM 多语言，域名与 HTTPS 设置。SEO + AEO/GEO：包含基础版全部内容，另加每页标题与 meta 描述、网站地图、提交 Google 与 Bing 收录、网页速度优化、清楚的问答 / FAQ 内容、结构化数据（schema）、FAQ 页面、全站一致的公司资料，以及收录检查报告。价格：基础版 RM886 起；SEO + AEO/GEO 在基础版上另加 RM1,999（合共 RM2,885）。以上为起价，最终价格在了解需求后以书面报价确认。不承诺排名。"),
 )
 WB["ms"] = dict(
  geth="Apa yang anda dapat",
@@ -283,19 +283,19 @@ WB["ms"] = dict(
      "<b>AEO</b> (pengoptimuman enjin jawapan): kandungan soal jawab dan FAQ yang jelas, supaya enjin carian boleh memetik jawapan anda secara terus",
      "<b>GEO</b> (pengoptimuman enjin generatif): data berstruktur (schema), halaman FAQ dan maklumat syarikat yang konsisten, supaya carian AI seperti ChatGPT dan Perplexity mudah memahami dan memetik laman anda",
      "Laporan semakan pengindeksan"],
- feel="Yuran: ", fee="Sebut harga bertulis",
+ feel="Yuran: ", fee1="Dari RM886", fee2="Tambahan RM1,999 (jumlah RM2,885)",
  cta="Tanya tentang laman web di WhatsApp",
- fine="Skop dan yuran dipersetujui dalam sebut harga bertulis sebelum mula. Kami tidak menjanjikan kedudukan carian, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami nyatakan dengan jelas apa yang kami bina dan sediakan; cara enjin carian dan alat AI menyusun dan memetik laman ditentukan oleh mereka.",
+ fine="Harga di atas ialah harga permulaan. Harga akhir disahkan melalui sebut harga bertulis selepas kami menilai skop laman anda. Kami tidak menjanjikan kedudukan carian, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami nyatakan dengan jelas apa yang kami bina dan sediakan; cara enjin carian dan alat AI menyusun dan memetik laman ditentukan oleh mereka.",
  wamsg="Hai Hunter, saya nak tanya tentang laman web syarikat.\nBisnes saya: __\nAda laman web sekarang? (ya/tidak, pautan): __\nAsas atau SEO + AEO/GEO: __\nBahasa diperlukan (EN / 中文 / BM): __",
- ld=("Pembinaan laman web", "Laman web syarikat untuk perniagaan perkhidmatan di Malaysia dan Singapura. Asas: halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi, butang WhatsApp, reka bentuk mesra telefon, pilihan EN / Cina / BM, serta persediaan domain dan HTTPS. SEO + AEO/GEO: semua dalam pakej Asas serta tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, kelajuan halaman, kandungan soal jawab / FAQ yang jelas, data berstruktur (schema), halaman FAQ, maklumat syarikat yang konsisten dan laporan semakan pengindeksan. Yuran melalui sebut harga bertulis; kedudukan carian tidak dijanjikan."),
+ ld=("Pembinaan laman web", "Laman web syarikat untuk perniagaan perkhidmatan di Malaysia dan Singapura. Asas: halaman Utama, Tentang Kami, Perkhidmatan dan Hubungi, butang WhatsApp, reka bentuk mesra telefon, pilihan EN / Cina / BM, serta persediaan domain dan HTTPS. SEO + AEO/GEO: semua dalam pakej Asas serta tajuk halaman dan meta description, sitemap, penghantaran kepada Google dan Bing untuk pengindeksan, kelajuan halaman, kandungan soal jawab / FAQ yang jelas, data berstruktur (schema), halaman FAQ, maklumat syarikat yang konsisten dan laporan semakan pengindeksan. Harga: Asas dari RM886; SEO + AEO/GEO ialah tambahan RM1,999 (jumlah RM2,885). Ini harga permulaan; harga akhir disahkan melalui sebut harga bertulis selepas skop dinilai. Kedudukan carian tidak dijanjikan."),
 )
 
 def _wb(k):
     w = WB[k]
     link = "https://wa.me/60196273143?text=" + urllib.parse.quote(w["wamsg"], safe="")
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
-    panel = lambda tag, h, sub, xs, cls: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
-                                          '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, h, sub, chk(xs), w["feel"], w["fee"])
+    panel = lambda tag, h, sub, xs, cls, fee: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
+                                               '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, h, sub, chk(xs), w["feel"], fee)
     return ('<section class="wrap section pd-products pd-ads-sec wb-sec" id="website-building"><p class="eyebrow"><i></i>%s</p><h2>%s</h2><div class="pd-ads-lede">%s'
             '<p><a class="button whatsapp" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></p></div></section>\n'
             '<section class="paper ad-section wb-section"><div class="wrap section">'
@@ -305,7 +305,7 @@ def _wb(k):
             '<p class="ad-fine">%s</p></div></section>\n') % (
         w["eyebrow"], w["h"], "".join("<p>%s</p>" % x for x in w["p"]), link, w["cta"],
         w["geth"], "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[i], x) for i, x in zip(["glb", "srv", "key"], w["gets"])),
-        panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], ""), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus"),
+        panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", w["fee1"]), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", w["fee2"]),
         w["scope"], w["fine"])
 
 # ---- FAQ (visible <details> list + FAQPage JSON-LD). Answers only restate what this page already says. ----
