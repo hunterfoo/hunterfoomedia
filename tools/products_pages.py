@@ -182,7 +182,7 @@ ADSW["ms"] = dict(
 
 def _ads(k, s):
     a = ADS[k]; e = a["ex"]
-    link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
+    link = "https://wa.me/601133154541?text=" + urllib.parse.quote(a["wamsg"], safe="")
     know = "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[KNOW_ICONS[i]], x) for i, x in enumerate(a["know"]))
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
     W = ADSW[k]; t0 = W["types"][0]
@@ -292,7 +292,7 @@ WB["ms"] = dict(
 
 def _wb(k):
     w = WB[k]
-    link = "https://wa.me/60196273143?text=" + urllib.parse.quote(w["wamsg"], safe="")
+    link = "https://wa.me/601133154541?text=" + urllib.parse.quote(w["wamsg"], safe="")
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
     panel = lambda tag, h, sub, xs, cls: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
                                           '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, h, sub, chk(xs), w["feel"], w["fee"])
@@ -390,7 +390,7 @@ S["en"] = dict(
  lede="HF Media Solution builds and runs AI “digital employees” for service businesses in Malaysia and Singapore. They're automation systems that do the repetitive work: sorting candidates, answering WhatsApp enquiries, preparing social posts. A person stays in charge of every decision that matters.",
  introh="What we do, in plain terms",
  intro=["We work with small service businesses: recruitment agencies, clinics and beauty salons, property agents, tuition centres, and other owner-run teams that live on WhatsApp and Facebook.",
-        "Everything is delivered online. We map how you work over video call and WhatsApp, cut the steps that don't need to exist, then build the system on tools you already use, like WhatsApp, Google Sheets and Facebook. There's no shop, no walk-in office and nothing to install on site.",
+        "Everything is delivered online. We map how you work over video call and WhatsApp, cut the steps that don't need to exist, then build the system on tools you already use, like WhatsApp, Google Sheets and Facebook. We're based in Kuala Lumpur and work mostly online, with nothing to install on site.",
         "<strong>In daily use:</strong> these systems run every day for our client Sky Employment Pte Ltd, a licensed Singapore employment agency. See the case study below."],
  engh="How an engagement works",
  eng=[("1 · Setup", "A one-off project. We map your process, build the system, test it with you and train your team. Setup timeline and fees are agreed in a written quote before we start."),
@@ -442,7 +442,7 @@ S["zh"] = dict(
  lede="HF Media Solution 为马来西亚与新加坡的服务型生意，搭建并运营 AI「数字员工」：也就是帮你做重复工作的自动化系统，比如筛选候选人、回复 WhatsApp 询问、准备社媒贴文。重要的决定，始终由人来做。",
  introh="我们具体做什么",
  intro=["我们的客户是小型服务型生意：招聘中介、诊所和美容院、房产经纪、补习中心，以及每天靠 WhatsApp 和 Facebook 接客户的老板型团队。",
-        "全部线上交付。我们通过视频会议和 WhatsApp 了解你怎么做事，先删掉不必要的步骤，再用你现有的工具（WhatsApp、Google 表格、Facebook）搭系统。没有门店，不需要上门安装。",
+        "全部线上交付。我们通过视频会议和 WhatsApp 了解你怎么做事，先删掉不必要的步骤，再用你现有的工具（WhatsApp、Google 表格、Facebook）搭系统。我们位于吉隆坡，大部分工作在线上完成，不需要上门安装。",
         "<strong>每天在用：</strong>这些系统每天都在为我们的客户 Sky Employment Pte Ltd（新加坡持牌职业中介）运行。详见下方案例。"],
  engh="合作怎么进行",
  eng=[("1 · 搭建", "一次性项目。梳理流程、搭系统、和你一起测试、培训团队。搭建时间和费用在开工前以书面报价确认。"),
@@ -494,7 +494,7 @@ S["ms"] = dict(
  lede="HF Media Solution membina dan mengendalikan “pekerja digital” AI untuk perniagaan servis di Malaysia dan Singapura. Ia sistem automasi yang buat kerja berulang: menapis calon, menjawab pertanyaan WhatsApp, menyediakan post media sosial. Keputusan penting tetap dibuat oleh manusia.",
  introh="Apa yang kami buat",
  intro=["Pelanggan kami ialah perniagaan servis kecil: agensi rekrutmen, klinik dan salun kecantikan, ejen hartanah, pusat tuisyen dan pasukan kecil yang bergantung pada WhatsApp dan Facebook setiap hari.",
-        "Semuanya diserahkan secara dalam talian. Kami fahami cara kerja anda melalui panggilan video dan WhatsApp, buang langkah yang tak perlu, kemudian bina sistem atas alat yang anda sudah guna: WhatsApp, Google Sheets dan Facebook. Tiada kedai, tiada pejabat fizikal, tiada pemasangan di premis.",
+        "Semuanya diserahkan secara dalam talian. Kami fahami cara kerja anda melalui panggilan video dan WhatsApp, buang langkah yang tak perlu, kemudian bina sistem atas alat yang anda sudah guna: WhatsApp, Google Sheets dan Facebook. Kami berpangkalan di Kuala Lumpur dan kebanyakan kerja dibuat dalam talian, tanpa pemasangan di premis.",
         "<strong>Digunakan setiap hari:</strong> sistem ini berjalan setiap hari untuk pelanggan kami Sky Employment Pte Ltd, agensi pekerjaan berlesen di Singapura. Lihat kajian kes di bawah."],
  engh="Cara kerjasama berjalan",
  eng=[("1 · Persediaan", "Projek sekali. Kami petakan proses, bina sistem, uji bersama anda dan latih pasukan anda. Tempoh persediaan dan yuran dipersetujui dalam sebut harga bertulis sebelum mula."),
@@ -568,7 +568,7 @@ def _main(s):
             '<section class="wrap section pd-products" id="demos"><h2>%s</h2><p class="pd-sub">%s</p>%s%s%s</section>\n'
             '%s%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
             '%s<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
-            '<a class="button whatsapp" data-wa="%s" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
+            '<a class="button whatsapp" data-wa="%s" href="https://wa.me/601133154541" target="_blank" rel="noopener noreferrer">WhatsApp +60 11-3315 4541 <span aria-hidden="true">↗</span></a>'
             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div>'
             '<p class="pd-reg">%s</p></section>\n'
             '<script type="application/json" id="pd-data">%s</script>\n<script src="/assets/products-demo.js" defer></script>\n'
