@@ -5,15 +5,16 @@ import re, json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from i18n_strings import T
 from about_pages import ABOUT
+from home_pages import HOME
 from products_pages import PRODUCTS
 from articles_pages import ARTICLES, INDEX as ART_INDEX, index_main, article_main
 import datetime
 BUILD_DATE = datetime.date.today().isoformat()
 D = "https://www.hunterfoomedia.com"
 SRC = "tools/src_zh"
-PAGES = ["/", "/services/", "/services/ai-automation/", "/services/personal-brand/", "/services/social-reels/"]
+PAGES = ["/services/", "/services/ai-automation/", "/services/personal-brand/", "/services/social-reels/"]
 ART_PATHS = ["/notes/"] + ["/notes/%s/" % a["slug"] for a in ARTICLES]
-ALL = PAGES + ["/products/", "/about/"] + ART_PATHS
+ALL = ["/"] + PAGES + ["/products/", "/about/"] + ART_PATHS
 LANGS = {"en": ("", "en", "en_MY", "EN"), "zh": ("/zh", "zh-Hans", "zh_MY", "中文"), "ms": ("/ms", "ms", "ms_MY", "BM")}
 IDX = {"en": 0, "ms": 1}
 C = r'[\u3000-\u9fff\uff00-\uffef]'
@@ -152,6 +153,20 @@ for lang in LANGS:
     for path in PAGES:
         src = open(os.path.join(SRC, path.lstrip("/"), "index.html")).read()
         write(lang, path, build(src, path, lang))
+    # Homepage: built from the AI automation page shell (same template as Products / About / Notes)
+    shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
+    a = HOME[lang]
+    shell = re.sub(r'<title>.*?</title>', lambda m: '<title>%s</title>' % a["title"], shell)
+    shell = re.sub(r'<meta name="description" content="[^"]*">', lambda m: '<meta name="description" content="%s">' % a["desc"], shell)
+    shell = re.sub(r'<meta (property|name)="(og|twitter):title" content="[^"]*">', lambda m: '<meta %s="%s:title" content="%s">' % (m.group(1), m.group(2), a["title"]), shell)
+    shell = re.sub(r'<meta (property|name)="(og|twitter):description" content="[^"]*">', lambda m: '<meta %s="%s:description" content="%s">' % (m.group(1), m.group(2), a["desc"]), shell)
+    shell = shell.replace(D + "/services/ai-automation/", D + "/").replace(' aria-current="page"', '')
+    shell = shell.replace('<meta name="robots" content="index,follow">', '<meta name="robots" content="index,follow">\n<meta name="msvalidate.01" content="BFCF075D4216FA548FE3B322C5FD77B6" />')
+    shell = shell.replace('<link rel="stylesheet" href="/styles.css">', '<link rel="stylesheet" href="/styles.css">\n<link rel="stylesheet" href="/assets/products.css">\n<link rel="stylesheet" href="/assets/home.css">')
+    shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(a["ld"], ensure_ascii=False) + '</script>', shell, flags=re.S)
+    shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
+    write(lang, "/", build(shell, "/", lang).replace("__EN__", "/").replace("__ZH__", "/zh/").replace("__MS__", "/ms/"))
+
     # About page: built from the AI automation page shell
     shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
     a = ABOUT[lang]
@@ -160,6 +175,7 @@ for lang in LANGS:
     shell = re.sub(r'<meta (property|name)="(og|twitter):title" content="[^"]*">', lambda m: '<meta %s="%s:title" content="%s">' % (m.group(1), m.group(2), a["title"]), shell)
     shell = re.sub(r'<meta (property|name)="(og|twitter):description" content="[^"]*">', lambda m: '<meta %s="%s:description" content="%s">' % (m.group(1), m.group(2), a["desc"]), shell)
     shell = shell.replace(D + "/services/ai-automation/", D + "/about/").replace(' aria-current="page"', '')
+    shell = shell.replace('<a href="/about/">', '<a href="/about/" aria-current="page">')
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "AboutPage", "@id": D + "/about/#webpage", "url": D + "/about/", "name": a["title"], "description": a["desc"], "about": {"@id": D + "/#organization"}, "isPartOf": {"@id": D + "/#website"}},
         {"@type": "Person", "@id": D + "/#founder", "name": "Hunter Foo", "jobTitle": "Founder", "image": D + "/assets/hunter-foo-portrait.jpeg", "sameAs": ["https://www.linkedin.com/in/hunterfoo3143/"], "worksFor": {"@id": D + "/#organization"}}]}

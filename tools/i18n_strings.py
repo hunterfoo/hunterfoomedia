@@ -418,3 +418,13 @@ T.update({
 '冷气漏水？预约检查': ('Aircon leaking? Book a check', 'Aircond bocor? Tempah semakan'),
 '新加坡冷气保养服务。WhatsApp 我们问报价。': ('Aircon servicing in Singapore. WhatsApp us for a quote.', 'Servis aircond di Singapura. WhatsApp kami untuk sebut harga.'),
 })
+# homepage-v2: nav + services restyle (no timelines)
+T.update({
+'网站': ('Website', 'Laman Web'),
+'自动化': ('Automation', 'Automasi'),
+'演示': ('Demos', 'Demo'),
+'关于我们': ('About', 'Tentang Kami'),
+'诊断后给你一页报价（做什么、多少钱）。': ('One-page quote after the call: what you get and how much.', 'Sebut harga satu halaman selepas panggilan: apa yang anda dapat dan berapa kosnya.'),
+'先做哪件、多少钱。不合适我会直说。': ("What to fix first and how much. If it's not a fit, I'll say so.", 'Apa yang perlu dibaiki dahulu dan berapa kosnya. Kalau tak sesuai, saya akan beritahu.'),
+'做好后你先试用': ('You test it first', 'Anda cuba dahulu'),
+})
