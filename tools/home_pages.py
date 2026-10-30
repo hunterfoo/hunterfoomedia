@@ -1,7 +1,7 @@
 # Homepage (EN / ZH / MS). Copy written natively per language.
 # Rules: no timelines, no ranking or AI-recommendation promises, no invented clients/testimonials/portfolio,
 # fees by written quote except the website prices (taken from products_pages.WB).
-from products_pages import WB, CHECK, PRODUCTS
+from products_pages import WB, CHECK, PRODUCTS, fee_btn
 from articles_pages import ARTICLES, DATE_FMT
 
 WA = "https://wa.me/60196273143"
@@ -10,7 +10,7 @@ D = "https://www.hunterfoomedia.com"
 H = {}
 H["en"] = dict(
  title="AI agency in Malaysia & Singapore | Websites AI can read, lead automation | Hunter Foo Media",
- desc="Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur working as forward deployed engineers. Start with a website Google and AI assistants can read (Basic RM399 nett), then automate how you find, follow up and close leads, and your back-office work. WhatsApp +60196273143.",
+ desc="Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur working as forward deployed engineers. Start with a website Google and AI assistants can read (Basic RM399), then automate how you find, follow up and close leads, and your back-office work. WhatsApp +60196273143.",
  eyebrow="AI AGENCY · MALAYSIA &amp; SINGAPORE",
  h1='Bring AI into your business, <span class="orange">one step at a time.</span>',
  lede=["Hunter Foo Media is an AI agency for businesses in Malaysia and Singapore. We work as <b>forward deployed engineers</b>: we sit with your team, learn how you actually work, then build what fits.",
@@ -76,7 +76,7 @@ H["en"] = dict(
 )
 H["zh"] = dict(
  title="马来西亚与新加坡的 AI Agency｜AI 读得懂的网站与获客自动化｜Hunter Foo Media",
- desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，以前沿部署工程师的方式工作。先做 Google 和 AI 助手都读得懂的网站，基础版 RM399（净价）；再把找客户、跟进、成交和后台工作自动化。WhatsApp +60196273143。",
+ desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，以前沿部署工程师的方式工作。先做 Google 和 AI 助手都读得懂的网站，基础版 RM399；再把找客户、跟进、成交和后台工作自动化。WhatsApp +60196273143。",
  eyebrow="AI AGENCY · 马来西亚与新加坡",
  h1='把 AI 带进你的公司，<span class="orange">一步一步来。</span>',
  lede=["Hunter Foo Media 是服务马来西亚和新加坡企业的 AI agency。我们以<b>前沿部署工程师</b>（Forward Deployed Engineer）的方式工作：走进你的团队，先弄清楚你们实际怎么做事，再动手搭建合用的系统。",
@@ -142,7 +142,7 @@ H["zh"] = dict(
 )
 H["ms"] = dict(
  title="Agensi AI di Malaysia & Singapura | Laman web yang AI boleh baca, automasi prospek | Hunter Foo Media",
- desc="Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur yang bekerja sebagai forward deployed engineer. Mula dengan laman web yang boleh dibaca Google dan pembantu AI (Asas RM399 nett), kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda. WhatsApp +60196273143.",
+ desc="Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur yang bekerja sebagai forward deployed engineer. Mula dengan laman web yang boleh dibaca Google dan pembantu AI (Asas RM399), kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda. WhatsApp +60196273143.",
  eyebrow="AGENSI AI · MALAYSIA &amp; SINGAPURA",
  h1='Bawa AI ke dalam perniagaan anda, <span class="orange">selangkah demi selangkah.</span>',
  lede=["Hunter Foo Media ialah agensi AI untuk perniagaan di Malaysia dan Singapura. Kami bekerja sebagai <b>forward deployed engineer</b>: kami duduk bersama pasukan anda, faham cara anda sebenarnya bekerja, kemudian bina sistem yang sesuai.",
@@ -213,7 +213,7 @@ def _main(k):
     wa = WA + "?text=" + urllib.parse.quote(h["wamsg"], safe="")
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
     tier = lambda tag, t, sub, xs, cls, fee: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
-                                              '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, t, sub, chk(xs), w["feel"], fee)
+                                              '%s</div>') % (cls, tag, t, sub, chk(xs), fee)
     demos = PRODUCTS[k]["services"]
     out = []
     # Hero
@@ -234,7 +234,7 @@ def _main(k):
                '<div class="hm-example"><h3>%s</h3><p>%s</p><ul>%s</ul></div>'
                '</div></section>\n' % (
                h["s1e"], h["s1h"], "".join("<p>%s</p>" % x for x in h["s1p"]),
-               tier(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", w["fee1"]), tier(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", w["fee2"]),
+               tier(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), tier(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)),
                h["more"], w["fine"], h["exh"], h["exsub"],
                "".join('<li>%s<b>%s</b><span>%s</span></li>' % (CHECK, a, b) for a, b in h["ex"])))
     # Step 2: lead automation
