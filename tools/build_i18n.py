@@ -25,7 +25,7 @@ ORG = {"@type": "Organization", "@id": D + "/#organization", "name": "Hunter Foo
        "legalName": "HF Media Solution", "alternateName": "Hunter Foo Media",
        "identifier": {"@type": "PropertyValue", "propertyID": "Malaysia business registration (SSM)", "value": "IP0633909-U"},
        "url": D + "/", "logo": D + "/assets/hfm-logo.png", "email": "hello@hunterfoomedia.com", "telephone": "+601133154541",
-       "address": {"@type": "PostalAddress", "streetAddress": "D-1, 28, Residensi Bandar Razak, Salak Selatan", "postalCode": "57100",
+       "address": {"@type": "PostalAddress", "streetAddress": "D-1-28, Residensi Bandar Razak, Salak Selatan", "postalCode": "57100",
                    "addressLocality": "Kuala Lumpur", "addressRegion": "Wilayah Persekutuan Kuala Lumpur", "addressCountry": "MY"},
        "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}],
        "sameAs": ["https://web.facebook.com/hunterfooai/", "https://www.linkedin.com/in/hunterfoo3143/"],
@@ -71,7 +71,7 @@ def switcher(path, lang):
         a.append('<a href="%s%s" hreflang="%s" lang="%s"%s>%s</a>' % (p, path, hl, hl, cur, label))
     return '<div class="lang-switch" role="navigation" aria-label="Language">' + ' <span aria-hidden="true">|</span> '.join(a) + '</div>'
 
-ADDR_FOOT = "D-1, 28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
+ADDR_FOOT = "D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
 
 def legal(lang, p):
     return ('<p class="legal">© <span id="year">2026</span> HF Media Solution (IP0633909-U) · Hunter Foo Media · '

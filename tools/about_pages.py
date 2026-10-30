@@ -1,4 +1,4 @@
-ADDRESS = "D-1, 28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
+ADDRESS = "D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
 
 def _main(h):
     rows = "".join("<tr><th scope=\"row\">%s</th><td>%s</td></tr>" % r for r in h["rows"])
