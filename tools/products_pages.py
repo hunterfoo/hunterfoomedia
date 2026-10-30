@@ -182,7 +182,7 @@ ADSW["ms"] = dict(
 
 def _ads(k, s):
     a = ADS[k]; e = a["ex"]
-    link = "https://wa.me/601133154541?text=" + urllib.parse.quote(a["wamsg"], safe="")
+    link = "https://wa.me/60196273143?text=" + urllib.parse.quote(a["wamsg"], safe="")
     know = "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[KNOW_ICONS[i]], x) for i, x in enumerate(a["know"]))
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
     W = ADSW[k]; t0 = W["types"][0]
@@ -292,7 +292,7 @@ WB["ms"] = dict(
 
 def _wb(k):
     w = WB[k]
-    link = "https://wa.me/601133154541?text=" + urllib.parse.quote(w["wamsg"], safe="")
+    link = "https://wa.me/60196273143?text=" + urllib.parse.quote(w["wamsg"], safe="")
     chk = lambda xs: '<ul class="ad-checks">' + "".join("<li>%s<span>%s</span></li>" % (CHECK, x) for x in xs) + "</ul>"
     panel = lambda tag, h, sub, xs, cls: ('<div class="ad-panel wb-tier%s"><p class="wb-tag">%s</p><h3>%s</h3><p class="wb-sub">%s</p>%s'
                                           '<p class="wb-fee">%s<b>%s</b></p></div>') % (cls, tag, h, sub, chk(xs), w["feel"], w["fee"])
@@ -568,7 +568,7 @@ def _main(s):
             '<section class="wrap section pd-products" id="demos"><h2>%s</h2><p class="pd-sub">%s</p>%s%s%s</section>\n'
             '%s%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
             '%s<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
-            '<a class="button whatsapp" data-wa="%s" href="https://wa.me/601133154541" target="_blank" rel="noopener noreferrer">WhatsApp +60 11-3315 4541 <span aria-hidden="true">↗</span></a>'
+            '<a class="button whatsapp" data-wa="%s" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div>'
             '<p class="pd-reg">%s</p></section>\n'
             '<script type="application/json" id="pd-data">%s</script>\n<script src="/assets/products-demo.js" defer></script>\n'

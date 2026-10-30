@@ -9,7 +9,7 @@ const msgs={
 const message=msgs[lang]||msgs.en;
 document.querySelectorAll('a.whatsapp').forEach(a=>{
  const text=a.dataset.wa||message;
- a.href='https://wa.me/601133154541?text='+encodeURIComponent(text);
+ a.href='https://wa.me/60196273143?text='+encodeURIComponent(text);
 });
 const year=document.getElementById('year');
 if(year) year.textContent=String(new Date().getFullYear());

@@ -1,6 +1,6 @@
 # Notes section (URL /notes/; formerly "Articles"): index + article pages (EN / ZH / MS), built by build_i18n.py.
 # Write each language natively. No ranking promises, no timelines, no invented numbers, no client names.
-WA = "https://wa.me/601133154541"
+WA = "https://wa.me/60196273143"
 
 INDEX = {
  "en": {"title": "Notes | Hunter Foo Media",
@@ -267,19 +267,19 @@ ART2 = {"slug": "keeping-your-business-in-step-with-ai", "date": "2026-10-30",
          "desc": "AI tools rise and fade fast, and there is no standard way to keep up. Hunter Foo on what a Forward Deployed Engineer does, why trust starts with a website, and the funnel from social media to WhatsApp.",
          "lede": "Sooner or later every company feels the pressure of AI. Here is how I think a business can keep up: build trust first, starting with a website, then a funnel from social media to WhatsApp.",
          "eyebrow": "AI · BUSINESS", "body": ART2_EN, "next": "NEXT STEP", "cta": "Not sure where to start?",
-         "wa": "Hi Hunter, I read your article on keeping up with AI. Our business is: ____", "cta_note": "Malaysian number +60 11-3315 4541. English or Chinese. Fees by written quote."},
+         "wa": "Hi Hunter, I read your article on keeping up with AI. Our business is: ____", "cta_note": "Malaysian number +60196273143. English or Chinese. Fees by written quote."},
   "zh": {"title": "公司怎样和 AI 科技同步？先从信任和网站开始｜Hunter Foo Media",
          "h1": "AI 不停迭代，公司怎样持续跟上？",
          "desc": "AI 功能起落很快，跟上 AI 没有标准答案。Hunter Foo 谈前沿部署工程师（FDE）在做什么、为什么信任从网站开始，以及从社交媒体到 WhatsApp 的销售漏斗。",
          "lede": "每间公司迟早都会感受到 AI 带来的压力。我的看法是：先建立信任，从网站开始，再做从社交媒体到 WhatsApp 的销售漏斗。",
          "eyebrow": "AI · 企业", "body": ART2_ZH, "next": "下一步", "cta": "不知道从哪里开始？",
-         "wa": "你好 Hunter，我看了你写的 AI 文章。我们的业务是：＿＿", "cta_note": "马来西亚号码 +60 11-3315 4541。简体中文或英文都行。费用以书面报价为准。"},
+         "wa": "你好 Hunter，我看了你写的 AI 文章。我们的业务是：＿＿", "cta_note": "马来西亚号码 +60196273143。简体中文或英文都行。费用以书面报价为准。"},
   "ms": {"title": "Kekal Seiring dengan AI: Panduan untuk Perniagaan | Hunter Foo Media",
          "h1": "Bagaimana perniagaan boleh kekal seiring dengan AI",
          "desc": "Alat AI cepat naik dan cepat hilang, dan tiada cara standard untuk kekal seiring. Hunter Foo tentang kerja Forward Deployed Engineer, kenapa kepercayaan bermula dengan laman web, dan corong jualan dari media sosial ke WhatsApp.",
          "lede": "Lambat-laun setiap syarikat akan merasai tekanan AI. Begini saya lihat cara perniagaan boleh kekal seiring: bina kepercayaan dahulu, bermula dengan laman web, kemudian corong jualan dari media sosial ke WhatsApp.",
          "eyebrow": "AI · PERNIAGAAN", "body": ART2_MS, "next": "LANGKAH SETERUSNYA", "cta": "Tidak pasti di mana hendak bermula?",
-         "wa": "Hai Hunter, saya baca artikel anda tentang AI. Perniagaan kami: ____", "cta_note": "Nombor Malaysia +60 11-3315 4541. Bahasa Inggeris atau Cina. Yuran melalui sebut harga bertulis."}}
+         "wa": "Hai Hunter, saya baca artikel anda tentang AI. Perniagaan kami: ____", "cta_note": "Nombor Malaysia +60196273143. Bahasa Inggeris atau Cina. Yuran melalui sebut harga bertulis."}}
 
 ARTICLES = [
  ART2,
@@ -289,19 +289,19 @@ ARTICLES = [
          "desc": "Meta's Employment ad category, targeting limits, fair job ad wording, simple caption tips, WhatsApp for applicants and fast follow-up. A practical guide for Singapore SMEs.",
          "lede": "Facebook and Instagram can reach people who are not on job portals. Here is what to get right first: Meta's rules, fair wording, the ad itself, and how you reply.",
          "eyebrow": "META ADS · HIRING", "body": ART_EN, "next": "NEXT STEP", "cta": "Planning a hiring ad?",
-         "wa": "Hi Hunter, I read your article on Meta hiring ads. We are hiring for: ____ in ____", "cta_note": "Malaysian number +60 11-3315 4541. English or Chinese. Fees by written quote."},
+         "wa": "Hi Hunter, I read your article on Meta hiring ads. We are hiring for: ____ in ____", "cta_note": "Malaysian number +60196273143. English or Chinese. Fees by written quote."},
   "zh": {"title": "新加坡 SME 投 Meta 招聘广告前要知道的事｜Hunter Foo Media",
          "h1": "新加坡 SME 投 Meta 招聘广告前要知道的事",
          "desc": "Meta 就业类特殊广告限制、定位限制、公平招聘文案、简单的图文技巧、用 WhatsApp 接应征者、快速跟进。写给新加坡中小企业的实用指南。",
          "lede": "Facebook 和 Instagram 能碰到不上求职网站的人。投之前先把几件事做对：Meta 的规则、公平的写法、广告本身，以及你怎么回复。",
          "eyebrow": "META 广告 · 招聘", "body": ART_ZH, "next": "下一步", "cta": "准备投招聘广告？",
-         "wa": "你好 Hunter，我看了你写的 Meta 招聘广告文章。我们在招：＿＿，地点：＿＿", "cta_note": "马来西亚号码 +60 11-3315 4541。简体中文或英文都行。费用以书面报价为准。"},
+         "wa": "你好 Hunter，我看了你写的 Meta 招聘广告文章。我们在招：＿＿，地点：＿＿", "cta_note": "马来西亚号码 +60196273143。简体中文或英文都行。费用以书面报价为准。"},
   "ms": {"title": "Sebelum Iklan Kerja Meta di Singapura: Apa PKS Perlu Tahu | Hunter Foo Media",
          "h1": "Apa yang PKS Singapura perlu tahu sebelum menjalankan iklan kerja di Meta",
          "desc": "Kategori iklan Employment Meta, had sasaran, ayat iklan kerja yang adil, tip kapsyen ringkas, WhatsApp untuk pemohon dan susulan pantas. Panduan praktikal untuk PKS Singapura.",
          "lede": "Facebook dan Instagram boleh sampai kepada orang yang tidak membuka portal kerja. Ini yang perlu dibetulkan dahulu: peraturan Meta, ayat yang adil, iklan itu sendiri, dan cara anda membalas.",
          "eyebrow": "IKLAN META · PENGAMBILAN", "body": ART_MS, "next": "LANGKAH SETERUSNYA", "cta": "Merancang iklan kerja?",
-         "wa": "Hai Hunter, saya baca artikel anda tentang iklan kerja Meta. Kami mencari: ____ di ____", "cta_note": "Nombor Malaysia +60 11-3315 4541. Bahasa Inggeris atau Cina. Yuran melalui sebut harga bertulis."}},
+         "wa": "Hai Hunter, saya baca artikel anda tentang iklan kerja Meta. Kami mencari: ____ di ____", "cta_note": "Nombor Malaysia +60196273143. Bahasa Inggeris atau Cina. Yuran melalui sebut harga bertulis."}},
 ]
 
 DATE_FMT = {"en": lambda d: "%d %s %s" % (int(d[8:]), ["January","February","March","April","May","June","July","August","September","October","November","December"][int(d[5:7])-1], d[:4]),
@@ -313,7 +313,7 @@ ALL_LABEL = {"en": "All notes", "zh": "全部笔记", "ms": "Semua catatan"}
 def contact(lang, next_, cta, wa, note=""):
     n = '<p>%s</p>' % note if note else ''
     return ('<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
-            '<a class="button whatsapp" data-wa="%s" href="%s" target="_blank" rel="noopener noreferrer">WhatsApp +60 11-3315 4541 <span aria-hidden="true">↗</span></a>'
+            '<a class="button whatsapp" data-wa="%s" href="%s" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a>%s</div></div></section>\n') % (next_, cta, wa, WA, n)
 
 def index_main(lang, p):
