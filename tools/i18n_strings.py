@@ -309,7 +309,7 @@ T = {
 '修改次数怎么算？': ('How do revisions work?', 'Bagaimana kiraan pindaan?'),
 '怎么付款？': ('How do I pay?', 'Bagaimana bayaran?'),
 '金额以诊断后一页报价为准。付款方式诊断时说明。': ("You pay the amount on your one-page quote. I'll explain payment options on the call.", 'Jumlah ikut sebut harga satu muka surat selepas diagnosis. Cara bayaran diterangkan semasa diagnosis.'),
-'马来西亚、新加坡都远程做，同一套服务。工作室在马来西亚，没有门店，网站上不放街道地址。': ("Same service, delivered remotely in Malaysia and Singapore. The studio is in Malaysia with no walk-in office, so there's no street address listed.", 'Perkhidmatan sama, secara jarak jauh untuk Malaysia dan Singapura. Studio di Malaysia tanpa kedai fizikal, jadi tiada alamat jalan disenaraikan.'),
+'马来西亚、新加坡同一套服务。我们位于吉隆坡，服务马来西亚与新加坡的客户，大部分工作在线上完成。': ("Same service in Malaysia and Singapore. We're based in Kuala Lumpur and serve clients across Malaysia and Singapore, mostly online.", 'Perkhidmatan sama untuk Malaysia dan Singapura. Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk pelanggan di seluruh Malaysia dan Singapura, kebanyakannya secara dalam talian.'),
 '不确定先做哪件？': ('Not sure where to start?', 'Tak pasti nak mula dengan apa?'),
 '20 分钟帮你判断。': ("20 minutes and you'll know.", '20 minit untuk tahu.'),
 '免费，不用准备资料。': ('Free. Nothing to prepare.', 'Percuma, tak perlu sediakan apa-apa.'),
