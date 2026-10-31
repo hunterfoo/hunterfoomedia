@@ -343,6 +343,8 @@ FAQ["en"] = dict(jump="FAQ", kicker="FAQ", h="Common questions", qa=[
   "ChatGPT ads don't replace Google. Think of ChatGPT as another place your customers ask, beyond Google search. It runs alongside the channels you already use, so if Google ads bring you customers, keep them going."),
  ("How do you handle my data? What about PDPA?",
   "We handle personal data in line with the personal data protection laws of Malaysia and Singapore (PDPA). Your accounts, your data and your customers stay yours: data stays in your own accounts, and we only get the access we need to set up and run the work. The demos on this page use made-up sample data only."),
+ ("Does the website come with an admin login, so I can edit it myself?",
+  "Websites on the Basic and SEO + AEO/GEO packages don't come with an admin panel. That keeps the site faster and more secure, and easier for AI tools to read. To change something, just WhatsApp us. If you update often, you can choose maintenance at RM199/month. If you'd still rather log in and edit the text and images yourself, we can add an admin panel separately, by <b>written quote</b>."),
 ])
 FAQ["zh"] = dict(jump="常见问题", kicker="常见问题", h="你可能想问的", qa=[
  ("什么是 ChatGPT 广告？谁会看到？",
@@ -357,6 +359,8 @@ FAQ["zh"] = dict(jump="常见问题", kicker="常见问题", h="你可能想问�
   "ChatGPT 广告不是取代 Google。把它当成 Google 搜索之外，客户提问的另一个地方。它和你现在用的渠道并行；Google 广告有带来客户，就继续做。"),
  ("你们怎么处理我的资料？有遵守 PDPA 吗？",
   "我们依照马来西亚与新加坡的个人资料保护法（PDPA）处理个人资料。账号、数据、客户都是你的：数据保存在你自己的账号里，我们只取得开设和运行所需的权限。本页演示只使用虚构的示例数据。"),
+ ("网站有后台，可以自己登入修改吗？",
+  "基础版和 SEO + AEO/GEO 方案的网站不带后台，这样网站更快、更安全，AI 也更容易读懂。要改内容，直接 WhatsApp 我们；需要经常更新的，可以选每月 RM199 的维护。如果你一定要自己登入修改文字和图片，我们可以另外加后台，费用以<b>书面报价</b>确认。"),
 ])
 FAQ["ms"] = dict(jump="Soalan lazim", kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
  ("Apa itu iklan ChatGPT, dan siapa yang nampak?",
@@ -371,6 +375,8 @@ FAQ["ms"] = dict(jump="Soalan lazim", kicker="Soalan lazim", h="Soalan yang mung
   "Iklan ChatGPT bukan pengganti Google. Anggap ChatGPT satu lagi tempat pelanggan anda bertanya, selain carian Google. Ia berjalan bersama saluran yang anda sudah guna, jadi jika iklan Google membawa pelanggan, teruskan."),
  ("Bagaimana data saya dikendalikan? Bagaimana dengan PDPA?",
   "Kami mengendalikan data peribadi selaras dengan undang-undang perlindungan data peribadi Malaysia dan Singapura (PDPA). Akaun, data dan pelanggan kekal milik anda: data disimpan dalam akaun anda sendiri, dan kami hanya diberi akses yang perlu untuk menyediakan dan menjalankan kerja. Demo di halaman ini hanya guna data contoh rekaan."),
+ ("Adakah laman web ada panel admin, supaya saya boleh log masuk dan ubah sendiri?",
+  "Laman web pakej Asas dan SEO + AEO/GEO tidak disertakan panel admin. Ini menjadikan laman lebih pantas, lebih selamat dan lebih mudah dibaca oleh AI. Nak ubah kandungan, WhatsApp saja kami. Jika anda kerap mengemas kini, boleh pilih penyelenggaraan RM199/bulan. Jika anda tetap mahu log masuk dan ubah teks serta gambar sendiri, kami boleh tambah panel admin secara berasingan, dengan <b>sebut harga bertulis</b>."),
 ])
 
 import re as _re
