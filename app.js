@@ -8,6 +8,8 @@ const msgs={
 };
 const message=msgs[lang]||msgs.en;
 document.querySelectorAll('a.whatsapp').forEach(a=>{
+ // Keep a button's own preset: data-wa, or a ?text= already in its href. Only bare wa.me links get the generic message.
+ if(!a.dataset.wa && /[?&]text=/.test(a.getAttribute('href')||'')) return;
  const text=a.dataset.wa||message;
  a.href='https://wa.me/60196273143?text='+encodeURIComponent(text);
 });

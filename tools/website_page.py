@@ -51,11 +51,11 @@ P["en"] = dict(
       ("What's the difference between Basic and SEO + AEO/GEO?",
        "Basic gives you a clean company website. SEO + AEO/GEO adds what search engines and AI tools read: page titles and descriptions, a sitemap, submission to Google and Bing, FAQ content, structured data and an indexing check report. It's a one-time setup. Optional maintenance: RM199/month.")],
  pfe="PROOF YOU CAN CHECK", pfh="Our own work, in the open",
- pf=["We don't show a client website portfolio yet. What you can check is hunterfoomedia.com itself: built by us in English, " + ZH + " and BM, with llms.txt, structured data and a sitemap.",
+ pf=["You can check hunterfoomedia.com itself: built by us in English, " + ZH + " and BM, with llms.txt, structured data and a sitemap.",
      "We also build and run AI automation every day for our client Sky Employment Pte Ltd, a licensed Singapore employment agency."],
  pfl=[("/", "This website →"), ("/llms.txt", "Our llms.txt →"), ("/products/#case-study", "Case study →")],
  ce="NEXT STEP", ch="Ready to build your website?", cnote="Malaysian number +60196273143. English, " + ZH + " or BM. Package prices as above; anything beyond the packages by written quote.",
- crumb="Home",
+ crumb="Home", maint="SEO + AEO/GEO maintenance (optional, per month)",
 )
 P["zh"] = dict(
  title="马来西亚网站设计｜做网站 RM399，含 SEO 方案｜Hunter Foo Media",
@@ -99,11 +99,11 @@ P["zh"] = dict(
       ("基础版和 SEO + AEO/GEO 有什么不同？",
        "基础版给你一个清楚好用的公司网站。SEO + AEO/GEO 再补上搜索引擎和 AI 工具会读的内容：每页标题与描述、网站地图、提交 Google 与 Bing 收录、FAQ 内容、结构化数据和收录检查报告。这是一次性设置；如需维护：每月 RM199。")],
  pfe="可以查证的例子", pfh="我们自己的作品，公开可查",
- pf=["我们目前没有公开的客户网站作品集。你可以直接查看 hunterfoomedia.com：这是我们自己做的网站，有 EN / 中文 / BM 三语、llms.txt、结构化数据和网站地图。",
+ pf=["你可以直接查看 hunterfoomedia.com：这是我们自己做的网站，有 EN / 中文 / BM 三语、llms.txt、结构化数据和网站地图。",
      "我们也每天为我们的客户 Sky Employment Pte Ltd（新加坡持牌职业中介）搭建并运行 AI 自动化系统。"],
  pfl=[("/", "看这个网站 →"), ("/llms.txt", "我们的 llms.txt →"), ("/products/#case-study", "看客户案例 →")],
  ce="下一步", ch="准备好做网站了吗？", cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。方案价格如上；方案以外的需求以书面报价确认。",
- crumb="首页",
+ crumb="首页", maint="SEO + AEO/GEO 维护（可选，每月）",
 )
 P["ms"] = dict(
  title="Buat Website Malaysia RM399 | Pakej & Harga | Hunter Foo Media",
@@ -147,11 +147,11 @@ P["ms"] = dict(
       ("Apa beza pakej Asas dan SEO + AEO/GEO?",
        "Pakej Asas memberi anda laman web syarikat yang kemas. SEO + AEO/GEO menambah apa yang dibaca oleh enjin carian dan alat AI: tajuk dan meta description, sitemap, penghantaran kepada Google dan Bing, kandungan FAQ, data berstruktur dan laporan semakan pengindeksan. Ia persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan.")],
  pfe="BUKTI YANG BOLEH DISEMAK", pfh="Kerja kami sendiri, terbuka untuk disemak",
- pf=["Kami belum memaparkan portfolio laman web pelanggan. Yang boleh anda semak ialah hunterfoomedia.com sendiri: kami bina dalam EN, " + ZH + " dan BM, dengan llms.txt, data berstruktur dan sitemap.",
+ pf=["Anda boleh semak hunterfoomedia.com sendiri: kami bina dalam EN, " + ZH + " dan BM, dengan llms.txt, data berstruktur dan sitemap.",
      "Kami juga membina dan menjalankan automasi AI setiap hari untuk pelanggan kami Sky Employment Pte Ltd, agensi pekerjaan berlesen di Singapura."],
  pfl=[("/", "Laman web ini →"), ("/llms.txt", "llms.txt kami →"), ("/products/#case-study", "Kajian kes →")],
  ce="LANGKAH SETERUSNYA", ch="Sedia untuk buat website?", cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM. Harga pakej seperti di atas; keperluan di luar pakej melalui sebut harga bertulis.",
- crumb="Utama",
+ crumb="Utama", maint="Penyelenggaraan SEO + AEO/GEO (pilihan, sebulan)",
 )
 
 def _main(k):
@@ -209,7 +209,7 @@ def _ld(k):
          "provider": {"@id": D + "/#organization"}, "areaServed": area, "url": u,
          "offers": [offer(w["t1h"], "399", _plain(" · ".join(w["t1"]))),
                     offer(w["t2h"], "1393", _plain(" · ".join(w["t2"]))),
-                    offer(w["t2h"] + " maintenance (optional)", "199", "Optional maintenance, per month",
+                    offer(h["maint"], "199", h["maint"],
                           {"priceSpecification": {"@type": "UnitPriceSpecification", "price": "199", "priceCurrency": "MYR", "unitCode": "MON", "referenceQuantity": {"@type": "QuantitativeValue", "value": 1, "unitCode": "MON"}}})]},
         {"@type": "FAQPage", "@id": u + "#faq", "url": u + "#faq", "isPartOf": {"@id": u + "#webpage"},
          "mainEntity": [{"@type": "Question", "name": _plain(q), "acceptedAnswer": {"@type": "Answer", "text": _plain(a)}} for q, a in h["faq"]]},
