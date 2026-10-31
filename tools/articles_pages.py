@@ -206,7 +206,7 @@ ART2_EN = """
 <p><strong>Have you started bringing AI into your business?</strong></p>
 
 <h2>Where to start</h2>
-<p>If you are not sure what your first step should be, take a look at <a href="/products/#website-building">our website building service</a> and the rest of what we do, or message me on WhatsApp. Hunter Foo Media can build the website, the social media content and the WhatsApp flow with you, and you approve each step. We do not promise search rankings or recommendations from AI tools. Fees are by written quote.</p>
+<p>If you are not sure what your first step should be, take a look at <a href="/website-design/">our website building service</a> and the rest of what we do, or message me on WhatsApp. Hunter Foo Media can build the website, the social media content and the WhatsApp flow with you, and you approve each step. We do not promise search rankings or recommendations from AI tools. Fees are by written quote.</p>
 """
 
 ART2_ZH = """
@@ -232,7 +232,7 @@ ART2_ZH = """
 <p><strong>你开始结合AI了吗？</strong></p>
 
 <h2>从哪里开始</h2>
-<p>如果你还不确定第一步该做什么，可以先看看我们的<a href="/products/#website-building">网站建设服务</a>和其他服务，或者直接 WhatsApp 我。Hunter Foo Media 可以和你一起把网站、社交媒体内容和 WhatsApp 流程做起来，每一步都由你确认。我们不保证搜索排名，也不保证会被 AI 工具推荐。费用以书面报价为准。</p>
+<p>如果你还不确定第一步该做什么，可以先看看我们的<a href="/website-design/">网站建设服务</a>和其他服务，或者直接 WhatsApp 我。Hunter Foo Media 可以和你一起把网站、社交媒体内容和 WhatsApp 流程做起来，每一步都由你确认。我们不保证搜索排名，也不保证会被 AI 工具推荐。费用以书面报价为准。</p>
 """
 
 ART2_MS = """
@@ -258,7 +258,7 @@ ART2_MS = """
 <p><strong>Sudahkah anda mula membawa AI ke dalam perniagaan anda?</strong></p>
 
 <h2>Di mana hendak bermula</h2>
-<p>Jika anda belum pasti apa langkah pertama, lihat <a href="/products/#website-building">servis pembinaan laman web</a> kami dan servis lain, atau WhatsApp saya terus. Hunter Foo Media boleh membina laman web, kandungan media sosial dan aliran WhatsApp bersama anda, dan anda luluskan setiap langkah. Kami tidak menjanjikan kedudukan carian atau cadangan daripada alat AI. Yuran melalui sebut harga bertulis.</p>
+<p>Jika anda belum pasti apa langkah pertama, lihat <a href="/website-design/">servis pembinaan laman web</a> kami dan servis lain, atau WhatsApp saya terus. Hunter Foo Media boleh membina laman web, kandungan media sosial dan aliran WhatsApp bersama anda, dan anda luluskan setiap langkah. Kami tidak menjanjikan kedudukan carian atau cadangan daripada alat AI. Yuran melalui sebut harga bertulis.</p>
 """
 
 ART2 = {"slug": "keeping-your-business-in-step-with-ai", "date": "2026-10-30",

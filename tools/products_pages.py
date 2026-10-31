@@ -230,6 +230,7 @@ WB["en"] = dict(
      "An indexing check report",
      "llms.txt, written so AI tools can read your services and FAQ",
      "A one-time setup. Optional maintenance: RM199/month"],
+ more="Website design details →",
  feel="Fee", btn1="RM399 · WhatsApp us", btn2="RM1,393 · WhatsApp us", btn2sub="Basic RM399 + RM994",
  wa1="I'd like to build my Basic website (RM399)", wa2="I'd like to build my website with SEO + AEO/GEO (RM1,393 total)",
  cta="Ask about a website on WhatsApp",
@@ -262,6 +263,7 @@ WB["zh"] = dict(
      "收录检查报告",
      "llms.txt：把你的服务和 FAQ 写成 AI 工具读得懂的格式",
      "一次性设置。如需维护：每月 RM199"],
+ more="网站设计详情 →",
  feel="费用", btn1="RM399 · WhatsApp 我们", btn2="RM1,393 · WhatsApp 我们", btn2sub="基础版 RM399 + RM994",
  wa1="我要搭建我的 Basic 网站 RM399", wa2="我要搭建我的网站，含 SEO + AEO/GEO，合共 RM1,393",
  cta="用 WhatsApp 问网站建设",
@@ -294,6 +296,7 @@ WB["ms"] = dict(
      "Laporan semakan pengindeksan",
      "llms.txt, ditulis supaya alat AI boleh membaca servis dan FAQ anda",
      "Persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan"],
+ more="Butiran buat website →",
  feel="Yuran", btn1="RM399 · WhatsApp kami", btn2="RM1,393 · WhatsApp kami", btn2sub="Asas RM399 + RM994",
  wa1="Saya mahu bina laman web Basic saya (RM399)", wa2="Saya mahu bina laman web saya dengan SEO + AEO/GEO (jumlah RM1,393)",
  cta="Tanya tentang laman web di WhatsApp",
@@ -322,11 +325,11 @@ def _wb(k):
             '<h3 class="ad-h3">%s</h3><ul class="wb-gets">%s</ul>'
             '<div class="ad-two wb-two">%s%s</div>'
             '<p class="wb-scope">%s</p>'
-            '<p class="ad-fine">%s</p></div></section>\n') % (
+            '<p class="ad-fine">%s</p><p class="hm-more wb-more"><a href="/website-design/">%s</a></p></div></section>\n') % (
         w["eyebrow"], w["h"], "".join("<p>%s</p>" % x for x in w["p"]), link, w["cta"],
         w["geth"], "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[i], x) for i, x in zip(["glb", "srv", "key"], w["gets"])),
         panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)),
-        w["scope"], w["fine"])
+        w["scope"], w["fine"], w["more"])
 
 # ---- FAQ (visible <details> list + FAQPage JSON-LD). Answers only restate what this page already says. ----
 FAQ = {}
