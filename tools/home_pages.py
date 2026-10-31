@@ -19,7 +19,7 @@ H["en"] = dict(
  s1e="STEP 1 · WEBSITE", s1h="Start with a website that Google and AI can read.",
  s1p=["For most companies, the most basic step into AI is a website that search engines and AI assistants like ChatGPT and Perplexity can read clearly. That's where we start.",
       "Basic gets you a clean company website. The SEO + AEO/GEO add-on adds what search engines and AI tools read: structured data (schema), Q&amp;A and FAQ content, a sitemap and submission to Google and Bing. Each includes one language and your domain for the first year: English, <span lang='zh-Hans'>中文</span> or BM, plus an llms.txt summary for AI tools. SEO + AEO/GEO is a one-time setup. Optional maintenance: RM199/month."],
- more="Full package details →",
+ more="Website design details →",
  exh="This site is our first example", exsub="Everything below is live on hunterfoomedia.com today. Check it yourself:",
  ex=[('<a href="/llms.txt">llms.txt</a>', "a plain-text summary of who we are and what we offer, written for AI tools"),
      ('<a href="__EN__">English</a>, <a href="__ZH__" lang="zh-Hans">中文</a> and <a href="__MS__">BM</a>', "three language versions, linked to each other with hreflang tags"),
@@ -85,7 +85,7 @@ H["zh"] = dict(
  s1e="第一步 · 网站", s1h="先有一个 Google 和 AI 都读得懂的网站。",
  s1p=["公司要接上 AI，最基本的一步，就是有一个搜索引擎和 ChatGPT、Perplexity 这类 AI 助手都能读清楚的网站。我们从这里开始。",
       "基础版给你一个清楚好用的公司网站。「SEO + AEO/GEO」加购项，再补上搜索引擎和 AI 工具会读的内容：结构化数据（schema）、问答与 FAQ 内容、网站地图，并提交 Google 与 Bing 收录。两个方案都含 1 种语言（EN、中文或 BM 任选）和第一年域名，并附 llms.txt 给 AI 工具读。SEO + AEO/GEO 是一次性设置；如需维护：每月 RM199。"],
- more="看完整方案内容 →",
+ more="网站设计详情 →",
  exh="这个网站，就是我们的第一个例子", exsub="下面每一项，现在都在 hunterfoomedia.com 上运行，你可以自己点开看：",
  ex=[('<a href="/llms.txt">llms.txt</a>', "一份写给 AI 工具看的纯文字简介：我们是谁、提供什么"),
      ('<a href="__EN__">English</a>、<a href="__ZH__">中文</a>、<a href="__MS__">BM</a>', "三个语言版本，用 hreflang 标签互相对应"),
@@ -151,7 +151,7 @@ H["ms"] = dict(
  s1e="LANGKAH 1 · LAMAN WEB", s1h="Mula dengan laman web yang Google dan AI boleh baca.",
  s1p=["Bagi kebanyakan syarikat, langkah paling asas untuk bersedia dengan AI ialah laman web yang boleh dibaca dengan jelas oleh enjin carian dan pembantu AI seperti ChatGPT dan Perplexity. Di situlah kami bermula.",
       "Pakej Asas memberi anda laman web syarikat yang kemas. Tambahan SEO + AEO/GEO menambah apa yang dibaca oleh enjin carian dan alat AI: data berstruktur (schema), kandungan soal jawab dan FAQ, sitemap serta penghantaran kepada Google dan Bing. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama: EN, <span lang='zh-Hans'>中文</span> atau BM, serta ringkasan llms.txt untuk alat AI. SEO + AEO/GEO ialah persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan."],
- more="Butiran penuh pakej →",
+ more="Butiran buat website →",
  exh="Laman ini contoh pertama kami", exsub="Semua di bawah sudah berjalan di hunterfoomedia.com hari ini. Semak sendiri:",
  ex=[('<a href="/llms.txt">llms.txt</a>', "ringkasan teks biasa tentang siapa kami dan apa yang kami tawarkan, ditulis untuk alat AI"),
      ('<a href="__EN__">English</a>, <a href="__ZH__" lang="zh-Hans">中文</a> dan <a href="__MS__">BM</a>', "tiga versi bahasa, dipautkan antara satu sama lain dengan tag hreflang"),
@@ -218,7 +218,7 @@ def _main(k):
     out = []
     # Hero
     out.append('<section class="wrap hm-hero"><p class="eyebrow"><i></i>%s</p><h1>%s</h1>%s'
-               '<div class="hm-ctas"><a class="button" href="/products/#website-building">%s <span aria-hidden="true">→</span></a>'
+               '<div class="hm-ctas"><a class="button" href="/website-design/">%s <span aria-hidden="true">→</span></a>'
                '<a class="button ghost" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></div>'
                '<nav class="hm-stepsnav" aria-label="%s">%s</nav></section>\n' % (
                h["eyebrow"], h["h1"], "".join('<p class="lede">%s</p>' % x for x in h["lede"]), h["cta1"], wa, h["cta2"],
@@ -229,7 +229,7 @@ def _main(k):
     # Step 1: website
     out.append('<section class="paper ad-section hm-sec" id="website"><div class="wrap section">'
                '<p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2><div class="hm-lede">%s</div>'
-               '<div class="ad-two wb-two">%s%s</div><p class="hm-more"><a href="/products/#website-building">%s</a></p>'
+               '<div class="ad-two wb-two">%s%s</div><p class="hm-more"><a href="/website-design/">%s</a></p>'
                '<p class="ad-fine">%s</p>'
                '<div class="hm-example"><h3>%s</h3><p>%s</p><ul>%s</ul></div>'
                '</div></section>\n' % (
@@ -287,7 +287,7 @@ def _ld(k):
         {"@type": "WebSite", "@id": D + "/#website", "url": u, "name": "Hunter Foo Media", "publisher": {"@id": D + "/#organization"}},
         {"@type": "WebPage", "@id": u + "#webpage", "url": u, "name": h["title"], "description": h["desc"], "about": {"@id": D + "/#organization"}, "isPartOf": {"@id": D + "/#website"}},
         {"@type": "Service", "@id": u + "#website-building", "name": w["ld"][0], "description": w["ld"][1], "serviceType": "Website building", "provider": {"@id": D + "/#organization"},
-         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": D + "/products/#website-building"},
+         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": D + "/website-design/"},
         {"@type": "Service", "@id": u + "#management", "name": h["mgh"].rstrip(".。"), "description": h["mgp"], "serviceType": "Back-office AI automation", "provider": {"@id": D + "/#organization"},
          "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": u + "#management"},
         {"@type": "Person", "@id": D + "/#founder", "name": "Hunter Foo", "jobTitle": "Founder", "image": D + "/assets/hunter-foo-portrait.jpeg",

@@ -84,3 +84,8 @@
 .hm-mgmt+#demos{border-top:1px solid var(--line)}
 @media(max-width:1200px){.hm-cards-5{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.hm-area{padding-top:44px;padding-bottom:40px}.hm-area-h{font-size:clamp(30px,8.4vw,40px)}.hm-mgmt{padding-top:65px;padding-bottom:65px}.hm-cards-5,.hm-mg-proof ul{grid-template-columns:1fr}}
+/* /website-design/ */
+.wd-ai ul{grid-template-columns:1fr}.wd-ai li b{font-size:inherit;color:var(--paper);line-height:inherit}
+.wd-ai li span{font-size:16px}
+#proof+.contact{border-top:1px solid var(--line)}
+.wb-more{margin-top:14px}
