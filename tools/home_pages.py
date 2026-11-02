@@ -208,6 +208,62 @@ H["ms"] = dict(
 )
 
 import urllib.parse, html
+
+# ---- Homepage FAQ (visible <details> list + matching FAQPage JSON-LD). Answers only restate what the site already says. ----
+ZH_ = '<span lang="zh-Hans">中文</span>'
+HFAQ = {}
+HFAQ["en"] = dict(kicker="FAQ", h="Common questions", qa=[
+ ("What does Hunter Foo Media do?",
+  "Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore. We work as forward deployed engineers: we learn how your team actually works, then build what fits. We start with a website that Google and AI assistants can read, then automate how you find, follow up and close leads, and your back-office work."),
+ ("How much does a website cost?",
+  "Basic is RM399. SEO + AEO/GEO is RM1,393 in total (Basic RM399 + RM994), a one-time setup. Both include one language and your domain for the first year. Optional maintenance: RM199/month. More languages, extra pages or other custom scope are confirmed by <b>written quote</b>."),
+ ("How much does AI automation cost?",
+  "Lead automation, the WhatsApp digital employee and back-office (Management) work are priced by <b>written quote</b>, agreed before we start. Only the website packages have fixed prices."),
+ ("Will AI send messages to my customers without my approval?",
+  "No. A person stays in charge of every decision that matters, and you approve every message template before it goes live. Drafts wait in an approval queue, and a person approves them before anything goes out."),
+ ("Do you guarantee Google rankings or AI recommendations?",
+  "No. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up."),
+ ("Where are you based, and how do I contact you?",
+  "We're based in Kuala Lumpur and work remotely across Malaysia and Singapore. WhatsApp +60 19-627 3143 or email hello@hunterfoomedia.com, in English, " + ZH_ + " or BM."),
+])
+HFAQ["zh"] = dict(kicker="常见问题", h="你可能想问的", qa=[
+ ("Hunter Foo Media 是做什么的？",
+  "Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，服务马来西亚和新加坡企业。我们以前沿部署工程师的方式工作：先弄清楚你的团队实际怎么做事，再动手搭建合用的系统。第一步做一个 Google 和 AI 助手都读得懂的网站，接着把找客户、跟进、成交和后台工作自动化。"),
+ ("做网站要多少钱？",
+  "基础版 RM399；含 SEO + AEO/GEO 合共 RM1,393（基础版 RM399 + RM994），是一次性设置。两个方案都含 1 种语言和第一年域名。如需维护：每月 RM199。加语言、加页面或其他特别需求，以<b>书面报价</b>确认。"),
+ ("AI 自动化怎么收费？",
+  "获客自动化、WhatsApp 数字员工和后台（管理）工作，费用都以<b>书面报价</b>确认，开工前谈好。只有网站方案是固定价格。"),
+ ("AI 会不经我同意就发信息给客户吗？",
+  "不会。重要的决定始终由人来做；每一条对外的话术模板，都要你批准后才上线。草稿先进审批队列，经人批准后才发出。"),
+ ("保证 Google 排名或 AI 推荐吗？",
+  "不保证。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们会清楚告诉你做了什么、设置了什么。"),
+ ("你们在哪里？怎么联系？",
+  "我们立足吉隆坡，远程服务马来西亚与新加坡。WhatsApp +60 19-627 3143，或电邮 hello@hunterfoomedia.com；中文、英文或马来文都可以。"),
+])
+HFAQ["ms"] = dict(kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
+ ("Apa yang Hunter Foo Media buat?",
+  "Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura. Kami bekerja sebagai forward deployed engineer: kami faham cara pasukan anda sebenarnya bekerja, kemudian bina sistem yang sesuai. Kami mula dengan laman web yang boleh dibaca oleh Google dan pembantu AI, kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda."),
+ ("Berapa harga laman web?",
+  "Pakej Asas RM399. SEO + AEO/GEO berjumlah RM1,393 (Asas RM399 + RM994), persediaan sekali sahaja. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama. Penyelenggaraan pilihan: RM199/bulan. Bahasa tambahan, halaman tambahan atau skop khas lain disahkan melalui <b>sebut harga bertulis</b>."),
+ ("Berapa kos automasi AI?",
+  "Automasi prospek, Pekerja Digital WhatsApp dan kerja dalaman (Pengurusan) dikenakan yuran melalui <b>sebut harga bertulis</b>, dipersetujui sebelum mula. Hanya pakej laman web yang ada harga tetap."),
+ ("Adakah AI akan hantar mesej kepada pelanggan saya tanpa kelulusan saya?",
+  "Tidak. Setiap keputusan penting tetap dibuat oleh manusia, dan anda luluskan setiap templat mesej sebelum ia digunakan. Draf menunggu dalam barisan kelulusan, dan seorang manusia meluluskannya sebelum apa-apa dihantar."),
+ ("Adakah anda jamin kedudukan Google atau cadangan AI?",
+  "Tidak. Kami tidak menjanjikan kedudukan, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami beritahu dengan jelas apa yang kami bina dan sediakan."),
+ ("Di mana anda berada, dan bagaimana nak hubungi?",
+  "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk Malaysia dan Singapura secara jarak jauh. WhatsApp +60 19-627 3143 atau e-mel hello@hunterfoomedia.com, dalam bahasa Inggeris, Cina atau BM."),
+])
+
+import re as _re
+def _faq_plain(s):
+    return html.unescape(_re.sub(r"<[^>]+>", "", s))
+
+def _home_faq(k):
+    f = HFAQ[k]
+    items = "".join('<details%s><summary>%s</summary><p>%s</p></details>' % (' open' if i == 0 else '', q, a) for i, (q, a) in enumerate(f["qa"]))
+    return ('<section class="paper pd-faq-wrap" id="faq" aria-labelledby="hm-faq-h"><div class="wrap section"><div class="pd-faq">'
+            '<p class="pd-kicker">%s</p><h2 id="hm-faq-h">%s</h2>%s</div></div></section>\n') % (f["kicker"], f["h"], items)
 def _main(k):
     h = H[k]; w = WB[k]
     wa = WA + "?text=" + urllib.parse.quote(h["wamsg"], safe="")
@@ -273,6 +329,8 @@ def _main(k):
                '<div><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2><p class="hm-role">%s</p>%s'
                '<p class="hm-links"><a class="hm-link" href="/about/">%s</a><a class="hm-link" href="https://www.linkedin.com/in/hunterfoo3143/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p></div></section>\n' % (
                h["falt"], h["fe"], h["fh"], h["frole"], "".join('<p class="hm-lede-d">%s</p>' % x for x in h["fp"]), h["fmore"]))
+    # FAQ (matches the FAQPage JSON-LD in _ld)
+    out.append(_home_faq(k))
     # Contact
     out.append('<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
                '<a class="button whatsapp" data-wa="%s" href="%s" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
@@ -291,6 +349,8 @@ def _ld(k):
         {"@type": "Service", "@id": u + "#management", "name": h["mgh"].rstrip(".。"), "description": h["mgp"], "serviceType": "Back-office AI automation", "provider": {"@id": D + "/#organization"},
          "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": u + "#management"},
         {"@type": "Person", "@id": D + "/#founder", "name": "Hunter Foo", "jobTitle": "Founder", "image": D + "/assets/hunter-foo-portrait.jpeg",
-         "sameAs": ["https://www.linkedin.com/in/hunterfoo3143/"], "worksFor": {"@id": D + "/#organization"}}]}
+         "sameAs": ["https://www.linkedin.com/in/hunterfoo3143/"], "worksFor": {"@id": D + "/#organization"}},
+        {"@type": "FAQPage", "@id": u + "#faq", "url": u + "#faq", "isPartOf": {"@id": u + "#webpage"},
+         "mainEntity": [{"@type": "Question", "name": _faq_plain(q), "acceptedAnswer": {"@type": "Answer", "text": _faq_plain(a)}} for q, a in HFAQ[k]["qa"]]}]}
 
 HOME = {k: {"title": H[k]["title"], "desc": H[k]["desc"], "main": _main(k), "ld": _ld(k)} for k in H}
