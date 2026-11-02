@@ -23,16 +23,16 @@ LEGAL = {"en": "About", "zh": "关于我们", "ms": "Tentang Kami"}
 MENU = {"en": ("Menu", "Close"), "zh": ("菜单", "关闭"), "ms": ("Menu", "Tutup")}
 SUF = {"en": " a year", "ms": " setahun"}
 
-ORG = {"@type": "Organization", "@id": D + "/#organization", "name": "Hunter Foo Media",
+ORG = {"@type": ["Organization", "ProfessionalService"], "@id": D + "/#organization", "name": "Hunter Foo Media",
        "legalName": "HF Media Solution", "alternateName": "Hunter Foo Media",
        "identifier": {"@type": "PropertyValue", "propertyID": "Malaysia business registration (SSM)", "value": "IP0633909-U"},
-       "url": D + "/", "logo": D + "/assets/hfm-logo.png", "email": "hello@hunterfoomedia.com", "telephone": "+60196273143",
+       "url": D + "/", "logo": D + "/assets/hfm-logo.png", "email": "hello@hunterfoomedia.com", "telephone": "+60 19-627 3143",
        "address": {"@type": "PostalAddress", "streetAddress": "D-1-28, Residensi Bandar Razak, Salak Selatan", "postalCode": "57100",
                    "addressLocality": "Kuala Lumpur", "addressRegion": "Wilayah Persekutuan Kuala Lumpur", "addressCountry": "MY"},
        "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}],
        "sameAs": ["https://web.facebook.com/hunterfooai/", "https://www.linkedin.com/in/hunterfoo3143/"],
        "founder": {"@id": D + "/#founder"},
-       "contactPoint": [{"@type": "ContactPoint", "telephone": "+60196273143", "email": "hello@hunterfoomedia.com",
+       "contactPoint": [{"@type": "ContactPoint", "telephone": "+60 19-627 3143", "email": "hello@hunterfoomedia.com",
                          "contactType": "customer service", "url": "https://wa.me/60196273143",
                          "availableLanguage": ["en", "zh-Hans"], "areaServed": ["MY", "SG"]}]}
 
@@ -86,7 +86,7 @@ def fix_jsonld(s, lang, path):
     def fix(m):
         data = json.loads(m.group(1))
         g = data.get("@graph", [data])
-        g = [n for n in g if n.get("@type") != "Organization"]
+        g = [n for n in g if n.get("@id") != ORG["@id"] and n.get("@type") not in ("Organization", ORG["@type"])]
         for n in g:
             if "inLanguage" in n: n["inLanguage"] = hl
             if n.get("@type") in ("WebPage", "FAQPage", "AboutPage"): n["inLanguage"] = hl
