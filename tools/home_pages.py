@@ -326,7 +326,7 @@ def _main(k):
                "".join('<li><a href="/notes/%s/"><time datetime="%s">%s</time><h3>%s</h3><p>%s</p></a></li>' % (a["slug"], a["date"], DATE_FMT[k](a["date"]), a[k]["h1"], a[k]["desc"]) for a in ARTICLES[:2]),
                h["nall"]))
     # Founder
-    out.append('<section class="wrap section hm-sec hm-dark hm-founder" id="founder"><img src="/assets/hunter-foo-portrait.jpeg" width="160" height="160" alt="%s" loading="lazy" decoding="async">'
+    out.append('<section class="wrap section hm-sec hm-dark hm-founder" id="founder"><img src="/assets/hunter-foo-avatar.jpg" width="160" height="160" alt="%s" loading="lazy" decoding="async">'
                '<div><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2><p class="hm-role">%s</p>%s'
                '<p class="hm-links"><a class="hm-link" href="/about/">%s</a><a class="hm-link" href="https://www.linkedin.com/in/hunterfoo3143/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p></div></section>\n' % (
                h["falt"], h["fe"], h["fh"], h["frole"], "".join('<p class="hm-lede-d">%s</p>' % x for x in h["fp"]), h["fmore"]))
