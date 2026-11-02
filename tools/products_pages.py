@@ -598,7 +598,7 @@ def _main(s):
             '%s%s<section class="paper pd-how-wrap"><div class="wrap section prose pd-intro"><div><h2>%s</h2><ol class="pd-steps pd-how">%s</ol></div><div><h2>%s</h2><ul class="pd-priv">%s</ul></div></div></section>\n'
             '%s<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" data-wa="%s" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
-            '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div>'
+            '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off--></div></div>'
             '<p class="pd-reg">%s</p></section>\n'
             '<script type="application/json" id="pd-data">%s</script>\n<script src="/assets/products-demo.js" defer></script>\n'
             ) % (s["eyebrow"], s["h1"], s["lede"], s["prodh"], s["p1h"], s["p2h"], s["p3h"], ADS[s["k"]]["jump"], WB[s["k"]]["jump"], CS[s["k"]]["jump"], FAQ[s["k"]]["jump"],

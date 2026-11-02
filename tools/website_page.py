@@ -189,7 +189,7 @@ def _main(k):
                 "".join('<a class="hm-link" href="%s">%s</a>' % x for x in h["pfl"])))
     o.append('<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
              '<a class="button whatsapp" data-wa="%s" href="%s" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
-             '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><p>%s</p></div></div></section>\n'
+             '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off--><p>%s</p></div></div></section>\n'
              % (h["ce"], h["ch"], html.escape(w["wamsg"]), wa, h["cnote"]))
     return "\n" + "".join(o)
 

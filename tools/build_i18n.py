@@ -34,7 +34,7 @@ ORG = {"@type": ["Organization", "ProfessionalService"], "@id": D + "/#organizat
        "founder": {"@id": D + "/#founder"},
        "contactPoint": [{"@type": "ContactPoint", "telephone": "+60 19-627 3143", "email": "hello@hunterfoomedia.com",
                          "contactType": "customer service", "url": "https://wa.me/60196273143",
-                         "availableLanguage": ["en", "zh-Hans"], "areaServed": ["MY", "SG"]}]}
+                         "availableLanguage": ["en", "zh-Hans", "ms"], "areaServed": ["MY", "SG"]}]}
 
 def tr(s, lang):
     if lang == "zh": return s
@@ -77,7 +77,7 @@ ADDR_FOOT = "D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, 
 
 def legal(lang, p):
     return ('<p class="legal">© <span id="year">2026</span> HF Media Solution (IP0633909-U) · Hunter Foo Media · '
-            'WhatsApp <a href="https://wa.me/60196273143">+60 19-627 3143</a> · <a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a> · '
+            'WhatsApp <a href="https://wa.me/60196273143">+60 19-627 3143</a> · <!--email_off--><a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a><!--/email_off--> · '
             '%s · '
             '<a href="%s/about/">%s</a></p>' % (ADDR_FOOT, p, LEGAL[lang]))
 

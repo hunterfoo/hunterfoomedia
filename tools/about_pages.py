@@ -7,13 +7,13 @@ def _main(h):
             '<h2>%s</h2>\n<p>%s</p>\n<p class="agency-note">%s</p>\n</div></section>\n'
             '<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
-            '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a></div></div></section>\n'
+            '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off--></div></div></section>\n'
             ) % (h["eyebrow"], h["h1"], h["lede"], h["idh"], rows, h["founderh"], h["founder"], h["note"], h["next"], h["cta"])
 
 def _rows(l):
     return [(l[0], "HF Media Solution"), (l[1], "Hunter Foo Media"), (l[2], "IP0633909-U"), (l[3], l[4]),
             (l[5], "Hunter Foo"), (l[6], '<a href="https://wa.me/60196273143">+60 19-627 3143</a>'),
-            (l[7], '<a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a>'),
+            (l[7], '<!--email_off--><a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a><!--/email_off-->'),
             (l[8], '<a href="https://www.hunterfoomedia.com/">www.hunterfoomedia.com</a>'), (l[11], ADDRESS), (l[9], l[10])]
 
 ABOUT = {

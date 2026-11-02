@@ -314,7 +314,7 @@ def contact(lang, next_, cta, wa, note=""):
     n = '<p>%s</p>' % note if note else ''
     return ('<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" data-wa="%s" href="%s" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
-            '<a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a>%s</div></div></section>\n') % (next_, cta, wa, WA, n)
+            '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off-->%s</div></div></section>\n') % (next_, cta, wa, WA, n)
 
 def index_main(lang, p):
     h = INDEX[lang]
