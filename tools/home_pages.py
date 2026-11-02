@@ -224,7 +224,7 @@ HFAQ["en"] = dict(kicker="FAQ", h="Common questions", qa=[
  ("Do you guarantee Google rankings or AI recommendations?",
   "No. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up."),
  ("Where are you based, and how do I contact you?",
-  "We're based in Kuala Lumpur and work remotely across Malaysia and Singapore. WhatsApp +60 19-627 3143 or email hello@hunterfoomedia.com, in English, " + ZH_ + " or BM."),
+  "We're based in Kuala Lumpur and work remotely across Malaysia and Singapore. WhatsApp +60 19-627 3143 or email <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->, in English, " + ZH_ + " or BM."),
 ])
 HFAQ["zh"] = dict(kicker="常见问题", h="你可能想问的", qa=[
  ("Hunter Foo Media 是做什么的？",
@@ -238,7 +238,7 @@ HFAQ["zh"] = dict(kicker="常见问题", h="你可能想问的", qa=[
  ("保证 Google 排名或 AI 推荐吗？",
   "不保证。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们会清楚告诉你做了什么、设置了什么。"),
  ("你们在哪里？怎么联系？",
-  "我们立足吉隆坡，远程服务马来西亚与新加坡。WhatsApp +60 19-627 3143，或电邮 hello@hunterfoomedia.com；中文、英文或马来文都可以。"),
+  "我们立足吉隆坡，远程服务马来西亚与新加坡。WhatsApp +60 19-627 3143，或电邮 <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->；中文、英文或马来文都可以。"),
 ])
 HFAQ["ms"] = dict(kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
  ("Apa yang Hunter Foo Media buat?",
@@ -252,12 +252,13 @@ HFAQ["ms"] = dict(kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
  ("Adakah anda jamin kedudukan Google atau cadangan AI?",
   "Tidak. Kami tidak menjanjikan kedudukan, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami beritahu dengan jelas apa yang kami bina dan sediakan."),
  ("Di mana anda berada, dan bagaimana nak hubungi?",
-  "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk Malaysia dan Singapura secara jarak jauh. WhatsApp +60 19-627 3143 atau e-mel hello@hunterfoomedia.com, dalam bahasa Inggeris, Cina atau BM."),
+  "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk Malaysia dan Singapura secara jarak jauh. WhatsApp +60 19-627 3143 atau e-mel <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->, dalam bahasa Inggeris, Cina atau BM."),
 ])
 
 import re as _re
 def _faq_plain(s):
-    return html.unescape(_re.sub(r"<[^>]+>", "", s))
+    # strips tags and the <!--email_off--> markers (they stop Cloudflare Email Obfuscation rewriting the address in the visible answer)
+    return html.unescape(_re.sub(r"<!--.*?-->|<[^>]+>", "", s))
 
 def _home_faq(k):
     f = HFAQ[k]
