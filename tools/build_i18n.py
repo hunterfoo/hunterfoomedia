@@ -10,7 +10,6 @@ from products_pages import PRODUCTS
 from website_page import WD
 from articles_pages import ARTICLES, INDEX as ART_INDEX, index_main, article_main
 import datetime
-BUILD_DATE = datetime.date.today().isoformat()
 D = "https://www.hunterfoomedia.com"
 SRC = "tools/src_zh"
 PAGES = ["/services/", "/services/ai-automation/", "/services/personal-brand/", "/services/social-reels/"]
@@ -259,11 +258,44 @@ for lang in LANGS:
         write(lang, path, build(put(art_shell(t["title"], t["desc"], path, "article"), ld, article_main(lang, a, p)), path, lang))
 
 # sitemap
+# <lastmod> = date (Asia/Kuala_Lumpur) the page's content last changed, not the build date:
+#  - generated HTML differs from the committed version -> today (MYT)
+#  - otherwise -> committer date of the newest commit that changed this file's normalized content
+#    (cache-busting ?v=hash values are ignored, so a CSS/JS-only change doesn't bump every page)
+#  - git unavailable -> keep the lastmod already in sitemap.xml (else today)
+# Deterministic: rebuilding with no source changes yields an identical sitemap.xml.
+import subprocess
+MYT = datetime.timezone(datetime.timedelta(hours=8))
+TODAY = datetime.datetime.now(MYT).date().isoformat()
+def _norm(b):
+    return re.sub(rb'\?v=[0-9a-f]{8}"', b'"', b or b"").strip() if b is not None else None
+def _git(*a):
+    r = subprocess.run(("git",) + a, capture_output=True)
+    return r.stdout if r.returncode == 0 else None
+def _blob(rev, fp):
+    return _git("show", "%s:%s" % (rev, fp))
+_prev = {}
+if os.path.isfile("sitemap.xml"):
+    _prev = dict(re.findall(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", open("sitemap.xml").read()))
+def lastmod(loc, fp):
+    if _git("rev-parse", "--git-dir") is None:
+        return _prev.get(loc, TODAY)
+    cur = _norm(open(fp, "rb").read())
+    if _norm(_blob("HEAD", fp)) != cur:
+        return TODAY
+    for line in (_git("log", "--format=%H %ct", "HEAD", "--", fp) or b"").decode().split("\n"):
+        if not line: continue
+        h, ts = line.split()
+        if _norm(_blob(h, fp)) != _norm(_blob(h + "^", fp)):
+            return datetime.datetime.fromtimestamp(int(ts), MYT).date().isoformat()
+    return _prev.get(loc, TODAY)
 urls = []
 for path in ALL:
     for k in LANGS:
         alt = "".join('\n    <xhtml:link rel="alternate" hreflang="%s" href="%s%s%s"/>' % (LANGS[j][1], D, LANGS[j][0], path) for j in LANGS)
         alt += '\n    <xhtml:link rel="alternate" hreflang="x-default" href="%s%s"/>' % (D, path)
-        urls.append('  <url>\n    <loc>%s%s%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (D, LANGS[k][0], path, BUILD_DATE, alt))
+        loc = D + LANGS[k][0] + path
+        fp = (LANGS[k][0].lstrip("/") + path).lstrip("/") + "index.html"
+        urls.append('  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (loc, lastmod(loc, fp), alt))
 open("sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
 print("done")
