@@ -97,3 +97,4 @@
 .wb-fee-l{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#536053;font-weight:700}
 .wb-buy{width:100%;gap:20px;font-size:17px;font-weight:700}
 .wb-buy-sub{font-size:13.5px;color:#536053}
+.wb-founding{margin:20px 0 0;padding:14px 18px;background:#fff;border:1px solid var(--ad-line);border-left:4px solid var(--orange);border-radius:12px;font-size:15px;line-height:1.6;color:#2b3a33;max-width:46em}

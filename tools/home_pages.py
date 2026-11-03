@@ -1,7 +1,7 @@
 # Homepage (EN / ZH / MS). Copy written natively per language.
 # Rules: no timelines, no ranking or AI-recommendation promises, no invented clients/testimonials/portfolio,
 # fees by written quote except the website prices (taken from products_pages.WB).
-from products_pages import WB, CHECK, PRODUCTS, fee_btn
+from products_pages import WB, CHECK, PRODUCTS, fee_btn, founding_note
 from articles_pages import ARTICLES, DATE_FMT
 
 WA = "https://wa.me/60196273143"
@@ -216,7 +216,7 @@ HFAQ["en"] = dict(kicker="FAQ", h="Common questions", qa=[
  ("What does Hunter Foo Media do?",
   "Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore. We work as forward deployed engineers: we learn how your team actually works, then build what fits. We start with a website that Google and AI assistants can read, then automate how you find, follow up and close leads, and your back-office work."),
  ("How much does a website cost?",
-  "Basic is RM399. SEO + AEO/GEO is RM1,393 in total (Basic RM399 + RM994), a one-time setup. Both include one language and your domain for the first year. Optional maintenance: RM199/month. More languages, extra pages or other custom scope are confirmed by <b>written quote</b>."),
+  "Basic is RM399. SEO + AEO/GEO is RM1,393 in total (Basic RM399 + RM994), a one-time setup. Both include one language and your domain for the first year. Optional maintenance: RM199/month. More languages, extra pages or other custom scope are confirmed by <b>written quote</b>. These prices (including RM199/month maintenance) are founding-client prices for our first 20 clients, in exchange for an honest testimonial. Prices will go up after 20 clients."),
  ("How much does AI automation cost?",
   "Lead automation, the WhatsApp digital employee and back-office (Management) work are priced by <b>written quote</b>, agreed before we start. Only the website packages have fixed prices."),
  ("Will AI send messages to my customers without my approval?",
@@ -230,7 +230,7 @@ HFAQ["zh"] = dict(kicker="常见问题", h="你可能想问的", qa=[
  ("Hunter Foo Media 是做什么的？",
   "Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，服务马来西亚和新加坡企业。我们以前沿部署工程师的方式工作：先弄清楚你的团队实际怎么做事，再动手搭建合用的系统。第一步做一个 Google 和 AI 助手都读得懂的网站，接着把找客户、跟进、成交和后台工作自动化。"),
  ("做网站要多少钱？",
-  "基础版 RM399；含 SEO + AEO/GEO 合共 RM1,393（基础版 RM399 + RM994），是一次性设置。两个方案都含 1 种语言和第一年域名。如需维护：每月 RM199。加语言、加页面或其他特别需求，以<b>书面报价</b>确认。"),
+  "基础版 RM399；含 SEO + AEO/GEO 合共 RM1,393（基础版 RM399 + RM994），是一次性设置。两个方案都含 1 种语言和第一年域名。如需维护：每月 RM199。加语言、加页面或其他特别需求，以<b>书面报价</b>确认。以上价格（含 RM199/月维护费）为前 20 位客户优惠价，条件是为我们写一则真实评价。满 20 位后将调价。"),
  ("AI 自动化怎么收费？",
   "获客自动化、WhatsApp 数字员工和后台（管理）工作，费用都以<b>书面报价</b>确认，开工前谈好。只有网站方案是固定价格。"),
  ("AI 会不经我同意就发信息给客户吗？",
@@ -244,7 +244,7 @@ HFAQ["ms"] = dict(kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
  ("Apa yang Hunter Foo Media buat?",
   "Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura. Kami bekerja sebagai forward deployed engineer: kami faham cara pasukan anda sebenarnya bekerja, kemudian bina sistem yang sesuai. Kami mula dengan laman web yang boleh dibaca oleh Google dan pembantu AI, kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda."),
  ("Berapa harga laman web?",
-  "Pakej Asas RM399. SEO + AEO/GEO berjumlah RM1,393 (Asas RM399 + RM994), persediaan sekali sahaja. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama. Penyelenggaraan pilihan: RM199/bulan. Bahasa tambahan, halaman tambahan atau skop khas lain disahkan melalui <b>sebut harga bertulis</b>."),
+  "Pakej Asas RM399. SEO + AEO/GEO berjumlah RM1,393 (Asas RM399 + RM994), persediaan sekali sahaja. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama. Penyelenggaraan pilihan: RM199/bulan. Bahasa tambahan, halaman tambahan atau skop khas lain disahkan melalui <b>sebut harga bertulis</b>. Harga ini (termasuk penyelenggaraan RM199/bulan) ialah harga pelanggan awal untuk 20 pelanggan pertama, sebagai balasan satu testimoni yang jujur. Harga akan naik selepas 20 pelanggan."),
  ("Berapa kos automasi AI?",
   "Automasi prospek, Pekerja Digital WhatsApp dan kerja dalaman (Pengurusan) dikenakan yuran melalui <b>sebut harga bertulis</b>, dipersetujui sebelum mula. Hanya pakej laman web yang ada harga tetap."),
  ("Adakah AI akan hantar mesej kepada pelanggan saya tanpa kelulusan saya?",
@@ -286,12 +286,12 @@ def _main(k):
     # Step 1: website
     out.append('<section class="paper ad-section hm-sec" id="website"><div class="wrap section">'
                '<p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2><div class="hm-lede">%s</div>'
-               '<div class="ad-two wb-two">%s%s</div><p class="hm-more"><a href="/website-design/">%s</a></p>'
+               '<div class="ad-two wb-two">%s%s</div>%s<p class="hm-more"><a href="/website-design/">%s</a></p>'
                '<p class="ad-fine">%s</p>'
                '<div class="hm-example"><h3>%s</h3><p>%s</p><ul>%s</ul></div>'
                '</div></section>\n' % (
                h["s1e"], h["s1h"], "".join("<p>%s</p>" % x for x in h["s1p"]),
-               tier(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), tier(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)),
+               tier(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), tier(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)), founding_note(w),
                h["more"], w["fine"], h["exh"], h["exsub"],
                "".join('<li>%s<b>%s</b><span>%s</span></li>' % (CHECK, a, b) for a, b in h["ex"])))
     # Step 2: lead automation

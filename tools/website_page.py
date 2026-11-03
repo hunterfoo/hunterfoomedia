@@ -2,7 +2,7 @@
 # Rules: fixed package prices only (taken from products_pages.WB), no "from/起/Dari"; no timelines; no ranking or
 # AI-recommendation promises; no client website portfolio or testimonials (none exist); custom scope by written quote.
 import urllib.parse, html
-from products_pages import WB, CHECK, ICON, fee_btn
+from products_pages import WB, CHECK, ICON, fee_btn, founding_note
 
 WA = "https://wa.me/60196273143"
 D = "https://www.hunterfoomedia.com"
@@ -39,7 +39,7 @@ P["en"] = dict(
      ("After launch", "Need a change? WhatsApp us. If you update often, choose maintenance at RM199/month.")],
  fqe="FAQ", fqh="Website questions",
  faq=[("How much does a website cost in Malaysia?",
-       "With us, Basic is RM399 and SEO + AEO/GEO is RM1,393 in total (Basic RM399 + RM994). Both include one language and your domain for the first year. More languages, extra pages or other custom work are confirmed by <b>written quote</b>. Prices in the market vary a lot with scope, so compare what each quote includes."),
+       "With us, Basic is RM399 and SEO + AEO/GEO is RM1,393 in total (Basic RM399 + RM994). Both include one language and your domain for the first year. More languages, extra pages or other custom work are confirmed by <b>written quote</b>. Prices in the market vary a lot with scope, so compare what each quote includes. These prices (including RM199/month maintenance) are founding-client prices for our first 20 clients, in exchange for an honest testimonial. Prices will go up after 20 clients."),
       ("Does the website come with an admin login, so I can edit it myself?",
        "Websites on the Basic and SEO + AEO/GEO packages don't come with an admin panel. That keeps the site faster and more secure, and easier for AI tools to read. To change something, just WhatsApp us. If you update often, you can choose maintenance at RM199/month. If you'd still rather log in and edit the text and images yourself, we can add an admin panel separately, by <b>written quote</b>."),
       ("What happens with the domain after the first year?",
@@ -87,7 +87,7 @@ P["zh"] = dict(
      ("上线之后", "要改内容，WhatsApp 我们；需要经常更新的，可以选每月 RM199 的维护。")],
  fqe="常见问题", fqh="做网站常见问题",
  faq=[("做网站要多少钱？",
-       "在我们这里，基础版 RM399；含 SEO + AEO/GEO 合共 RM1,393（基础版 RM399 + RM994）。两个方案都含 1 种语言和第一年域名。加语言、加页面或其他特别需求，以<b>书面报价</b>确认。市面上做网站的价格差别很大，主要看范围，比较时看清楚每份报价包含什么。"),
+       "在我们这里，基础版 RM399；含 SEO + AEO/GEO 合共 RM1,393（基础版 RM399 + RM994）。两个方案都含 1 种语言和第一年域名。加语言、加页面或其他特别需求，以<b>书面报价</b>确认。市面上做网站的价格差别很大，主要看范围，比较时看清楚每份报价包含什么。以上价格（含 RM199/月维护费）为前 20 位客户优惠价，条件是为我们写一则真实评价。满 20 位后将调价。"),
       ("网站有后台，可以自己登入修改吗？",
        "基础版和 SEO + AEO/GEO 方案的网站不带后台，这样网站更快、更安全，AI 也更容易读懂。要改内容，直接 WhatsApp 我们；需要经常更新的，可以选每月 RM199 的维护。如果你一定要自己登入修改文字和图片，我们可以另外加后台，费用以<b>书面报价</b>确认。"),
       ("第一年之后，域名怎么算？",
@@ -135,7 +135,7 @@ P["ms"] = dict(
      ("Selepas dilancarkan", "Nak ubah sesuatu? WhatsApp kami. Jika kerap kemas kini, pilih penyelenggaraan RM199/bulan.")],
  fqe="SOALAN LAZIM", fqh="Soalan tentang buat website",
  faq=[("Harga buat website di Malaysia?",
-       "Dengan kami, pakej Asas RM399 dan SEO + AEO/GEO RM1,393 semuanya (Asas RM399 + RM994). Kedua-dua pakej termasuk satu bahasa dan domain untuk tahun pertama. Bahasa tambahan, halaman tambahan atau skop khas disahkan melalui <b>sebut harga bertulis</b>. Upah buat website di pasaran berbeza-beza mengikut skop, jadi bandingkan apa yang termasuk dalam setiap sebut harga."),
+       "Dengan kami, pakej Asas RM399 dan SEO + AEO/GEO RM1,393 semuanya (Asas RM399 + RM994). Kedua-dua pakej termasuk satu bahasa dan domain untuk tahun pertama. Bahasa tambahan, halaman tambahan atau skop khas disahkan melalui <b>sebut harga bertulis</b>. Upah buat website di pasaran berbeza-beza mengikut skop, jadi bandingkan apa yang termasuk dalam setiap sebut harga. Harga ini (termasuk penyelenggaraan RM199/bulan) ialah harga pelanggan awal untuk 20 pelanggan pertama, sebagai balasan satu testimoni yang jujur. Harga akan naik selepas 20 pelanggan."),
       ("Adakah laman web ada panel admin, supaya saya boleh log masuk dan ubah sendiri?",
        "Laman web pakej Asas dan SEO + AEO/GEO tidak disertakan panel admin. Ini menjadikan laman lebih pantas, lebih selamat dan lebih mudah dibaca oleh AI. Nak ubah kandungan, WhatsApp saja kami. Jika anda kerap mengemas kini, boleh pilih penyelenggaraan RM199/bulan. Jika anda tetap mahu log masuk dan ubah teks serta gambar sendiri, kami boleh tambah panel admin secara berasingan, dengan <b>sebut harga bertulis</b>."),
       ("Bagaimana dengan domain selepas tahun pertama?",
@@ -174,10 +174,10 @@ def _main(k):
                 "".join('<li>%s<span>%s</span></li>' % (CHECK, x) for x in h["ai"]), h["aiex"], h["aifine"]))
     o.append('<section class="paper ad-section wb-section hm-sec" id="packages"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>'
              '<h3 class="ad-h3">%s</h3><ul class="wb-gets">%s</ul>'
-             '<div class="ad-two wb-two">%s%s</div><p class="wb-scope">%s</p><p class="ad-fine">%s</p></div></section>\n'
+             '<div class="ad-two wb-two">%s%s</div>%s<p class="wb-scope">%s</p><p class="ad-fine">%s</p></div></section>\n'
              % (h["pke"], h["pkh"], w["geth"],
                 "".join('<li class="ad-know"><span class="ad-ico">%s</span><p>%s</p></li>' % (ICON[i], x) for i, x in zip(["glb", "srv", "key"], w["gets"])),
-                panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", 1), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", 2),
+                panel(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", 1), panel(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", 2), founding_note(w),
                 w["scope"], w["fine"]))
     o.append('<section class="wrap section hm-sec hm-dark" id="process"><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2>%s</section>\n'
              % (h["pre"], h["prh"], cards(h["pr"], "hm-cards-5")))
