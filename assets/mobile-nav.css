@@ -15,19 +15,33 @@
  header.menu-open .menu-toggle .bars::before{transform:translateY(6px) rotate(45deg)}
  header.menu-open .menu-toggle .bars::after{transform:translateY(-6px) rotate(-45deg)}
  header .logo,header .brand{order:1}
- /* closed: only logo + toggle */
- body>header nav,header.header nav.compact,body>header .wrap>.lang-switch,body>header .btn.sm.wa,header.header .header-actions{display:none!important}
- /* open */
- header.menu-open nav,header.menu-open nav.compact{display:flex!important;flex-direction:column;order:3;width:100%;gap:0;padding:6px 0 4px;font-size:16px;max-width:none}
+ /* closed: logo + lang (beside menu) + toggle; hide nav and WhatsApp */
+ body>header nav,header.header nav.compact,body>header .btn.sm.wa{display:none!important}
+ .menu-toggle{order:3;margin-left:0}
+ header.header .header-actions{
+  display:flex!important;order:2;margin-left:auto;align-items:center;gap:4px;
+  flex-direction:row;width:auto;padding:0;
+ }
+ header.header .header-actions .lang-switch{
+  display:flex!important;order:0;width:auto;font-size:12px;padding:0;border:0;gap:0;
+ }
+ header.header .header-actions .lang-switch a{padding:6px 5px;color:#f4f5f1}
+ header.header .header-actions .header-contact{display:none!important}
+ /* open: full menu + WhatsApp; lang stays in header row */
+ header.menu-open nav,header.menu-open nav.compact{display:flex!important;flex-direction:column;order:4;width:100%;gap:0;padding:6px 0 4px;font-size:16px;max-width:none}
  header.menu-open nav a{display:block;padding:12px 2px;border-top:1px solid rgba(244,245,241,.14);color:#f4f5f1}
  header.menu-open nav a[aria-current]{color:#ff7b45}
  header.menu-open .m-only{display:block}
- header.menu-open .wrap>.lang-switch,header.menu-open .header-actions .lang-switch{display:flex!important;order:4;width:100%;font-size:15px;padding:12px 0;border-top:1px solid rgba(244,245,241,.14)}
- header.menu-open .lang-switch a{padding:6px 8px;color:#f4f5f1}
- header.menu-open .header-actions{display:flex!important;flex-direction:column;align-items:stretch;order:4;width:100%;gap:0;padding-bottom:14px}
+ header.menu-open .header-actions{order:2;margin-left:auto}
+ header.menu-open .header-actions .header-contact{
+  display:none!important; /* WA still via menu link / keep header compact */
+ }
  header.menu-open .btn.sm.wa{display:flex!important;order:5;width:100%;justify-content:center;margin:4px 0 14px;min-height:46px;align-items:center}
- header.menu-open .header-contact{display:flex;justify-content:center;align-items:center;min-height:46px;background:#ff7b45;color:#17271e;font-weight:600;font-size:15px}
- header.menu-open .header-contact .orange{color:#17271e}
  header.menu-open{max-height:100vh;overflow-y:auto}
+ @media(max-width:389px){
+  header.header .header-actions .lang-switch{font-size:11px}
+  header.header .header-actions .lang-switch a{padding:6px 3px}
+  .menu-toggle{padding:0 10px;font-size:13px}
+ }
 }
 @media(max-width:480px){.biz-id,.biz-id tbody,.biz-id tr,.biz-id th,.biz-id td{display:block;width:100%}.biz-id th{padding-bottom:0!important}.biz-id td{padding-top:2px!important;overflow-wrap:anywhere}}

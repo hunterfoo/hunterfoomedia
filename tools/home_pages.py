@@ -15,10 +15,9 @@ H["en"] = dict(
  h1='AI that helps you <span class="orange">serve customers</span> — and helps your team with daily work.',
  fde="We learn how your business actually works, then plug AI into the real workflow.",
  img_alt="3D company cutaway: HFM AI linking outward Website, Marketing, Customer Service and inward Manager, Clerk, PA",
- cta1="See website packages", cta_wa="Talk about what you want to automate", cta2="WhatsApp +60 19-627 3143",
+ cta1="See how we help the team", cta_wa="Talk about what you want to automate", cta2="WhatsApp +60 19-627 3143",
  s1e="STEP 1 · WEBSITE", s1h="Start with a website that Google and AI can read.",
- s1p=["For most companies, the most basic step into AI is a website that search engines and AI assistants like ChatGPT and Perplexity can read clearly. That's where we start.",
-      "Basic gets you a clean company website. The SEO + AEO/GEO add-on adds what search engines and AI tools read: structured data (schema), Q&amp;A and FAQ content, a sitemap and submission to Google and Bing. Each includes one language and your domain for the first year: English, <span lang='zh-Hans'>中文</span> or BM, plus an llms.txt summary for AI tools. SEO + AEO/GEO is a one-time setup. Optional maintenance: RM199/month."],
+ s1p=["A readable website is often the first step into AI. Details confirmed in writing."],
  more="Website design details →",
  exh="This site is our first example", exsub="Everything below is live on hunterfoomedia.com today. Check it yourself:",
  ex=[('<a href="/llms.txt">llms.txt</a>', "a plain-text summary of who we are and what we offer, written for AI tools"),
@@ -48,6 +47,23 @@ H["en"] = dict(
  falt="Portrait of Hunter Foo", fmore="More about us →",
  ce="NEXT STEP", ch="Tell us about your business.", cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM. Fees by written quote, except the website prices above.",
  wamsg="Hi Hunter, I'd like to ask about a website / AI for my business.\nMy business: __\nWebsite now (link or none): __",
+
+
+ # v8 dual sides + slim flow + bottom links
+ out_tag="OUTWARD", out_h="Serve customers",
+ out=[("Website", "Update pages so Google and AI assistants can understand them"),
+      ("Marketing", "Prepare social posts — published only after you approve"),
+      ("Customer Service", "Answer common questions first; complex ones go to a person")],
+ in_tag="INWARD", in_h="Help the team",
+ in_=[("Clerk", "Organise and archive files"),
+      ("Manager", "Follow up staff tasks and reminders"),
+      ("PA", "Sort email and draft replies for you to confirm")],
+ web_early="Need a company website? See packages ↓",
+ flow_e="HOW IT LANDS", flow_h="Lead flow and closing can use AI too",
+ flow_p="Finding leads, follow-ups, WhatsApp replies — AI takes the repetitive part; a person still approves before anything goes out. Fees by written quote.",
+ flow_chips=["Find leads & fill contacts", "Email follow-up", "WhatsApp answers common Qs", "Human approval before send"],
+ founder_link="Meet Hunter →", notes_link="Latest notes →",
+ pkg_kicker="SUPPORTING · WEBSITE", pkg_h="Need a clear company website first?",
  # Hero jump links + 业务 (Business, external) / 管理 (Management, internal) areas
  stepsnav=[('#business', 'Business'),
      ('#website', '1 · Website'),
@@ -81,10 +97,9 @@ H["zh"] = dict(
  h1='AI 帮你<span class="orange">服务客户</span>，也帮团队处理日常工作。',
  fde="先了解你的业务，再把 AI 接进实际工作。",
  img_alt="公司 3D 剖面图：HFM AI 连接对外 Website、Marketing、Customer Service，以及对内 Manager、Clerk、PA",
- cta1="看网站方案", cta_wa="聊聊你想自动化的工作", cta2="WhatsApp +60 19-627 3143",
+ cta1="看看怎么帮团队", cta_wa="聊聊你想自动化的工作", cta2="WhatsApp +60 19-627 3143",
  s1e="第一步 · 网站", s1h="先有一个 Google 和 AI 都读得懂的网站。",
- s1p=["公司要接上 AI，最基本的一步，就是有一个搜索引擎和 ChatGPT、Perplexity 这类 AI 助手都能读清楚的网站。我们从这里开始。",
-      "基础版给你一个清楚好用的公司网站。「SEO + AEO/GEO」加购项，再补上搜索引擎和 AI 工具会读的内容：结构化数据（schema）、问答与 FAQ 内容、网站地图，并提交 Google 与 Bing 收录。两个方案都含 1 种语言（EN、中文或 BM 任选）和第一年域名，并附 llms.txt 给 AI 工具读。SEO + AEO/GEO 是一次性设置；如需维护：每月 RM199。"],
+ s1p=["可读的网站常常是接上 AI 的第一步。详情与报价以书面为准。"],
  more="网站设计详情 →",
  exh="这个网站，就是我们的第一个例子", exsub="下面每一项，现在都在 hunterfoomedia.com 上运行，你可以自己点开看：",
  ex=[('<a href="/llms.txt">llms.txt</a>', "一份写给 AI 工具看的纯文字简介：我们是谁、提供什么"),
@@ -114,6 +129,23 @@ H["zh"] = dict(
  falt="Hunter Foo 肖像", fmore="了解更多 →",
  ce="下一步", ch="跟我们说说你的生意。", cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。除了上面的网站价格，其他费用以书面报价确认。",
  wamsg="你好 Hunter，我想了解网站 / AI 方案。\n我做的是：＿＿\n现在的网站（链接或没有）：＿＿",
+
+
+ # v8 dual sides + slim flow + bottom links
+ out_tag="对外", out_h="服务客户",
+ out=[("Website", "更新网页，让 Google 和 AI 助手读得懂"),
+      ("Marketing", "准备社交媒体内容，你批准后才发布"),
+      ("Customer Service", "先回常见询问，复杂的转真人")],
+ in_tag="对内", in_h="帮团队做事",
+ in_=[("Clerk", "整理和归档文件"),
+      ("Manager", "跟进员工任务和提醒"),
+      ("PA", "分类电邮、拟好回复给你确认")],
+ web_early="需要公司网站？看套餐 ↓",
+ flow_e="怎么落地", flow_h="获客与成交，也可以接上 AI",
+ flow_p="找线索、跟进、WhatsApp 回复——重复的部分交给 AI，发出前仍由人批准。费用书面报价。",
+ flow_chips=["找线索 & 补联系方式", "电邮跟进", "WhatsApp 先答常见问题", "人审批后再发出"],
+ founder_link="认识 Hunter →", notes_link="最新笔记 →",
+ pkg_kicker="支撑服务 · 网站", pkg_h="需要先有一个清楚的公司网站？",
  # Hero jump links + 业务 (Business, external) / 管理 (Management, internal) areas
  stepsnav=[('#business', '业务'),
      ('#website', '1 · 网站'),
@@ -147,10 +179,9 @@ H["ms"] = dict(
  h1='AI yang bantu anda <span class="orange">layan pelanggan</span> — dan bantu pasukan dengan kerja harian.',
  fde="Kami faham cara bisnes anda benar-benar berjalan, kemudian pasang AI ke aliran kerja sebenar.",
  img_alt="Keratan 3D syarikat: AI HFM menghubungkan Website, Marketing, Customer Service di luar dan Manager, Clerk, PA di dalam",
- cta1="Lihat pakej laman web", cta_wa="Bincang kerja yang mahu diautomatikkan", cta2="WhatsApp +60 19-627 3143",
+ cta1="Lihat cara bantu pasukan", cta_wa="Bincang kerja yang mahu diautomatikkan", cta2="WhatsApp +60 19-627 3143",
  s1e="LANGKAH 1 · LAMAN WEB", s1h="Mula dengan laman web yang Google dan AI boleh baca.",
- s1p=["Bagi kebanyakan syarikat, langkah paling asas untuk bersedia dengan AI ialah laman web yang boleh dibaca dengan jelas oleh enjin carian dan pembantu AI seperti ChatGPT dan Perplexity. Di situlah kami bermula.",
-      "Pakej Asas memberi anda laman web syarikat yang kemas. Tambahan SEO + AEO/GEO menambah apa yang dibaca oleh enjin carian dan alat AI: data berstruktur (schema), kandungan soal jawab dan FAQ, sitemap serta penghantaran kepada Google dan Bing. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama: EN, <span lang='zh-Hans'>中文</span> atau BM, serta ringkasan llms.txt untuk alat AI. SEO + AEO/GEO ialah persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan."],
+ s1p=["Laman yang mudah dibaca sering langkah pertama ke AI. Butiran disahkan secara bertulis."],
  more="Butiran buat website →",
  exh="Laman ini contoh pertama kami", exsub="Semua di bawah sudah berjalan di hunterfoomedia.com hari ini. Semak sendiri:",
  ex=[('<a href="/llms.txt">llms.txt</a>', "ringkasan teks biasa tentang siapa kami dan apa yang kami tawarkan, ditulis untuk alat AI"),
@@ -180,6 +211,23 @@ H["ms"] = dict(
  falt="Potret Hunter Foo", fmore="Lagi tentang kami →",
  ce="LANGKAH SETERUSNYA", ch="Ceritakan tentang perniagaan anda.", cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM. Yuran melalui sebut harga bertulis, kecuali harga laman web di atas.",
  wamsg="Hai Hunter, saya nak tanya tentang laman web / AI untuk perniagaan saya.\nBisnes saya: __\nLaman web sekarang (pautan atau tiada): __",
+
+
+ # v8 dual sides + slim flow + bottom links
+ out_tag="LUARAN", out_h="Layan pelanggan",
+ out=[("Website", "Kemas kini laman supaya Google dan pembantu AI faham"),
+      ("Marketing", "Sedia kandungan sosial — diterbit selepas anda luluskan"),
+      ("Customer Service", "Jawab soalan biasa dahulu; yang kompleks kepada orang")],
+ in_tag="DALAMAN", in_h="Bantu pasukan",
+ in_=[("Clerk", "Susun dan arkib fail"),
+      ("Manager", "Susuli tugas dan peringatan kakitangan"),
+      ("PA", "Isih e-mel dan draf balasan untuk anda sahkan")],
+ web_early="Perlukan laman syarikat? Lihat pakej ↓",
+ flow_e="CARA DILAKSANAKAN", flow_h="Aliran prospek dan tutup jualan juga boleh guna AI",
+ flow_p="Cari prospek, susulan, balasan WhatsApp — AI ambil yang berulang; manusia masih luluskan sebelum apa-apa keluar. Yuran melalui sebut harga bertulis.",
+ flow_chips=["Cari prospek & lengkapkan kontak", "Susulan e-mel", "WhatsApp jawab soalan biasa", "Kelulusan manusia sebelum hantar"],
+ founder_link="Kenali Hunter →", notes_link="Catatan terkini →",
+ pkg_kicker="SOKONGAN · LAMAN WEB", pkg_h="Perlukan laman syarikat yang jelas dahulu?",
  # Hero jump links + 业务 (Business, external) / 管理 (Management, internal) areas
  stepsnav=[('#business', 'Perniagaan'),
      ('#website', '1 · Laman web'),
@@ -209,50 +257,38 @@ H["ms"] = dict(
 
 import urllib.parse, html
 
-# ---- Homepage FAQ (visible <details> list + matching FAQPage JSON-LD). Answers only restate what the site already says. ----
+# ---- Homepage FAQ (v8: 3–4 short Qs, no prices). Answers match FAQPage JSON-LD. ----
 ZH_ = '<span lang="zh-Hans">中文</span>'
 HFAQ = {}
 HFAQ["en"] = dict(kicker="FAQ", h="Common questions", qa=[
  ("What does Hunter Foo Media do?",
-  "Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore. We work as forward deployed engineers: we learn how your team actually works, then build what fits. We start with a website that Google and AI assistants can read, then automate how you find, follow up and close leads, and your back-office work."),
- ("How much does a website cost?",
-  "Basic is RM399. SEO + AEO/GEO is RM1,393 in total (Basic RM399 + RM994), a one-time setup. Both include one language and your domain for the first year. Optional maintenance: RM199/month. More languages, extra pages or other custom scope are confirmed by <b>written quote</b>. These prices (including RM199/month maintenance) are founding-client prices for our first 20 clients, in exchange for an honest testimonial. Prices will go up after 20 clients."),
- ("How much does AI automation cost?",
-  "Lead automation, the WhatsApp digital employee and back-office (Management) work are priced by <b>written quote</b>, agreed before we start. Only the website packages have fixed prices."),
+  "An AI agency in Kuala Lumpur for businesses in Malaysia and Singapore: we learn how you work, then plug AI into lead flow, customer service and back-office work."),
  ("Will AI send messages to my customers without my approval?",
-  "No. A person stays in charge of every decision that matters, and you approve every message template before it goes live. Drafts wait in an approval queue, and a person approves them before anything goes out."),
+  "No. Outbound message templates need your approval first. Drafts wait in a queue until a person approves them."),
  ("Do you guarantee Google rankings or AI recommendations?",
-  "No. We don't promise rankings, or that Google or any AI tool will show or recommend your site. We tell you exactly what we build and set up."),
+  "No. We tell you exactly what we build and set up; ranking and citation are up to search engines and AI tools."),
  ("Where are you based, and how do I contact you?",
-  "We're based in Kuala Lumpur and work remotely across Malaysia and Singapore. WhatsApp +60 19-627 3143 or email <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->, in English, " + ZH_ + " or BM."),
+  "Kuala Lumpur, working remotely across Malaysia and Singapore. WhatsApp +60 19-627 3143 or email <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->."),
 ])
 HFAQ["zh"] = dict(kicker="常见问题", h="你可能想问的", qa=[
  ("Hunter Foo Media 是做什么的？",
-  "Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，服务马来西亚和新加坡企业。我们以前沿部署工程师的方式工作：先弄清楚你的团队实际怎么做事，再动手搭建合用的系统。第一步做一个 Google 和 AI 助手都读得懂的网站，接着把找客户、跟进、成交和后台工作自动化。"),
- ("做网站要多少钱？",
-  "基础版 RM399；含 SEO + AEO/GEO 合共 RM1,393（基础版 RM399 + RM994），是一次性设置。两个方案都含 1 种语言和第一年域名。如需维护：每月 RM199。加语言、加页面或其他特别需求，以<b>书面报价</b>确认。以上价格（含 RM199/月维护费）为前 20 位客户优惠价，条件是为我们写一则真实评价。满 20 位后将调价。"),
- ("AI 自动化怎么收费？",
-  "获客自动化、WhatsApp 数字员工和后台（管理）工作，费用都以<b>书面报价</b>确认，开工前谈好。只有网站方案是固定价格。"),
+  "吉隆坡的 AI agency，服务马来西亚与新加坡企业：先弄清楚你怎么做事，再把 AI 接进获客、客服和后台工作。"),
  ("AI 会不经我同意就发信息给客户吗？",
-  "不会。重要的决定始终由人来做；每一条对外的话术模板，都要你批准后才上线。草稿先进审批队列，经人批准后才发出。"),
+  "不会。对外话术要你批准后才上线；草稿先进审批队列，经人批准后才发出。"),
  ("保证 Google 排名或 AI 推荐吗？",
-  "不保证。我们不承诺排名，也不承诺 Google 或任何 AI 工具会显示或推荐你的网站。我们会清楚告诉你做了什么、设置了什么。"),
+  "不保证。我们只把做什么、设置什么写清楚；怎么排序、引用由搜索引擎和 AI 工具决定。"),
  ("你们在哪里？怎么联系？",
-  "我们立足吉隆坡，远程服务马来西亚与新加坡。WhatsApp +60 19-627 3143，或电邮 <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->；中文、英文或马来文都可以。"),
+  "立足吉隆坡，远程服务马来西亚与新加坡。WhatsApp +60 19-627 3143，或电邮 <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->。"),
 ])
 HFAQ["ms"] = dict(kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
  ("Apa yang Hunter Foo Media buat?",
-  "Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura. Kami bekerja sebagai forward deployed engineer: kami faham cara pasukan anda sebenarnya bekerja, kemudian bina sistem yang sesuai. Kami mula dengan laman web yang boleh dibaca oleh Google dan pembantu AI, kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda."),
- ("Berapa harga laman web?",
-  "Pakej Asas RM399. SEO + AEO/GEO berjumlah RM1,393 (Asas RM399 + RM994), persediaan sekali sahaja. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama. Penyelenggaraan pilihan: RM199/bulan. Bahasa tambahan, halaman tambahan atau skop khas lain disahkan melalui <b>sebut harga bertulis</b>. Harga ini (termasuk penyelenggaraan RM199/bulan) ialah harga pelanggan awal untuk 20 pelanggan pertama, sebagai balasan satu testimoni yang jujur. Harga akan naik selepas 20 pelanggan."),
- ("Berapa kos automasi AI?",
-  "Automasi prospek, Pekerja Digital WhatsApp dan kerja dalaman (Pengurusan) dikenakan yuran melalui <b>sebut harga bertulis</b>, dipersetujui sebelum mula. Hanya pakej laman web yang ada harga tetap."),
- ("Adakah AI akan hantar mesej kepada pelanggan saya tanpa kelulusan saya?",
-  "Tidak. Setiap keputusan penting tetap dibuat oleh manusia, dan anda luluskan setiap templat mesej sebelum ia digunakan. Draf menunggu dalam barisan kelulusan, dan seorang manusia meluluskannya sebelum apa-apa dihantar."),
+  "Agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura: kami faham cara anda bekerja, kemudian pasang AI ke aliran prospek, khidmat pelanggan dan kerja dalaman."),
+ ("Adakah AI akan hantar mesej kepada pelanggan tanpa kelulusan saya?",
+  "Tidak. Templat mesej keluar perlu anda luluskan dahulu. Draf menunggu dalam barisan sehingga seorang manusia meluluskannya."),
  ("Adakah anda jamin kedudukan Google atau cadangan AI?",
-  "Tidak. Kami tidak menjanjikan kedudukan, atau bahawa Google atau mana-mana alat AI akan memaparkan atau mengesyorkan laman anda. Kami beritahu dengan jelas apa yang kami bina dan sediakan."),
+  "Tidak. Kami beritahu dengan jelas apa yang kami bina dan sediakan; kedudukan dan petikan terserah kepada enjin carian dan alat AI."),
  ("Di mana anda berada, dan bagaimana nak hubungi?",
-  "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk Malaysia dan Singapura secara jarak jauh. WhatsApp +60 19-627 3143 atau e-mel <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->, dalam bahasa Inggeris, Cina atau BM."),
+  "Kuala Lumpur, berkhidmat jarak jauh di Malaysia dan Singapura. WhatsApp +60 19-627 3143 atau e-mel <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->."),
 ])
 
 import re as _re
@@ -273,7 +309,7 @@ def _main(k):
                                               '%s</div>') % (cls, tag, t, sub, chk(xs), fee)
     demos = PRODUCTS[k]["services"]
     out = []
-    # Hero (v6 visual: headline + FDE line + 3D company image + WhatsApp CTA)
+    # Hero (v8: no pill row; secondary CTA → #internal)
     out.append(
         '<section class="wrap hm-hero">'
         '<p class="eyebrow"><i></i>%s</p>'
@@ -287,69 +323,62 @@ def _main(k):
         '</figure>'
         '<div class="hm-ctas">'
         '<a class="button" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a>'
-        '<a class="button ghost" href="#website">%s <span aria-hidden="true">→</span></a>'
+        '<a class="button ghost" href="#internal">%s <span aria-hidden="true">→</span></a>'
         '</div>'
-        '<nav class="hm-stepsnav" aria-label="%s">%s</nav>'
         '</section>\n' % (
             h["eyebrow"], h["h1"], h["fde"], html.escape(h["img_alt"], quote=True),
             wa, h["cta_wa"], h["cta1"],
-            h["s1e"].split("·")[0].strip(),
-            "".join('<a href="%s">%s</a>' % x for x in h["stepsnav"]),
         )
     )
-    # 业务 (Business, external): group header for steps 1-3
-    out.append('<section class="wrap hm-area" id="business"><p class="eyebrow"><i></i>%s</p><h2 class="hm-area-h">%s</h2><p class="hm-lede-d">%s</p></section>\n' % (
-               h["bge"], h["bgh"], h["bgp"]))
-    # Step 1: website
-    out.append('<section class="paper ad-section hm-sec" id="website"><div class="wrap section">'
-               '<p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2><div class="hm-lede">%s</div>'
-               '<div class="ad-two wb-two">%s%s</div>%s<p class="hm-more"><a href="/website-design/">%s</a></p>'
-               '<p class="ad-fine">%s</p>'
-               '<div class="hm-example"><h3>%s</h3><p>%s</p><ul>%s</ul></div>'
-               '</div></section>\n' % (
-               h["s1e"], h["s1h"], "".join("<p>%s</p>" % x for x in h["s1p"]),
-               tier(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), tier(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)), founding_note(w),
-               h["more"], w["fine"], h["exh"], h["exsub"],
-               "".join('<li>%s<b>%s</b><span>%s</span></li>' % (CHECK, a, b) for a, b in h["ex"])))
-    # Step 2: lead automation
-    out.append('<section class="wrap section hm-sec hm-dark" id="automation"><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2><p class="hm-lede-d">%s</p>'
-               '<ol class="hm-cards">%s</ol>'
-               '<div class="hm-proof"><h3>%s</h3><ul>%s</ul><p class="hm-src">%s</p><p><a class="hm-link" href="/products/#case-study">%s</a></p></div>'
-               '<p class="hm-fine">%s</p></section>\n' % (
-               h["s2e"], h["s2h"], h["s2p"],
-               "".join('<li><span class="hm-n">%d</span><h3>%s</h3><p>%s</p></li>' % (i + 1, a, b) for i, (a, b) in enumerate(h["s2"])),
-               h["proofh"], "".join('<li><b>%s</b><span>%s</span></li>' % x for x in h["proof"]), h["proofsrc"], h["s2link"], h["s2fee"]))
-    # Step 3: WhatsApp
-    out.append('<section class="paper hm-sec" id="whatsapp"><div class="wrap section hm-split"><div><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2></div>'
-               '<div>%s<p><a class="button" href="/products/#demo-2">%s</a></p></div></div></section>\n' % (
-               h["s3e"], h["s3h"], "".join('<p class="hm-p">%s</p>' % x for x in h["s3p"]), h["s3link"].rstrip(" →") + ' <span aria-hidden="true">→</span>'))
-    # 管理 (Management, internal): back-office work, recruitment system as proof; fee by written quote only
-    out.append('<section class="wrap hm-area hm-mgmt" id="management"><p class="eyebrow"><i></i>%s</p><h2 class="hm-area-h">%s</h2><p class="hm-lede-d">%s</p>'
-               '<ol class="hm-cards hm-cards-5">%s</ol>'
-               '<div class="hm-proof hm-mg-proof"><h3>%s</h3><ul>%s</ul><p class="hm-src">%s</p><p><a class="hm-link" href="/products/#demo-1">%s</a></p></div>'
-               '<p class="hm-fine hm-mg-fee">%s</p></section>\n' % (
-               h["mge"], h["mgh"], h["mgp"],
-               "".join('<li><span class="hm-n">%d</span><h3>%s</h3><p>%s</p></li>' % (i + 1, a, b) for i, (a, b) in enumerate(h["mg"])),
-               h["mgproofh"], "".join('<li>%s<span>%s</span></li>' % (CHECK, x) for x in h["mgproof"]), h["mgnote"], h["mglink"], h["mgfee"]))
-    # See AI at work
+    # Dual sides matching 3D desks
+    def side_items(pairs):
+        return "".join('<li><span class="hm-side-ico" aria-hidden="true">%s</span><div><strong>%s</strong><span>%s</span></div></li>' % (a[:2], a, b) for a, b in pairs)
+    out.append(
+        '<section class="wrap hm-sides" id="sides">'
+        '<div class="hm-sides-grid">'
+        '<article class="hm-side" id="external"><h2><span class="hm-side-tag">%s</span> %s</h2><ul class="hm-side-list">%s</ul></article>'
+        '<article class="hm-side" id="internal"><h2><span class="hm-side-tag">%s</span> %s</h2><ul class="hm-side-list">%s</ul></article>'
+        '</div>'
+        '<p class="hm-more"><a href="#website">%s</a></p>'
+        '</section>\n' % (
+            h["out_tag"], h["out_h"], side_items(h["out"]),
+            h["in_tag"], h["in_h"], side_items(h["in_"]),
+            h["web_early"],
+        )
+    )
+    # Slim lead-flow
+    out.append(
+        '<section class="wrap section hm-sec hm-dark hm-flow" id="automation">'
+        '<p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2><p class="hm-lede-d">%s</p>'
+        '<div class="hm-chips">%s</div>'
+        '</section>\n' % (
+            h["flow_e"], h["flow_h"], h["flow_p"],
+            "".join('<span class="hm-chip">%s</span>' % c for c in h["flow_chips"]),
+        )
+    )
+    # Demos (before packages)
     out.append('<section class="wrap section hm-sec hm-dark" id="demos"><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2><p class="hm-lede-d">%s</p>'
                '<ul class="hm-demos">%s</ul></section>\n' % (
                h["aie"], h["aih"], h["aip"],
                "".join('<li><a href="/products/#demo-%d"><span class="hm-n">0%d</span><h3>%s</h3><p>%s</p><span class="hm-go">%s</span></a></li>' % (i + 1, i + 1, n, d, h["aitry"]) for i, (n, d) in enumerate(demos))))
-    # Latest notes
-    out.append('<section class="paper hm-sec" id="notes"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2><ul class="hm-notes">%s</ul>'
-               '<p class="hm-more"><a href="/notes/">%s</a></p></div></section>\n' % (
-               h["ne"], h["nh"],
-               "".join('<li><a href="/notes/%s/"><time datetime="%s">%s</time><h3>%s</h3><p>%s</p></a></li>' % (a["slug"], a["date"], DATE_FMT[k](a["date"]), a[k]["h1"], a[k]["desc"]) for a in ARTICLES[:2]),
-               h["nall"]))
-    # Founder
-    out.append('<section class="wrap section hm-sec hm-dark hm-founder" id="founder"><img src="/assets/hunter-foo-avatar.jpg" width="160" height="160" alt="%s" loading="lazy" decoding="async">'
-               '<div><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2><p class="hm-role">%s</p>%s'
-               '<p class="hm-links"><a class="hm-link" href="/about/">%s</a><a class="hm-link" href="https://www.linkedin.com/in/hunterfoo3143/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p></div></section>\n' % (
-               h["falt"], h["fe"], h["fh"], h["frole"], "".join('<p class="hm-lede-d">%s</p>' % x for x in h["fp"]), h["fmore"]))
-    # FAQ (matches the FAQPage JSON-LD in _ld)
+    # Website packages (moved down)
+    out.append('<section class="paper ad-section hm-sec" id="website"><div class="wrap section">'
+               '<p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2><div class="hm-lede">%s</div>'
+               '<div class="ad-two wb-two">%s%s</div>%s<p class="hm-more"><a href="/website-design/">%s</a></p>'
+               '<p class="ad-fine">%s</p>'
+               '</div></section>\n' % (
+               h["pkg_kicker"], h["pkg_h"], "".join("<p>%s</p>" % x for x in h["s1p"]),
+               tier(w["t1tag"], w["t1h"], w["t1sub"], w["t1"], "", fee_btn(w, 1)), tier(w["t2tag"], w["t2h"], w["t2sub"], w["t2"], " wb-plus", fee_btn(w, 2)), founding_note(w),
+               h["more"], w["fine"]))
+    # Founder + notes one-liners
+    out.append(
+        '<section class="wrap hm-more-links" id="more">'
+        '<a class="hm-link" href="/about/">%s</a>'
+        '<a class="hm-link" href="/notes/">%s</a>'
+        '</section>\n' % (h["founder_link"], h["notes_link"])
+    )
+    # FAQ then contact
     out.append(_home_faq(k))
-    # Contact
     out.append('<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
                '<a class="button whatsapp" data-wa="%s" href="%s" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
                '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off--><p>%s</p></div></div></section>\n' % (
@@ -364,8 +393,8 @@ def _ld(k):
         {"@type": "WebPage", "@id": u + "#webpage", "url": u, "name": h["title"], "description": h["desc"], "about": {"@id": D + "/#organization"}, "isPartOf": {"@id": D + "/#website"}},
         {"@type": "Service", "@id": u + "#website-building", "name": w["ld"][0], "description": w["ld"][1], "serviceType": "Website building", "provider": {"@id": D + "/#organization"},
          "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": D + "/website-design/"},
-        {"@type": "Service", "@id": u + "#management", "name": h["mgh"].rstrip(".。"), "description": h["mgp"], "serviceType": "Back-office AI automation", "provider": {"@id": D + "/#organization"},
-         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": u + "#management"},
+        {"@type": "Service", "@id": u + "#management", "name": h["in_h"], "description": h["flow_p"], "serviceType": "Back-office AI automation", "provider": {"@id": D + "/#organization"},
+         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": u + "#internal"},
         {"@type": "Person", "@id": D + "/#founder", "name": "Hunter Foo", "jobTitle": "Founder", "image": D + "/assets/hunter-foo-portrait.jpeg",
          "sameAs": ["https://www.linkedin.com/in/hunterfoo3143/"], "worksFor": {"@id": D + "/#organization"}},
         {"@type": "FAQPage", "@id": u + "#faq", "url": u + "#faq", "isPartOf": {"@id": u + "#webpage"},
