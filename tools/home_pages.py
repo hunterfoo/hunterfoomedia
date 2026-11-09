@@ -10,12 +10,12 @@ D = "https://www.hunterfoomedia.com"
 H = {}
 H["en"] = dict(
  title="AI agency in Malaysia & Singapore | Websites AI can read, lead automation | Hunter Foo Media",
- desc="Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur working as forward deployed engineers. Start with a website Google and AI assistants can read (Basic RM399), then automate how you find, follow up and close leads, and your back-office work. WhatsApp +60196273143.",
- eyebrow="AI AGENCY · MALAYSIA &amp; SINGAPORE",
- h1='Bring AI into your business, <span class="orange">one step at a time.</span>',
- lede=["Hunter Foo Media is an AI agency for businesses in Malaysia and Singapore. We work as <b>forward deployed engineers</b>: we sit with your team, learn how you actually work, then build what fits.",
-       "Start with a website that Google and AI assistants can read. Then automate how you find, follow up and close leads, and the back-office work that keeps the business running."],
- cta1="See website packages", cta2="WhatsApp +60 19-627 3143",
+ desc="Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore. Start with a website Google and AI assistants can read (Basic RM399), then automate how you find, follow up and close leads, and your back-office work. WhatsApp +60196273143.",
+ eyebrow="AI FOR BUSINESSES · MALAYSIA &amp; SINGAPORE",
+ h1='AI that helps you <span class="orange">serve customers</span> — and helps your team with daily work.',
+ fde="We learn how your business actually works, then plug AI into the real workflow.",
+ img_alt="3D company cutaway: HFM AI linking outward Website, Marketing, Customer Service and inward Manager, Clerk, PA",
+ cta1="See website packages", cta_wa="Talk about what you want to automate", cta2="WhatsApp +60 19-627 3143",
  s1e="STEP 1 · WEBSITE", s1h="Start with a website that Google and AI can read.",
  s1p=["For most companies, the most basic step into AI is a website that search engines and AI assistants like ChatGPT and Perplexity can read clearly. That's where we start.",
       "Basic gets you a clean company website. The SEO + AEO/GEO add-on adds what search engines and AI tools read: structured data (schema), Q&amp;A and FAQ content, a sitemap and submission to Google and Bing. Each includes one language and your domain for the first year: English, <span lang='zh-Hans'>中文</span> or BM, plus an llms.txt summary for AI tools. SEO + AEO/GEO is a one-time setup. Optional maintenance: RM199/month."],
@@ -76,12 +76,12 @@ H["en"] = dict(
 )
 H["zh"] = dict(
  title="马来西亚与新加坡的 AI Agency｜AI 读得懂的网站与获客自动化｜Hunter Foo Media",
- desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，以前沿部署工程师的方式工作。先做 Google 和 AI 助手都读得懂的网站，基础版 RM399；再把找客户、跟进、成交和后台工作自动化。WhatsApp +60196273143。",
- eyebrow="AI AGENCY · 马来西亚与新加坡",
- h1='把 AI 带进你的公司，<span class="orange">一步一步来。</span>',
- lede=["Hunter Foo Media 是服务马来西亚和新加坡企业的 AI agency。我们以<b>前沿部署工程师</b>（Forward Deployed Engineer）的方式工作：走进你的团队，先弄清楚你们实际怎么做事，再动手搭建合用的系统。",
-       "第一步，做一个 Google 和 AI 助手都读得懂的网站。接着，把找客户、跟进和成交的流程自动化，再把公司内部的后台工作理顺。"],
- cta1="看网站方案", cta2="WhatsApp +60 19-627 3143",
+ desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，服务马来西亚和新加坡企业。先做 Google 和 AI 助手都读得懂的网站，基础版 RM399；再把找客户、跟进、成交和后台工作自动化。WhatsApp +60196273143。",
+ eyebrow="企业 AI · 马来西亚与新加坡",
+ h1='AI 帮你<span class="orange">服务客户</span>，也帮团队处理日常工作。',
+ fde="先了解你的业务，再把 AI 接进实际工作。",
+ img_alt="公司 3D 剖面图：HFM AI 连接对外 Website、Marketing、Customer Service，以及对内 Manager、Clerk、PA",
+ cta1="看网站方案", cta_wa="聊聊你想自动化的工作", cta2="WhatsApp +60 19-627 3143",
  s1e="第一步 · 网站", s1h="先有一个 Google 和 AI 都读得懂的网站。",
  s1p=["公司要接上 AI，最基本的一步，就是有一个搜索引擎和 ChatGPT、Perplexity 这类 AI 助手都能读清楚的网站。我们从这里开始。",
       "基础版给你一个清楚好用的公司网站。「SEO + AEO/GEO」加购项，再补上搜索引擎和 AI 工具会读的内容：结构化数据（schema）、问答与 FAQ 内容、网站地图，并提交 Google 与 Bing 收录。两个方案都含 1 种语言（EN、中文或 BM 任选）和第一年域名，并附 llms.txt 给 AI 工具读。SEO + AEO/GEO 是一次性设置；如需维护：每月 RM199。"],
@@ -142,12 +142,12 @@ H["zh"] = dict(
 )
 H["ms"] = dict(
  title="Agensi AI di Malaysia & Singapura | Laman web yang AI boleh baca, automasi prospek | Hunter Foo Media",
- desc="Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur yang bekerja sebagai forward deployed engineer. Mula dengan laman web yang boleh dibaca Google dan pembantu AI (Asas RM399), kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda. WhatsApp +60196273143.",
- eyebrow="AGENSI AI · MALAYSIA &amp; SINGAPURA",
- h1='Bawa AI ke dalam perniagaan anda, <span class="orange">selangkah demi selangkah.</span>',
- lede=["Hunter Foo Media ialah agensi AI untuk perniagaan di Malaysia dan Singapura. Kami bekerja sebagai <b>forward deployed engineer</b>: kami duduk bersama pasukan anda, faham cara anda sebenarnya bekerja, kemudian bina sistem yang sesuai.",
-       "Mula dengan laman web yang boleh dibaca oleh Google dan pembantu AI. Selepas itu, automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman yang memastikan perniagaan terus berjalan."],
- cta1="Lihat pakej laman web", cta2="WhatsApp +60 19-627 3143",
+ desc="Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura. Mula dengan laman web yang boleh dibaca Google dan pembantu AI (Asas RM399), kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda. WhatsApp +60196273143.",
+ eyebrow="AI UNTUK PERNIAGAAN · MALAYSIA &amp; SINGAPURA",
+ h1='AI yang bantu anda <span class="orange">layan pelanggan</span> — dan bantu pasukan dengan kerja harian.',
+ fde="Kami faham cara bisnes anda benar-benar berjalan, kemudian pasang AI ke aliran kerja sebenar.",
+ img_alt="Keratan 3D syarikat: AI HFM menghubungkan Website, Marketing, Customer Service di luar dan Manager, Clerk, PA di dalam",
+ cta1="Lihat pakej laman web", cta_wa="Bincang kerja yang mahu diautomatikkan", cta2="WhatsApp +60 19-627 3143",
  s1e="LANGKAH 1 · LAMAN WEB", s1h="Mula dengan laman web yang Google dan AI boleh baca.",
  s1p=["Bagi kebanyakan syarikat, langkah paling asas untuk bersedia dengan AI ialah laman web yang boleh dibaca dengan jelas oleh enjin carian dan pembantu AI seperti ChatGPT dan Perplexity. Di situlah kami bermula.",
       "Pakej Asas memberi anda laman web syarikat yang kemas. Tambahan SEO + AEO/GEO menambah apa yang dibaca oleh enjin carian dan alat AI: data berstruktur (schema), kandungan soal jawab dan FAQ, sitemap serta penghantaran kepada Google dan Bing. Kedua-duanya termasuk satu bahasa dan domain untuk tahun pertama: EN, <span lang='zh-Hans'>中文</span> atau BM, serta ringkasan llms.txt untuk alat AI. SEO + AEO/GEO ialah persediaan sekali sahaja. Penyelenggaraan pilihan: RM199/bulan."],
@@ -273,13 +273,30 @@ def _main(k):
                                               '%s</div>') % (cls, tag, t, sub, chk(xs), fee)
     demos = PRODUCTS[k]["services"]
     out = []
-    # Hero
-    out.append('<section class="wrap hm-hero"><p class="eyebrow"><i></i>%s</p><h1>%s</h1>%s'
-               '<div class="hm-ctas"><a class="button" href="/website-design/">%s <span aria-hidden="true">→</span></a>'
-               '<a class="button ghost" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a></div>'
-               '<nav class="hm-stepsnav" aria-label="%s">%s</nav></section>\n' % (
-               h["eyebrow"], h["h1"], "".join('<p class="lede">%s</p>' % x for x in h["lede"]), h["cta1"], wa, h["cta2"],
-               h["s1e"].split("·")[0].strip(), "".join('<a href="%s">%s</a>' % x for x in h["stepsnav"])))
+    # Hero (v6 visual: headline + FDE line + 3D company image + WhatsApp CTA)
+    out.append(
+        '<section class="wrap hm-hero">'
+        '<p class="eyebrow"><i></i>%s</p>'
+        '<h1>%s</h1>'
+        '<p class="hm-fde">%s</p>'
+        '<figure class="hm-3d">'
+        '<picture>'
+        '<source type="image/webp" srcset="/assets/hfm-ai-company-3d.webp">'
+        '<img src="/assets/hfm-ai-company-3d.jpg" width="1280" height="720" alt="%s" decoding="async" fetchpriority="high">'
+        '</picture>'
+        '</figure>'
+        '<div class="hm-ctas">'
+        '<a class="button" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a>'
+        '<a class="button ghost" href="#website">%s <span aria-hidden="true">→</span></a>'
+        '</div>'
+        '<nav class="hm-stepsnav" aria-label="%s">%s</nav>'
+        '</section>\n' % (
+            h["eyebrow"], h["h1"], h["fde"], html.escape(h["img_alt"], quote=True),
+            wa, h["cta_wa"], h["cta1"],
+            h["s1e"].split("·")[0].strip(),
+            "".join('<a href="%s">%s</a>' % x for x in h["stepsnav"]),
+        )
+    )
     # 业务 (Business, external): group header for steps 1-3
     out.append('<section class="wrap hm-area" id="business"><p class="eyebrow"><i></i>%s</p><h2 class="hm-area-h">%s</h2><p class="hm-lede-d">%s</p></section>\n' % (
                h["bge"], h["bgh"], h["bgp"]))

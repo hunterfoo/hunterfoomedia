@@ -89,3 +89,21 @@
 .wd-ai li span{font-size:16px}
 #proof+.contact{border-top:1px solid var(--line)}
 .wb-more{margin-top:14px}
+
+
+/* Homepage hero 3D company visual (2026-11-09) */
+.hm-hero .hm-fde{
+  margin:0 0 22px; max-width:36em; font-size:15.5px; line-height:1.65; color:var(--muted, #b5c3b8);
+  border-left:3px solid var(--orange, #ff7b45); padding-left:14px;
+}
+.hm-hero .hm-3d{
+  margin:0 0 22px; border-radius:18px; overflow:hidden;
+  background:#f4f5f1; border:1px solid rgba(84,116,93,.35);
+}
+.hm-hero .hm-3d picture, .hm-hero .hm-3d img{
+  display:block; width:100%; height:auto;
+}
+@media (max-width:760px){
+  .hm-hero .hm-fde{font-size:14.5px; margin-bottom:16px}
+  .hm-hero .hm-3d{border-radius:14px; margin-bottom:16px}
+}
