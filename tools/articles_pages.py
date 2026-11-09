@@ -4,17 +4,17 @@ WA = "https://wa.me/60196273143"
 
 INDEX = {
  "en": {"title": "Notes | Hunter Foo Media",
-        "desc": "Practical notes for small businesses in Malaysia and Singapore on ads, hiring, content and AI automation. Written from real work, no hype.",
-        "eyebrow": "NOTES", "h1": "Notes.", "lede": "Practical notes on ads, hiring, content and automation for small businesses in Malaysia and Singapore. Written from what we actually do.",
-        "read": "Read the note", "crumb": "Home", "next": "CONTACT", "cta": "Ask us a question.", "wa": "Hi Hunter, I read your notes and have a question:"},
+        "desc": "Practical notes for businesses in Malaysia and Singapore on ads, hiring, content and AI automation. Written from real work, no hype.",
+        "eyebrow": "NOTES", "h1": "Notes", "lede": "Practical notes on ads, hiring, content and automation for businesses in Malaysia and Singapore. Written from what we actually do.",
+        "read": "Read the note", "crumb": "Home", "next": "CONTACT", "cta": "Ask us a question", "wa": "Hi Hunter, I read your notes and have a question:"},
  "zh": {"title": "笔记｜Hunter Foo Media",
-        "desc": "写给马来西亚与新加坡中小企业的实用笔记：广告、招聘、内容与 AI 自动化。从实际工作出发，不吹牛。",
-        "eyebrow": "笔记", "h1": "笔记。", "lede": "写给马来西亚和新加坡中小企业的实用笔记：广告、招聘、内容和自动化。都是我们实际在做的事。",
-        "read": "阅读全文", "crumb": "首页", "next": "联系", "cta": "有问题直接问。", "wa": "你好 Hunter，我看了你的笔记，想问："},
+        "desc": "写给马来西亚与新加坡企业的实用笔记：广告、招聘、内容与 AI 自动化。从实际工作出发，不吹牛。",
+        "eyebrow": "笔记", "h1": "笔记", "lede": "写给马来西亚和新加坡企业的实用笔记：广告、招聘、内容和自动化。都是我们实际在做的事。",
+        "read": "阅读全文", "crumb": "首页", "next": "联系", "cta": "有问题直接问", "wa": "你好 Hunter，我看了你的笔记，想问："},
  "ms": {"title": "Catatan | Hunter Foo Media",
-        "desc": "Nota praktikal untuk perniagaan kecil di Malaysia dan Singapura tentang iklan, pengambilan pekerja, kandungan dan automasi AI. Ditulis daripada kerja sebenar.",
-        "eyebrow": "CATATAN", "h1": "Catatan.", "lede": "Nota praktikal tentang iklan, pengambilan pekerja, kandungan dan automasi untuk perniagaan kecil di Malaysia dan Singapura. Berdasarkan kerja yang kami buat sendiri.",
-        "read": "Baca catatan", "crumb": "Utama", "next": "HUBUNGI", "cta": "Tanya kami.", "wa": "Hai Hunter, saya baca catatan anda dan ada soalan:"},
+        "desc": "Nota praktikal untuk perniagaan di Malaysia dan Singapura tentang iklan, pengambilan pekerja, kandungan dan automasi AI. Ditulis daripada kerja sebenar.",
+        "eyebrow": "CATATAN", "h1": "Catatan", "lede": "Nota praktikal tentang iklan, pengambilan pekerja, kandungan dan automasi untuk perniagaan di Malaysia dan Singapura. Berdasarkan kerja yang kami buat sendiri.",
+        "read": "Baca catatan", "crumb": "Utama", "next": "HUBUNGI", "cta": "Tanya kami", "wa": "Hai Hunter, saya baca catatan anda dan ada soalan:"},
 }
 
 META_HELP = "https://www.facebook.com/business/help/1537759006681893"
