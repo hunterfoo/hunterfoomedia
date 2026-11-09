@@ -10,10 +10,10 @@ D = "https://www.hunterfoomedia.com"
 H = {}
 H["en"] = dict(
  title="AI agency in Malaysia & Singapore | Websites AI can read, lead automation | Hunter Foo Media",
- desc="Hunter Foo Media (HF Media Solution) is an AI agency in Kuala Lumpur for businesses in Malaysia and Singapore. Start with a website Google and AI assistants can read (Basic RM399), then automate how you find, follow up and close leads, and your back-office work. WhatsApp +60196273143.",
+ desc="Hunter Foo Media helps businesses in Malaysia and Singapore stay in sync with AI — serving customers outside and supporting the team inside. WhatsApp +60196273143.",
  eyebrow="AI FOR BUSINESSES · MALAYSIA &amp; SINGAPORE",
  h1='AI that helps you <span class="orange">serve customers</span> — and helps your team with daily work.',
- fde="We learn how your business actually works, then plug AI into the real workflow.",
+ fde="We help businesses stay in sync with AI, joining the outside and inside pieces so you keep pace with the market and technology.",
  img_alt="3D company cutaway: HFM AI linking outward Website, Marketing, Customer Service and inward Manager, Clerk, PA",
  cta1="See how we help the team", cta_wa="Talk about what you want to automate", cta2="WhatsApp +60 19-627 3143",
  s1e="STEP 1 · WEBSITE", s1h="Start with a website that Google and AI can read.",
@@ -92,10 +92,10 @@ H["en"] = dict(
 )
 H["zh"] = dict(
  title="马来西亚与新加坡的 AI Agency｜AI 读得懂的网站与获客自动化｜Hunter Foo Media",
- desc="Hunter Foo Media（HF Media Solution）是吉隆坡的 AI agency，服务马来西亚和新加坡企业。先做 Google 和 AI 助手都读得懂的网站，基础版 RM399；再把找客户、跟进、成交和后台工作自动化。WhatsApp +60196273143。",
+ desc="Hunter Foo Media 帮企业和 AI 同步：对外服务客户，对内帮团队做事，让公司跟上市场和科技的变化。WhatsApp +60196273143。",
  eyebrow="企业 AI · 马来西亚与新加坡",
  h1='AI 帮你<span class="orange">服务客户</span>，也帮团队处理日常工作。',
- fde="先了解你的业务，再把 AI 接进实际工作。",
+ fde="帮企业和 AI 同步：拼好对外和对内两块拼图，跟上市场和科技的变化。",
  img_alt="公司 3D 剖面图：HFM AI 连接对外 Website、Marketing、Customer Service，以及对内 Manager、Clerk、PA",
  cta1="看看怎么帮团队", cta_wa="聊聊你想自动化的工作", cta2="WhatsApp +60 19-627 3143",
  s1e="第一步 · 网站", s1h="先有一个 Google 和 AI 都读得懂的网站。",
@@ -174,10 +174,10 @@ H["zh"] = dict(
 )
 H["ms"] = dict(
  title="Agensi AI di Malaysia & Singapura | Laman web yang AI boleh baca, automasi prospek | Hunter Foo Media",
- desc="Hunter Foo Media (HF Media Solution) ialah agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura. Mula dengan laman web yang boleh dibaca Google dan pembantu AI (Asas RM399), kemudian automasikan cara anda cari, susul dan tutup jualan, serta kerja dalaman anda. WhatsApp +60196273143.",
+ desc="Hunter Foo Media membantu perniagaan di Malaysia dan Singapura seiring dengan AI — melayan pelanggan di luar dan bantu pasukan di dalam. WhatsApp +60196273143.",
  eyebrow="AI UNTUK PERNIAGAAN · MALAYSIA &amp; SINGAPURA",
  h1='AI yang bantu anda <span class="orange">layan pelanggan</span> — dan bantu pasukan dengan kerja harian.',
- fde="Kami faham cara bisnes anda benar-benar berjalan, kemudian pasang AI ke aliran kerja sebenar.",
+ fde="Kami bantu perniagaan seiring dengan AI, menyatukan kepingan luar dan dalam supaya anda mengikuti perubahan pasaran dan teknologi.",
  img_alt="Keratan 3D syarikat: AI HFM menghubungkan Website, Marketing, Customer Service di luar dan Manager, Clerk, PA di dalam",
  cta1="Lihat cara bantu pasukan", cta_wa="Bincang kerja yang mahu diautomatikkan", cta2="WhatsApp +60 19-627 3143",
  s1e="LANGKAH 1 · LAMAN WEB", s1h="Mula dengan laman web yang Google dan AI boleh baca.",
