@@ -49,6 +49,7 @@ header nav.compact a[aria-current=page]{color:var(--orange)}
 .crumbs{font-size:13px;color:var(--muted);margin:0 0 18px}
 .crumbs a:hover{color:var(--orange)}
 .lede{font-size:18px;line-height:1.85;color:#c7d1c9;max-width:760px;margin:0}
+.page-intro .lede + .lede{margin-top:16px}
 .prose h2{font-size:clamp(26px,3vw,36px);margin:28px 0 10px}
 .prose h2:first-child{margin-top:0}
 .prose p,.prose li{font-size:16px;line-height:1.9;color:#536053}

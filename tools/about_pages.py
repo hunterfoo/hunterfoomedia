@@ -2,13 +2,13 @@ ADDRESS = "D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wi
 
 def _main(h):
     rows = "".join("<tr><th scope=\"row\">%s</th><td>%s</td></tr>" % r for r in h["rows"])
-    return ('\n<section class="wrap page-intro">\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n</section>\n'
+    return ('\n<section class="wrap page-intro">\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n<p class="lede lede-fde">%s</p>\n</section>\n'
             '<section class="paper"><div class="wrap section prose">\n<h2>%s</h2>\n<table class="biz-id">%s</table>\n'
             '<h2>%s</h2>\n<p>%s</p>\n<p class="agency-note">%s</p>\n</div></section>\n'
             '<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
             '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off--></div></div></section>\n'
-            ) % (h["eyebrow"], h["h1"], h["lede"], h["idh"], rows, h["founderh"], h["founder"], h["note"], h["next"], h["cta"])
+            ) % (h["eyebrow"], h["h1"], h["lede"], h["fde"], h["idh"], rows, h["founderh"], h["founder"], h["note"], h["next"], h["cta"])
 
 def _rows(l):
     return [(l[0], "HF Media Solution"), (l[1], "Hunter Foo Media"), (l[2], "IP0633909-U"), (l[3], l[4]),
@@ -19,19 +19,22 @@ def _rows(l):
 ABOUT = {
  "en": {"title": "About HF Media Solution (IP0633909-U) | Hunter Foo Media",
         "desc": "Hunter Foo Media helps businesses stay in sync with AI — outside for customers, inside for the team. HF Media Solution (IP0633909-U), Malaysia. WhatsApp +60196273143.",
-        "main": None, "d": dict(eyebrow="ABOUT", h1="Who we are", lede="Hunter Foo Media helps businesses stay in sync with AI. We bring two pieces together, serving customers on the outside and supporting your team on the inside, so your company keeps pace with the market and technology and becomes one of the most competitive in its field. Hunter Foo Media is the trading name of HF Media Solution, registered in Malaysia.",
+        "main": None, "d": dict(eyebrow="ABOUT", h1="Who we are", lede="Hunter Foo Media helps businesses stay in sync with AI. We bring two pieces together, serving customers on the outside and supporting your team on the inside, so your company becomes one of the most competitive in its field. Hunter Foo Media is the trading name of HF Media Solution, registered in Malaysia.",
+        fde="We ease companies' anxiety about AI through our FDE service. We work inside the company as a forward deployed engineer, joining the external work of serving customers with the internal work of helping the team, so the company keeps pace with AI.",
         idh="Business details", rows=_rows(["Registered name", "Brand", "Business registration no. (Malaysia)", "Country of registration", "Malaysia", "Founder", "WhatsApp", "Email", "Website", "Service area", "Malaysia and Singapore (remote)", "Address"]),
         founderh="Founder", founder="Hunter Foo started as a CNC programmer in Singapore and has spent 18 years in HR, recruitment and sales. Since 2025 he has run his own company's daily work with AI and built an internal HR app. He only offers clients what he has tested in his own business.",
         note="<strong>Not a recruitment agency.</strong> We don't charge job seekers or place candidates ourselves. The Singapore job posts we manage are published for our client Sky Employment Pte Ltd, a licensed employment agency (MOM EA licence 08C5793). We are based in Kuala Lumpur and serve clients across Malaysia and Singapore, mostly online.", next="CONTACT", cta="Get in touch")},
  "zh": {"title": "关于我们｜HF Media Solution (IP0633909-U)｜Hunter Foo Media",
         "desc": "Hunter Foo Media 帮企业和 AI 同步：对外服务客户，对内帮团队做事。HF Media Solution（IP0633909-U）。WhatsApp +60196273143。",
-        "main": None, "d": dict(eyebrow="关于我们", h1="我们是谁", lede="Hunter Foo Media 帮企业和 AI 同步。我们把对外和对内两块拼图拼在一起：对外服务客户，对内帮团队做事，让公司跟上市场和科技的变化，成为更有竞争力的企业。Hunter Foo Media 是 HF Media Solution 的经营品牌，在马来西亚注册。",
+        "main": None, "d": dict(eyebrow="关于我们", h1="我们是谁", lede="Hunter Foo Media 帮企业和 AI 同步。我们把对外和对内两块拼图拼在一起：对外服务客户，对内帮团队做事，让公司成为更有竞争力的企业。Hunter Foo Media 是 HF Media Solution 的经营品牌，在马来西亚注册。",
+        fde="我们通过驻场 AI 工程师（FDE，Forward Deployed Engineer）服务，解决企业对 AI 的焦虑：进到公司里面一起做，把对外（服务客户）和对内（帮团队做事）接起来，让企业跟上 AI 的脚步。",
         idh="商业资料", rows=_rows(["注册名称", "品牌", "马来西亚商业注册号", "注册国家", "马来西亚", "创办人", "WhatsApp", "电邮", "网站", "服务地区", "马来西亚与新加坡（远程）", "地址"]),
         founderh="创办人", founder="Hunter Foo 在人力资源、招聘和销售做了 18 年，最早在新加坡做 CNC 编程。2025 年开始把 AI 用进自己公司的日常工作，并做了内部 HR 应用。只做自己用过、有效的东西。",
         note="<strong>不是职业中介。</strong>本商业不向求职者收费，也不自行安排工作。我们管理的新加坡职位贴文，是为客户 Sky Employment Pte Ltd（持牌职业中介，MOM EA 08C5793）发布的。我们位于吉隆坡，服务马来西亚与新加坡的客户，大部分工作在线上完成。", next="联系", cta="和我们聊聊")},
  "ms": {"title": "Tentang HF Media Solution (IP0633909-U) | Hunter Foo Media",
         "desc": "Hunter Foo Media membantu perniagaan seiring dengan AI — luar untuk pelanggan, dalam untuk pasukan. HF Media Solution (IP0633909-U). WhatsApp +60196273143.",
-        "main": None, "d": dict(eyebrow="TENTANG KAMI", h1="Siapa kami", lede="Hunter Foo Media membantu perniagaan bergerak seiring dengan AI. Kami menyatukan dua kepingan, iaitu melayani pelanggan di luar dan membantu pasukan di dalam, supaya syarikat anda sentiasa mengikuti perubahan pasaran dan teknologi serta menjadi antara yang paling berdaya saing. Hunter Foo Media ialah jenama dagangan HF Media Solution, perniagaan berdaftar di Malaysia.",
+        "main": None, "d": dict(eyebrow="TENTANG KAMI", h1="Siapa kami", lede="Hunter Foo Media membantu perniagaan bergerak seiring dengan AI. Kami menyatukan dua kepingan, iaitu melayani pelanggan di luar dan membantu pasukan di dalam, supaya syarikat anda menjadi antara yang paling berdaya saing. Hunter Foo Media ialah jenama dagangan HF Media Solution, perniagaan berdaftar di Malaysia.",
+        fde="Kami meredakan keresahan syarikat terhadap AI melalui perkhidmatan FDE kami. Kami bekerja di dalam syarikat sebagai jurutera AI yang ditempatkan di tapak (forward deployed engineer / FDE), menyatukan bahagian luaran (melayan pelanggan) dan bahagian dalaman (membantu pasukan), supaya syarikat mengikuti rentak AI.",
         idh="Maklumat perniagaan", rows=_rows(["Nama berdaftar", "Jenama", "No. pendaftaran perniagaan (Malaysia)", "Negara pendaftaran", "Malaysia", "Pengasas", "WhatsApp", "E-mel", "Laman web", "Kawasan servis", "Malaysia dan Singapura (jarak jauh)", "Alamat"]),
         founderh="Pengasas", founder="Hunter Foo mempunyai 18 tahun pengalaman dalam HR, rekrutmen dan jualan, bermula sebagai pengaturcara CNC di Singapura. Sejak 2025 beliau menggunakan AI dalam kerja harian syarikatnya sendiri dan membina aplikasi HR dalaman. Beliau hanya menawarkan apa yang telah digunakan sendiri dan terbukti berkesan.",
         note="<strong>Bukan agensi pekerjaan.</strong> Perniagaan ini tidak mengenakan caj kepada pencari kerja dan tidak menempatkan calon sendiri. Iklan kerja Singapura yang kami urus diterbitkan untuk pelanggan kami Sky Employment Pte Ltd, agensi pekerjaan berlesen (lesen EA MOM 08C5793). Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk pelanggan di seluruh Malaysia dan Singapura, kebanyakannya secara dalam talian.", next="HUBUNGI", cta="Bercakap dengan kami")},

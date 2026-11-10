@@ -13,7 +13,8 @@ H["en"] = dict(
  desc="Hunter Foo Media helps businesses in Malaysia and Singapore stay in sync with AI — serving customers outside and supporting the team inside. WhatsApp +60196273143.",
  eyebrow="AI FOR BUSINESSES · MALAYSIA &amp; SINGAPORE",
  h1='AI that helps you <span class="orange">serve customers</span> — and helps your team with daily work',
- fde="We help businesses stay in sync with AI, joining the outside and inside pieces so you keep pace with the market and technology.",
+ pos="We ease your company's anxiety about AI and help you keep pace with AI",
+ fde="We join the outside and inside pieces: serving customers, and helping your team.",
  img_alt="3D company cutaway: HFM AI linking outward Website, Marketing, Customer Service and inward Manager, Clerk, PA",
  cta1="See how we help the team", cta_wa="Talk about what you want to automate", cta2="WhatsApp +60 19-627 3143",
  s1e="STEP 1 · WEBSITE", s1h="Start with a website that Google and AI can read.",
@@ -95,7 +96,8 @@ H["zh"] = dict(
  desc="Hunter Foo Media 帮企业和 AI 同步：对外服务客户，对内帮团队做事，让公司跟上市场和科技的变化。WhatsApp +60196273143。",
  eyebrow="企业 AI · 马来西亚与新加坡",
  h1='AI 帮你<span class="orange">服务客户</span>，也帮团队处理日常工作',
- fde="帮企业和 AI 同步：拼好对外和对内两块拼图，跟上市场和科技的变化。",
+ pos="解决企业对 AI 的焦虑，帮你跟上 AI 的脚步",
+ fde="对外服务客户，对内帮团队做事，把两块拼图拼在一起。",
  img_alt="公司 3D 剖面图：HFM AI 连接对外 Website、Marketing、Customer Service，以及对内 Manager、Clerk、PA",
  cta1="看看怎么帮团队", cta_wa="聊聊你想自动化的工作", cta2="WhatsApp +60 19-627 3143",
  s1e="第一步 · 网站", s1h="先有一个 Google 和 AI 都读得懂的网站。",
@@ -177,7 +179,8 @@ H["ms"] = dict(
  desc="Hunter Foo Media membantu perniagaan di Malaysia dan Singapura seiring dengan AI — melayan pelanggan di luar dan bantu pasukan di dalam. WhatsApp +60196273143.",
  eyebrow="AI UNTUK PERNIAGAAN · MALAYSIA &amp; SINGAPURA",
  h1='AI yang bantu anda <span class="orange">layan pelanggan</span> — dan bantu pasukan dengan kerja harian',
- fde="Kami bantu perniagaan seiring dengan AI, menyatukan kepingan luar dan dalam supaya anda mengikuti perubahan pasaran dan teknologi.",
+ pos="Kami meredakan keresahan syarikat anda terhadap AI, dan membantu anda mengikuti rentak AI",
+ fde="Kami menyatukan kepingan luar dan dalam: melayan pelanggan, dan membantu pasukan.",
  img_alt="Keratan 3D syarikat: AI HFM menghubungkan Website, Marketing, Customer Service di luar dan Manager, Clerk, PA di dalam",
  cta1="Lihat cara bantu pasukan", cta_wa="Bincang kerja yang mahu diautomatikkan", cta2="WhatsApp +60 19-627 3143",
  s1e="LANGKAH 1 · LAMAN WEB", s1h="Mula dengan laman web yang Google dan AI boleh baca.",
@@ -314,6 +317,7 @@ def _main(k):
         '<section class="wrap hm-hero">'
         '<p class="eyebrow"><i></i>%s</p>'
         '<h1>%s</h1>'
+        '<p class="hm-pos">%s</p>'
         '<p class="hm-fde">%s</p>'
         '<figure class="hm-3d">'
         '<picture>'
@@ -326,7 +330,7 @@ def _main(k):
         '<a class="button ghost" href="#internal">%s <span aria-hidden="true">→</span></a>'
         '</div>'
         '</section>\n' % (
-            h["eyebrow"], h["h1"], h["fde"], html.escape(h["img_alt"], quote=True),
+            h["eyebrow"], h["h1"], h["pos"], h["fde"], html.escape(h["img_alt"], quote=True),
             wa, h["cta_wa"], h["cta1"],
         )
     )

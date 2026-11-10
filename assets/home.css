@@ -1,6 +1,6 @@
 /* Homepage + /services/ (shares the Products / About template: styles.css + products.css) */
 .hm-hero{padding:72px 0 64px}
-.hm-hero h1{font-size:clamp(36px,5.2vw,72px);line-height:1.12;letter-spacing:-.035em;margin:18px 0 26px;max-width:14em}
+.hm-hero h1{font-size:clamp(36px,5.2vw,72px);line-height:1.12;letter-spacing:-.035em;margin:18px 0 14px;max-width:14em}
 .hm-hero .lede{margin:0 0 14px;max-width:44em}
 .hm-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 .button.ghost{background:transparent;color:var(--paper);border:1px solid #6f8371}
@@ -62,7 +62,7 @@
 .svc-gap{margin-top:56px}.svc-region{margin:40px 0 0;font-size:14px;color:#536053}
 @media(max-width:1050px){.hm-cards{grid-template-columns:1fr 1fr}.svc-grid{grid-template-columns:1fr}}
 @media(max-width:760px){
- .hm-hero{padding:40px 0 48px}.hm-hero h1{font-size:clamp(32px,9vw,44px);margin:14px 0 20px}
+ .hm-hero{padding:40px 0 48px}.hm-hero h1{font-size:clamp(32px,9vw,44px);margin:14px 0 12px}
  .hm-ctas .button{width:100%;gap:16px}.hm-stepsnav{margin-top:28px}
  .hm-cards,.hm-cards-light,.hm-demos,.hm-notes,.hm-proof ul,.hm-split{grid-template-columns:1fr}
  .hm-split{gap:8px}.hm-example{padding:22px 18px;border-radius:16px}.hm-example ul{grid-template-columns:1fr}
@@ -92,6 +92,10 @@
 
 
 /* Homepage hero 3D company visual (2026-11-09) */
+.hm-hero .hm-pos{
+  margin:0 0 14px; max-width:40em; font-size:19px; line-height:1.5; letter-spacing:-.01em;
+  color:var(--paper, #f4f5f1); font-weight:500;
+}
 .hm-hero .hm-fde{
   margin:0 0 22px; max-width:36em; font-size:15.5px; line-height:1.65; color:var(--muted, #b5c3b8);
   border-left:3px solid var(--orange, #ff7b45); padding-left:14px;
@@ -104,6 +108,7 @@
   display:block; width:100%; height:auto;
 }
 @media (max-width:760px){
+  .hm-hero .hm-pos{font-size:16.5px; margin-bottom:12px}
   .hm-hero .hm-fde{font-size:14.5px; margin-bottom:16px}
   .hm-hero .hm-3d{border-radius:14px; margin-bottom:16px}
 }
