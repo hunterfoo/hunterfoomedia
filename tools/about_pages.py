@@ -1,14 +1,16 @@
 ADDRESS = "D-1-28, Residensi Bandar Razak, Salak Selatan, 57100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
 
+LINE = {"en": "Hunter Foo Media is an AI agency in Kuala Lumpur.", "zh": "Hunter Foo Media 是吉隆坡的 AI agency。", "ms": "Hunter Foo Media ialah agensi AI (AI agency) di Kuala Lumpur."}
+
 def _main(h):
     rows = "".join("<tr><th scope=\"row\">%s</th><td>%s</td></tr>" % r for r in h["rows"])
-    return ('\n<section class="wrap page-intro">\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n<p class="lede lede-fde">%s</p>\n</section>\n'
+    return ('\n<section class="wrap page-intro">\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede lede-line">%s</p>\n<p class="lede">%s</p>\n<p class="lede lede-fde">%s</p>\n</section>\n'
             '<section class="paper"><div class="wrap section prose">\n<h2>%s</h2>\n<table class="biz-id">%s</table>\n'
             '<h2>%s</h2>\n<p>%s</p>\n<p class="agency-note">%s</p>\n</div></section>\n'
             '<section class="wrap section contact" id="contact"><p class="eyebrow"><i></i>%s</p><div class="contact-row"><h2>%s</h2><div class="contact-actions">'
             '<a class="button whatsapp" href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60196273143 <span aria-hidden="true">↗</span></a>'
             '<!--email_off--><a class="email-link" href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com <span aria-hidden="true">↗</span></a><!--/email_off--></div></div></section>\n'
-            ) % (h["eyebrow"], h["h1"], h["lede"], h["fde"], h["idh"], rows, h["founderh"], h["founder"], h["note"], h["next"], h["cta"])
+            ) % (h["eyebrow"], h["h1"], LINE[h["_k"]], h["lede"], h["fde"], h["idh"], rows, h["founderh"], h["founder"], h["note"], h["next"], h["cta"])
 
 def _rows(l):
     return [(l[0], "HF Media Solution"), (l[1], "Hunter Foo Media"), (l[2], "IP0633909-U"), (l[3], l[4]),
@@ -39,5 +41,5 @@ ABOUT = {
         founderh="Pengasas", founder="Hunter Foo mempunyai 18 tahun pengalaman dalam HR, rekrutmen dan jualan, bermula sebagai pengaturcara CNC di Singapura. Sejak 2025 beliau menggunakan AI dalam kerja harian syarikatnya sendiri dan membina aplikasi HR dalaman. Beliau hanya menawarkan apa yang telah digunakan sendiri dan terbukti berkesan.",
         note="<strong>Bukan agensi pekerjaan.</strong> Perniagaan ini tidak mengenakan caj kepada pencari kerja dan tidak menempatkan calon sendiri. Iklan kerja Singapura yang kami urus diterbitkan untuk pelanggan kami Sky Employment Pte Ltd, agensi pekerjaan berlesen (lesen EA MOM 08C5793). Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk pelanggan di seluruh Malaysia dan Singapura, kebanyakannya secara dalam talian.", next="HUBUNGI", cta="Bercakap dengan kami")},
 }
-for v in ABOUT.values():
-    v["main"] = _main(v["d"])
+for _k, v in ABOUT.items():
+    v["main"] = _main(dict(v["d"], _k=_k))

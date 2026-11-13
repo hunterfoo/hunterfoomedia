@@ -5,16 +5,17 @@ import re, json, os, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from i18n_strings import T
 from about_pages import ABOUT
-from home_pages import HOME
 from products_pages import PRODUCTS
 from website_page import WD
+from services_page import SV, P as SP
+from home_v2 import HOME2
 from articles_pages import ARTICLES, INDEX as ART_INDEX, index_main, article_main
 import datetime
 D = "https://www.hunterfoomedia.com"
 SRC = "tools/src_zh"
-PAGES = ["/services/", "/services/ai-automation/", "/services/personal-brand/", "/services/social-reels/"]
+PAGES = []
 ART_PATHS = ["/notes/"] + ["/notes/%s/" % a["slug"] for a in ARTICLES]
-ALL = ["/"] + PAGES + ["/products/", "/website-design/", "/about/"] + ART_PATHS
+ALL = ["/", "/services/", "/website-design/", "/about/"] + ART_PATHS
 LANGS = {"en": ("", "en", "en_MY", "EN"), "zh": ("/zh", "zh-Hans", "zh_MY", "中文"), "ms": ("/ms", "ms", "ms_MY", "BM")}
 IDX = {"en": 0, "ms": 1}
 C = r'[\u3000-\u9fff\uff00-\uffef]'
@@ -95,15 +96,40 @@ def fix_jsonld(s, lang, path):
         return '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": g}, ensure_ascii=False, separators=(",", ":")) + '</script>'
     return re.sub(r'<script type="application/ld\+json">(.*?)</script>', fix, s, flags=re.S)
 
+# Simplified navigation (2026-11-13): header = Services / Website / Notes / About; footer = grouped, not repeating the header.
+NAV = {"en": [("services", "/services/", "Services"), ("website", "/website-design/", "Website"), ("notes", "/notes/", "Notes"), ("about", "/about/", "About")],
+       "zh": [("services", "/services/", "服务"), ("website", "/website-design/", "网站"), ("notes", "/notes/", "笔记"), ("about", "/about/", "关于我们")],
+       "ms": [("services", "/services/", "Perkhidmatan"), ("website", "/website-design/", "Laman Web"), ("notes", "/notes/", "Catatan"), ("about", "/about/", "Tentang Kami")]}
+FOOT_G = {"en": ("Services", "Contact"), "zh": ("服务", "联系"), "ms": ("Perkhidmatan", "Hubungi")}
+def _cur(path):
+    if path == "/services/": return "services"
+    if path == "/website-design/": return "website"
+    if path.startswith("/notes/"): return "notes"
+    if path == "/about/": return "about"
+    return None
+def nav_html(lang, path):
+    p = LANGS[lang][0]; c = _cur(path)
+    return "".join('<a href="%s%s"%s>%s</a>' % (p, h, ' aria-current="page"' if k == c else "", t) for k, h, t in NAV[lang])
+def foot_html(lang):
+    p = LANGS[lang][0]
+    svc = "".join('<a href="%s%s">%s</a>' % (p, "/website-design/" if sid == "website-building" else "/services/#" + sid, re.sub(r"（.*?）", "", name))
+                  for sid, name, d_, pr, l_ in SP[lang]["services"])
+    ct = ('<a href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60 19-627 3143</a>'
+          '<!--email_off--><a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a><!--/email_off-->')
+    return ('<div class="fn-g"><strong>%s</strong>%s</div><div class="fn-g"><strong>%s</strong>%s</div>' % (FOOT_G[lang][0], svc, FOOT_G[lang][1], ct))
+
 def build(src, path, lang):
     p, hl, loc, _ = LANGS[lang]
     s = src
+    s = re.sub(r'(<nav class="compact" aria-label="[^"]*">).*?</nav>', r'\1@@NAV@@</nav>', s, count=1, flags=re.S)
+    s = re.sub(r'(<nav class="footer-nav" aria-label="[^"]*">).*?</nav>', r'\1@@FNAV@@</nav>', s, count=1, flags=re.S)
     if lang != "zh":
         s = s.replace('"一年 "+f(one*12)', 'f(one*12)+"%s"' % SUF[lang]).replace('"一年 "+f(one)', 'f(one)+"%s"' % SUF[lang])
         s = s.replace('(i==="y1"||i==="y12"?"一年 ":"")+"RM ____"', '"RM ____"+(i==="y1"||i==="y12"?"%s":"")' % SUF[lang])
     s = tr(s, lang)
     s = s.replace('href="/#about"', 'href="/about/"')
     s = rewrite_urls(s, p)
+    s = s.replace('@@NAV@@', nav_html(lang, path)).replace('@@FNAV@@', foot_html(lang))
     s = re.sub(r'<html lang="[^"]*">', '<html lang="%s">' % hl, s, 1)
     s = s.replace('content="zh_MY"', 'content="%s"' % loc)
     s = re.sub(r'(<link rel="canonical" href="[^"]*">)', lambda m: m.group(1) + "\n" + alternates(path), s, 1)
@@ -155,7 +181,7 @@ for lang in LANGS:
         write(lang, path, build(src, path, lang))
     # Homepage: built from the AI automation page shell (same template as Products / About / Notes)
     shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
-    a = HOME[lang]
+    a = HOME2[lang]
     shell = re.sub(r'<title>.*?</title>', lambda m: '<title>%s</title>' % a["title"], shell)
     shell = re.sub(r'<meta name="description" content="[^"]*">', lambda m: '<meta name="description" content="%s">' % a["desc"], shell)
     shell = re.sub(r'<meta (property|name)="(og|twitter):title" content="[^"]*">', lambda m: '<meta %s="%s:title" content="%s">' % (m.group(1), m.group(2), a["title"]), shell)
@@ -183,31 +209,6 @@ for lang in LANGS:
     shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
     write(lang, "/about/", build(shell, "/about/", lang))
 
-    # Products + demo page: same shell pattern as About
-    shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
-    a = PRODUCTS[lang]
-    shell = re.sub(r'<title>.*?</title>', '<title>%s</title>' % a["title"], shell)
-    shell = re.sub(r'<meta name="description" content="[^"]*">', '<meta name="description" content="%s">' % a["desc"], shell)
-    shell = re.sub(r'<meta (property|name)="(og|twitter):title" content="[^"]*">', lambda m: '<meta %s="%s:title" content="%s">' % (m.group(1), m.group(2), a["title"]), shell)
-    shell = re.sub(r'<meta (property|name)="(og|twitter):description" content="[^"]*">', lambda m: '<meta %s="%s:description" content="%s">' % (m.group(1), m.group(2), a["desc"]), shell)
-    shell = shell.replace(D + "/services/ai-automation/", D + "/products/").replace(' aria-current="page"', '')
-    shell = shell.replace('<a href="/products/">', '<a href="/products/" aria-current="page">')
-    shell = shell.replace('<link rel="stylesheet" href="/styles.css">', '<link rel="stylesheet" href="/styles.css">\n<link rel="stylesheet" href="/assets/products.css">')
-    pu = D + "/products/"
-    ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebPage", "@id": pu + "#webpage", "url": pu, "name": a["title"], "description": a["desc"], "about": {"@id": D + "/#organization"}, "isPartOf": {"@id": D + "/#website"}}] + [
-        {"@type": "Service", "@id": pu + "#product-%d" % (i + 1), "name": n, "description": d, "serviceType": "AI automation", "provider": {"@id": D + "/#organization"},
-         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#demo-%d" % (i + 1)} for i, (n, d) in enumerate(a["services"])] + [
-        {"@type": "Service", "@id": pu + "#chatgpt-ads", "name": a["ads_service"][0], "description": a["ads_service"][1], "serviceType": "ChatGPT Ads", "provider": {"@id": D + "/#organization"},
-         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#chatgpt-ads"},
-        {"@type": "Service", "@id": pu + "#website-building", "name": a["web_service"][0], "description": a["web_service"][1], "serviceType": "Website building", "provider": {"@id": D + "/#organization"},
-         "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}], "url": pu + "#website-building"},
-        {"@type": "FAQPage", "@id": pu + "#faq", "url": pu + "#faq", "isPartOf": {"@id": pu + "#webpage"},
-         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": t}} for q, t in a["faq"]]}]}
-    shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>', shell, flags=re.S)
-    shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
-    write(lang, "/products/", build(shell, "/products/", lang))
-
     # Website design page (/website-design/): same shell pattern as Products
     shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
     a = WD[lang]
@@ -221,6 +222,19 @@ for lang in LANGS:
     shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(a["ld"], ensure_ascii=False) + '</script>', shell, flags=re.S)
     shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
     write(lang, "/website-design/", build(shell, "/website-design/", lang))
+
+    # Services page (/services/): the five services + "what our AI can do" (same shell pattern as Website design)
+    shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
+    a = SV[lang]
+    shell = re.sub(r'<title>.*?</title>', lambda m: '<title>%s</title>' % a["title"], shell)
+    shell = re.sub(r'<meta name="description" content="[^"]*">', lambda m: '<meta name="description" content="%s">' % a["desc"], shell)
+    shell = re.sub(r'<meta (property|name)="(og|twitter):title" content="[^"]*">', lambda m: '<meta %s="%s:title" content="%s">' % (m.group(1), m.group(2), a["title"]), shell)
+    shell = re.sub(r'<meta (property|name)="(og|twitter):description" content="[^"]*">', lambda m: '<meta %s="%s:description" content="%s">' % (m.group(1), m.group(2), a["desc"]), shell)
+    shell = shell.replace(D + "/services/ai-automation/", D + "/services/").replace(' aria-current="page"', '')
+    shell = shell.replace('<link rel="stylesheet" href="/styles.css">', '<link rel="stylesheet" href="/styles.css">\n<link rel="stylesheet" href="/assets/products.css">\n<link rel="stylesheet" href="/assets/home.css">')
+    shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(a["ld"], ensure_ascii=False) + '</script>', shell, flags=re.S)
+    shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
+    write(lang, "/services/", build(shell, "/services/", lang))
 
     # Notes (formerly Articles): index + each article, same shell pattern as About
     def art_shell(title, desc, path, ogtype="website"):
