@@ -9,13 +9,14 @@ from products_pages import PRODUCTS
 from website_page import WD
 from services_page import SV, P as SP
 from home_v2 import HOME2
+from demo_page import DM, FOOT_DEMO
 from articles_pages import ARTICLES, INDEX as ART_INDEX, index_main, article_main
 import datetime
 D = "https://www.hunterfoomedia.com"
 SRC = "tools/src_zh"
 PAGES = []
 ART_PATHS = ["/notes/"] + ["/notes/%s/" % a["slug"] for a in ARTICLES]
-ALL = ["/", "/services/", "/website-design/", "/about/"] + ART_PATHS
+ALL = ["/", "/services/", "/website-design/", "/about/", "/demo/"] + ART_PATHS
 LANGS = {"en": ("", "en", "en_MY", "EN"), "zh": ("/zh", "zh-Hans", "zh_MY", "中文"), "ms": ("/ms", "ms", "ms_MY", "BM")}
 IDX = {"en": 0, "ms": 1}
 C = r'[\u3000-\u9fff\uff00-\uffef]'
@@ -116,6 +117,7 @@ def foot_html(lang):
                   for sid, name, d_, pr, l_ in SP[lang]["services"])
     ct = ('<a href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60 19-627 3143</a>'
           '<!--email_off--><a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a><!--/email_off-->')
+    svc += '<a href="%s/demo/">%s</a>' % (p, FOOT_DEMO[lang])
     return ('<div class="fn-g"><strong>%s</strong>%s</div><div class="fn-g"><strong>%s</strong>%s</div>' % (FOOT_G[lang][0], svc, FOOT_G[lang][1], ct))
 
 def build(src, path, lang):
@@ -235,6 +237,20 @@ for lang in LANGS:
     shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(a["ld"], ensure_ascii=False) + '</script>', shell, flags=re.S)
     shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
     write(lang, "/services/", build(shell, "/services/", lang))
+
+    # AI demo page (/demo/): click-to-try simulation of the six digital employees (static, client-side)
+    shell = open(os.path.join(SRC, "services/ai-automation/index.html")).read()
+    a = DM[lang]
+    shell = re.sub(r'<title>.*?</title>', lambda m: '<title>%s</title>' % a["title"], shell)
+    shell = re.sub(r'<meta name="description" content="[^"]*">', lambda m: '<meta name="description" content="%s">' % a["desc"], shell)
+    shell = re.sub(r'<meta (property|name)="(og|twitter):title" content="[^"]*">', lambda m: '<meta %s="%s:title" content="%s">' % (m.group(1), m.group(2), a["title"]), shell)
+    shell = re.sub(r'<meta (property|name)="(og|twitter):description" content="[^"]*">', lambda m: '<meta %s="%s:description" content="%s">' % (m.group(1), m.group(2), a["desc"]), shell)
+    shell = shell.replace(D + "/services/ai-automation/", D + "/demo/").replace(' aria-current="page"', '')
+    shell = shell.replace('<link rel="stylesheet" href="/styles.css">', '<link rel="stylesheet" href="/styles.css">\n<link rel="stylesheet" href="/assets/products.css">\n<link rel="stylesheet" href="/assets/home.css">\n<link rel="stylesheet" href="/assets/demo.css">')
+    shell = shell.replace('</body>', '<script src="/assets/demo.js" defer></script>\n</body>', 1)
+    shell = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: '<script type="application/ld+json">' + json.dumps(a["ld"], ensure_ascii=False) + '</script>', shell, flags=re.S)
+    shell = re.sub(r'<main id="main">.*</main>', lambda m: '<main id="main">' + a["main"] + '</main>', shell, flags=re.S)
+    write(lang, "/demo/", build(shell, "/demo/", lang))
 
     # Notes (formerly Articles): index + each article, same shell pattern as About
     def art_shell(title, desc, path, ogtype="website"):

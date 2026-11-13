@@ -36,7 +36,7 @@ P["en"] = dict(
   ("manage", "Website maintenance + Google Business Profile management", "Website AI keeps your web pages up to date, and we look after your Google Business Profile, so Google and AI assistants keep reading and finding you.", "RM499/month, a founding price for the first 5 clients", "/website-design/"),
   ("social-media", "Social media management", "Marketing AI drafts 2 posts a week for you (caption and image), 8 posts a month, plus 2 AI reels (15 seconds each) a month. Nothing is published until you approve it.", "By quote", None),
   ("custom-ai", "Customized AI system", "If the six digital employees aren't enough, we build something made for your company. For example: an AI knowledge base that answers questions from your own company documents; workflows that link your repeated steps together automatically; a call system where AI assists during phone calls; a calendar system that books and schedules for you. And more, depending on what you need.", "By quote", None)],
- aie="WHAT OUR AI CAN DO", aih="What our AI can do",
+ aie="WHAT OUR AI CAN DO", aih="What our AI can do", demo_l="Try the interactive demo",
  aisub="Six digital employees: three serve your customers, three help your team.",
  outh="Outside: serving customers", inh="Inside: helping your team",
  six=[("Website AI", "Updates your web page content, so Google and AI assistants can read and find you."),
@@ -69,7 +69,7 @@ P["zh"] = dict(
   ("manage", "网站维护 + Google Business Profile 管理", "网站 AI 帮你持续更新网页内容，我们也帮你管理 Google Business Profile，让 Google 和 AI 助手一直读得懂、找得到你。", "每月 RM499，前 5 位客户的创始价", "/website-design/"),
   ("social-media", "Social media management（社交媒体管理）", "营销 AI 每周帮你起草 2 篇帖子（文案加图片），一个月 8 篇，另外每月做 2 条 15 秒的 AI 短视频（reel）。你批准后才发布。", "按报价", None),
   ("custom-ai", "定制 AI 系统", "如果六位数字员工还不够，我们按你公司的需要量身做。例如：用公司资料回答问题的 AI 知识库；把重复的步骤自动串起来的流程；电话通话中由 AI 协助的通话系统；自动排日程、约时间的日历系统。还有别的，看你需要什么。", "按报价", None)],
- aie="我们的 AI 能做什么", aih="我们的 AI 能做什么",
+ aie="我们的 AI 能做什么", aih="我们的 AI 能做什么", demo_l="试用互动演示",
  aisub="六位数字员工：三位服务客户，三位帮团队。",
  outh="对外：服务客户", inh="对内：帮团队做事",
  six=[("网站 AI", "更新网页内容，让 Google 和 AI 助手读得懂、找得到你。"),
@@ -102,7 +102,7 @@ P["ms"] = dict(
   ("manage", "Penyelenggaraan laman web + pengurusan Google Business Profile", "AI Laman Web memastikan halaman web anda dikemas kini, dan kami menjaga Google Business Profile anda, supaya Google dan pembantu AI terus membaca dan menemui anda.", "RM499/bulan, harga pelanggan awal untuk 5 pelanggan pertama", "/website-design/"),
   ("social-media", "Pengurusan media sosial", "AI Pemasaran merangka 2 hantaran seminggu untuk anda (kapsyen dan imej), 8 hantaran sebulan, serta 2 reel AI (15 saat setiap satu) sebulan. Tiada apa diterbitkan sehingga anda luluskan.", "Ikut sebut harga", None),
   ("custom-ai", "Sistem AI tersuai", "Jika enam pekerja digital belum cukup, kami bina sesuatu yang dibuat khas untuk syarikat anda. Contohnya: pangkalan pengetahuan AI yang menjawab soalan berdasarkan dokumen syarikat anda sendiri; aliran kerja yang menyambungkan langkah berulang anda secara automatik; sistem panggilan di mana AI membantu semasa panggilan telefon; sistem kalendar yang menetapkan jadual dan temu janji untuk anda. Dan lagi, bergantung pada keperluan anda.", "Ikut sebut harga", None)],
- aie="APA AI KAMI BOLEH BUAT", aih="Apa AI kami boleh buat",
+ aie="APA AI KAMI BOLEH BUAT", aih="Apa AI kami boleh buat", demo_l="Cuba demo interaktif",
  aisub="Enam pekerja digital: tiga melayan pelanggan, tiga membantu pasukan.",
  outh="Di luar: melayan pelanggan", inh="Di dalam: membantu pasukan",
  six=[("AI Laman Web", "Mengemas kini kandungan halaman web anda, supaya Google dan pembantu AI boleh membaca dan menemui anda."),
@@ -127,7 +127,8 @@ def six_cards(k):
     card = lambda i: ('<li><span class="sv-ico">%s</span><h3>%s</h3><p>%s</p></li>' % (ICONS[i], h["six"][i][0], h["six"][i][1]))
     return ('<p class="hm-lede-d">%s</p><h3 class="ad-h3 sv-h3">%s</h3><ul class="hm-cards hm-cards-light sv-six">%s</ul>'
             '<h3 class="ad-h3 sv-h3">%s</h3><ul class="hm-cards hm-cards-light sv-six">%s</ul>'
-            % (h["aisub"], h["outh"], "".join(card(i) for i in range(3)), h["inh"], "".join(card(i) for i in range(3, 6))))
+            '<p class="sv-demo"><a class="button" href="/demo/">%s <span aria-hidden="true">→</span></a></p>'
+            % (h["aisub"], h["outh"], "".join(card(i) for i in range(3)), h["inh"], "".join(card(i) for i in range(3, 6)), h["demo_l"]))
 
 def _main(k):
     h = P[k]
