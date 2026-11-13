@@ -152,3 +152,5 @@
 .hm-six-l{margin:22px 0 8px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--orange,#ff7b45);font-weight:700}
 @media(max-width:760px){.sv-sec .sv-block{grid-template-columns:36px 1fr;gap:12px}.sv-block h3{font-size:19px}}
 .hm-svc .hm-price{margin-top:10px;font-size:13.5px;font-weight:700;color:#c2552a}
+.hm-demo{margin:28px 0 0}
+@media (max-width:600px){.hm-demo .button{width:100%}}
