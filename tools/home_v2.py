@@ -21,7 +21,7 @@ for _k, (_t, _d) in META.items():
 
 X = {}
 X["en"] = dict(
- see="See our services", sve="WHAT WE DO", svh="Five services",
+ see="See our services", demo="Try AI Demo", sve="WHAT WE DO", svh="Five services",
  lines=["A monthly meeting, and your first main digital employee set up for free.",
         "A company website that Google and AI assistants can read and find.",
         "Your web pages and Google Business Profile, kept up to date.",
@@ -31,7 +31,7 @@ X["en"] = dict(
  aie="SIX DIGITAL EMPLOYEES", aih="Three serve your customers. Three help your team.", out="Outside", inn="Inside", aigo="See what each one does →",
  cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM.")
 X["zh"] = dict(
- see="看我们的服务", sve="我们做什么", svh="五项服务",
+ see="看我们的服务", demo="试用 AI 演示", sve="我们做什么", svh="五项服务",
  lines=["每月开会一次，并免费设立你的第一位主要数字员工。",
         "Google 和 AI 助手读得懂、找得到的公司网站。",
         "网页和 Google Business Profile，持续更新。",
@@ -41,7 +41,7 @@ X["zh"] = dict(
  aie="六位数字员工", aih="三位服务客户，三位帮团队。", out="对外", inn="对内", aigo="看每一位做什么 →",
  cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。")
 X["ms"] = dict(
- see="Lihat perkhidmatan kami", sve="APA KAMI BUAT", svh="Lima perkhidmatan",
+ see="Lihat perkhidmatan kami", demo="Cuba Demo AI", sve="APA KAMI BUAT", svh="Lima perkhidmatan",
  lines=["Mesyuarat sebulan sekali, dan pekerja digital utama pertama anda disediakan percuma.",
         "Laman web syarikat yang boleh dibaca dan ditemui oleh Google dan pembantu AI.",
         "Halaman web dan Google Business Profile anda, sentiasa dikemas kini.",
@@ -64,7 +64,8 @@ def _main(k):
     cards = "".join('<li><a href="/services/#%s"><span class="hm-n">%d</span><h3>%s</h3><p>%s</p><p class="hm-price">%s</p></a></li>' % (sid, i + 1, name, x["lines"][i], x["tags"][i])
                     for i, (sid, name, d_, p_, l_) in enumerate(s["services"]))
     o.append('<section class="paper hm-sec" id="services"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>'
-             '<ol class="hm-cards hm-cards-light hm-cards-5 hm-svc">%s</ol></div></section>\n' % (x["sve"], x["svh"], cards))
+             '<ol class="hm-cards hm-cards-light hm-cards-5 hm-svc">%s</ol>'
+             '<p class="hm-demo"><a class="button" href="/demo/">%s <span aria-hidden="true">→</span></a></p></div></section>\n' % (x["sve"], x["svh"], cards, x["demo"]))
     chips = lambda a, b: "".join('<span class="hm-chip">%s</span>' % s["six"][i][0] for i in range(a, b))
     o.append('<section class="wrap section hm-sec hm-dark" id="six"><p class="eyebrow"><i></i>%s</p><h2 class="hm-h2">%s</h2>'
              '<p class="hm-six-l">%s</p><div class="hm-chips">%s</div><p class="hm-six-l">%s</p><div class="hm-chips">%s</div>'
