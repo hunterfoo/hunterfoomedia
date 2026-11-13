@@ -10,6 +10,38 @@ https://hunterfoomedia.com/* https://www.hunterfoomedia.com/:splat 301
 /singapore /services/ 301
 /singapore/ /services/ 301
 
+# Simplified site (2026-11-13): products/demos, the three old service pages and the AI Agency page now live on /services/
+/products /services/#ai-can-do 301
+/products/ /services/#ai-can-do 301
+/services/ai-automation /services/#ai-consultant 301
+/services/ai-automation/ /services/#ai-consultant 301
+/services/personal-brand /services/ 301
+/services/personal-brand/ /services/ 301
+/services/social-reels /services/#social-media 301
+/services/social-reels/ /services/#social-media 301
+/ai-agency-malaysia /services/ 301
+/ai-agency-malaysia/ /services/ 301
+/zh/products /zh/services/#ai-can-do 301
+/zh/products/ /zh/services/#ai-can-do 301
+/zh/services/ai-automation /zh/services/#ai-consultant 301
+/zh/services/ai-automation/ /zh/services/#ai-consultant 301
+/zh/services/personal-brand /zh/services/ 301
+/zh/services/personal-brand/ /zh/services/ 301
+/zh/services/social-reels /zh/services/#social-media 301
+/zh/services/social-reels/ /zh/services/#social-media 301
+/zh/ai-agency-malaysia /zh/services/ 301
+/zh/ai-agency-malaysia/ /zh/services/ 301
+/ms/products /ms/services/#ai-can-do 301
+/ms/products/ /ms/services/#ai-can-do 301
+/ms/services/ai-automation /ms/services/#ai-consultant 301
+/ms/services/ai-automation/ /ms/services/#ai-consultant 301
+/ms/services/personal-brand /ms/services/ 301
+/ms/services/personal-brand/ /ms/services/ 301
+/ms/services/social-reels /ms/services/#social-media 301
+/ms/services/social-reels/ /ms/services/#social-media 301
+/ms/ai-agency-malaysia /ms/services/ 301
+/ms/ai-agency-malaysia/ /ms/services/ 301
+
 # Default favicon path for browsers and crawlers
 /favicon.ico /assets/favicon-48.png 301
 

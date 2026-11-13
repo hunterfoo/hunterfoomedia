@@ -328,7 +328,7 @@ def article_main(lang, a, p):
     t = a[lang]; h = INDEX[lang]
     return ('\n<article>\n<section class="wrap page-intro">\n<p class="crumbs"><a href="/">%s</a> / <a href="/notes/">%s</a> / %s</p>\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n'
             '<p class="crumbs" style="margin-top:18px"><time datetime="%s">%s</time> · %s</p>\n</section>\n'
-            '<section class="paper"><div class="wrap section prose">\n%s\n<p class="related"><a href="/notes/">← %s</a><a href="/products/">%s</a></p>\n</div></section>\n</article>\n' % (
+            '<section class="paper"><div class="wrap section prose">\n%s\n<p class="related"><a href="/notes/">← %s</a><a href="/services/">%s</a></p>\n</div></section>\n</article>\n' % (
             h["crumb"], h["h1"].rstrip(".。"), t["h1"], t["eyebrow"], t["h1"], t["lede"], a["date"], DATE_FMT[lang](a["date"]), BY[lang], t["body"], ALL_LABEL[lang],
-            {"en": "Our services and demos", "zh": "看我们的服务与演示", "ms": "Servis dan demo kami"}[lang])
+            {"en": "Our services", "zh": "看我们的服务", "ms": "Perkhidmatan kami"}[lang])
             + contact(lang, t["next"], t["cta"], t["wa"], t["cta_note"]))
