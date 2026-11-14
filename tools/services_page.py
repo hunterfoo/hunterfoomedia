@@ -24,14 +24,14 @@ ICONS = [
 P = {}
 P["en"] = dict(
  title="AI Agency in Malaysia | Our 5 Services | Hunter Foo Media",
- desc="AI agency in Malaysia: AI consultant (digital employees set up and maintained), website building, website and Google Business Profile management, social media management and customized AI systems. Hunter Foo Media, Kuala Lumpur. WhatsApp +60196273143.",
+ desc="AI agency in Malaysia: AI consulting (Forward Deployed Engineer style), website building, website and Google Business Profile management, social media management and customized AI systems. Hunter Foo Media, Kuala Lumpur. WhatsApp +60196273143.",
  eyebrow="SERVICES · KUALA LUMPUR", h1='AI Agency in <span class="orange">Malaysia</span>',
- lede="Five services, from setting up your AI digital employees to building a system made for your company.",
+ lede="Five services, from AI consulting to building a system made for your company.",
  cta="WhatsApp +60 19-627 3143", wamsg="Hi Hunter, I read your services page. My business: __\nI'd like to talk about service no.: __",
  sve="OUR SERVICES", svh="Five services",
  price_l="Price", quote="By quote", see_web="See the website design page", more_web="Website design page →",
  services=[
-  ("ai-consultant", "AI Consultant", "We meet once a month to look at where your business needs AI. We set up one main digital employee for you for free, then maintain it. The six digital employees are Website AI, Marketing AI and Customer Service AI (serving your customers), and Clerk AI, Manager AI and PA AI (helping your team).", "Setting up one main digital employee: free. Maintenance after that: by quote", None),
+  ("ai-consultant", "AI Consulting | Forward Deployed Engineer style", "<p>We work like a Forward Deployed Engineer embedded in your company. We learn how your business and team work, then advise where AI fits, what to do first and how to do it, so you keep up with AI without chasing every new tool.</p><ul class=\"sv-points\"><li>One consulting meeting a month</li><li>Review which tasks can be handed to AI</li><li>A clear plan with priorities</li><li>Hands-on implementation when you need it (optional)</li></ul>", "By quote", None),
   ("website-building", "Website building", "We build a company website that Google and AI assistants can read and find. It is the base Website AI keeps up to date.", "RM399 (Basic), a founding price for the first 5 clients. The package with SEO + AEO/GEO is on the website design page", "/website-design/"),
   ("manage", "Website maintenance + Google Business Profile management", "Website AI keeps your web pages up to date, and we look after your Google Business Profile, so Google and AI assistants keep reading and finding you.", "RM499/month, a founding price for the first 5 clients", "/website-design/"),
   ("social-media", "Social media management", "Marketing AI drafts 2 posts a week for you (caption and image), 8 posts a month, plus 2 AI reels (15 seconds each) a month. Nothing is published until you approve it.", "By quote", None),
@@ -47,7 +47,7 @@ P["en"] = dict(
       ("PA AI", "Manages the boss's schedule, reminds you to follow up, and drafts replies that are sent only after you confirm.")],
  fqe="FAQ", fqh="Common questions",
  faq=[("What is an AI agency?", "An AI agency is a company that helps businesses put AI to work in their daily operations: setting it up, connecting it to how the business already runs, and keeping it working. It is different from only selling a software subscription."),
-      ("How much does an AI agency cost in Malaysia?", "It depends on the scope, so there is no single price. At Hunter Foo Media, website building is RM399 (Basic) and website maintenance + Google Business Profile management is RM499/month. Setting up your first main digital employee is free. These two prices are founding-client prices for the first 5 clients, in exchange for an honest testimonial, and will go up after 5 clients. Social media management, customized AI systems and the maintenance of your digital employees are quoted after we understand how your business works."),
+      ("How much does an AI agency cost in Malaysia?", "It depends on the scope, so there is no single price. At Hunter Foo Media, website building is RM399 (Basic) and website maintenance + Google Business Profile management is RM499/month. These two prices are founding-client prices for the first 5 clients, in exchange for an honest testimonial, and will go up after 5 clients. Social media management, customized AI systems and the maintenance of your digital employees are quoted after we understand how your business works."),
       ("Will the AI send things to my customers without my approval?", "No. Marketing AI publishes only after you approve, Customer Service AI hands complex cases to a person, and PA AI's drafted replies are sent only after you confirm."),
       HFAQ["en"]["qa"][2],
       ("Where are you, and do you serve Singapore?", "We are based in Kuala Lumpur and serve businesses in Malaysia and Singapore, mostly online."),
@@ -57,14 +57,14 @@ P["en"] = dict(
 )
 P["zh"] = dict(
  title="马来西亚 AI Agency｜我们的五项服务｜Hunter Foo Media",
- desc="马来西亚 AI Agency：AI 顾问（设立并维护数字员工）、制作网站、管理网站和 Google Business Profile、社交媒体管理、定制 AI 系统。Hunter Foo Media，吉隆坡。WhatsApp +60196273143。",
+ desc="马来西亚 AI Agency：AI 顾问（FDE 驻场式陪跑）、制作网站、管理网站和 Google Business Profile、社交媒体管理、定制 AI 系统。Hunter Foo Media，吉隆坡。WhatsApp +60196273143。",
  eyebrow="服务 · 吉隆坡", h1='马来西亚 <span class="orange">AI Agency</span>',
- lede="五项服务：从设立你的 AI 数字员工，到做一个为你公司量身定做的系统。",
+ lede="五项服务：从 AI 顾问陪跑，到做一个为你公司量身定做的系统。",
  cta="WhatsApp +60 19-627 3143", wamsg="你好 Hunter，我看了你们的服务页。我做的是：＿＿\n想聊的服务编号：＿＿",
  sve="我们的服务", svh="五项服务",
  price_l="价格", quote="按报价", see_web="看制作网站页", more_web="制作网站页 →",
  services=[
-  ("ai-consultant", "AI 顾问", "每月开会一次，一起看你的业务哪一块需要 AI。我们免费帮你设立一位主要的数字员工，之后持续维护。六位数字员工是：对外服务客户的网站 AI、营销 AI、客服 AI，对内帮团队的文员 AI、经理 AI、PA AI。", "设立一位主要的数字员工：免费。之后的维护：按报价", None),
+  ("ai-consultant", "AI 顾问｜FDE 驻场式陪跑", "<p>我们像你公司里的 Forward Deployed Engineer：先了解你的业务和团队，再告诉你哪里适合用 AI、先做什么、怎么做。你不用自己追新工具，有我们帮你判断。</p><ul class=\"sv-points\"><li>每月一次顾问会议</li><li>盘点公司里哪些工作可以交给 AI</li><li>给你一份清楚的建议和优先顺序</li><li>需要落地时，我们可以帮你执行（可选）</li></ul>", "按报价", None),
   ("website-building", "制作网站", "做一个 Google 和 AI 助手读得懂、找得到的公司网站，也是网站 AI 持续更新的基础。", "RM399（基础版），前 5 位客户的创始价。含 SEO + AEO/GEO 的方案见制作网站页", "/website-design/"),
   ("manage", "网站维护 + Google Business Profile 管理", "网站 AI 帮你持续更新网页内容，我们也帮你管理 Google Business Profile，让 Google 和 AI 助手一直读得懂、找得到你。", "每月 RM499，前 5 位客户的创始价", "/website-design/"),
   ("social-media", "Social media management（社交媒体管理）", "营销 AI 每周帮你起草 2 篇帖子（文案加图片），一个月 8 篇，另外每月做 2 条 15 秒的 AI 短视频（reel）。你批准后才发布。", "按报价", None),
@@ -80,7 +80,7 @@ P["zh"] = dict(
       ("PA AI", "管理老板的日程，提醒跟进，起草回复，你确认后才发出。")],
  fqe="常见问题", fqh="常见问题",
  faq=[("什么是 AI agency？", "AI agency 是帮企业把 AI 用进日常运作的公司：把 AI 设置好，接上企业原本的做事方式，并让它持续运作。和只卖软件订阅不一样。"),
-      ("马来西亚的 AI agency 要多少钱？", "要看范围，没有单一价格。在 Hunter Foo Media，制作网站是 RM399（基础版），网站维护 + Google Business Profile 管理是每月 RM499，设立你的第一位主要数字员工是免费的。这两个价格是前 5 位客户的创始价，条件是为我们写一则真实评价，满 5 位后将调价。社交媒体管理、定制 AI 系统，以及数字员工的维护，等我们弄清楚你的生意怎么运作之后，以书面报价确认。"),
+      ("马来西亚的 AI agency 要多少钱？", "要看范围，没有单一价格。在 Hunter Foo Media，制作网站是 RM399（基础版），网站维护 + Google Business Profile 管理是每月 RM499。这两个价格是前 5 位客户的创始价，条件是为我们写一则真实评价，满 5 位后将调价。社交媒体管理、定制 AI 系统，以及数字员工的维护，等我们弄清楚你的生意怎么运作之后，以书面报价确认。"),
       ("AI 会不经我批准就发东西给客户吗？", "不会。营销 AI 要你批准后才发布；客服 AI 遇到复杂情况会交给真人；PA AI 起草的回复，你确认后才发出。"),
       HFAQ["zh"]["qa"][2],
       ("你们在哪里？也服务新加坡吗？", "我们位于吉隆坡，服务马来西亚和新加坡的企业，大部分在线上完成。"),
@@ -90,14 +90,14 @@ P["zh"] = dict(
 )
 P["ms"] = dict(
  title="Agensi AI di Malaysia (AI Agency) | 5 Perkhidmatan Kami | Hunter Foo Media",
- desc="Agensi AI (AI agency) di Malaysia: perunding AI (pekerja digital disediakan dan diselenggara), pembinaan laman web, pengurusan laman web dan Google Business Profile, pengurusan media sosial dan sistem AI tersuai. Hunter Foo Media, Kuala Lumpur. WhatsApp +60196273143.",
+ desc="Agensi AI (AI agency) di Malaysia: perundingan AI (gaya Forward Deployed Engineer), pembinaan laman web, pengurusan laman web dan Google Business Profile, pengurusan media sosial dan sistem AI tersuai. Hunter Foo Media, Kuala Lumpur. WhatsApp +60196273143.",
  eyebrow="PERKHIDMATAN · KUALA LUMPUR", h1='Agensi AI <span class="orange">(AI Agency)</span> di Malaysia',
- lede="Lima perkhidmatan, daripada menyediakan pekerja digital AI anda hingga membina sistem yang dibuat khas untuk syarikat anda.",
+ lede="Lima perkhidmatan, daripada perundingan AI hingga membina sistem yang dibuat khas untuk syarikat anda.",
  cta="WhatsApp +60 19-627 3143", wamsg="Hai Hunter, saya baca halaman perkhidmatan anda. Perniagaan saya: __\nNombor perkhidmatan yang saya nak bincang: __",
  sve="PERKHIDMATAN KAMI", svh="Lima perkhidmatan",
  price_l="Harga", quote="Ikut sebut harga", see_web="Lihat halaman reka bentuk laman web", more_web="Halaman laman web →",
  services=[
-  ("ai-consultant", "Perunding AI", "Kami bermesyuarat sebulan sekali untuk melihat bahagian perniagaan anda yang perlukan AI. Kami sediakan satu pekerja digital utama untuk anda secara percuma, kemudian menyelenggarakannya. Enam pekerja digital ialah AI Laman Web, AI Pemasaran dan AI Khidmat Pelanggan (untuk pelanggan), serta AI Kerani, AI Pengurus dan AI PA (untuk pasukan).", "Menyediakan satu pekerja digital utama: percuma. Penyelenggaraan selepas itu: ikut sebut harga", None),
+  ("ai-consultant", "Perundingan AI | Gaya Forward Deployed Engineer", "<p>Kami bekerja seperti Forward Deployed Engineer yang ditempatkan di syarikat anda. Kami mempelajari bagaimana perniagaan dan pasukan anda berfungsi, kemudian menasihati di mana AI sesuai, apa yang perlu dibuat dahulu dan bagaimana membuatnya, supaya anda dapat mengikuti rentak AI tanpa mengejar setiap alat baharu.</p><ul class=\"sv-points\"><li>Mesyuarat perunding sebulan sekali</li><li>Tinjau tugas mana dalam syarikat yang boleh diserahkan kepada AI</li><li>Satu rancangan yang jelas beserta keutamaan</li><li>Pelaksanaan secara langsung apabila anda memerlukannya (pilihan)</li></ul>", "Ikut sebut harga", None),
   ("website-building", "Pembinaan laman web", "Kami bina laman web syarikat yang boleh dibaca dan ditemui oleh Google dan pembantu AI. Ia asas yang AI Laman Web kemas kini.", "RM399 (Asas), harga pelanggan awal untuk 5 pelanggan pertama. Pakej dengan SEO + AEO/GEO ada di halaman reka bentuk laman web", "/website-design/"),
   ("manage", "Penyelenggaraan laman web + pengurusan Google Business Profile", "AI Laman Web memastikan halaman web anda dikemas kini, dan kami menjaga Google Business Profile anda, supaya Google dan pembantu AI terus membaca dan menemui anda.", "RM499/bulan, harga pelanggan awal untuk 5 pelanggan pertama", "/website-design/"),
   ("social-media", "Pengurusan media sosial", "AI Pemasaran merangka 2 hantaran seminggu untuk anda (kapsyen dan imej), 8 hantaran sebulan, serta 2 reel AI (15 saat setiap satu) sebulan. Tiada apa diterbitkan sehingga anda luluskan.", "Ikut sebut harga", None),
@@ -113,7 +113,7 @@ P["ms"] = dict(
       ("AI PA", "Mengurus jadual bos, mengingatkan tindakan susulan, dan merangka balasan yang dihantar hanya selepas anda sahkan.")],
  fqe="SOALAN LAZIM", fqh="Soalan lazim",
  faq=[("Apa itu agensi AI (AI agency)?", "Agensi AI ialah syarikat yang membantu perniagaan menggunakan AI dalam operasi harian: menyediakannya, menyambungkannya dengan cara perniagaan sedia berjalan, dan memastikan ia terus berfungsi. Ia berbeza daripada sekadar menjual langganan perisian."),
-      ("Berapa kos agensi AI di Malaysia?", "Bergantung kepada skop, jadi tiada satu harga. Di Hunter Foo Media, pembinaan laman web ialah RM399 (Asas) dan penyelenggaraan laman web + pengurusan Google Business Profile ialah RM499/bulan. Menyediakan pekerja digital utama pertama anda adalah percuma. Dua harga ini ialah harga pelanggan awal untuk 5 pelanggan pertama, sebagai balasan satu testimoni yang jujur, dan akan naik selepas 5 pelanggan. Pengurusan media sosial, sistem AI tersuai dan penyelenggaraan pekerja digital anda disebut harga selepas kami faham cara perniagaan anda berjalan."),
+      ("Berapa kos agensi AI di Malaysia?", "Bergantung kepada skop, jadi tiada satu harga. Di Hunter Foo Media, pembinaan laman web ialah RM399 (Asas) dan penyelenggaraan laman web + pengurusan Google Business Profile ialah RM499/bulan. Dua harga ini ialah harga pelanggan awal untuk 5 pelanggan pertama, sebagai balasan satu testimoni yang jujur, dan akan naik selepas 5 pelanggan. Pengurusan media sosial, sistem AI tersuai dan penyelenggaraan pekerja digital anda disebut harga selepas kami faham cara perniagaan anda berjalan."),
       ("Adakah AI hantar sesuatu kepada pelanggan tanpa kelulusan saya?", "Tidak. AI Pemasaran hanya menerbitkan selepas anda luluskan, AI Khidmat Pelanggan menyerahkan kes rumit kepada orang, dan balasan yang dirangka AI PA dihantar hanya selepas anda sahkan."),
       HFAQ["ms"]["qa"][2],
       ("Di mana anda, dan adakah anda berkhidmat di Singapura?", "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk perniagaan di Malaysia dan Singapura, kebanyakannya secara dalam talian."),
@@ -140,8 +140,9 @@ def _main(k):
     blocks = []
     for i, (sid, name, desc, price, link) in enumerate(h["services"]):
         more = '<p class="sv-more"><a class="hm-link" href="%s">%s</a></p>' % (link, h["more_web"]) if link else ""
-        blocks.append('<article class="sv-block" id="%s"><span class="hm-n">%d</span><div class="sv-body"><h3>%s</h3><p>%s</p><p class="sv-price"><strong>%s</strong> %s</p>%s</div></article>'
-                      % (sid, i + 1, name, desc, h["price_l"], price, more))
+        copy = desc if desc.lstrip().startswith("<") else "<p>%s</p>" % desc
+        blocks.append('<article class="sv-block" id="%s"><span class="hm-n">%d</span><div class="sv-body"><h3>%s</h3>%s<p class="sv-price"><strong>%s</strong> %s</p>%s</div></article>'
+                      % (sid, i + 1, name, copy, h["price_l"], price, more))
     o.append('<section class="paper hm-sec sv-sec" id="services"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>%s</div></section>\n'
              % (h["sve"], h["svh"], "".join(blocks)))
     o.append('<section class="paper pd-faq-wrap" id="faq" aria-labelledby="sv-faq-h"><div class="wrap section"><div class="pd-faq">'
@@ -156,7 +157,10 @@ def _main(k):
     return "\n" + "".join(o)
 
 def _plain(s):
-    return re.sub(r"<[^>]+>", "", s)
+    s = re.sub(r"</li>", "; ", s)
+    s = re.sub(r"</(p|div|h3)>", " ", s)
+    s = re.sub(r"<[^>]+>", "", s)
+    return re.sub(r"\s+", " ", s).strip().rstrip(";").strip()
 
 def _ld(k):
     h = P[k]; u = D + PATH

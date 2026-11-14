@@ -113,7 +113,8 @@ def nav_html(lang, path):
     return "".join('<a href="%s%s"%s>%s</a>' % (p, h, ' aria-current="page"' if k == c else "", t) for k, h, t in NAV[lang])
 def foot_html(lang):
     p = LANGS[lang][0]
-    svc = "".join('<a href="%s%s">%s</a>' % (p, "/website-design/" if sid == "website-building" else "/services/#" + sid, re.sub(r"（.*?）", "", name))
+    short = lambda n: re.split(r"\s*[｜|]\s*", re.sub(r"（.*?）", "", n), maxsplit=1)[0]
+    svc = "".join('<a href="%s%s">%s</a>' % (p, "/website-design/" if sid == "website-building" else "/services/#" + sid, short(name))
                   for sid, name, d_, pr, l_ in SP[lang]["services"])
     ct = ('<a href="https://wa.me/60196273143" target="_blank" rel="noopener noreferrer">WhatsApp +60 19-627 3143</a>'
           '<!--email_off--><a href="mailto:hello@hunterfoomedia.com">hello@hunterfoomedia.com</a><!--/email_off-->')

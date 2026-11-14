@@ -1,6 +1,6 @@
 # Simplified homepage (EN / ZH / MS): core line verbatim (H[k]["pos"] from home_pages), no definition line,
 # Hero, the five services, a brief six-piece overview linking to /services/, one CTA.
-import urllib.parse, html
+import urllib.parse, html, re
 from home_pages import H
 from services_page import P as SP
 
@@ -22,7 +22,7 @@ for _k, (_t, _d) in META.items():
 X = {}
 X["en"] = dict(
  see="See our services", demo="Try AI Demo", sve="WHAT WE DO", svh="Five services",
- lines=["A monthly meeting, and your first main digital employee set up for free.",
+ lines=["A monthly meeting to advise where AI fits, what to do first and how.",
         "A company website that Google and AI assistants can read and find.",
         "Your web pages and Google Business Profile, kept up to date.",
         "8 posts and 2 AI reels a month. You approve before anything is published.",
@@ -32,7 +32,7 @@ X["en"] = dict(
  cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM.")
 X["zh"] = dict(
  see="看我们的服务", demo="试用 AI 演示", sve="我们做什么", svh="五项服务",
- lines=["每月开会一次，并免费设立你的第一位主要数字员工。",
+ lines=["每月一次顾问会议，告诉你哪里适合用 AI、先做什么、怎么做。",
         "Google 和 AI 助手读得懂、找得到的公司网站。",
         "网页和 Google Business Profile，持续更新。",
         "每月 8 篇帖子加 2 条 AI 短视频，你批准后才发布。",
@@ -42,7 +42,7 @@ X["zh"] = dict(
  cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。")
 X["ms"] = dict(
  see="Lihat perkhidmatan kami", demo="Cuba Demo AI", sve="APA KAMI BUAT", svh="Lima perkhidmatan",
- lines=["Mesyuarat sebulan sekali, dan pekerja digital utama pertama anda disediakan percuma.",
+ lines=["Mesyuarat perunding sebulan sekali: di mana AI sesuai, apa dibuat dahulu dan bagaimana.",
         "Laman web syarikat yang boleh dibaca dan ditemui oleh Google dan pembantu AI.",
         "Halaman web dan Google Business Profile anda, sentiasa dikemas kini.",
         "8 hantaran dan 2 reel AI sebulan. Anda luluskan sebelum diterbitkan.",
@@ -61,7 +61,8 @@ def _main(k):
              '<div class="hm-ctas"><a class="button" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a>'
              '<a class="button ghost" href="/services/">%s <span aria-hidden="true">→</span></a></div></section>\n'
              % (h["eyebrow"], h["h1"], h["pos"], html.escape(h["img_alt"], quote=True), wa, h["cta_wa"], x["see"]))
-    cards = "".join('<li><a href="/services/#%s"><span class="hm-n">%d</span><h3>%s</h3><p>%s</p><p class="hm-price">%s</p></a></li>' % (sid, i + 1, name, x["lines"][i], x["tags"][i])
+    short = lambda n: re.split(r"\s*[｜|]\s*", n, maxsplit=1)[0]
+    cards = "".join('<li><a href="/services/#%s"><span class="hm-n">%d</span><h3>%s</h3><p>%s</p><p class="hm-price">%s</p></a></li>' % (sid, i + 1, short(name), x["lines"][i], x["tags"][i])
                     for i, (sid, name, d_, p_, l_) in enumerate(s["services"]))
     o.append('<section class="paper hm-sec" id="services"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>'
              '<ol class="hm-cards hm-cards-light hm-cards-5 hm-svc">%s</ol>'
