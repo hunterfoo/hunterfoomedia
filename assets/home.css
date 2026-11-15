@@ -137,7 +137,8 @@
 }
 
 /* Simplified structure (2026-11-13): services page, homepage service cards, six-piece cards */
-.hm-cards a{display:block;color:inherit;height:100%}.hm-svc li{padding:0}.hm-svc a{padding:22px;border-radius:16px}.hm-svc a:hover h3{color:#c2552a}
+.hm-cards a{display:block;color:inherit;height:100%}.hm-svc li{padding:22px}.hm-svc a{padding:0;height:auto;border-radius:0}.hm-svc a:hover h3{color:#c2552a}
+.hm-svc .hm-price a{display:inline;height:auto;color:inherit}.hm-svc .hm-price a:hover{text-decoration:underline}
 .hm-svc h3{font-size:17px}
 .sv-sec .sv-block{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:26px 0;border-top:1px solid #dfe4dc}
 .sv-sec .sv-block:first-of-type{border-top:0}

@@ -27,7 +27,7 @@ X["en"] = dict(
         "Your web pages and Google Business Profile, kept up to date.",
         "8 posts and 2 AI reels a month. You approve before anything is published.",
         "Built around your company: an AI that answers from your documents, workflows, calendar and more."],
- tags=["By quote", "RM399 · founding price", "RM499/month · founding price", "By quote", "By quote"],
+ tags=["Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote"],
  aie="SIX DIGITAL EMPLOYEES", aih="Three serve your customers. Three help your team.", out="Outside", inn="Inside", aigo="See what each one does →",
  cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM.")
 X["zh"] = dict(
@@ -37,7 +37,7 @@ X["zh"] = dict(
         "网页和 Google Business Profile，持续更新。",
         "每月 8 篇帖子加 2 条 AI 短视频，你批准后才发布。",
         "按你的公司量身做：用公司资料回答问题的 AI、自动流程、日历等。"],
- tags=["按报价", "RM399 · 创始价", "每月 RM499 · 创始价", "按报价", "按报价"],
+ tags=["欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价"],
  aie="六位数字员工", aih="三位服务客户，三位帮团队。", out="对外", inn="对内", aigo="看每一位做什么 →",
  cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。")
 X["ms"] = dict(
@@ -47,7 +47,7 @@ X["ms"] = dict(
         "Halaman web dan Google Business Profile anda, sentiasa dikemas kini.",
         "8 hantaran dan 2 reel AI sebulan. Anda luluskan sebelum diterbitkan.",
         "Dibina khas untuk syarikat anda: AI yang menjawab daripada dokumen anda, aliran kerja, kalendar dan lagi."],
- tags=["Ikut sebut harga", "RM399 · harga pelanggan awal", "RM499/bulan · harga pelanggan awal", "Ikut sebut harga", "Ikut sebut harga"],
+ tags=["Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga"],
  aie="ENAM PEKERJA DIGITAL", aih="Tiga melayan pelanggan anda. Tiga membantu pasukan anda.", out="Di luar", inn="Di dalam", aigo="Lihat apa setiap satu buat →",
  cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM.")
 
@@ -62,7 +62,8 @@ def _main(k):
              '<a class="button ghost" href="/services/">%s <span aria-hidden="true">→</span></a></div></section>\n'
              % (h["eyebrow"], h["h1"], h["pos"], html.escape(h["img_alt"], quote=True), wa, h["cta_wa"], x["see"]))
     short = lambda n: re.split(r"\s*[｜|]\s*", n, maxsplit=1)[0]
-    cards = "".join('<li><a href="/services/#%s"><span class="hm-n">%d</span><h3>%s</h3><p>%s</p><p class="hm-price">%s</p></a></li>' % (sid, i + 1, short(name), x["lines"][i], x["tags"][i])
+    qlink = '<a href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a>' % (wa, x["tags"][0])
+    cards = "".join('<li><a href="/services/#%s"><span class="hm-n">%d</span><h3>%s</h3><p>%s</p></a><p class="hm-price">%s</p></li>' % (sid, i + 1, short(name), x["lines"][i], qlink)
                     for i, (sid, name, d_, p_, l_) in enumerate(s["services"]))
     o.append('<section class="paper hm-sec" id="services"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>'
              '<ol class="hm-cards hm-cards-light hm-cards-5 hm-svc">%s</ol>'

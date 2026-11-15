@@ -1,6 +1,6 @@
 # /services/ (EN / ZH / MS): the single services page. Five services, then the "what our AI can do" block (six pieces).
 # Copy is written AROUND Hunter's six pieces (names and one-line outcomes below, no tool names, no invented figures).
-# Prices: nothing numeric here. Website prices live on /website-design/ only; the rest is "by quote".
+# No numeric prices. Each service points to WhatsApp for a quote.
 # The company definition is NOT on this page (About only). FAQ answers stay generic.
 import urllib.parse, html, re
 from home_pages import HFAQ
@@ -8,6 +8,11 @@ from home_pages import HFAQ
 WA = "https://wa.me/60196273143"
 D = "https://www.hunterfoomedia.com"
 PATH = "/services/"
+QUOTE = {
+ "en": "Contact us on WhatsApp for a quote",
+ "zh": "欢迎 WhatsApp 咨询报价",
+ "ms": "Hubungi kami di WhatsApp untuk sebut harga",
+}
 
 def _svg(inner):
     return ('<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" '
@@ -29,13 +34,13 @@ P["en"] = dict(
  lede="Five services, from AI consulting to building a system made for your company.",
  cta="WhatsApp +60 19-627 3143", wamsg="Hi Hunter, I read your services page. My business: __\nI'd like to talk about service no.: __",
  sve="OUR SERVICES", svh="Five services",
- price_l="Price", quote="By quote", see_web="See the website design page", more_web="Website design page →",
+ price_l="Quote", quote="Contact us on WhatsApp for a quote", see_web="See the website design page", more_web="Website design page →",
  services=[
-  ("ai-consultant", "AI Consulting | Forward Deployed Engineer style", "<p>We work like a Forward Deployed Engineer embedded in your company. We learn how your business and team work, then advise where AI fits, what to do first and how to do it, so you keep up with AI without chasing every new tool.</p><ul class=\"sv-points\"><li>One consulting meeting a month</li><li>Review which tasks can be handed to AI</li><li>A clear plan with priorities</li><li>Hands-on implementation when you need it (optional)</li></ul>", "By quote", None),
-  ("website-building", "Website building", "We build a company website that Google and AI assistants can read and find. It is the base Website AI keeps up to date.", "RM399 (Basic), a founding price for the first 5 clients. The package with SEO + AEO/GEO is on the website design page", "/website-design/"),
-  ("manage", "Website maintenance + Google Business Profile management", "Website AI keeps your web pages up to date, and we look after your Google Business Profile, so Google and AI assistants keep reading and finding you.", "RM499/month, a founding price for the first 5 clients", "/website-design/"),
-  ("social-media", "Social media management", "Marketing AI drafts 2 posts a week for you (caption and image), 8 posts a month, plus 2 AI reels (15 seconds each) a month. Nothing is published until you approve it.", "By quote", None),
-  ("custom-ai", "Customized AI system", "If the six digital employees aren't enough, we build something made for your company. For example: an AI knowledge base that answers questions from your own company documents; workflows that link your repeated steps together automatically; a call system where AI assists during phone calls; a calendar system that books and schedules for you. And more, depending on what you need.", "By quote", None)],
+  ("ai-consultant", "AI Consulting | Forward Deployed Engineer style", "<p>We work like a Forward Deployed Engineer embedded in your company. We learn how your business and team work, then advise where AI fits, what to do first and how to do it, so you keep up with AI without chasing every new tool.</p><ul class=\"sv-points\"><li>One consulting meeting a month</li><li>Review which tasks can be handed to AI</li><li>A clear plan with priorities</li><li>Hands-on implementation when you need it (optional)</li></ul>", "Contact us on WhatsApp for a quote", None),
+  ("website-building", "Website building", "We build a company website that Google and AI assistants can read and find. It is the base Website AI keeps up to date.", "Contact us on WhatsApp for a quote", "/website-design/"),
+  ("manage", "Website maintenance + Google Business Profile management", "Website AI keeps your web pages up to date, and we look after your Google Business Profile, so Google and AI assistants keep reading and finding you.", "Contact us on WhatsApp for a quote", "/website-design/"),
+  ("social-media", "Social media management", "Marketing AI drafts 2 posts a week for you (caption and image), 8 posts a month, plus 2 AI reels (15 seconds each) a month. Nothing is published until you approve it.", "Contact us on WhatsApp for a quote", None),
+  ("custom-ai", "Customized AI system", "If the six digital employees aren't enough, we build something made for your company. For example: an AI knowledge base that answers questions from your own company documents; workflows that link your repeated steps together automatically; a call system where AI assists during phone calls; a calendar system that books and schedules for you. And more, depending on what you need.", "Contact us on WhatsApp for a quote", None)],
  aie="WHAT OUR AI CAN DO", aih="What our AI can do", demo_l="Try the interactive demo",
  aisub="Six digital employees: three serve your customers, three help your team.",
  outh="Outside: serving customers", inh="Inside: helping your team",
@@ -47,7 +52,7 @@ P["en"] = dict(
       ("PA AI", "Manages the boss's schedule, reminds you to follow up, and drafts replies that are sent only after you confirm.")],
  fqe="FAQ", fqh="Common questions",
  faq=[("What is an AI agency?", "An AI agency is a company that helps businesses put AI to work in their daily operations: setting it up, connecting it to how the business already runs, and keeping it working. It is different from only selling a software subscription."),
-      ("How much does an AI agency cost in Malaysia?", "It depends on the scope, so there is no single price. At Hunter Foo Media, website building is RM399 (Basic) and website maintenance + Google Business Profile management is RM499/month. These two prices are founding-client prices for the first 5 clients, in exchange for an honest testimonial, and will go up after 5 clients. Social media management, customized AI systems and the maintenance of your digital employees are quoted after we understand how your business works."),
+      ("How much does an AI agency cost in Malaysia?", "It depends on the scope. <a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">Contact us on WhatsApp for a quote</a>."),
       ("Will the AI send things to my customers without my approval?", "No. Marketing AI publishes only after you approve, Customer Service AI hands complex cases to a person, and PA AI's drafted replies are sent only after you confirm."),
       HFAQ["en"]["qa"][2],
       ("Where are you, and do you serve Singapore?", "We are based in Kuala Lumpur and serve businesses in Malaysia and Singapore, mostly online."),
@@ -62,13 +67,13 @@ P["zh"] = dict(
  lede="五项服务：从 AI 顾问陪跑，到做一个为你公司量身定做的系统。",
  cta="WhatsApp +60 19-627 3143", wamsg="你好 Hunter，我看了你们的服务页。我做的是：＿＿\n想聊的服务编号：＿＿",
  sve="我们的服务", svh="五项服务",
- price_l="价格", quote="按报价", see_web="看制作网站页", more_web="制作网站页 →",
+ price_l="报价", quote="欢迎 WhatsApp 咨询报价", see_web="看制作网站页", more_web="制作网站页 →",
  services=[
-  ("ai-consultant", "AI 顾问｜FDE 驻场式陪跑", "<p>我们像你公司里的 Forward Deployed Engineer：先了解你的业务和团队，再告诉你哪里适合用 AI、先做什么、怎么做。你不用自己追新工具，有我们帮你判断。</p><ul class=\"sv-points\"><li>每月一次顾问会议</li><li>盘点公司里哪些工作可以交给 AI</li><li>给你一份清楚的建议和优先顺序</li><li>需要落地时，我们可以帮你执行（可选）</li></ul>", "按报价", None),
-  ("website-building", "制作网站", "做一个 Google 和 AI 助手读得懂、找得到的公司网站，也是网站 AI 持续更新的基础。", "RM399（基础版），前 5 位客户的创始价。含 SEO + AEO/GEO 的方案见制作网站页", "/website-design/"),
-  ("manage", "网站维护 + Google Business Profile 管理", "网站 AI 帮你持续更新网页内容，我们也帮你管理 Google Business Profile，让 Google 和 AI 助手一直读得懂、找得到你。", "每月 RM499，前 5 位客户的创始价", "/website-design/"),
-  ("social-media", "Social media management（社交媒体管理）", "营销 AI 每周帮你起草 2 篇帖子（文案加图片），一个月 8 篇，另外每月做 2 条 15 秒的 AI 短视频（reel）。你批准后才发布。", "按报价", None),
-  ("custom-ai", "定制 AI 系统", "如果六位数字员工还不够，我们按你公司的需要量身做。例如：用公司资料回答问题的 AI 知识库；把重复的步骤自动串起来的流程；电话通话中由 AI 协助的通话系统；自动排日程、约时间的日历系统。还有别的，看你需要什么。", "按报价", None)],
+  ("ai-consultant", "AI 顾问｜FDE 驻场式陪跑", "<p>我们像你公司里的 Forward Deployed Engineer：先了解你的业务和团队，再告诉你哪里适合用 AI、先做什么、怎么做。你不用自己追新工具，有我们帮你判断。</p><ul class=\"sv-points\"><li>每月一次顾问会议</li><li>盘点公司里哪些工作可以交给 AI</li><li>给你一份清楚的建议和优先顺序</li><li>需要落地时，我们可以帮你执行（可选）</li></ul>", "欢迎 WhatsApp 咨询报价", None),
+  ("website-building", "制作网站", "做一个 Google 和 AI 助手读得懂、找得到的公司网站，也是网站 AI 持续更新的基础。", "欢迎 WhatsApp 咨询报价", "/website-design/"),
+  ("manage", "网站维护 + Google Business Profile 管理", "网站 AI 帮你持续更新网页内容，我们也帮你管理 Google Business Profile，让 Google 和 AI 助手一直读得懂、找得到你。", "欢迎 WhatsApp 咨询报价", "/website-design/"),
+  ("social-media", "Social media management（社交媒体管理）", "营销 AI 每周帮你起草 2 篇帖子（文案加图片），一个月 8 篇，另外每月做 2 条 15 秒的 AI 短视频（reel）。你批准后才发布。", "欢迎 WhatsApp 咨询报价", None),
+  ("custom-ai", "定制 AI 系统", "如果六位数字员工还不够，我们按你公司的需要量身做。例如：用公司资料回答问题的 AI 知识库；把重复的步骤自动串起来的流程；电话通话中由 AI 协助的通话系统；自动排日程、约时间的日历系统。还有别的，看你需要什么。", "欢迎 WhatsApp 咨询报价", None)],
  aie="我们的 AI 能做什么", aih="我们的 AI 能做什么", demo_l="试用互动演示",
  aisub="六位数字员工：三位服务客户，三位帮团队。",
  outh="对外：服务客户", inh="对内：帮团队做事",
@@ -80,7 +85,7 @@ P["zh"] = dict(
       ("PA AI", "管理老板的日程，提醒跟进，起草回复，你确认后才发出。")],
  fqe="常见问题", fqh="常见问题",
  faq=[("什么是 AI agency？", "AI agency 是帮企业把 AI 用进日常运作的公司：把 AI 设置好，接上企业原本的做事方式，并让它持续运作。和只卖软件订阅不一样。"),
-      ("马来西亚的 AI agency 要多少钱？", "要看范围，没有单一价格。在 Hunter Foo Media，制作网站是 RM399（基础版），网站维护 + Google Business Profile 管理是每月 RM499。这两个价格是前 5 位客户的创始价，条件是为我们写一则真实评价，满 5 位后将调价。社交媒体管理、定制 AI 系统，以及数字员工的维护，等我们弄清楚你的生意怎么运作之后，以书面报价确认。"),
+      ("马来西亚的 AI agency 要多少钱？", "要看范围。<a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">欢迎 WhatsApp 咨询报价</a>。"),
       ("AI 会不经我批准就发东西给客户吗？", "不会。营销 AI 要你批准后才发布；客服 AI 遇到复杂情况会交给真人；PA AI 起草的回复，你确认后才发出。"),
       HFAQ["zh"]["qa"][2],
       ("你们在哪里？也服务新加坡吗？", "我们位于吉隆坡，服务马来西亚和新加坡的企业，大部分在线上完成。"),
@@ -95,13 +100,13 @@ P["ms"] = dict(
  lede="Lima perkhidmatan, daripada perundingan AI hingga membina sistem yang dibuat khas untuk syarikat anda.",
  cta="WhatsApp +60 19-627 3143", wamsg="Hai Hunter, saya baca halaman perkhidmatan anda. Perniagaan saya: __\nNombor perkhidmatan yang saya nak bincang: __",
  sve="PERKHIDMATAN KAMI", svh="Lima perkhidmatan",
- price_l="Harga", quote="Ikut sebut harga", see_web="Lihat halaman reka bentuk laman web", more_web="Halaman laman web →",
+ price_l="Sebut harga", quote="Hubungi kami di WhatsApp untuk sebut harga", see_web="Lihat halaman reka bentuk laman web", more_web="Halaman laman web →",
  services=[
-  ("ai-consultant", "Perundingan AI | Gaya Forward Deployed Engineer", "<p>Kami bekerja seperti Forward Deployed Engineer yang ditempatkan di syarikat anda. Kami mempelajari bagaimana perniagaan dan pasukan anda berfungsi, kemudian menasihati di mana AI sesuai, apa yang perlu dibuat dahulu dan bagaimana membuatnya, supaya anda dapat mengikuti rentak AI tanpa mengejar setiap alat baharu.</p><ul class=\"sv-points\"><li>Mesyuarat perunding sebulan sekali</li><li>Tinjau tugas mana dalam syarikat yang boleh diserahkan kepada AI</li><li>Satu rancangan yang jelas beserta keutamaan</li><li>Pelaksanaan secara langsung apabila anda memerlukannya (pilihan)</li></ul>", "Ikut sebut harga", None),
-  ("website-building", "Pembinaan laman web", "Kami bina laman web syarikat yang boleh dibaca dan ditemui oleh Google dan pembantu AI. Ia asas yang AI Laman Web kemas kini.", "RM399 (Asas), harga pelanggan awal untuk 5 pelanggan pertama. Pakej dengan SEO + AEO/GEO ada di halaman reka bentuk laman web", "/website-design/"),
-  ("manage", "Penyelenggaraan laman web + pengurusan Google Business Profile", "AI Laman Web memastikan halaman web anda dikemas kini, dan kami menjaga Google Business Profile anda, supaya Google dan pembantu AI terus membaca dan menemui anda.", "RM499/bulan, harga pelanggan awal untuk 5 pelanggan pertama", "/website-design/"),
-  ("social-media", "Pengurusan media sosial", "AI Pemasaran merangka 2 hantaran seminggu untuk anda (kapsyen dan imej), 8 hantaran sebulan, serta 2 reel AI (15 saat setiap satu) sebulan. Tiada apa diterbitkan sehingga anda luluskan.", "Ikut sebut harga", None),
-  ("custom-ai", "Sistem AI tersuai", "Jika enam pekerja digital belum cukup, kami bina sesuatu yang dibuat khas untuk syarikat anda. Contohnya: pangkalan pengetahuan AI yang menjawab soalan berdasarkan dokumen syarikat anda sendiri; aliran kerja yang menyambungkan langkah berulang anda secara automatik; sistem panggilan di mana AI membantu semasa panggilan telefon; sistem kalendar yang menetapkan jadual dan temu janji untuk anda. Dan lagi, bergantung pada keperluan anda.", "Ikut sebut harga", None)],
+  ("ai-consultant", "Perundingan AI | Gaya Forward Deployed Engineer", "<p>Kami bekerja seperti Forward Deployed Engineer yang ditempatkan di syarikat anda. Kami mempelajari bagaimana perniagaan dan pasukan anda berfungsi, kemudian menasihati di mana AI sesuai, apa yang perlu dibuat dahulu dan bagaimana membuatnya, supaya anda dapat mengikuti rentak AI tanpa mengejar setiap alat baharu.</p><ul class=\"sv-points\"><li>Mesyuarat perunding sebulan sekali</li><li>Tinjau tugas mana dalam syarikat yang boleh diserahkan kepada AI</li><li>Satu rancangan yang jelas beserta keutamaan</li><li>Pelaksanaan secara langsung apabila anda memerlukannya (pilihan)</li></ul>", "Hubungi kami di WhatsApp untuk sebut harga", None),
+  ("website-building", "Pembinaan laman web", "Kami bina laman web syarikat yang boleh dibaca dan ditemui oleh Google dan pembantu AI. Ia asas yang AI Laman Web kemas kini.", "Hubungi kami di WhatsApp untuk sebut harga", "/website-design/"),
+  ("manage", "Penyelenggaraan laman web + pengurusan Google Business Profile", "AI Laman Web memastikan halaman web anda dikemas kini, dan kami menjaga Google Business Profile anda, supaya Google dan pembantu AI terus membaca dan menemui anda.", "Hubungi kami di WhatsApp untuk sebut harga", "/website-design/"),
+  ("social-media", "Pengurusan media sosial", "AI Pemasaran merangka 2 hantaran seminggu untuk anda (kapsyen dan imej), 8 hantaran sebulan, serta 2 reel AI (15 saat setiap satu) sebulan. Tiada apa diterbitkan sehingga anda luluskan.", "Hubungi kami di WhatsApp untuk sebut harga", None),
+  ("custom-ai", "Sistem AI tersuai", "Jika enam pekerja digital belum cukup, kami bina sesuatu yang dibuat khas untuk syarikat anda. Contohnya: pangkalan pengetahuan AI yang menjawab soalan berdasarkan dokumen syarikat anda sendiri; aliran kerja yang menyambungkan langkah berulang anda secara automatik; sistem panggilan di mana AI membantu semasa panggilan telefon; sistem kalendar yang menetapkan jadual dan temu janji untuk anda. Dan lagi, bergantung pada keperluan anda.", "Hubungi kami di WhatsApp untuk sebut harga", None)],
  aie="APA AI KAMI BOLEH BUAT", aih="Apa AI kami boleh buat", demo_l="Cuba demo interaktif",
  aisub="Enam pekerja digital: tiga melayan pelanggan, tiga membantu pasukan.",
  outh="Di luar: melayan pelanggan", inh="Di dalam: membantu pasukan",
@@ -113,7 +118,7 @@ P["ms"] = dict(
       ("AI PA", "Mengurus jadual bos, mengingatkan tindakan susulan, dan merangka balasan yang dihantar hanya selepas anda sahkan.")],
  fqe="SOALAN LAZIM", fqh="Soalan lazim",
  faq=[("Apa itu agensi AI (AI agency)?", "Agensi AI ialah syarikat yang membantu perniagaan menggunakan AI dalam operasi harian: menyediakannya, menyambungkannya dengan cara perniagaan sedia berjalan, dan memastikan ia terus berfungsi. Ia berbeza daripada sekadar menjual langganan perisian."),
-      ("Berapa kos agensi AI di Malaysia?", "Bergantung kepada skop, jadi tiada satu harga. Di Hunter Foo Media, pembinaan laman web ialah RM399 (Asas) dan penyelenggaraan laman web + pengurusan Google Business Profile ialah RM499/bulan. Dua harga ini ialah harga pelanggan awal untuk 5 pelanggan pertama, sebagai balasan satu testimoni yang jujur, dan akan naik selepas 5 pelanggan. Pengurusan media sosial, sistem AI tersuai dan penyelenggaraan pekerja digital anda disebut harga selepas kami faham cara perniagaan anda berjalan."),
+      ("Berapa kos agensi AI di Malaysia?", "Bergantung kepada skop. <a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">Hubungi kami di WhatsApp untuk sebut harga</a>."),
       ("Adakah AI hantar sesuatu kepada pelanggan tanpa kelulusan saya?", "Tidak. AI Pemasaran hanya menerbitkan selepas anda luluskan, AI Khidmat Pelanggan menyerahkan kes rumit kepada orang, dan balasan yang dirangka AI PA dihantar hanya selepas anda sahkan."),
       HFAQ["ms"]["qa"][2],
       ("Di mana anda, dan adakah anda berkhidmat di Singapura?", "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk perniagaan di Malaysia dan Singapura, kebanyakannya secara dalam talian."),
@@ -141,8 +146,9 @@ def _main(k):
     for i, (sid, name, desc, price, link) in enumerate(h["services"]):
         more = '<p class="sv-more"><a class="hm-link" href="%s">%s</a></p>' % (link, h["more_web"]) if link else ""
         copy = desc if desc.lstrip().startswith("<") else "<p>%s</p>" % desc
-        blocks.append('<article class="sv-block" id="%s"><span class="hm-n">%d</span><div class="sv-body"><h3>%s</h3>%s<p class="sv-price"><strong>%s</strong> %s</p>%s</div></article>'
-                      % (sid, i + 1, name, copy, h["price_l"], price, more))
+        qlink = '<a class="hm-link" href="%s" target="_blank" rel="noopener noreferrer">%s <span aria-hidden="true">↗</span></a>' % (wa, QUOTE[k])
+        blocks.append('<article class="sv-block" id="%s"><span class="hm-n">%d</span><div class="sv-body"><h3>%s</h3>%s<p class="sv-price">%s</p>%s</div></article>'
+                      % (sid, i + 1, name, copy, qlink, more))
     o.append('<section class="paper hm-sec sv-sec" id="services"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>%s</div></section>\n'
              % (h["sve"], h["svh"], "".join(blocks)))
     o.append('<section class="paper pd-faq-wrap" id="faq" aria-labelledby="sv-faq-h"><div class="wrap section"><div class="pd-faq">'

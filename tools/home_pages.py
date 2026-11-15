@@ -1,6 +1,6 @@
 # Homepage (EN / ZH / MS). Copy written natively per language.
 # Rules: no timelines, no ranking or AI-recommendation promises, no invented clients/testimonials/portfolio,
-# fees by written quote except the website prices (taken from products_pages.WB).
+# contact line points to WhatsApp for a quote; website packages come from products_pages.WB.
 from products_pages import WB, CHECK, PRODUCTS, fee_btn, founding_note
 from articles_pages import ARTICLES, DATE_FMT
 
@@ -46,7 +46,7 @@ H["en"] = dict(
  fp=["I started as a CNC programmer in Singapore, then spent 18 years in HR, recruitment and sales.",
      "In early 2025 I started running my own company's daily work with AI, and built an internal HR app to track candidates and follow-ups. I only offer clients what I've used myself and seen work."],
  falt="Portrait of Hunter Foo", fmore="More about us →",
- ce="NEXT STEP", ch="Tell us about your business", cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM. Fees by written quote, except the website prices above.",
+ ce="NEXT STEP", ch="Tell us about your business", cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM. Contact us on WhatsApp for a quote.",
  wamsg="Hi Hunter, I'd like to ask about a website / AI for my business.\nMy business: __\nWebsite now (link or none): __",
 
 
@@ -129,7 +129,7 @@ H["zh"] = dict(
  fp=["我在新加坡做过 CNC 编程，后来转做人力资源、招聘和销售，前后 18 年。",
      "2025 年初，我开始用 AI 处理自己公司的日常工作，也做了一个内部 HR 应用来整理候选人和跟进。我只给客户做自己用过、确定有效的东西。"],
  falt="Hunter Foo 肖像", fmore="了解更多 →",
- ce="下一步", ch="跟我们说说你的生意", cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。除了上面的网站价格，其他费用以书面报价确认。",
+ ce="下一步", ch="跟我们说说你的生意", cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。欢迎 WhatsApp 咨询报价。",
  wamsg="你好 Hunter，我想了解网站 / AI 方案。\n我做的是：＿＿\n现在的网站（链接或没有）：＿＿",
 
 
@@ -212,7 +212,7 @@ H["ms"] = dict(
  fp=["Saya bermula sebagai pengaturcara CNC di Singapura, kemudian 18 tahun dalam HR, rekrutmen dan jualan.",
      "Pada awal 2025, saya mula menggunakan AI untuk kerja harian syarikat saya sendiri, dan membina aplikasi HR dalaman untuk menjejak calon dan susulan. Saya hanya menawarkan apa yang telah saya guna sendiri dan terbukti berkesan."],
  falt="Potret Hunter Foo", fmore="Lagi tentang kami →",
- ce="LANGKAH SETERUSNYA", ch="Ceritakan tentang perniagaan anda", cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM. Yuran melalui sebut harga bertulis, kecuali harga laman web di atas.",
+ ce="LANGKAH SETERUSNYA", ch="Ceritakan tentang perniagaan anda", cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM. Hubungi kami di WhatsApp untuk sebut harga.",
  wamsg="Hai Hunter, saya nak tanya tentang laman web / AI untuk perniagaan saya.\nBisnes saya: __\nLaman web sekarang (pautan atau tiada): __",
 
 
