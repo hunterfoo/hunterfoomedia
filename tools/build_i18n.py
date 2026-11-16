@@ -31,7 +31,12 @@ ORG = {"@type": ["Organization", "ProfessionalService"], "@id": D + "/#organizat
        "address": {"@type": "PostalAddress", "streetAddress": "D-1-28, Residensi Bandar Razak, Salak Selatan", "postalCode": "57100",
                    "addressLocality": "Kuala Lumpur", "addressRegion": "Wilayah Persekutuan Kuala Lumpur", "addressCountry": "MY"},
        "areaServed": [{"@type": "Country", "name": "Malaysia"}, {"@type": "Country", "name": "Singapore"}],
-       "sameAs": ["https://web.facebook.com/hunterfooai/", "https://www.linkedin.com/in/hunterfoo3143/"],
+       # GBP: cid is int("0x7fc62cbd2152987d", 16) from Maps place id (verified).
+       # geo from Hunter's official Maps embed pin (2026-11-16); do not guess coordinates.
+       "sameAs": ["https://web.facebook.com/hunterfooai/", "https://www.linkedin.com/in/hunterfoo3143/",
+                  "https://www.google.com/maps?cid=9207095679025059965"],
+       "hasMap": "https://www.google.com/maps?cid=9207095679025059965",
+       "geo": {"@type": "GeoCoordinates", "latitude": 3.108995, "longitude": 101.702564},
        "founder": {"@id": D + "/#founder"},
        "contactPoint": [{"@type": "ContactPoint", "telephone": "+60 19-627 3143", "email": "hello@hunterfoomedia.com",
                          "contactType": "customer service", "url": "https://wa.me/60196273143",

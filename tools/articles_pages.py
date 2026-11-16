@@ -3,17 +3,17 @@
 WA = "https://wa.me/60196273143"
 
 INDEX = {
- "en": {"title": "Notes | Hunter Foo Media",
-        "desc": "Practical notes for businesses in Malaysia and Singapore on ads, hiring, content and AI automation. Written from real work, no hype.",
-        "eyebrow": "NOTES", "h1": "Notes", "lede": "Practical notes on ads, hiring, content and automation for businesses in Malaysia and Singapore. Written from what we actually do.",
+ "en": {"title": "Notes on AI Automation, Ads and Hiring | Hunter Foo Media",
+        "desc": "Practical notes for businesses in Malaysia and Singapore on AI automation, ads, hiring and content. Written from real work, no hype, to help you keep pace with AI.",
+        "eyebrow": "NOTES", "h1": "Notes on AI automation, ads and hiring", "lede": "Practical notes on AI automation, ads, hiring and content for businesses in Malaysia and Singapore. Written from what we actually do.",
         "read": "Read the note", "crumb": "Home", "next": "CONTACT", "cta": "Ask us a question", "wa": "Hi Hunter, I read your notes and have a question:"},
- "zh": {"title": "笔记｜Hunter Foo Media",
-        "desc": "写给马来西亚与新加坡企业的实用笔记：广告、招聘、内容与 AI 自动化。从实际工作出发，不吹牛。",
-        "eyebrow": "笔记", "h1": "笔记", "lede": "写给马来西亚和新加坡企业的实用笔记：广告、招聘、内容和自动化。都是我们实际在做的事。",
+ "zh": {"title": "AI 自动化、广告与招聘笔记｜Hunter Foo Media",
+        "desc": "写给马来西亚与新加坡企业的实用笔记，内容涵盖 AI 自动化、广告、招聘与内容经营。都从实际工作出发，不吹牛，帮企业跟上 AI 的脚步。",
+        "eyebrow": "笔记", "h1": "AI 自动化、广告与招聘笔记", "lede": "写给马来西亚和新加坡企业的实用笔记：AI 自动化、广告、招聘和内容。都是我们实际在做的事。",
         "read": "阅读全文", "crumb": "首页", "next": "联系", "cta": "有问题直接问", "wa": "你好 Hunter，我看了你的笔记，想问："},
- "ms": {"title": "Catatan | Hunter Foo Media",
-        "desc": "Nota praktikal untuk perniagaan di Malaysia dan Singapura tentang iklan, pengambilan pekerja, kandungan dan automasi AI. Ditulis daripada kerja sebenar.",
-        "eyebrow": "CATATAN", "h1": "Catatan", "lede": "Nota praktikal tentang iklan, pengambilan pekerja, kandungan dan automasi untuk perniagaan di Malaysia dan Singapura. Berdasarkan kerja yang kami buat sendiri.",
+ "ms": {"title": "Catatan Automasi AI, Iklan dan Pengambilan | Hunter Foo Media",
+        "desc": "Nota praktikal untuk perniagaan di Malaysia dan Singapura tentang automasi AI, iklan, pengambilan pekerja dan kandungan. Ditulis daripada kerja sebenar, supaya anda kekal seiring dengan AI.",
+        "eyebrow": "CATATAN", "h1": "Catatan automasi AI, iklan dan pengambilan", "lede": "Nota praktikal tentang automasi AI, iklan, pengambilan pekerja dan kandungan untuk perniagaan di Malaysia dan Singapura. Berdasarkan kerja yang kami buat sendiri.",
         "read": "Baca catatan", "crumb": "Utama", "next": "HUBUNGI", "cta": "Tanya kami", "wa": "Hai Hunter, saya baca catatan anda dan ada soalan:"},
 }
 
@@ -75,6 +75,7 @@ ART_EN = """
 
 <h2>Where we can help</h2>
 <p>Hunter Foo Media plans and runs Meta ads for small businesses in Singapore and Malaysia, including hiring ads: campaign setup, caption and image, the WhatsApp reply flow, and a simple report on what is happening. You approve every ad before it runs. We cannot promise a number of applicants or hires, and we are not a recruitment agency, so the hiring decisions stay with you. Fees are by written quote.</p>
+<p>For a wider view of keeping a business in step with AI, read <a href="/notes/keeping-your-business-in-step-with-ai/">Keeping your business in step with AI</a>.</p>
 """ % (ext(META_HELP, "About ads for employment"), ext(TAFEP, "guide to writing fair job advertisements"), ext(PDPC, "advisory guidelines on NRIC numbers"))
 
 ART_ZH = """
@@ -127,7 +128,8 @@ ART_ZH = """
 <p>一条招聘广告点赞很多、私讯很少，就是没做到它该做的事。要记的是：多少人发了消息、多少人通过基本问题、多少人来面试、多少人真的上班。预算先从小开始，一次只改一样（图片、第一行、地区），等真的有人来面试了再加钱。</p>
 
 <h2>我们能帮什么</h2>
-<p>Hunter Foo Media 帮新加坡和马来西亚的中小企业规划和投放 Meta 广告，包括招聘广告：开设广告活动、写文案做图、设好 WhatsApp 回复流程，再给你一份看得懂的简单报告。每条广告上线前都由你确认。我们不能保证有多少人应征或录用；我们也不是职业中介，录不录用由你决定。费用以书面报价为准。</p>
+<p>Hunter Foo Media 帮新加坡和马来西亚的企业规划和投放 Meta 广告，包括招聘广告：开设广告活动、写文案做图、设好 WhatsApp 回复流程，再给你一份看得懂的简单报告。每条广告上线前都由你确认。我们不能保证有多少人应征或录用；我们也不是职业中介，录不录用由你决定。费用以书面报价为准。</p>
+<p>若想从更宽的角度看企业如何跟上 AI，可阅读<a href="/notes/keeping-your-business-in-step-with-ai/">AI 不停迭代，公司怎样持续跟上？</a>。</p>
 """ % (ext(META_HELP, "About ads for employment"), ext(TAFEP, "公平招聘广告写作指南"), ext(PDPC, "关于 NRIC 号码的咨询指南"))
 
 ART_MS = """
@@ -181,6 +183,7 @@ ART_MS = """
 
 <h2>Di mana kami boleh bantu</h2>
 <p>Hunter Foo Media merancang dan menjalankan iklan Meta untuk perniagaan kecil di Singapura dan Malaysia, termasuk iklan pengambilan pekerja: persediaan kempen, kapsyen dan gambar, aliran balasan WhatsApp, dan laporan ringkas tentang apa yang berlaku. Anda luluskan setiap iklan sebelum ia disiarkan. Kami tidak boleh menjanjikan bilangan pemohon atau pekerja, dan kami bukan agensi pekerjaan, jadi keputusan pengambilan kekal di tangan anda. Yuran melalui sebut harga bertulis.</p>
+<p>Untuk pandangan yang lebih luas tentang cara perniagaan kekal seiring dengan AI, baca <a href="/notes/keeping-your-business-in-step-with-ai/">Bagaimana perniagaan boleh kekal seiring dengan AI</a>.</p>
 """ % (ext(META_HELP, "About ads for employment"), ext(TAFEP, "Panduan menulis iklan kerja yang adil"), ext(PDPC, "garis panduan nasihat tentang nombor NRIC"))
 
 ART2_EN = """
@@ -207,6 +210,7 @@ ART2_EN = """
 
 <h2>Where to start</h2>
 <p>If you are not sure what your first step should be, take a look at <a href="/website-design/">our website building service</a> and the rest of what we do, or message me on WhatsApp. Hunter Foo Media can build the website, the social media content and the WhatsApp flow with you, and you approve each step. We do not promise search rankings or recommendations from AI tools. Fees are by written quote.</p>
+<p>If you are planning hiring ads, see also <a href="/notes/meta-hiring-ads-singapore-sme/">what to know before running Meta hiring ads in Singapore</a>.</p>
 """
 
 ART2_ZH = """
@@ -233,6 +237,7 @@ ART2_ZH = """
 
 <h2>从哪里开始</h2>
 <p>如果你还不确定第一步该做什么，可以先看看我们的<a href="/website-design/">网站建设服务</a>和其他服务，或者直接 WhatsApp 我。Hunter Foo Media 可以和你一起把网站、社交媒体内容和 WhatsApp 流程做起来，每一步都由你确认。我们不保证搜索排名，也不保证会被 AI 工具推荐。费用以书面报价为准。</p>
+<p>如果要在新加坡投放招聘广告，也可以先看<a href="/notes/meta-hiring-ads-singapore-sme/">投 Meta 招聘广告前要知道的事</a>。</p>
 """
 
 ART2_MS = """
@@ -259,6 +264,7 @@ ART2_MS = """
 
 <h2>Di mana hendak bermula</h2>
 <p>Jika anda belum pasti apa langkah pertama, lihat <a href="/website-design/">servis pembinaan laman web</a> kami dan servis lain, atau WhatsApp saya terus. Hunter Foo Media boleh membina laman web, kandungan media sosial dan aliran WhatsApp bersama anda, dan anda luluskan setiap langkah. Kami tidak menjanjikan kedudukan carian atau cadangan daripada alat AI. Yuran melalui sebut harga bertulis.</p>
+<p>Jika anda merancang iklan pengambilan pekerja, lihat juga <a href="/notes/meta-hiring-ads-singapore-sme/">apa yang perlu diketahui sebelum menjalankan iklan kerja Meta di Singapura</a>.</p>
 """
 
 ART2 = {"slug": "keeping-your-business-in-step-with-ai", "date": "2026-10-30",
@@ -292,7 +298,7 @@ ARTICLES = [
          "wa": "Hi Hunter, I read your article on Meta hiring ads. We are hiring for: ____ in ____", "cta_note": "Malaysian number +60196273143. English or Chinese. Fees by written quote."},
   "zh": {"title": "新加坡 SME 投 Meta 招聘广告前要知道的事｜Hunter Foo Media",
          "h1": "新加坡 SME 投 Meta 招聘广告前要知道的事",
-         "desc": "Meta 就业类特殊广告限制、定位限制、公平招聘文案、简单的图文技巧、用 WhatsApp 接应征者、快速跟进。写给新加坡中小企业的实用指南。",
+         "desc": "Meta 就业类特殊广告限制、定位限制、公平招聘文案、简单的图文技巧、用 WhatsApp 接应征者、快速跟进。写给在新加坡招聘的企业的实用指南。",
          "lede": "Facebook 和 Instagram 能碰到不上求职网站的人。投之前先把几件事做对：Meta 的规则、公平的写法、广告本身，以及你怎么回复。",
          "eyebrow": "META 广告 · 招聘", "body": ART_ZH, "next": "下一步", "cta": "准备投招聘广告？",
          "wa": "你好 Hunter，我看了你写的 Meta 招聘广告文章。我们在招：＿＿，地点：＿＿", "cta_note": "马来西亚号码 +60196273143。简体中文或英文都行。费用以书面报价为准。"},
@@ -328,7 +334,8 @@ def article_main(lang, a, p):
     t = a[lang]; h = INDEX[lang]
     return ('\n<article>\n<section class="wrap page-intro">\n<p class="crumbs"><a href="/">%s</a> / <a href="/notes/">%s</a> / %s</p>\n<p class="eyebrow"><i></i>%s</p>\n<h1>%s</h1>\n<p class="lede">%s</p>\n'
             '<p class="crumbs" style="margin-top:18px"><time datetime="%s">%s</time> · %s</p>\n</section>\n'
-            '<section class="paper"><div class="wrap section prose">\n%s\n<p class="related"><a href="/notes/">← %s</a><a href="/services/">%s</a></p>\n</div></section>\n</article>\n' % (
+            '<section class="paper"><div class="wrap section prose">\n%s\n<p class="related"><a href="/notes/">← %s</a>%s<a href="/services/">%s</a></p>\n</div></section>\n</article>\n' % (
             h["crumb"], h["h1"].rstrip(".。"), t["h1"], t["eyebrow"], t["h1"], t["lede"], a["date"], DATE_FMT[lang](a["date"]), BY[lang], t["body"], ALL_LABEL[lang],
+            "".join('<a href="/notes/%s/">%s</a>' % (b["slug"], b[lang]["h1"]) for b in ARTICLES if b["slug"] != a["slug"]),
             {"en": "Our services", "zh": "看我们的服务", "ms": "Perkhidmatan kami"}[lang])
             + contact(lang, t["next"], t["cta"], t["wa"], t["cta_note"]))

@@ -3,7 +3,7 @@
 # No numeric prices. Each service points to WhatsApp for a quote.
 # The company definition is NOT on this page (About only). FAQ answers stay generic.
 import urllib.parse, html, re
-from home_pages import HFAQ
+from home_pages import RANKING_QA
 
 WA = "https://wa.me/60196273143"
 D = "https://www.hunterfoomedia.com"
@@ -54,9 +54,16 @@ P["en"] = dict(
  faq=[("What is an AI agency?", "An AI agency is a company that helps businesses put AI to work in their daily operations: setting it up, connecting it to how the business already runs, and keeping it working. It is different from only selling a software subscription."),
       ("How much does an AI agency cost in Malaysia?", "It depends on the scope. <a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">Contact us on WhatsApp for a quote</a>."),
       ("Will the AI send things to my customers without my approval?", "No. Marketing AI publishes only after you approve, Customer Service AI hands complex cases to a person, and PA AI's drafted replies are sent only after you confirm."),
-      HFAQ["en"]["qa"][2],
+      RANKING_QA["en"],
       ("Where are you, and do you serve Singapore?", "We are based in Kuala Lumpur and serve businesses in Malaysia and Singapore, mostly online."),
       ("Is Hunter Foo Media a recruitment agency?", "No. We don't charge job seekers or place candidates ourselves. See the About page for details.")],
+ nte="FROM OUR NOTES", nth="Notes that go with these services",
+ ntp="If you want to keep pace with AI, or you are about to run hiring ads, start with these two notes.",
+ nall="All notes →",
+ notes=[("/notes/keeping-your-business-in-step-with-ai/", "Keeping your business in step with AI",
+         "How a business can keep pace with AI: start with trust and a website, then a funnel to WhatsApp."),
+        ("/notes/meta-hiring-ads-singapore-sme/", "What Singapore businesses should know before running Meta hiring ads",
+         "Practical points on Meta's employment ads, fair wording, and WhatsApp follow-up.")],
  ce="NEXT STEP", ch="Tell us about your business", cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM.",
  crumb="Home", crumbp="Services", svcname="AI agency services for businesses in Malaysia and Singapore",
 )
@@ -87,9 +94,16 @@ P["zh"] = dict(
  faq=[("什么是 AI agency？", "AI agency 是帮企业把 AI 用进日常运作的公司：把 AI 设置好，接上企业原本的做事方式，并让它持续运作。和只卖软件订阅不一样。"),
       ("马来西亚的 AI agency 要多少钱？", "要看范围。<a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">欢迎 WhatsApp 咨询报价</a>。"),
       ("AI 会不经我批准就发东西给客户吗？", "不会。营销 AI 要你批准后才发布；客服 AI 遇到复杂情况会交给真人；PA AI 起草的回复，你确认后才发出。"),
-      HFAQ["zh"]["qa"][2],
+      RANKING_QA["zh"],
       ("你们在哪里？也服务新加坡吗？", "我们位于吉隆坡，服务马来西亚和新加坡的企业，大部分在线上完成。"),
       ("Hunter Foo Media 是职业中介吗？", "不是。我们不向求职者收费，也不自行安排工作。详情见关于页。")],
+ nte="来自我们的笔记", nth="和这些服务相关的笔记",
+ ntp="想跟上 AI，或准备投放招聘广告，可以先读这两篇。",
+ nall="全部笔记 →",
+ notes=[("/notes/keeping-your-business-in-step-with-ai/", "AI 不停迭代，公司怎样持续跟上？",
+         "企业怎样跟上 AI：先建立信任、从网站开始，再做从社交媒体到 WhatsApp 的销售漏斗。"),
+        ("/notes/meta-hiring-ads-singapore-sme/", "新加坡 SME 投 Meta 招聘广告前要知道的事",
+         "Meta 就业类广告规则、公平的写法，以及用 WhatsApp 跟进应征者。")],
  ce="下一步", ch="跟我们说说你的生意", cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。",
  crumb="首页", crumbp="服务", svcname="面向马来西亚与新加坡企业的 AI agency 服务",
 )
@@ -120,9 +134,16 @@ P["ms"] = dict(
  faq=[("Apa itu agensi AI (AI agency)?", "Agensi AI ialah syarikat yang membantu perniagaan menggunakan AI dalam operasi harian: menyediakannya, menyambungkannya dengan cara perniagaan sedia berjalan, dan memastikan ia terus berfungsi. Ia berbeza daripada sekadar menjual langganan perisian."),
       ("Berapa kos agensi AI di Malaysia?", "Bergantung kepada skop. <a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">Hubungi kami di WhatsApp untuk sebut harga</a>."),
       ("Adakah AI hantar sesuatu kepada pelanggan tanpa kelulusan saya?", "Tidak. AI Pemasaran hanya menerbitkan selepas anda luluskan, AI Khidmat Pelanggan menyerahkan kes rumit kepada orang, dan balasan yang dirangka AI PA dihantar hanya selepas anda sahkan."),
-      HFAQ["ms"]["qa"][2],
+      RANKING_QA["ms"],
       ("Di mana anda, dan adakah anda berkhidmat di Singapura?", "Kami berpangkalan di Kuala Lumpur dan berkhidmat untuk perniagaan di Malaysia dan Singapura, kebanyakannya secara dalam talian."),
       ("Adakah Hunter Foo Media agensi pekerjaan?", "Bukan. Kami tidak mengenakan caj kepada pencari kerja dan tidak menempatkan calon sendiri. Lihat halaman Tentang Kami untuk butiran.")],
+ nte="DARIPADA CATATAN KAMI", nth="Catatan yang berkaitan dengan perkhidmatan ini",
+ ntp="Jika anda mahu kekal seiring dengan AI, atau akan menjalankan iklan pengambilan pekerja, mulakan dengan dua catatan ini.",
+ nall="Semua catatan →",
+ notes=[("/notes/keeping-your-business-in-step-with-ai/", "Bagaimana perniagaan boleh kekal seiring dengan AI",
+         "Cara perniagaan kekal seiring dengan AI: mula dengan kepercayaan dan laman web, kemudian corong ke WhatsApp."),
+        ("/notes/meta-hiring-ads-singapore-sme/", "Apa yang PKS Singapura perlu tahu sebelum menjalankan iklan kerja di Meta",
+         "Peraturan iklan Employment Meta, ayat yang adil, dan susulan WhatsApp.")],
  ce="LANGKAH SETERUSNYA", ch="Ceritakan tentang perniagaan anda", cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM.",
  crumb="Utama", crumbp="Perkhidmatan", svcname="Perkhidmatan agensi AI untuk perniagaan di Malaysia dan Singapura",
 )
@@ -151,6 +172,10 @@ def _main(k):
                       % (sid, i + 1, name, copy, qlink, more))
     o.append('<section class="paper hm-sec sv-sec" id="services"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2>%s</div></section>\n'
              % (h["sve"], h["svh"], "".join(blocks)))
+    cards = "".join('<li><a href="%s"><h3>%s</h3><p>%s</p></a></li>' % (href, title, blurb) for href, title, blurb in h["notes"])
+    o.append('<section class="paper hm-sec" id="notes"><div class="wrap section"><p class="pd-kicker">%s</p><h2 class="hm-h2">%s</h2><p class="hm-lede">%s</p>'
+             '<ul class="hm-notes">%s</ul><p class="hm-links"><a class="hm-link" href="/notes/">%s</a></p></div></section>\n'
+             % (h["nte"], h["nth"], h["ntp"], cards, h["nall"]))
     o.append('<section class="paper pd-faq-wrap" id="faq" aria-labelledby="sv-faq-h"><div class="wrap section"><div class="pd-faq">'
              '<p class="pd-kicker">%s</p><h2 id="sv-faq-h">%s</h2>%s</div></div></section>\n'
              % (h["fqe"], h["fqh"], "".join('<details%s><summary>%s</summary><p>%s</p></details>' % (' open' if j == 0 else '', q, a) for j, (q, a) in enumerate(h["faq"]))))

@@ -12,7 +12,7 @@ H["en"] = dict(
  title="AI agency in Malaysia & Singapore | Websites AI can read, lead automation | Hunter Foo Media",
  desc="Hunter Foo Media helps businesses in Malaysia and Singapore stay in sync with AI — serving customers outside and supporting the team inside. WhatsApp +60196273143.",
  eyebrow="AI FOR BUSINESSES · MALAYSIA &amp; SINGAPORE",
- h1='AI that helps you <span class="orange">serve customers</span> — and helps your team with daily work',
+ h1='AI automation for businesses in Malaysia: help you <span class="orange">serve customers</span> — and help your team with daily work',
  pos="We ease your company's anxiety about AI and help you keep pace with AI",
  fde="We join the outside and inside pieces: serving customers, and helping your team.",
  img_alt="3D company cutaway: HFM AI linking outward Website, Marketing, Customer Service and inward Manager, Clerk, PA",
@@ -95,7 +95,7 @@ H["zh"] = dict(
  title="马来西亚与新加坡的 AI Agency｜AI 读得懂的网站与获客自动化｜Hunter Foo Media",
  desc="Hunter Foo Media 帮企业和 AI 同步：对外服务客户，对内帮团队做事，让公司跟上市场和科技的变化。WhatsApp +60196273143。",
  eyebrow="企业 AI · 马来西亚与新加坡",
- h1='AI 帮你<span class="orange">服务客户</span>，也帮团队处理日常工作',
+ h1='马来西亚企业的 AI 自动化：帮你<span class="orange">服务客户</span>，也帮团队处理日常工作',
  pos="解决企业对 AI 的焦虑，帮你跟上 AI 的脚步",
  fde="对外服务客户，对内帮团队做事，把两块拼图拼在一起。",
  img_alt="公司 3D 剖面图：HFM AI 连接对外 Website、Marketing、Customer Service，以及对内 Manager、Clerk、PA",
@@ -178,7 +178,7 @@ H["ms"] = dict(
  title="Agensi AI di Malaysia & Singapura | Laman web yang AI boleh baca, automasi prospek | Hunter Foo Media",
  desc="Hunter Foo Media membantu perniagaan di Malaysia dan Singapura seiring dengan AI — melayan pelanggan di luar dan bantu pasukan di dalam. WhatsApp +60196273143.",
  eyebrow="AI UNTUK PERNIAGAAN · MALAYSIA &amp; SINGAPURA",
- h1='AI yang bantu anda <span class="orange">layan pelanggan</span> — dan bantu pasukan dengan kerja harian',
+ h1='Automasi AI untuk perniagaan di Malaysia: bantu anda <span class="orange">layan pelanggan</span> — dan bantu pasukan dengan kerja harian',
  pos="Kami meredakan keresahan syarikat anda terhadap AI, dan membantu anda mengikuti rentak AI",
  fde="Kami menyatukan kepingan luar dan dalam: melayan pelanggan, dan membantu pasukan.",
  img_alt="Keratan 3D syarikat: AI HFM menghubungkan Website, Marketing, Customer Service di luar dan Manager, Clerk, PA di dalam",
@@ -260,38 +260,57 @@ H["ms"] = dict(
 
 import urllib.parse, html
 
-# ---- Homepage FAQ (v8: 3–4 short Qs, no prices). Answers match FAQPage JSON-LD. ----
+# Homepage FAQ is REQUIRED and must not be removed (Hunter's rule 2026-11-16).
+# Visible <details> list + FAQPage JSON-LD, all three languages. Keep ~6 Q&As
+# aligned with current positioning; no prices (point to WhatsApp for a quote).
 ZH_ = '<span lang="zh-Hans">中文</span>'
+RANKING_QA = {
+ "en": ("Do you guarantee Google rankings or AI recommendations?",
+        "No. We tell you exactly what we build and set up; ranking and citation are up to search engines and AI tools."),
+ "zh": ("保证 Google 排名或 AI 推荐吗？",
+        "不保证。我们只把做什么、设置什么写清楚；怎么排序、引用由搜索引擎和 AI 工具决定。"),
+ "ms": ("Adakah anda jamin kedudukan Google atau cadangan AI?",
+        "Tidak. Kami beritahu dengan jelas apa yang kami bina dan sediakan; kedudukan dan petikan terserah kepada enjin carian dan alat AI."),
+}
 HFAQ = {}
 HFAQ["en"] = dict(kicker="FAQ", h="Common questions", qa=[
  ("What does Hunter Foo Media do?",
-  "An AI agency in Kuala Lumpur for businesses in Malaysia and Singapore: we learn how you work, then plug AI into lead flow, customer service and back-office work."),
+  "We help businesses in Malaysia and Singapore with AI automation. We ease your company's anxiety about AI and help you keep pace with AI: we advise where AI fits, what to do first and how, and can implement it with you if you want."),
+ ("How do you work with a company?",
+  "We work in an embedded, advisory style. We learn how your business and team work, then recommend where AI fits and what to do first. Hands-on implementation is optional; you can start with advice only. There is one consulting meeting a month."),
+ ("How much does it cost?",
+  "It depends on the scope. <a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">Contact us on WhatsApp for a quote</a>."),
  ("Will AI send messages to my customers without my approval?",
   "No. Outbound message templates need your approval first. Drafts wait in a queue until a person approves them."),
- ("Do you guarantee Google rankings or AI recommendations?",
-  "No. We tell you exactly what we build and set up; ranking and citation are up to search engines and AI tools."),
+ RANKING_QA["en"],
  ("Where are you based, and how do I contact you?",
-  "Kuala Lumpur, working remotely across Malaysia and Singapore. WhatsApp +60 19-627 3143 or email <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->."),
+  "We are based in Kuala Lumpur and work with businesses across Malaysia and Singapore, mostly online. WhatsApp +60 19-627 3143 or email <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->."),
 ])
 HFAQ["zh"] = dict(kicker="常见问题", h="你可能想问的", qa=[
  ("Hunter Foo Media 是做什么的？",
-  "吉隆坡的 AI agency，服务马来西亚与新加坡企业：先弄清楚你怎么做事，再把 AI 接进获客、客服和后台工作。"),
+  "我们为马来西亚与新加坡的企业做 AI 自动化。解决企业对 AI 的焦虑，帮你跟上 AI 的脚步：先建议哪里适合用 AI、先做什么、怎么做；落地执行是可选的。"),
+ ("你们怎么和一家企业合作？",
+  "我们用驻场式顾问的方式：先了解你的业务和团队，再建议哪里适合用 AI、先做什么。落地执行是可选的，也可以先只做顾问。每月一次顾问会议。"),
+ ("怎么收费？",
+  "要看范围。<a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">欢迎 WhatsApp 询价</a>。"),
  ("AI 会不经我同意就发信息给客户吗？",
   "不会。对外话术要你批准后才上线；草稿先进审批队列，经人批准后才发出。"),
- ("保证 Google 排名或 AI 推荐吗？",
-  "不保证。我们只把做什么、设置什么写清楚；怎么排序、引用由搜索引擎和 AI 工具决定。"),
+ RANKING_QA["zh"],
  ("你们在哪里？怎么联系？",
-  "立足吉隆坡，远程服务马来西亚与新加坡。WhatsApp +60 19-627 3143，或电邮 <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->。"),
+  "我们在吉隆坡，服务马来西亚与新加坡的企业，大部分在线上完成。WhatsApp +60 19-627 3143，或电邮 <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->。"),
 ])
 HFAQ["ms"] = dict(kicker="Soalan lazim", h="Soalan yang mungkin anda ada", qa=[
  ("Apa yang Hunter Foo Media buat?",
-  "Agensi AI di Kuala Lumpur untuk perniagaan di Malaysia dan Singapura: kami faham cara anda bekerja, kemudian pasang AI ke aliran prospek, khidmat pelanggan dan kerja dalaman."),
+  "Kami membantu perniagaan di Malaysia dan Singapura dengan automasi AI. Kami meredakan keresahan syarikat anda terhadap AI, dan membantu anda mengikuti rentak AI: kami menasihati di mana AI sesuai, apa dibuat dahulu dan bagaimana, dan boleh laksanakan bersama anda jika anda mahu."),
+ ("Bagaimana anda bekerjasama dengan sebuah syarikat?",
+  "Kami bekerja secara nasihat yang tertanam dalam pasukan anda. Kami mempelajari cara perniagaan dan pasukan anda berfungsi, kemudian cadangkan di mana AI sesuai dan apa yang perlu dibuat dahulu. Pelaksanaan secara langsung adalah pilihan; anda boleh bermula dengan nasihat sahaja. Ada satu mesyuarat perunding sebulan."),
+ ("Berapa kosnya?",
+  "Bergantung kepada skop. <a class=\"hm-link\" href=\"https://wa.me/60196273143\" target=\"_blank\" rel=\"noopener noreferrer\">Hubungi kami di WhatsApp untuk sebut harga</a>."),
  ("Adakah AI akan hantar mesej kepada pelanggan tanpa kelulusan saya?",
   "Tidak. Templat mesej keluar perlu anda luluskan dahulu. Draf menunggu dalam barisan sehingga seorang manusia meluluskannya."),
- ("Adakah anda jamin kedudukan Google atau cadangan AI?",
-  "Tidak. Kami beritahu dengan jelas apa yang kami bina dan sediakan; kedudukan dan petikan terserah kepada enjin carian dan alat AI."),
+ RANKING_QA["ms"],
  ("Di mana anda berada, dan bagaimana nak hubungi?",
-  "Kuala Lumpur, berkhidmat jarak jauh di Malaysia dan Singapura. WhatsApp +60 19-627 3143 atau e-mel <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->."),
+  "Kami berpangkalan di Kuala Lumpur dan bekerja dengan perniagaan di Malaysia dan Singapura, kebanyakannya secara dalam talian. WhatsApp +60 19-627 3143 atau e-mel <!--email_off-->hello@hunterfoomedia.com<!--/email_off-->."),
 ])
 
 import re as _re
