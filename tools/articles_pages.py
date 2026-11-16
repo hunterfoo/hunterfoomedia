@@ -211,6 +211,7 @@ ART2_EN = """
 <h2>Where to start</h2>
 <p>If you are not sure what your first step should be, take a look at <a href="/website-design/">our website building service</a> and the rest of what we do, or message me on WhatsApp. Hunter Foo Media can build the website, the social media content and the WhatsApp flow with you, and you approve each step. We do not promise search rankings or recommendations from AI tools. Fees are by written quote.</p>
 <p>If you are planning hiring ads, see also <a href="/notes/meta-hiring-ads-singapore-sme/">what to know before running Meta hiring ads in Singapore</a>.</p>
+<p>For this week's AI updates, see also <a href="/notes/ai-tools-keep-changing-your-bottleneck-does-not/">AI tools keep changing. Your bottleneck doesn't</a>.</p>
 """
 
 ART2_ZH = """
@@ -238,6 +239,7 @@ ART2_ZH = """
 <h2>从哪里开始</h2>
 <p>如果你还不确定第一步该做什么，可以先看看我们的<a href="/website-design/">网站建设服务</a>和其他服务，或者直接 WhatsApp 我。Hunter Foo Media 可以和你一起把网站、社交媒体内容和 WhatsApp 流程做起来，每一步都由你确认。我们不保证搜索排名，也不保证会被 AI 工具推荐。费用以书面报价为准。</p>
 <p>如果要在新加坡投放招聘广告，也可以先看<a href="/notes/meta-hiring-ads-singapore-sme/">投 Meta 招聘广告前要知道的事</a>。</p>
+<p>若想看本周的 AI 更新，也可以先看<a href="/notes/ai-tools-keep-changing-your-bottleneck-does-not/">工具每个月都在变，你的瓶颈不会</a>。</p>
 """
 
 ART2_MS = """
@@ -265,7 +267,112 @@ ART2_MS = """
 <h2>Di mana hendak bermula</h2>
 <p>Jika anda belum pasti apa langkah pertama, lihat <a href="/website-design/">servis pembinaan laman web</a> kami dan servis lain, atau WhatsApp saya terus. Hunter Foo Media boleh membina laman web, kandungan media sosial dan aliran WhatsApp bersama anda, dan anda luluskan setiap langkah. Kami tidak menjanjikan kedudukan carian atau cadangan daripada alat AI. Yuran melalui sebut harga bertulis.</p>
 <p>Jika anda merancang iklan pengambilan pekerja, lihat juga <a href="/notes/meta-hiring-ads-singapore-sme/">apa yang perlu diketahui sebelum menjalankan iklan kerja Meta di Singapura</a>.</p>
+<p>Untuk kemas kini AI minggu ini, lihat juga <a href="/notes/ai-tools-keep-changing-your-bottleneck-does-not/">Alat AI berubah setiap bulan, kekangan anda tidak</a>.</p>
 """
+
+ART3_EN = """
+<p>This week (10–16 November 2026) brought a few more AI updates. After going through them, what I want to tell businesses in Malaysia and Singapore is not which tool to adopt first. Tools change every month. Your bottleneck does not.</p>
+
+<h2>Businesses in ChatGPT: an AI can only repeat what it can read</h2>
+<p>OpenAI has released a beta called Businesses in ChatGPT. Businesses can claim their profile; those that qualify can also build an agent to answer customer questions. It is not confirmed to be open in Malaysia and Singapore.</p>
+<p>Even if it opens later, the core point does not change: an AI only repeats the information it can read. If your service pages, FAQs, and Google Business Profile — address, hours, and what you do — are unclear, a smarter ChatGPT still cannot invent an accurate answer. Getting the website and Google Business Profile right matters more than waiting for a feature to arrive here.</p>
+
+<h2>Sierra Poppy 1.0: it does not matter whether the buyer is a person or an AI</h2>
+<p>Sierra has released Poppy 1.0, which lets an AI assistant act for the user when dealing with a business. Shopify and Wix have it on by default.</p>
+<p>If you sell products or provide a service, the visitor may soon be a customer's AI assistant, not only a person. But a buyer who is a person and a buyer who is an AI still need the same things: what you offer, what it costs, and whether it is in stock. If that is clear on the page, they can decide. You do not have to chase a new protocol first. Put those basics where they can be found.</p>
+
+<h2>a16z's agent economy: the job of a website is to help you get chosen</h2>
+<p>a16z says AI agents already make up most of the web's traffic, and puts forward the idea of an agent economy. I do not have my own figures on whether agents are already in the majority; I am passing on their claim.</p>
+<p>What businesses should take seriously is the next layer: more of the comparing, shortlisting, and ordering will be done by machines. The job of a website is no longer only to be read by people. It is to help you get chosen. Write your FAQ and service pages so a machine can understand them too: what you do, what you do not do, how to reach you, and what the next step is. If that is clear, a machine can recommend you. If it is vague, you are easier to skip.</p>
+
+<h2>Baidu KOOKO: writing software is getting cheaper; knowing what to build is not</h2>
+<p>According to a third-party account, Baidu's KOOKO has been shown generating a website, a booking system, and an admin backend through chat. It is not confirmed to be available outside China.</p>
+<p>Even if it becomes available later, this does not change: writing software is getting cheaper; knowing what should be built has not. A tool can quickly put up a booking page or a backend. Who your customers are, which process to fix first, who follows up after it goes live, and what you do when something goes wrong — those still need a person to think through. Get the business clear, then choose the tool.</p>
+
+<h2>Tools change. The bottleneck does not.</h2>
+<p>Look at these four updates together, and the same sentence appears: tools change every month; your bottleneck does not. The bottleneck is usually still this: people cannot find you, cannot understand you, or do not know how to reach you next.</p>
+<p>At Hunter Foo Media, we start with your business, then advise where AI fits and what to do first. Implementation is optional. What we set out to do is: 解决企业对 AI 的焦虑，帮你跟上 AI 的脚步.</p>
+
+<h2>Where to start</h2>
+<p>If you are not sure what your first step should be, take a look at <a href="/website-design/">our website building service</a> and <a href="/services/">what we offer</a>, or message me on WhatsApp. Making your website, FAQ and Google Business Profile clear is already preparation for these new tools. You approve each step. We do not promise search rankings or recommendations from AI tools. Fees are by written quote.</p>
+<p>For a wider view of keeping a business in step with AI, read <a href="/notes/keeping-your-business-in-step-with-ai/">Keeping your business in step with AI</a>.</p>
+"""
+
+ART3_ZH = """
+<p>本周（2026 年 11 月 10 日至 16 日）又有几项 AI 更新。我一个一个看下来，真正想跟新马企业说的，不是该立刻去用哪一个工具，而是：工具每个月都在变，你的瓶颈不会。</p>
+
+<h2>ChatGPT 里的商家资料：AI 只能复述它读得到的东西</h2>
+<p>OpenAI 推出了「Businesses in ChatGPT」测试版。商家可认领自己的资料；符合资格的，还可以建一个 agent，用来回答顾客的问题。新马目前还未确认开放。</p>
+<p>就算以后开放了，这件事的核心也没有变：AI 只会复述它读得到的资料。网站上的服务说明、常见问题，以及 Google Business Profile 里的地址、营业时间和业务介绍，如果写得不清楚，ChatGPT 再聪明也变不出准确的答案。所以先把网站和 Google Business Profile 写对，比等一个功能在新马上线更要紧。</p>
+
+<h2>Sierra Poppy 1.0：来买的不管是人还是 AI</h2>
+<p>Sierra 发布了 Poppy 1.0，让 AI 助理代用户跟商家办事。Shopify、Wix 已默认开放。</p>
+<p>对卖东西或提供服务的企业来说，以后上门的不一定是人，也可能是顾客的 AI 助理。但买家是人还是 AI 都一样，只要知道是什么、多少钱、有没有货。页面写清楚，对方才下得了决定。不必先去追一个新协议；先把这些基本信息放在对方找得到的地方。</p>
+
+<h2>a16z 说的 agent economy：网站的工作是让你被选中</h2>
+<p>a16z 称，AI agent 已占网络流量的多数，并提出 agent economy。流量是不是已经过半，我没有自己的数据，这里只转述他们的判断。</p>
+<p>值得企业认真想的，是后面那一层：以后帮顾客比较、筛选、下单的，会越来越多是机器。网站的工作不再只是给人看，而是让你被选中。FAQ 和服务页要写到机器也看得懂：你做什么、不做什么、怎么联系、下一步是什么。写清楚，机器才推荐得出去；写得含糊，就容易被跳过。</p>
+
+<h2>百度 KOOKO：会写软件，不等于知道该写什么</h2>
+<p>第三方转述，百度 KOOKO 演示了用聊天生成网站、预约系统和后台。中国以外是否可用，目前还未确认。</p>
+<p>就算以后能用，也改变不了这件事：写软件越来越便宜，知道该做什么却没有变便宜。工具可以很快搭出一个预约页或后台，但你的客户是谁、该先解决哪一个流程、上线后谁来跟、出了错怎么收——这些还是要人想清楚。先搞清楚业务，再决定用什么工具。</p>
+
+<h2>工具在变，瓶颈不在变</h2>
+<p>把这四件事放在一起看，会发现同一句话：工具每个月都在变，你的瓶颈不会。瓶颈通常还是：别人找不到你、看不懂你、不知道下一步怎么找你。</p>
+<p>我们在 Hunter Foo Media 做的，就是先看你的业务，再建议哪里适合用 AI、先做什么；落地执行是可选的。我们要做的是：解决企业对 AI 的焦虑，帮你跟上 AI 的脚步。</p>
+
+<h2>从哪里开始</h2>
+<p>如果你还不确定第一步该做什么，可以先看看我们的<a href="/website-design/">网站建设服务</a>和<a href="/services/">服务介绍</a>，或者直接 WhatsApp 我。把网站、FAQ 和 Google Business Profile 写清楚，本身就是在为这些新工具做准备。每一步都由你确认。我们不保证搜索排名，也不保证会被 AI 工具推荐。费用以书面报价为准。</p>
+<p>若想从更宽的角度看企业如何跟上 AI，可阅读<a href="/notes/keeping-your-business-in-step-with-ai/">AI 不停迭代，公司怎样持续跟上？</a>。</p>
+"""
+
+ART3_MS = """
+<p>Minggu ini (10–16 November 2026) muncul lagi beberapa kemas kini AI. Selepas membacanya satu per satu, apa yang ingin saya beritahu perniagaan di Malaysia dan Singapura bukan alat mana yang perlu digunakan segera. Alat berubah setiap bulan. Kekangan anda tidak.</p>
+
+<h2>Businesses in ChatGPT: AI hanya boleh ulangi apa yang ia dapat baca</h2>
+<p>OpenAI telah mengeluarkan versi beta bernama Businesses in ChatGPT. Perniagaan boleh menuntut profil mereka; yang layak juga boleh membina agent untuk menjawab soalan pelanggan. Belum disahkan ia dibuka di Malaysia dan Singapura.</p>
+<p>Walaupun ia dibuka nanti, terasnya tidak berubah: AI hanya mengulangi maklumat yang dapat dibacanya. Jika halaman perkhidmatan, FAQ, dan Google Business Profile — alamat, waktu operasi, dan apa yang anda lakukan — tidak jelas, ChatGPT yang lebih pintar pun tidak boleh mencipta jawapan yang tepat. Meluruskan laman web dan Google Business Profile lebih penting daripada menunggu ciri itu tiba di sini.</p>
+
+<h2>Sierra Poppy 1.0: pembeli sama ada manusia atau AI, keperluannya sama</h2>
+<p>Sierra telah mengeluarkan Poppy 1.0, yang membolehkan pembantu AI mengurus urusan dengan peniaga bagi pihak pengguna. Shopify dan Wix telah membukanya secara lalai.</p>
+<p>Jika anda menjual barangan atau menawarkan perkhidmatan, tetamu yang datang mungkin tidak lagi seorang manusia sahaja, tetapi pembantu AI pelanggan. Namun pembeli sama ada manusia atau AI tetap memerlukan perkara yang sama: apa yang anda tawarkan, berapa harganya, dan ada stok atau tidak. Jika itu jelas di halaman, mereka boleh membuat keputusan. Anda tidak perlu mengejar protokol baharu dahulu. Letakkan maklumat asas itu di tempat yang dapat ditemui.</p>
+
+<h2>Agent economy menurut a16z: kerja laman web ialah supaya anda dipilih</h2>
+<p>a16z menyatakan agent AI sudah merangkumi sebahagian besar trafik web, dan mengemukakan idea agent economy. Saya tidak mempunyai data sendiri sama ada agent sudah menjadi majoriti; di sini saya hanya menyampaikan dakwaan mereka.</p>
+<p>Apa yang patut ditimbang oleh perniagaan ialah lapisan seterusnya: semakin banyak perbandingan, penapisan dan pesanan akan dibuat oleh mesin. Kerja laman web bukan lagi sekadar untuk dibaca orang. Ia ialah supaya anda dipilih. Tulis FAQ dan halaman perkhidmatan supaya mesin juga faham: apa yang anda buat, apa yang anda tidak buat, cara menghubungi anda, dan apa langkah seterusnya. Jika itu jelas, mesin boleh mengesyorkan anda. Jika kabur, anda lebih mudah dilangkau.</p>
+
+<h2>Baidu KOOKO: menulis perisian semakin murah; tahu apa yang patut dibina tidak</h2>
+<p>Menurut sumber pihak ketiga, Baidu KOOKO telah didemonstrasikan menjana laman web, sistem tempahan dan backend melalui perbualan. Belum disahkan ia tersedia di luar China.</p>
+<p>Walaupun ia tersedia nanti, perkara ini tidak berubah: menulis perisian semakin murah; mengetahui apa yang patut dibina belum menjadi lebih murah. Alat boleh dengan cepat menghasilkan halaman tempahan atau backend. Siapa pelanggan anda, proses mana yang patut diselesaikan dahulu, siapa yang akan susul selepas ia dilancarkan, dan apa yang anda buat apabila sesuatu tersilap — itu masih perlu dipikirkan oleh orang. Jelaskan perniagaan dahulu, kemudian pilih alatnya.</p>
+
+<h2>Alat berubah. Kekangan tidak.</h2>
+<p>Lihat keempat-empat kemas kini ini bersama-sama, dan ayat yang sama muncul: alat berubah setiap bulan; kekangan anda tidak. Kekangan biasanya masih ini: orang tidak dapat menemui anda, tidak faham anda, atau tidak tahu bagaimana hendak menghubungi anda seterusnya.</p>
+<p>Di Hunter Foo Media, kami bermula dengan perniagaan anda, kemudian menasihati di mana AI sesuai dan apa yang perlu dibuat dahulu. Pelaksanaan adalah pilihan. Apa yang kami ingin buat ialah: 解决企业对 AI 的焦虑，帮你跟上 AI 的脚步.</p>
+
+<h2>Di mana hendak bermula</h2>
+<p>Jika anda belum pasti apa langkah pertama, lihat <a href="/website-design/">servis pembinaan laman web</a> kami dan <a href="/services/">apa yang kami tawarkan</a>, atau WhatsApp saya terus. Menjadikan laman web, FAQ dan Google Business Profile anda jelas sudah pun persediaan untuk alat-alat baharu ini. Anda luluskan setiap langkah. Kami tidak menjanjikan kedudukan carian atau cadangan daripada alat AI. Yuran melalui sebut harga bertulis.</p>
+<p>Untuk pandangan yang lebih luas tentang cara perniagaan kekal seiring dengan AI, baca <a href="/notes/keeping-your-business-in-step-with-ai/">Bagaimana perniagaan boleh kekal seiring dengan AI</a>.</p>
+"""
+
+ART3 = {"slug": "ai-tools-keep-changing-your-bottleneck-does-not", "date": "2026-11-16",
+  "en": {"title": "AI Tools Keep Changing. Your Bottleneck Doesn't. | Hunter Foo Media",
+         "h1": "AI tools keep changing. Your bottleneck doesn't.",
+         "desc": "This week's AI updates — Businesses in ChatGPT, Sierra Poppy, a16z's agent economy, and a Baidu KOOKO demo — point to the same work: make your website and Google Business Profile clear enough to be chosen.",
+         "lede": "A few more AI updates landed this week. What I want to tell businesses in Malaysia and Singapore is not which tool to pick up first. Tools change every month. Your bottleneck does not.",
+         "eyebrow": "AI · THIS WEEK", "body": ART3_EN, "next": "NEXT STEP", "cta": "Not sure where to start?",
+         "wa": "Hi Hunter, I read your note on this week's AI updates. Our business is: ____", "cta_note": "Malaysian number +60196273143. English or Chinese. Fees by written quote."},
+  "zh": {"title": "工具每个月都在变，你的瓶颈不会｜Hunter Foo Media",
+         "h1": "工具每个月都在变，你的瓶颈不会",
+         "desc": "本周 AI 更新：ChatGPT 商家资料、Sierra Poppy、a16z 的 agent economy，以及百度 KOOKO 演示。工具在变，企业该先做的没变：把网站和 Google Business Profile 写清楚。",
+         "lede": "本周又有几项 AI 更新。我想跟新马企业说的，不是该立刻去用哪一个工具，而是：工具每个月都在变，你的瓶颈不会。",
+         "eyebrow": "AI · 本周观察", "body": ART3_ZH, "next": "下一步", "cta": "不知道从哪里开始？",
+         "wa": "你好 Hunter，我看了你写的本周 AI 观察。我们的业务是：＿＿", "cta_note": "马来西亚号码 +60196273143。简体中文或英文都行。费用以书面报价为准。"},
+  "ms": {"title": "Alat AI Berubah Setiap Bulan, Kekangan Anda Tidak | Hunter Foo Media",
+         "h1": "Alat AI berubah setiap bulan, kekangan anda tidak",
+         "desc": "Kemas kini AI minggu ini — Businesses in ChatGPT, Sierra Poppy, agent economy menurut a16z, dan demo Baidu KOOKO — membawa kerja yang sama: pastikan laman web dan Google Business Profile cukup jelas untuk dipilih.",
+         "lede": "Beberapa kemas kini AI muncul lagi minggu ini. Apa yang ingin saya beritahu perniagaan di Malaysia dan Singapura bukan alat mana yang perlu digunakan segera. Alat berubah setiap bulan. Kekangan anda tidak.",
+         "eyebrow": "AI · MINGGU INI", "body": ART3_MS, "next": "LANGKAH SETERUSNYA", "cta": "Tidak pasti di mana hendak bermula?",
+         "wa": "Hai Hunter, saya baca catatan anda tentang kemas kini AI minggu ini. Perniagaan kami: ____", "cta_note": "Nombor Malaysia +60196273143. Bahasa Inggeris atau Cina. Yuran melalui sebut harga bertulis."}}
 
 ART2 = {"slug": "keeping-your-business-in-step-with-ai", "date": "2026-10-30",
   "en": {"title": "Keeping Your Business in Step with AI | Hunter Foo Media",
@@ -288,6 +395,7 @@ ART2 = {"slug": "keeping-your-business-in-step-with-ai", "date": "2026-10-30",
          "wa": "Hai Hunter, saya baca artikel anda tentang AI. Perniagaan kami: ____", "cta_note": "Nombor Malaysia +60196273143. Bahasa Inggeris atau Cina. Yuran melalui sebut harga bertulis."}}
 
 ARTICLES = [
+ ART3,
  ART2,
  {"slug": "meta-hiring-ads-singapore-sme", "date": "2026-10-28",
   "en": {"title": "Before Running Meta Hiring Ads in Singapore: What SMEs Should Know | Hunter Foo Media",

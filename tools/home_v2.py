@@ -31,9 +31,10 @@ X["en"] = dict(
  tags=["Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote", "Contact us on WhatsApp for a quote"],
  aie="SIX DIGITAL EMPLOYEES", aih="Three serve your customers. Three help your team.", out="Outside", inn="Inside", aigo="See what each one does →",
  nte="FROM OUR NOTES", nth="Notes for businesses keeping up with AI",
- ntp="Two short notes from real work: how a business can keep pace with AI, and what to get right before running hiring ads.",
+ ntp="Three short notes from real work: this week's AI updates, how a business can keep pace with AI, and what to get right before running hiring ads.",
  nall="All notes →",
- nblurb={"keeping-your-business-in-step-with-ai": "How a business can keep pace with AI: start with trust and a website, then a funnel from social media to WhatsApp.",
+ nblurb={"ai-tools-keep-changing-your-bottleneck-does-not": "This week's AI updates, and why the work is still to make your website and Google Business Profile clear enough to be chosen.",
+         "keeping-your-business-in-step-with-ai": "How a business can keep pace with AI: start with trust and a website, then a funnel from social media to WhatsApp.",
          "meta-hiring-ads-singapore-sme": "What to get right before running Meta hiring ads in Singapore: the rules, fair wording, and WhatsApp follow-up."},
  cnote="Malaysian number +60196273143. English, <span lang=\"zh-Hans\">中文</span> or BM.")
 X["zh"] = dict(
@@ -46,9 +47,10 @@ X["zh"] = dict(
  tags=["欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价", "欢迎 WhatsApp 咨询报价"],
  aie="六位数字员工", aih="三位服务客户，三位帮团队。", out="对外", inn="对内", aigo="看每一位做什么 →",
  nte="来自我们的笔记", nth="帮企业跟上 AI 的笔记",
- ntp="两篇从实际工作写出的短文：企业怎样跟上 AI，以及投放招聘广告前要先做对的事。",
+ ntp="三篇从实际工作写出的短文：本周 AI 更新、企业怎样跟上 AI，以及投放招聘广告前要先做对的事。",
  nall="全部笔记 →",
- nblurb={"keeping-your-business-in-step-with-ai": "企业怎样跟上 AI：先建立信任、从网站开始，再做从社交媒体到 WhatsApp 的销售漏斗。",
+ nblurb={"ai-tools-keep-changing-your-bottleneck-does-not": "本周 AI 更新，以及为什么该先做的事没变：把网站和 Google Business Profile 写清楚。",
+         "keeping-your-business-in-step-with-ai": "企业怎样跟上 AI：先建立信任、从网站开始，再做从社交媒体到 WhatsApp 的销售漏斗。",
          "meta-hiring-ads-singapore-sme": "在新加坡投 Meta 招聘广告前要先做对的事：规则、公平的写法，以及用 WhatsApp 跟进。"},
  cnote="马来西亚号码 +60196273143。中文、英文或马来文都可以。")
 X["ms"] = dict(
@@ -61,9 +63,10 @@ X["ms"] = dict(
  tags=["Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga", "Hubungi kami di WhatsApp untuk sebut harga"],
  aie="ENAM PEKERJA DIGITAL", aih="Tiga melayan pelanggan anda. Tiga membantu pasukan anda.", out="Di luar", inn="Di dalam", aigo="Lihat apa setiap satu buat →",
  nte="DARIPADA CATATAN KAMI", nth="Catatan untuk perniagaan yang mahu kekal seiring dengan AI",
- ntp="Dua catatan ringkas daripada kerja sebenar: cara perniagaan kekal seiring dengan AI, dan apa yang perlu dibetulkan sebelum iklan pengambilan pekerja.",
+ ntp="Tiga catatan ringkas daripada kerja sebenar: kemas kini AI minggu ini, cara perniagaan kekal seiring dengan AI, dan apa yang perlu dibetulkan sebelum iklan pengambilan pekerja.",
  nall="Semua catatan →",
- nblurb={"keeping-your-business-in-step-with-ai": "Cara perniagaan kekal seiring dengan AI: mula dengan kepercayaan dan laman web, kemudian corong dari media sosial ke WhatsApp.",
+ nblurb={"ai-tools-keep-changing-your-bottleneck-does-not": "Kemas kini AI minggu ini, dan kenapa kerja yang perlu dibuat masih sama: pastikan laman web dan Google Business Profile cukup jelas untuk dipilih.",
+         "keeping-your-business-in-step-with-ai": "Cara perniagaan kekal seiring dengan AI: mula dengan kepercayaan dan laman web, kemudian corong dari media sosial ke WhatsApp.",
          "meta-hiring-ads-singapore-sme": "Apa yang perlu dibetulkan sebelum iklan pengambilan pekerja Meta di Singapura: peraturan, ayat yang adil, dan susulan WhatsApp."},
  cnote="Nombor Malaysia +60196273143. Bahasa Inggeris, Cina atau BM.")
 
